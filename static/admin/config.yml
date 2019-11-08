@@ -1,0 +1,37 @@
+
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "home-vn"
+    label: "Home"
+    folder: "src/data/home"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+     preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - fields : 
+        - slide1 : 
+          - { label: "Featured Image",name: "thumbnail1",widget: "image"}
+          - { label: "Slide Caption", name: "slide-caption1", widget: "string" } 
+          - { label: "Slide Details", name: "slide-detail1", widget: "list" }
+        - slide2 : 
+          - { label: "Featured Image",name: "thumbnail2",widget: "image"}
+          - { label: "Slide Caption", name: "slide-caption2", widget: "string" } 
+          - { label: "Slide Details", name: "slide-detail2", widget: "list" }
+        - slide3 : 
+          - { label: "Featured Image",name: "thumbnail3",widget: "image"}
+          - { label: "Slide Caption", name: "slide-caption3", widget: "string" } 
+          - { label: "Slide Details", name: "slide-detail3", widget: "list" }
+        - slide4 : 
+          - { label: "Featured Image",name: "thumbnail4",widget: "image"}
+          - { label: "Slide Caption", name: "slide-caption4", widget: "string" } 
+          - { label: "Slide Details", name: "slide-detail4", widget: "list" }
