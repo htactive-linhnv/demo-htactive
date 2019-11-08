@@ -40,5 +40,54 @@ collections:
         widget: "object"
         fields:
           - { label: "Title",name: "home-service-title",widget: "string"}
+          - { label: "Description",name: "home-service-des",widget: "string"}
+          - name: "service1"
+            label: "Service1"
+            widget: "object"
+            fields: 
+              - { label: "Title",name: "home-box-title",widget: "string"}
+              - { label: "Description",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+          - name: "service2"
+            label: "Service2"
+            widget: "object"
+            fields: 
+              - { label: "Title",name: "home-box-title",widget: "string"}
+              - { label: "Description",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+          - name: "service3"
+            label: "Service3"
+            widget: "object"
+            fields: 
+              - { label: "Title",name: "home-box-title",widget: "string"}
+              - { label: "Description",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+      - name: "home-about"
+        label: "Home -- About"
+        widget: "object"
+        fields:
+          - { label: "Title",name: "home-about-title",widget: "string"}
+          - { label: "Description",name: "home-about-des",widget: "string"}
+          - name: "panel1"
+            label: "About Panel 1"
+            widget: "object"
+            fields: 
+              - { label: "Title",name: "home-box-title",widget: "string"}
+              - { label: "Description",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+          - name: "panel2"
+            label: "About Panel 2"
+            widget: "object"
+            fields: 
+              - { label: "Title",name: "home-box-title",widget: "string"}
+              - { label: "Description",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+          - name: "panel3"
+            label: "About Panel 3"
+            widget: "object"
+            fields: 
+              - { label: "Title",name: "home-box-title",widget: "string"}
+              - { label: "Description",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
 
 
