@@ -23,16 +23,16 @@ collections:
         label: "Slide"
         widget: "object"
         fields:
-          - { label: "Ảnh 1",name: "slide-img1",widget: "Ảnh"}
+          - { label: "Ảnh 1",name: "slide-img1",widget: "image"}
           - { label: " Caption 1 ", name: "slide-caption1", widget: "string" } 
           - { label: " Details", name: "slide-detail1", widget: "list" }
-          - { label: " Ảnh 2",name: "thumbnail2",widget: "Ảnh"}
+          - { label: " Ảnh 2",name: "thumbnail2",widget: "image"}
           - { label: " Caption 2", name: "slide-caption2", widget: "string" } 
           - { label: " Details", name: "slide-detail2", widget: "list" }
-          - { label: " Ảnh 3",name: "thumbnail3",widget: "Ảnh"}
+          - { label: " Ảnh 3",name: "thumbnail3",widget: "image"}
           - { label: " Caption 3", name: "slide-caption3", widget: "string" } 
           - { label: " Details", name: "slide-detail3", widget: "list" }
-          - { label: " Ảnh 4",name: "thumbnail4",widget: "Ảnh"}
+          - { label: " Ảnh 4",name: "thumbnail4",widget: "image"}
           - { label: " Caption 4", name: "slide-caption4", widget: "string" } 
           - { label: " Details", name: "slide-detail4", widget: "list" }
       - { label: "Lead text", name: "lead", widget: "string" }
@@ -104,14 +104,14 @@ collections:
               - { label: "Tiêu đề",name: "about-paragraph-title",widget: "string"}
               - { label: "Đoạn 1 ",name: "about-paragraph1",widget: "string"}
               - { label: "Đoạn 2 ",name: "about-paragraph2",widget: "string"}
-              - { label: "Ảnh",name: "about-img" ,widget: "Ảnh"}
+              - { label: "Ảnh",name: "about-img" ,widget: "image"}
       - name: "home-banner"
         label: "Home -- Banner"
         widget: "object"
         fields:
           - { label: "Heading",name: "home-banner-heading",widget: "string"}
           - { label: "Miêu tả",name: "home-banner-desc",widget: "string"}
-          - { label: "Ảnh",name: "banner-img" ,widget: "Ảnh"}   
+          - { label: "Ảnh",name: "banner-img" ,widget: "image"}   
       - name: "home-why"
         label: "Home -- Why"
         widget: "object"
@@ -124,28 +124,28 @@ collections:
             fields:
               - { label: "Tiêu đề",name: "tab-title",widget: "string"}  
               - { label: "Miêu tả",name: "tab-desc",widget: "string"}  
-              - { label: "Ảnh",name: "tab-img",widget: "Ảnh"}  
+              - { label: "Ảnh",name: "tab-img",widget: "image"}  
           - name: "tab2"
             label: "Tab 2"
             widget: "object"
             fields:
               - { label: "Tiêu đề",name: "tab-title",widget: "string"}  
               - { label: "Miêu tả",name: "tab-desc",widget: "string"}  
-              - { label: "Ảnh",name: "tab-img",widget: "Ảnh"}  
+              - { label: "Ảnh",name: "tab-img",widget: "image"}  
           - name: "tab3"
             label: "Tab 3"
             widget: "object"
             fields:
               - { label: "Tiêu đề",name: "tab-title",widget: "string"}  
               - { label: "Miêu tả",name: "tab-desc",widget: "string"}  
-              - { label: "Ảnh",name: "tab-img",widget: "Ảnh"}  
+              - { label: "Ảnh",name: "tab-img",widget: "image"}  
           - name: "tab4"
             label: "Tab 4"
             widget: "object"
             fields:
               - { label: "Tiêu đề",name: "tab-title",widget: "string"}  
               - { label: "Miêu tả",name: "tab-desc",widget: "string"}  
-              - { label: "Ảnh",name: "tab-img",widget: "Ảnh"}  
+              - { label: "Ảnh",name: "tab-img",widget: "image"}  
   - name: "home-en"
     label: "Home - English"
     folder: "src/data/home"
