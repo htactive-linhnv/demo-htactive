@@ -8,7 +8,145 @@ public_folder: /img
 
 collections:
   - name: "home-vn"
-    label: "Home"
+    label: "Home - Tiếng Việt"
+    folder: "src/data/home"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+     preview: false
+    fields:
+      - { label: "Tiêu đề", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Menu", name: "menu", widget: "list" }
+      - name: "slide"
+        label: "Slide"
+        widget: "object"
+        fields:
+          - { label: "Ảnh 1",name: "slide-img1",widget: "Ảnh"}
+          - { label: " Caption 1 ", name: "slide-caption1", widget: "string" } 
+          - { label: " Details", name: "slide-detail1", widget: "list" }
+          - { label: " Ảnh 2",name: "thumbnail2",widget: "Ảnh"}
+          - { label: " Caption 2", name: "slide-caption2", widget: "string" } 
+          - { label: " Details", name: "slide-detail2", widget: "list" }
+          - { label: " Ảnh 3",name: "thumbnail3",widget: "Ảnh"}
+          - { label: " Caption 3", name: "slide-caption3", widget: "string" } 
+          - { label: " Details", name: "slide-detail3", widget: "list" }
+          - { label: " Ảnh 4",name: "thumbnail4",widget: "Ảnh"}
+          - { label: " Caption 4", name: "slide-caption4", widget: "string" } 
+          - { label: " Details", name: "slide-detail4", widget: "list" }
+      - { label: "Lead text", name: "lead", widget: "string" }
+      - name: "home-service"
+        label: "Home -- Service"
+        widget: "object"
+        fields:
+          - { label: "Tiêu đề",name: "home-service-title",widget: "string"}
+          - { label: "Miêu tả",name: "home-service-des",widget: "string"}
+          - name: "service1"
+            label: "Service1"
+            widget: "object"
+            fields: 
+              - { label: "Tiêu đề",name: "home-box-title",widget: "string"}
+              - { label: "Miêu tả",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+          - name: "service2"
+            label: "Service2"
+            widget: "object"
+            fields: 
+              - { label: "Tiêu đề",name: "home-box-title",widget: "string"}
+              - { label: "Miêu tả",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+          - name: "service3"
+            label: "Service3"
+            widget: "object"
+            fields: 
+              - { label: "Tiêu đề",name: "home-box-title",widget: "string"}
+              - { label: "Miêu tả",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+      - name: "home-about"
+        label: "Home -- About"
+        widget: "object"
+        fields:
+          - { label: "Tiêu đề",name: "home-about-title",widget: "string"}
+          - { label: "Miêu tả",name: "home-about-des",widget: "string"}
+          - name: "panel1"
+            label: "About Panel 1"
+            widget: "object"
+            fields: 
+              - { label: "Tiêu đề",name: "home-box-title",widget: "string"}
+              - { label: "Miêu tả",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+          - name: "panel2"
+            label: "About Panel 2"
+            widget: "object"
+            fields: 
+              - { label: "Tiêu đề",name: "home-box-title",widget: "string"}
+              - { label: "Miêu tả",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+          - name: "panel3"
+            label: "About Panel 3"
+            widget: "object"
+            fields: 
+              - { label: "Tiêu đề",name: "home-box-title",widget: "string"}
+              - { label: "Miêu tả",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+          - name: "panel4"
+            label: "About Panel 4"
+            widget: "object"
+            fields: 
+              - { label: "Tiêu đề",name: "home-box-title",widget: "string"}
+              - { label: "Miêu tả",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+          - name: "about-paragraph"
+            label: "About Left Paragraph"
+            widget: "object"
+            fields: 
+              - { label: "Tiêu đề",name: "about-paragraph-title",widget: "string"}
+              - { label: "Đoạn 1 ",name: "about-paragraph1",widget: "string"}
+              - { label: "Đoạn 2 ",name: "about-paragraph2",widget: "string"}
+              - { label: "Ảnh",name: "about-img" ,widget: "Ảnh"}
+      - name: "home-banner"
+        label: "Home -- Banner"
+        widget: "object"
+        fields:
+          - { label: "Heading",name: "home-banner-heading",widget: "string"}
+          - { label: "Miêu tả",name: "home-banner-desc",widget: "string"}
+          - { label: "Ảnh",name: "banner-img" ,widget: "Ảnh"}   
+      - name: "home-why"
+        label: "Home -- Why"
+        widget: "object"
+        fields:
+          - { label: "Tiêu đề",name: "home-why-title",widget: "string"}
+          - { label: "Miêu tả",name: "home-why-desc",widget: "string"}
+          - name: "tab1"
+            label: "Tab 1"
+            widget: "object"
+            fields:
+              - { label: "Tiêu đề",name: "tab-title",widget: "string"}  
+              - { label: "Miêu tả",name: "tab-desc",widget: "string"}  
+              - { label: "Ảnh",name: "tab-img",widget: "Ảnh"}  
+          - name: "tab2"
+            label: "Tab 2"
+            widget: "object"
+            fields:
+              - { label: "Tiêu đề",name: "tab-title",widget: "string"}  
+              - { label: "Miêu tả",name: "tab-desc",widget: "string"}  
+              - { label: "Ảnh",name: "tab-img",widget: "Ảnh"}  
+          - name: "tab3"
+            label: "Tab 3"
+            widget: "object"
+            fields:
+              - { label: "Tiêu đề",name: "tab-title",widget: "string"}  
+              - { label: "Miêu tả",name: "tab-desc",widget: "string"}  
+              - { label: "Ảnh",name: "tab-img",widget: "Ảnh"}  
+          - name: "tab4"
+            label: "Tab 4"
+            widget: "object"
+            fields:
+              - { label: "Tiêu đề",name: "tab-title",widget: "string"}  
+              - { label: "Miêu tả",name: "tab-desc",widget: "string"}  
+              - { label: "Ảnh",name: "tab-img",widget: "Ảnh"}  
+  - name: "home-en"
+    label: "Home - English"
     folder: "src/data/home"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
