@@ -10,7 +10,7 @@ public_folder: /img
 collections:
   - name: "home-vn"
     label: "Home - Tiếng Việt"
-    folder: "src/data/home"
+    folder: "src/data/en/home"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
@@ -148,7 +148,7 @@ collections:
               - { label: "Ảnh",name: "tab-img-vn",widget: "image"}  
   - name: "home-en"
     label: "Home - English"
-    folder: "src/data/home"
+    folder: "src/data/vi/home"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
