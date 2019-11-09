@@ -89,5 +89,63 @@ collections:
               - { label: "Title",name: "home-box-title",widget: "string"}
               - { label: "Description",name: "home-box-desc",widget: "string"}
               - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+          - name: "panel4"
+            label: "About Panel 4"
+            widget: "object"
+            fields: 
+              - { label: "Title",name: "home-box-title",widget: "string"}
+              - { label: "Description",name: "home-box-desc",widget: "string"}
+              - { label: "Icon",name: "home-boxe-icon",widget: "string"}
+          - name: "about-paragraph"
+            label: "About Left Paragraph"
+            widget: "object"
+            fields: 
+              - { label: "Title",name: "about-paragraph-title",widget: "string"}
+              - { label: "Paragraph 1 ",name: "about-paragraph1",widget: "string"}
+              - { label: "Paragraph 2 ",name: "about-paragraph2",widget: "string"}
+              - { label: "Image",name: "about-img" ,widget: "image"}
+      - name: "home-banner"
+        label: "Home -- Banner"
+        widget: "object"
+        fields:
+          - { label: "Heading",name: "home-banner-heading",widget: "string"}
+          - { label: "Description",name: "home-banner-desc",widget: "string"}
+          - { label: "Image",name: "banner-img" ,widget: "image"}   
+      - name: "home-why"
+        label: "Home -- Why"
+        widget: "object"
+        fields:
+          - { label: "Title",name: "home-why-title",widget: "string"}
+          - { label: "Description",name: "home-why-desc",widget: "string"}
+          - name: "tab1"
+            label: "Tab 1"
+            widget: "object"
+            fields:
+              - { label: "Title",name: "tab-title",widget: "string"}  
+              - { label: "Description",name: "tab-desc",widget: "string"}  
+              - { label: "Image",name: "tab-img",widget: "image"}  
+          - name: "tab2"
+            label: "Tab 2"
+            widget: "object"
+            fields:
+              - { label: "Title",name: "tab-title",widget: "string"}  
+              - { label: "Description",name: "tab-desc",widget: "string"}  
+              - { label: "Image",name: "tab-img",widget: "image"}  
+          - name: "tab3"
+            label: "Tab 3"
+            widget: "object"
+            fields:
+              - { label: "Title",name: "tab-title",widget: "string"}  
+              - { label: "Description",name: "tab-desc",widget: "string"}  
+              - { label: "Image",name: "tab-img",widget: "image"}  
+          - name: "tab4"
+            label: "Tab 4"
+            widget: "object"
+            fields:
+              - { label: "Title",name: "tab-title",widget: "string"}  
+              - { label: "Description",name: "tab-desc",widget: "string"}  
+              - { label: "Image",name: "tab-img",widget: "image"}  
+
+          
 
 
