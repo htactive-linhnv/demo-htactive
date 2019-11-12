@@ -1,5 +1,5 @@
 import React from "react"
-import Logo from "../../contents/assets/images/logo_dark_gray.png"
+import Logo from "../../data/images/logo_dark_gray.png"
 import NavBar from "./navbar"
 
 const HeaderFixed = () => {

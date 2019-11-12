@@ -17,6 +17,7 @@ import "./layoutCss/assets/css/icons.css"
 import "./layoutCss/assets/css/main.css"
 import "./layoutCss/assets/css/plugins.css"
 
+
 import "./layoutCss/assets/voc/css/animations.css"
 import "./layoutCss/assets/voc/css/style.css"
 

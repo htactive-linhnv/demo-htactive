@@ -5761,16 +5761,8 @@ ul.tweets li span {
 	-moz-border-radius: 100%;
 	border-radius: 100%;
 }
-.tparrows.round:before {
-	font-family: 'fontello';
-	font-size: 24px;
-	content: '\e87c';
-	line-height: 52px;
-	display: inline-block;
-}
-.tparrows.round.tp-rightarrow:before {
-	content: '\e87d';
-}
+
+
 .tparrows.round:hover {
 	color: #ffffff;
 	background-color: #e84c3d;
@@ -5817,7 +5809,10 @@ ul.tweets li span {
 	background-image: none;
 	background-color: rgba(232, 76, 61, 0.7);
 	z-index: 100;
-	display: none;
+	height: 5px;
+	position: absolute;
+	bottom: 0;	
+	transform: translate3d(0px,0px,0px);
 }
 .slideshow-boxed .tp-bullets {
 	bottom: -33px !important;
