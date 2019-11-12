@@ -1,7 +1,24 @@
-.panel {
+.panel-group {
+  height:300px;
+}
+.panel__name:after {
+  font-family: "FontAwesome";
+  content: "\f147";
+  position: absolute;
+  right: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  top: 50%;
+  line-height: 1;
+  margin-top: -7px;
+}
+.panel__name--clicked:after {
+  content: "\f196";
+}
+.panel-group .panel {
   background: #999999;
-  width: 80%;
-  height: 40px;
+  width: 100%;
+  height: 45px;
   margin: auto;
   color: white;
   padding: 12px 10px;
@@ -18,47 +35,49 @@
 .panel__name {
   position: absolute;
   left: 15px;
-  top: 7px;
+  top: 10px;
+  font-size:16px;
+  width:100%;
 }
 .panel__toggle {
   position: absolute;
-  top: 11px;
+  top: 13px;
   right: 15px;
   border: 1px solid white;
   padding: 5px;
   border-radius: 4px;
-  font-size: 0.8em;
-  height: 1opx;
+  height: 20px;
   line-height: 0.5em;
 }
-.toggle-text {
-  font-size: 0.8em;
-  width: 80%;
+.panel-body {
+  width: 100%;
   margin: auto;
   visibility: hidden;
   max-height: 0;
   text-align: justify;
   background: #fafafa;
   line-height: 20px;
-  transition: visibility  1.75s, max-height  1.75s linear;
+  transition: visibility  2s, max-height  2s linear;
+  padding : 0 10px!important;
+  letter-spacing: 0.3px;
 }
 .test {
-  transition: visibility  1.75s, max-height  1.75s linear;
+  transition: visibility  2s, max-height  2s linear;
 }
 .test2 {
-  transition: color  1.75s linear;
+  transition: color  2s linear;
 }
 .show-text {
   visibility: visible;
   max-height: 500px;
 }
-.toggle-text p {
+.panel-body p {
   margin-bottom: 0;
 }
 
 .panel-clicked {
-  background: #333333;
-  color: white;
+  background: #333333!important;
+  color: white!important;
 }
 
 .slide-in-bottom {

@@ -1,36 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Home3rd/Home3rd.css'
-const Home3rd = (props) => {
+const Home3rd = ({ data }) => {
+    const [toggleStatus, setToggleStatus] = useState(0)
+    const toggleTab = (status) => {
+        toggleStatus !== status ? setToggleStatus(status) : setToggleStatus(0)
+    }
+    const dataUse = data.why.edges[0].node.frontmatter.home_why_vn
+    const dataArr = Object.values(dataUse).map(item => item)
+    const tabSelect = toggleStatus !== 0 ? dataArr[toggleStatus-1] : dataArr[0]
+    const navTabs = dataArr.map((item, index) => {
+        const position = index + 1
+        return (
+            <li onClick={() => toggleTab(position)} className={toggleStatus === position ? "active" : ""}>
+                <a role="tab" data-toggle="tab">{item.tab_title_vn}</a>
+            </li>
+        )
+    }
+    )
+
     return (
-        <div>
-            <div id="why">
-                <div class="about__text">
-                    <h1>WHY CHOOSE HT ACTIVE</h1>
-                    <div class="separator"></div>
-                    <p>HT Active offers a great service in the design, development and programming of your
-                        website/application. We strive to offer the best solution for your business and impartial advice at
-                        an honest price. We are constantly investigating new technologies and recommend them when they make
-                        sense.
-                </p>
-                </div>
-                <div id="board">
-                    <div class="board__left">
-                        <ul>
-                            <li class="board__li" id="toggleWhy1" onclick="toggleWhy(1)">THE RIGHT TEAM</li>
-                            <li class="board__li" id="toggleWhy2" onclick="toggleWhy(2)">WE LISTEN</li>
-                            <li class="board__li" id="toggleWhy3" onclick="toggleWhy(3)">CREATIVE AND TECHNICAL</li>
-                            <li class="board__li" id="toggleWhy4" onclick="toggleWhy(4)">UNDER ONE ROOF</li>
-                        </ul>
-                    </div>
-                    <div id="board__right">
-                        <h1 id="board__h1" class="fade-in">WE LISTEN</h1>
-                        <p id="board__p" class="fade-in">We listen, we discuss, we advise. We then select the best solution
-                            to fit. We don’t shoehorn projects and if we feel we’re not a good fit we’ll be honest and tell
-                            you from the outset.
-                            We're experienced programmers, we love discussing and planning new projects and have years of
-                        knowledge and ex</p>
-                        <div id="board__img" class="fade-in">
-                            <img src="1.png" />
+        <div className="vertical hc-tabs col-md-12">
+            <div className="arrow hidden-sm hidden-xs"><i className="fa fa-caret-up" /></div>
+            <ul className="nav nav-tabs" role="tablist">
+                {navTabs}
+            </ul>
+            <div className="tab-content tab-custom">
+                <div className="tab-pane fade in active">
+                    <h1 className="text-center title">{tabSelect.tab_title_vn || null}</h1>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <p>{tabSelect.tab_desc_vn || null}}</p>
+                            <img src="/assets/voc/images/whychooseus.png" alt="" />
                         </div>
                     </div>
                 </div>
