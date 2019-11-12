@@ -10,7 +10,7 @@ public_folder: /img
 collections:
   - name: "home-vn"
     label: "Home - Tiếng Việt"
-    folder: "src/data/en/home"
+    folder: "src/data/vi/home"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
@@ -83,14 +83,14 @@ collections:
               - { label: "Tiêu đề",name: "home-box-title-vn",widget: "string"}
               - { label: "Miêu tả",name: "home-box-desc-vn",widget: "string"}
               - { label: "Icon",name: "home-boxe-icon-vn",widget: "string"}
-          - name: "panel3-vn"
+          - name: "panel-vn3"
             label: "About Panel 3"
             widget: "object"
             fields: 
               - { label: "Tiêu đề",name: "home-box-title-vn",widget: "string"}
               - { label: "Miêu tả",name: "home-box-desc-vn",widget: "string"}
               - { label: "Icon",name: "home-boxe-icon-vn",widget: "string"}
-          - name: "panel4-vn"
+          - name: "panel-vn4"
             label: "About Panel 4"
             widget: "object"
             fields: 
@@ -148,7 +148,7 @@ collections:
               - { label: "Ảnh",name: "tab-img-vn",widget: "image"}  
   - name: "home-en"
     label: "Home - English"
-    folder: "src/data/vi/home"
+    folder: "src/data/en/home"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
