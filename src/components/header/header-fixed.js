@@ -1,5 +1,5 @@
 import React from "react"
-// import Logo from "../../contents/assets/images/logo_dark_gray.png"
+import Logo from "../../data/images/logo_dark_gray.png"
 import NavBar from "./navbar"
 
 const HeaderFixed = () => {
@@ -11,7 +11,7 @@ const HeaderFixed = () => {
             <div className="header-left clearfix">
               <div className="logo">
                 <a href="">
-                  {/* <img id="logo" src={Logo} alt="htactive" /> */}
+                  <img id="logo" src={Logo} alt="htactive" />
                 </a>
               </div>
               <div className="site-slogan">

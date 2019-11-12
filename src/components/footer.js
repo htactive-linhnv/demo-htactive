@@ -1,5 +1,7 @@
 import React from "react"
-// import Logo from "../contents/assets/images/logo_dark_gray.png"
+
+import Logo from "../data/images/logo_dark_gray.png"
+
 
 const Footer = () => {
   return (
@@ -11,7 +13,7 @@ const Footer = () => {
               <div className="footer-content">
                 <div className="logo">
                   <a href="">
-                    {/* <img src={Logo} alt="" /> */}
+                    <img src={Logo} alt="" />
                   </a>
                 </div>
                 <div className="row">
@@ -60,7 +62,7 @@ const Footer = () => {
                         <i className="fa fa-map-marker pr-10"></i>{" "}
                         <span>
                           150 Duy Tan
-                          <br />>
+                          <br />
                           <span style={{marginLeft: "30px"}}>
                             Da Nang, Viet Nam
                           </span>
