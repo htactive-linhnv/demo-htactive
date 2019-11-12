@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import '../Home3rd/Home3rd.css'
-const Home3rd = ({ data }) => {
+const Home3rd = ({test}) => {
     const [toggleStatus, setToggleStatus] = useState(0)
     const toggleTab = (status) => {
         toggleStatus !== status ? setToggleStatus(status) : setToggleStatus(0)
     }
-    const dataUse = data.why.edges[0].node.frontmatter.home_why_vn || {}
+    const dataUse = test.why.edges[0].node.frontmatter.home_why_vn || {}
     const dataArr = Object.values(dataUse).map(item => item) || []
     const tabSelect = toggleStatus !== 0 ? dataArr[toggleStatus-1] : dataArr[0] || {tab_title_vn: "Hello"}
     console.log(dataUse,dataArr,tabSelect,"???");

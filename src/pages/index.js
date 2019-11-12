@@ -7,8 +7,8 @@ import SEO from "../components/seo"
 
 
 
-export default (props) => {
-  console.log(props);
+export default ({data}) => {
+  console.log(data);
   return (
     <Layout>
       <SEO title="Home" />
@@ -34,8 +34,8 @@ export default (props) => {
         </p>
       </form>
       <div className="container">
-        <Home2nd data={props.data} />
-        <Home3rd data={props.data} />
+        <Home2nd test={data} />
+        <Home3rd test={data} />
       </div>
 
     </Layout >
