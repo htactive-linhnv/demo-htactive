@@ -6,7 +6,7 @@ const Home3rd = ({ data }) => {
         toggleStatus !== status ? setToggleStatus(status) : setToggleStatus(0)
     }
     const dataUse = data.why.edges[0].node.frontmatter.home_why_vn || {}
-    const dataArr = Object.values(dataUse).map(item => item)
+    const dataArr = Object.values(dataUse).map(item => item) || []
     const tabSelect = toggleStatus !== 0 ? dataArr[toggleStatus-1] : dataArr[0]
     const navTabs = dataArr.map((item, index) => {
         const position = index + 1

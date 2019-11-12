@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 import '../Home2nd/Home2nd.css'
 import ParagraphLeft from '../ParagraphLeft/ParagraphLeft';
 export default ({ data }) => {
-    const dataUse = data.about.edges[0].node.frontmatter.home_about_vn|| {}
-    const dataArr = Object.values(dataUse).map(item => item)
+    const dataUse = data.about.edges[0].node.frontmatter.home_about_vn || {}
+    const dataArr = Object.values(dataUse).map(item => item) || []
 
     const [toggleStatus, setToggleStatus] = useState(0)
     const [panelClicked, setPanelClicked] = useState(false)
