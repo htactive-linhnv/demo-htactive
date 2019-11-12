@@ -4,7 +4,6 @@ import '../Home2nd/Home2nd.css'
 import ParagraphLeft from '../ParagraphLeft/ParagraphLeft';
 export default ({test}) => {
     console.log(test);
-    
     const dataUse = test.about.edges[0].node.frontmatter.home_about_vn || {}
     const dataArr = Object.values(dataUse).map(item => item) || []
 
