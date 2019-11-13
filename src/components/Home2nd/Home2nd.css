@@ -57,7 +57,7 @@
   text-align: justify;
   background: #fafafa;
   line-height: 20px;
-  transition: visibility  2s, max-height  2s linear;
+  transition: max-height  2s linear;
   padding : 0 10px!important;
   letter-spacing: 0.3px;
 }

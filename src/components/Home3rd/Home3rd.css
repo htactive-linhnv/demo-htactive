@@ -50,3 +50,27 @@
   color: #999999 !important;
   border-left: 3px solid #cd3c2e;
 }
+.vertical .nav-tabs > li {
+  cursor: pointer;
+}
+.fade-in--quick {
+  -webkit-animation: fade-in 1s cubic-bezier(0.9, 0.575, 0.565, 1) both;
+  animation: fade-in 1s cubic-bezier(0.9, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

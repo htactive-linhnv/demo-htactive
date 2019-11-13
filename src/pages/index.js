@@ -4,15 +4,17 @@ import Home2nd from '../components/Home2nd/Home2nd'
 import Home3rd from '../components/Home3rd/Home3rd'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import FooterTop from "../components/FooterTop/FooterTop"
+import Contact from "../components/Contact"
 
 
 
 export default ({data}) => {
-  console.log(data);
+  // console.log(data);
   return (
     <Layout>
       <SEO title="Home" />
-      <form name="contact" method="POST" data-netlify="true">
+      {/* <form name="contact" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>Your Name: <input type="text" name="name" /></label>
@@ -32,15 +34,16 @@ export default ({data}) => {
         <p>
           <button type="submit">Send</button>
         </p>
-      </form>
+      </form> */}
       <div className="container">
         <Home2nd test={data} />
         <Home3rd test={data} />
       </div>
+      <Contact/>
+      <FooterTop/>
 
     </Layout >
   )
-
 }
 
 
@@ -51,7 +54,7 @@ query {
       edges {
         node {
           frontmatter {
-            home_why_vn {
+            home_why_vn  {
               tab1_vn {
                 tab_desc_vn
                 tab_img_vn

@@ -1,0 +1,15 @@
+.float-img1 {
+    transform: translate3d(0px, 0px, 0px);
+}
+.float-img2 {
+    transform: translate3d(-143px, 0px, 0px);
+}
+.float-img3 {
+    transform: translate3d(-268px, 0px, 0px);
+}
+.float-img4 {
+    transform: translate3d(-400px, 0px, 0px);
+}
+.float-img5 {
+    transform: translate3d(-540px, 0px, 0px);
+}
