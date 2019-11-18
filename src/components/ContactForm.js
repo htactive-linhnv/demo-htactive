@@ -2,9 +2,8 @@ import React from 'react';
 import GoogleMap from '../components/GoogleMap/GoogleMap'
 const ContactForm = () => {
     return (
-        < >
+        <React.Fragment>
             <GoogleMap />
-
             <div className="container">
                 <div >
                     <h1 className="page-title"><br /> CONTACT</h1>
@@ -59,7 +58,7 @@ const ContactForm = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </React.Fragment>
     );
 };
 

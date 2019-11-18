@@ -16,7 +16,6 @@ const Home3rd = ({ test }) => {
     const dataUse = test.why.edges[1].node.frontmatter.home_why_vn || {}
     const dataArr = Object.values(dataUse).map(item => item) || []
     const tabSelect = toggleStatus !== 0 ? dataArr[toggleStatus - 1] : dataArr[0] || { tab_title_vn: "Hello" }
-    // console.log(dataUse,dataArr,tabSelect,"???");
 
     const navTabs = dataArr.map((item, index) => {
         const position = index + 1

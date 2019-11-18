@@ -1,200 +1,101 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
+import BannerAnim from "rc-banner-anim"
+import QueueAnim from "rc-queue-anim"
 import Slide1 from "../../data/images/slider-1.jpg"
-import Slide3 from "../../data/images/slider-3.jpg"
 import Slide2 from "../../data/images/slider-background.jpg"
-import MacIcon from "../../data/images/slider-2.png"
+import Slide3 from "../../data/images/slider-3.jpg"
+import MacImg from "../../data/images/slider-2.png"
+import BannerLeft from "./bannerLeft"
+import ProgressBar from "./progressBar"
 
+const { Element } = BannerAnim
+const BgElement = Element.BgElement
 const Banner = () => {
-  const listImg = [Slide1, Slide2, Slide3]
-  const [counter, setCounter] = useState(0)
-  const [progressTime, setTimer] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTimer(0)
-      setCounter(counter =>
-        counter === 2 ? (counter = 0) : (counter = counter + 1)
-      )
-    }, 10000)
-    setInterval(() => {
-      setTimer(progressTime => (progressTime += 0.1))
-    }, 10)
-
-    return () => {
-      clearInterval(interval)
-    }
-  }, [])
-  const handleCounter = value => {
-    if (value === "prev") {
-      counter === 0 ? setCounter(2) : setCounter(counter - 1)
+  const [showbar, setBar] = useState(true)
+  const handleProgressBar = e => {
+    if (e === "after") {
+      setBar(true)
     } else {
-      counter === 2 ? setCounter(0) : setCounter(counter + 1)
+      setBar(false)
     }
   }
 
+  const data = [
+    {
+      bg: `${Slide1}`,
+      title: "HT Active - Professional Software Solutions",
+      lead: "Provide Best Services+New Technology+Best Quality+Support 24/7",
+      more: "And much more ...",
+      img: "",
+    },
+
+    {
+      bg: `${Slide2}`,
+      title: "We Provide All You Need",
+      lead: "Website Application+Windows Application+Mobile Application+Game",
+      more: "And more software solutions...",
+      img: `${MacImg}`,
+    },
+    {
+      bg: `${Slide3}`,
+      title: "Satisfaction Is What You Need",
+      lead:
+        "Clean and unique design+After sale support+Cross-Browser/ Cross-Platform Compatible+Young and Brilliant Team",
+      more: "Dont miss out!",
+      img: "",
+    },
+  ]
   return (
     <div className="banner">
-      <div className="slideshow">
-        <div
-          className="slider-banner-container"
-          style={{ backgroundImage: `url(${listImg[counter]})` }}
-        >
-          <div className="container banner-content">
-            {counter === 0 && (
-              <div className="banner-left-heading col-sm-9">
-                <h2 className="tp-caption default_bg large sfr tp-resizeme start">
-                  HT Active - Professional Software Solutions
-                </h2>
-                <ul>
-                  <li>
-                    <span className="icon-check dark_gray_bg">
-                      <i className="fa fa-check"></i>
-                    </span>
-                    <span className="right-text white_bg ">
-                      Provide Best Services
-                    </span>
-                  </li>
-                  <li>
-                    <span className="icon-check dark_gray_bg">
-                      <i className="fa fa-check"></i>
-                    </span>
-                    <span className="right-text white_bg ">New Technology</span>
-                  </li>
-                  <li>
-                    <span className="icon-check dark_gray_bg">
-                      <i className="fa fa-check"></i>
-                    </span>
-                    <span className="right-text white_bg ">Best Quality</span>
-                  </li>
-                  <li>
-                    <span className="icon-check dark_gray_bg">
-                      <i className="fa fa-check"></i>
-                    </span>
-                    <span className="right-text white_bg ">Support 24/7</span>
-                  </li>
-                  <li>
-                    <span className="dark_gray_bg right-text">
-                      And much more ...
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            )}
-            {counter === 1 && (
-              <>
-                <div className="banner-left-heading col-sm-6">
-                  <h2 className="tp-caption default_bg large sfr tp-resizeme start">
-                    We Provide All You Need
-                  </h2>
-                  <ul>
-                    <li className="tp-caption ">
-                      <span className="icon-check dark_gray_bg">
-                        <i className="fa fa-check"></i>
-                      </span>
-                      <span className="right-text white_bg ">
-                        Website Application
-                      </span>
-                    </li>
-                    <li>
-                      <span className="icon-check dark_gray_bg">
-                        <i className="fa fa-check"></i>
-                      </span>
-                      <span className="right-text white_bg ">
-                        Windows Application
-                      </span>
-                    </li>
-                    <li>
-                      <span className="icon-check dark_gray_bg">
-                        <i className="fa fa-check"></i>
-                      </span>
-                      <span className="right-text white_bg ">
-                        Mobile Application
-                      </span>
-                    </li>
-                    <li>
-                      <span className="icon-check dark_gray_bg">
-                        <i className="fa fa-check"></i>
-                      </span>
-                      <span className="right-text white_bg ">Game</span>
-                    </li>
-                    <li>
-                      <span className="dark_gray_bg right-text">
-                        And more software solutions...
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-sm-6 banner-right-mac">
-                  <img src={MacIcon} alt="mac" />
-                </div>
-              </>
-            )}
-            {counter === 2 && (
-              <div className="banner-left-heading col-sm-6">
-                <h2 className="tp-caption default_bg large sfr tp-resizeme start">
-                  Satisfaction is What you need
-                </h2>
-                <ul>
-                  <li className="tp-caption ">
-                    <span className="icon-check dark_gray_bg">
-                      <i className="fa fa-check"></i>
-                    </span>
-                    <span className="right-text white_bg ">
-                      Clean and unique design
-                    </span>
-                  </li>
-                  <li>
-                    <span className="icon-check dark_gray_bg">
-                      <i className="fa fa-check"></i>
-                    </span>
-                    <span className="right-text white_bg ">
-                      After sale support
-                    </span>
-                  </li>
-                  <li>
-                    <span className="icon-check dark_gray_bg">
-                      <i className="fa fa-check"></i>
-                    </span>
-                    <span className="right-text white_bg ">
-                      Cross-Browser/ Cross-Platform Compatible
-                    </span>
-                  </li>
-                  <li>
-                    <span className="icon-check dark_gray_bg">
-                      <i className="fa fa-check"></i>
-                    </span>
-                    <span className="right-text white_bg ">
-                      Young and Brilliant Team
-                    </span>
-                  </li>
-                  <li>
-                    <span className="dark_gray_bg right-text">
-                      Dont miss out!
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            )}
-          </div>
+      <BannerAnim
+        autoPlay
+        autoPlaySpeed={10000}
+        autoPlayEffect={false}
+        onChange={e => handleProgressBar(e)}
+      >
+        {data.map((item, index) => (
+          <Element
+            key={index}
+            prefixCls="banner-user-elem"
+            className="container"
+          >
+            <BgElement
+              key="bg"
+              className="bg"
+              style={{
+                width: "100%",
+                height: "100%",
+                backgroundImage: `url(${item.bg})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                position: "relative",
+              }}
+            />
+            <QueueAnim
+              name="QueueAnim"
+              className={`col-sm-10 banner-left-wrapper`}
+            >
+              {showbar && (
+                <BannerLeft
+                  showbar={showbar}
+                  title={item.title}
+                  lead={item.lead}
+                  more={item.more}
+                />
+              )}
 
-          <div
-            className="tp-leftarrow tparrows default round hidearrows"
-            onClick={() => handleCounter("prev")}
-          >
-            <span className="next-symbol"> &lt;</span>
-          </div>
-          <div
-            className="tp-rightarrow tparrows default round hidearrows"
-            onClick={() => handleCounter("next")}
-          >
-            <span className="next-symbol"> &gt;</span>
-          </div>
-          <div
-            className="tp-bannertimer tp-bottom"
-            style={{ width: `${progressTime}%` }}
-          ></div>
-        </div>
-      </div>
+              {item.img !== "" && (
+                <img
+                  src={`${item.img}`}
+                  alt="mac"
+                  className="macImg fade-in-right-4"
+                />
+              )}
+            </QueueAnim>
+          </Element>
+        ))}
+      </BannerAnim>
+      {showbar && <ProgressBar />}
     </div>
   )
 }

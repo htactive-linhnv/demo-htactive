@@ -5365,7 +5365,6 @@ ul.tweets li span {
 /* Isotope filtering
 ---------------------------------- */
 .isotope-container {
-	display: none;
 	margin-bottom: 40px;
 }
 .boxed .isotope-container.grid-space-0 .image-box img {

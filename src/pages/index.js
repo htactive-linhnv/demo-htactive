@@ -1,28 +1,50 @@
 import React, { useEffect, useState } from "react"
 import { Link, graphql } from "gatsby"
-import Home2nd from '../components/Home2nd/Home2nd'
-import Home3rd from '../components/Home3rd/Home3rd'
+import Home2nd from '../components/Home/Home2nd/Home2nd'
+import Home3rd from '../components/Home/Home3rd/Home3rd'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FooterTop from "../components/FooterTop/FooterTop"
-import BannerHome from "../components/BannerHome/BannerHome"
+import Banner from "../components/Home/banner"
+import BannerHome from '../components/BannerHome/BannerHome'
+import PageTop from "../components/Home/pageTop"
+import Services from "../components/Home/Home1st"
+import { changeColor } from '../state/app'
+import { connect, dispatch } from 'react-redux'
+const IndexPage = (props) => {
+  console.log(props, "???");
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Banner></Banner>
+      <PageTop/>
+      <Services/>
+      <div className="container">
+        <br></br>
+        <button onClick={() =>dispatch(props.changeColor("green"))}>Green</button>
+        <button onClick={() =>dispatch(props.changeColor("yellow"))}>Yellow</button>
+        <Home2nd test={props.data}  color={props.color}/>
+      </div>
+      <BannerHome />
+      <div className="container">
+        <Home3rd test={props.data} />
+      </div>
+      <FooterTop />
+    </Layout >
+  )
+}
 
-export default ({ data }) =>
-  <Layout>
-    <SEO title="Home" />
-    <div className="container">
-      <br></br>
-      <Home2nd test={data} />
-    </div>
-    <BannerHome />
-    <div className="container">
-      <Home3rd test={data} />
-    </div>
-    <FooterTop />
-  </Layout >
 
 
-
+const mapDispatchToProps = dispatch => {
+  return {
+    // dispatching plain actions
+    changeColor: (color) => dispatch(changeColor({ type: 'CHANGE_COLOR',color:color }))
+  }
+}
+export default connect(state => ({
+  color: state.app.color
+}), mapDispatchToProps)(IndexPage)
 
 
 export const query = graphql`

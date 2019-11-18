@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ParagraphLeft = () => {
+const ParagraphLeft = ({color}) => {
     return (
         <div class="col-lg-6 col-md-12">
             <h2 class="title">Meet the team - HT Active</h2>
@@ -14,7 +14,7 @@ const ParagraphLeft = () => {
                 </div>
             </div>
             <p>HT Active wouldn’t be what it is without the incredible and loving contributions of our member. Thanks to everyone who’s put their heart and their energy into this community.</p>
-            <a href="/about" class="btn btn-white">Read More</a>
+            <a href="/about" class="btn btn-white" style={{color:`${color}`}}>Read More</a>
             <div class="space hidden-md hidden-lg"></div>
         </div>
     );

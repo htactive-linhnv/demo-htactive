@@ -147,16 +147,20 @@ const HeaderTop = () => {
                   {openDropdown && (
                     <ul className="dropdown-menu dropdown-menu-right dropdown-animation">
                       <li
-                        onClick={() => (
-                          setLanguage("English"), setOpenDropdown(false)
-                        )}
+                        onClick={() => {
+                          setLanguage("English")
+                          setOpenDropdown(false)
+                        }
+                        }
                       >
                         <a className="btn-link" href="/">English</a>
                       </li>
                       <li
-                        onClick={() => (
-                          setLanguage("Tiếng Việt"), setOpenDropdown(false)
-                        )}
+                        onClick={() => {
+                          setLanguage("Tiếng Việt")
+                          setOpenDropdown(false)
+                        }
+                        }
                       >
                         <a className="btn-link" href="/">Tiếng Việt</a>
                       </li>
