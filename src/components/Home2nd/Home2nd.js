@@ -14,7 +14,7 @@ Known for its loyalty and faithfulness,
 it can be found as a welcome guest in many households across the world.
 `;
 export default ({ test }) => {
-    const dataUse = test.about.edges[0].node.frontmatter.home_about_vn || {}
+    const dataUse = test.about.edges[1].node.frontmatter.home_about_vn || {}
     const dataArr = Object.values(dataUse).map(item => item) || []
 
     const [toggleStatus, setToggleStatus] = useState(0)
