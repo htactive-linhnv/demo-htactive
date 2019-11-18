@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 #why {
   margin: 0 auto;
   margin-bottom: 50px;
@@ -56,6 +58,13 @@
 .fade-in--quick {
   -webkit-animation: fade-in 1s cubic-bezier(0.9, 0.575, 0.565, 1) both;
   animation: fade-in 1s cubic-bezier(0.9, 0.575, 0.565, 1) both;
+}
+.tab-content h1 {
+  font-size: 34px;
+  font-weight:bold;
+}
+.vertical {
+  padding:0!important;
 }
 @-webkit-keyframes fade-in {
   0% {

@@ -1,50 +1,27 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link, graphql } from "gatsby"
 import Home2nd from '../components/Home2nd/Home2nd'
 import Home3rd from '../components/Home3rd/Home3rd'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FooterTop from "../components/FooterTop/FooterTop"
-import Contact from "../components/Contact"
+import BannerHome from "../components/BannerHome/BannerHome"
+
+export default ({ data }) =>
+  <Layout>
+    <SEO title="Home" />
+    <div className="container">
+      <br></br>
+      <Home2nd test={data} />
+    </div>
+    <BannerHome />
+    <div className="container">
+      <Home3rd test={data} />
+    </div>
+    <FooterTop />
+  </Layout >
 
 
-
-export default ({data}) => {
-  // console.log(data);
-  return (
-    <Layout>
-      <SEO title="Home" />
-      {/* <form name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" />
-        <p>
-          <label>Your Name: <input type="text" name="name" /></label>
-        </p>
-        <p>
-          <label>Your Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
-          <label>Your Role: <select name="role[]" multiple>
-            <option value="leader">Leader</option>
-            <option value="follower">Follower</option>
-          </select></label>
-        </p>
-        <p>
-          <label>Message: <textarea name="message"></textarea></label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form> */}
-      <div className="container">
-        <Home2nd test={data} />
-        <Home3rd test={data} />
-      </div>
-      <Contact/>
-      <FooterTop/>
-
-    </Layout >
-  )
-}
 
 
 

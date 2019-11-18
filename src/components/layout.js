@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-
+import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 import Header from "./header/header"
 import Footer from "./footer"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,12 +25,16 @@ import "./layout.css"
 
 
 const Layout = ({ children }) => {
+  const color = "gray"
   return (
     <div className="page-wrapper">
-      <Header />
+      <Header color={color} />
       <main>{children}</main>
       <Footer />
-    </div>
+      <ScrollUpButton AnimationDuration={1500} ShowAtPosition={0}
+      />
+      <div ><i className="fa fa-angle-up"></i></div>
+    </div >
   )
 }
 

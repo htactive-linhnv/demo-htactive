@@ -24,16 +24,16 @@ const NavBar = () => {
       >
         <ul className="nav navbar-nav navbar-right">
           <li className="active">
-            <a href="">Home</a>
+            <a href="/">Home</a>
           </li>
           <li className="">
             <a href="services">Service</a>
           </li>
           <li className="">
-            <a href="products">Portfolios</a>
+            <a href="portfolio">Portfolios</a>
           </li>
           <li className="">
-            <a href="news">Blogs</a>
+            <a href="blog">Blogs</a>
           </li>
           <li className="">
             <a href="contact">Contact</a>

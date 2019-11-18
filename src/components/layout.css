@@ -21,7 +21,38 @@ body {
   height: 450px;
   background-size: cover;
 }
-
+.ScrollUpButton__Container {
+  background-color: transparent!important;
+  color: transparent!important;
+  height: 30px;
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  width: 30px;
+  transition: opacity 0.5s ease-in-out 0s, right;
+  cursor: pointer;
+  opacity: 1;
+  right: 10px!important;
+  z-index: 10000;
+  fill: white;
+  padding-bottom: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+.ScrollUpButton__Container > svg {
+  transform: scale(0)
+}
+.fa-angle-up {
+  font-size: 33px;
+  background: black;
+  color: white;
+  padding: 6px 14px 10px 14px;
+  position: fixed;
+  z-index: 3;
+  right: 2px;
+  bottom: 7px;
+  cursor: pointer;
+}
 .tparrows {
   cursor: pointer;
 }

@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer">
         <div className="container">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-sm-12 col-md-12 col-xl-6" style={{marginLeft:"0!important"}}>
               <div className="footer-content">
                 <div className="logo">
                   <a href="">
@@ -17,7 +17,7 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className="row">
-                  <div className="col-sm-6">
+                  <div className="col-sm-12 col-md-6">
                     <p>Your satisfaction is our success!</p>
                     <ul className="social-links circle">
                       <li className="facebook">
@@ -56,7 +56,7 @@ const Footer = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-sm-6">
+                  <div className="col-sm-12 col-md-6">
                     <ul className="list-icons">
                       <li>
                         <i className="fa fa-map-marker pr-10"></i>{" "}
@@ -90,7 +90,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="space-bottom hidden-lg hidden-xs"></div>
-            <div className="col-sm-6 col-md-2">
+            <div className="col-sm-12 col-md-6 col-xl-2">
               <div className="footer-content">
                 <h2>Links</h2>
                 <nav>
@@ -114,7 +114,7 @@ const Footer = () => {
                 </nav>
               </div>
             </div>
-            <div className="col-sm-6 col-md-4">
+            <div className="col-sm-12 col-md-6 col-xl-4">
               <div className="footer-content">
                 <h2>CONNECT WITH US!</h2>
                 <iframe

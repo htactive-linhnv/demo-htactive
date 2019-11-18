@@ -7,7 +7,6 @@ import SEO from "../components/seo"
 const PortfolioPage = () => (
   <Layout>
     <SEO title="Portfolio" />
-    <Link to="/portfolio">Go to page 2</Link>
   </Layout>
 )
 
