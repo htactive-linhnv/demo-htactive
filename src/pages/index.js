@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
 import Home2nd from '../components/Home/Home2nd/Home2nd'
 import Home3rd from '../components/Home/Home3rd/Home3rd'
@@ -9,43 +9,27 @@ import Banner from "../components/Home/banner"
 import BannerHome from '../components/BannerHome/BannerHome'
 import PageTop from "../components/Home/pageTop"
 import Services from "../components/Home/Home1st"
-import { changeColor } from '../state/app'
-import { connect, dispatch } from 'react-redux'
-const IndexPage = (props) => {
-  console.log(props, "???");
+import { connect } from 'react-redux'
+
+const IndexPage = ({ data, color, footer }) => {
   return (
-    <Layout>
+    <Layout footer={footer}>
       <SEO title="Home" />
       <Banner></Banner>
-      <PageTop/>
-      <Services/>
-      <div className="container">
-        <br></br>
-        <button onClick={() =>dispatch(props.changeColor("green"))}>Green</button>
-        <button onClick={() =>dispatch(props.changeColor("yellow"))}>Yellow</button>
-        <Home2nd test={props.data}  color={props.color}/>
-      </div>
+      <PageTop />
+      <Services color={color} />
+      <Home2nd test={data} color={color} />
       <BannerHome />
-      <div className="container">
-        <Home3rd test={props.data} />
-      </div>
+      <Home3rd test={data} />
       <FooterTop />
     </Layout >
   )
 }
 
-
-
-const mapDispatchToProps = dispatch => {
-  return {
-    // dispatching plain actions
-    changeColor: (color) => dispatch(changeColor({ type: 'CHANGE_COLOR',color:color }))
-  }
+const mapStateToProps = ({ color, footer }) => {
+  return { color, footer }
 }
-export default connect(state => ({
-  color: state.app.color
-}), mapDispatchToProps)(IndexPage)
-
+export default connect(mapStateToProps, null)(IndexPage)
 
 export const query = graphql`
 query {

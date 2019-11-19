@@ -3,9 +3,9 @@ import React from "react"
 import Logo from "../data/images/logo_dark_gray.png"
 
 
-const Footer = () => {
+const Footer = ({footer}) => {
   return (
-    <footer id="footer">
+    <footer id="footer" className={footer}>
       <div className="footer">
         <div className="container">
           <div className="row">

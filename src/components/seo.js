@@ -68,7 +68,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+    <link rel="stylesheet" id = "skinCSS" type="text/css" href= "skins/blue.css" />
+      </Helmet>
   )
 }
 

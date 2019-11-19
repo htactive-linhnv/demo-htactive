@@ -6,7 +6,7 @@ import { Collapse } from 'antd';
 import QueueAnim from 'rc-queue-anim';
 import TextCenter from '../TextCenter/TextCenter';
 const { Panel } = Collapse;
-export default ({ color,test }) => {
+export default ({ color, test }) => {
     const dataUse = test.about.edges[1].node.frontmatter.home_about_vn || {}
     const dataArr = Object.values(dataUse).map(item => item) || []
     const fontAwesome = ["fa fa-gavel customwidth", "fa fa-star customwidth", "fa fa-usd customwidth", "fa fa-weixin customwidth"]
@@ -17,10 +17,10 @@ export default ({ color,test }) => {
         </Panel>
     ))
     return (
-        <React.Fragment>
+        <div className="container">
             <TextCenter />
-            <div class="row home2nd">
-                <ParagraphLeft color={color}/>
+            <div className="row home2nd">
+                <ParagraphLeft color={color} />
                 <div className="col-lg-6 col-md-12">
                     <div >
                         <QueueAnim className="demo-content">
@@ -33,7 +33,7 @@ export default ({ color,test }) => {
                     </div>
                 </div>
             </div>
-        </React.Fragment>
+        </div>
 
 
 

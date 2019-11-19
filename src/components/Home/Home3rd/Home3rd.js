@@ -8,7 +8,6 @@ const Home3rd = ({ test }) => {
     }
     const resetAnimation = () => {
         const element = document.getElementById('tab-pane')
-        console.log(element);
         element.classList.remove("fade-in--quick");
         void element.offsetWidth;
         element.classList.add("fade-in--quick");
@@ -20,7 +19,7 @@ const Home3rd = ({ test }) => {
     const navTabs = dataArr.map((item, index) => {
         const position = index + 1
         return (
-            <li onClick={() => {
+            <li key={index} onClick={() => {
                 toggleTab(position)
                 resetAnimation()
             }} className={toggleStatus === position ? "active" : ""}>
@@ -31,8 +30,8 @@ const Home3rd = ({ test }) => {
     )
 
     return (
-        <React.Fragment>
-            <TextCenter/>
+        <div className="container">
+        <TextCenter />
             <div className="vertical hc-tabs col-md-12">
                 <div className="arrow hidden-sm hidden-xs"><i className="fa fa-caret-up" /></div>
                 <ul className="nav nav-tabs" role="tablist">
@@ -50,7 +49,7 @@ const Home3rd = ({ test }) => {
                     </div>
                 </div>
             </div>
-        </React.Fragment>
+        </div>
 
     );
 };
