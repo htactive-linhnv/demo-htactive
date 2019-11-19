@@ -1,6 +1,7 @@
-import React from "react"
+import React, {useState} from "react"
 
 const NavBar = () => {
+  const [openDrop, setOpenDrop]=useState(false)
   return (
     <nav className="navbar navbar-default" role="navigation">
     <div className="container-fluid">
@@ -8,8 +9,8 @@ const NavBar = () => {
         <button
           type="button"
           className="navbar-toggle"
-          data-toggle="collapse"
-          data-target="#navbar-collapse-1"
+        
+          onClick={()=>setOpenDrop(!openDrop)}
         >
           <span className="sr-only">Toggle navigation</span>
           <span className="icon-bar"></span>
@@ -20,7 +21,8 @@ const NavBar = () => {
 
       <div
         className="collapse navbar-collapse"
-        id="navbar-collapse-1"
+         onMouseLeave={()=> setOpenDrop(false)}
+         style={{display:`${openDrop?"block":"none"}`}}
       >
         <ul className="nav navbar-nav navbar-right">
           <li className="active">

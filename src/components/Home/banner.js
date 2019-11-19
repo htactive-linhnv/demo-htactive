@@ -57,7 +57,7 @@ const Banner = () => {
           <Element
             key={index}
             prefixCls="banner-user-elem"
-            className="container"
+            className="container"            
           >
             <BgElement
               key="bg"
@@ -77,7 +77,7 @@ const Banner = () => {
             >
               {showbar && (
                 <BannerLeft
-                  showbar={showbar}
+                  
                   title={item.title}
                   lead={item.lead}
                   more={item.more}
@@ -89,6 +89,7 @@ const Banner = () => {
                   src={`${item.img}`}
                   alt="mac"
                   className="macImg fade-in-right-4"
+                 
                 />
               )}
             </QueueAnim>

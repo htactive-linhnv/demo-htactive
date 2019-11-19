@@ -1,7 +1,7 @@
 import React from "react"
 const Services = () => {
   return (
-    <section className="main-container gray-bg" style={{ marginTop: 0 }}>
+    <section className="main-container " style={{ marginTop: 0, backgroundColor:"#f1f1f1" }}>
       <div className="main">
         <div className="container">
           <div className="row">
