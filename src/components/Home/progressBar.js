@@ -22,7 +22,7 @@ class ProgressBar extends React.Component {
     let { progressTime } = this.state
     return (
       <div
-        className="tp-bannertimer tp-bottom"
+        className="tp-bannertimer tp-bottom "
         style={{ width: `${progressTime}%` }}
       ></div>
     )
