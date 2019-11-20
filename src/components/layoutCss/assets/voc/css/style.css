@@ -84,7 +84,6 @@ h6 {
     width: auto!important;
 }
 }
-
 @media (min-width: 992px) {
   .title {
     margin-top: 0;
@@ -111,7 +110,6 @@ h6 {
   }
   .banner-title {
     padding: 5px;
-    margin-top: 15px!important;
   }
   .banner-left-heading ul {
     padding-left: 0 !important;
@@ -133,7 +131,7 @@ h6 {
     padding: 0px;
     letter-spacing: 0px;
     font-size: 22px;
-    padding: 5px 10px 0 10px;
+    padding: 3px 7px 0 7px;
   }
 
   .banner-left-wrapper {
@@ -157,7 +155,13 @@ h6 {
     font-size: 22px;
     padding: 4px 5px 6px 5px;
   }
-
+  .macImg {
+    width: 350px;
+    height: auto;
+    position: absolute!important;
+    right:17%!important;
+    top: 40px!important;
+  }
 }
 
 /* Medium devices (desktops, tablets, 769px and up) */
@@ -165,16 +169,6 @@ h6 {
   .title {
     margin-top: 0;
   }
-  .list-card .card-title {
-    min-height: 40px;
-    height: 70px;
-
-   }
-   .list-card .card-content {
-    min-height: 40px;
-    height: 70px;
-
-   }
   .header-fixed {
     display: flex;
     flex-direction: column;
@@ -195,7 +189,6 @@ h6 {
   
   .banner-title {
     padding: 10px 5px;
-    margin-top: 20px;
   }  
   .icon-check {
     transition: all 0s ease 0s;
@@ -205,7 +198,7 @@ h6 {
     padding: 0px;
     letter-spacing: 0px;
     font-size: 22px;
-    padding: 5px 10px 0 10px;
+    padding: 3px 7px 0 7px;
   }
 
   .banner-left-wrapper {
@@ -231,7 +224,7 @@ h6 {
     width: 30%;
     height: auto;
     position: absolute!important;
-    right: 15px;
+    right: 20px;
     top: 20px;
   }
 }
@@ -550,7 +543,7 @@ tbody {
     border-width: 0px;
     margin: 0px;
     letter-spacing: 0px;
-    padding: 1px 7px;
+    padding: 1px 5px;
   }
 }
 /* 2 Layout
@@ -2268,7 +2261,7 @@ tbody {
     position: absolute!important;
     right: 20px;
     width: 35%;
-    top: 10px;
+    top: 15%;
     height: auto;
   }
   .banner-left-wrapper {
@@ -6274,7 +6267,12 @@ ul.tweets li span {
   font-size: 18px;
   line-height: 26px;
 }
-
+.owl-prev:after {
+  content: "\e87c";
+}
+.owl-next:after {
+  content: "\e87d";
+}
 .no-touch .owl-controls.clickable .owl-buttons div:hover {
   filter: Alpha(Opacity=100);
   opacity: 1;

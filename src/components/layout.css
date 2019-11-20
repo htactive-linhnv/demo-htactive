@@ -49,7 +49,10 @@ body {
 .list-card {
   display: flex;
 }
-
+.banner-anim {
+  display: flex;
+  justify-content: space-between;
+}
 /*Portfolio*/
 .nav-pills li p {
   border-radius: 0;

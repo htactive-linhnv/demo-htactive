@@ -14,7 +14,7 @@ class BannerLeft extends React.Component {
             this.setState({
                 fadeOut: true
             })
-        }, 900000);
+        }, 9000);
     }
     componentWillUnmount() {
         clearTimeout(this.timerID)
@@ -41,7 +41,7 @@ class BannerLeft extends React.Component {
                         </li>
                     ))}
                     <li>
-                        <span className={`dark_gray_bg right-text tp-resizeme  ${fadeOut ? "fade-out-right-4" : "fade-in-left-5"}`}>
+                        <span className={`dark_gray_bg icon-check tp-resizeme  ${fadeOut ? "fade-out-right-4" : "fade-in-left-5"}`}>
                             {more}
                         </span>
                     </li>
