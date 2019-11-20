@@ -72,6 +72,7 @@ body {
    
 }
 
+
 @media (min-width: 468px) {
   .col-sm-4 {
     flex: none!important;
