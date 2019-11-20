@@ -10,7 +10,11 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+const SEO = ({ description, lang, meta, title }) => {
+  // const skinCSS = document.getElementById('skinCSS')
+  // console.log(localStorage.getItem('color'),"yo",skinCSS)
+  // if (skinCSS) setTimeout(() => skinCSS.href = `skins/${localStorage.getItem('color')}.css`, 0)  
+
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -69,8 +73,9 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-    <link rel="stylesheet" id = "skinCSS" type="text/css" href= "skins/blue.css" />
-      </Helmet>
+    <link rel="stylesheet" id="skinCSS" type="text/css" href="skins/red.css" />
+
+    </Helmet>
   )
 }
 

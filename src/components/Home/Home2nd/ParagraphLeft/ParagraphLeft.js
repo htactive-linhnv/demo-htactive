@@ -14,7 +14,7 @@ const ParagraphLeft = ({ color }) => {
                 </div>
             </div>
             <p>HT Active wouldn’t be what it is without the incredible and loving contributions of our member. Thanks to everyone who’s put their heart and their energy into this community.</p>
-            <a href="/about" className="btn btn-white" style={{ color: `${color}` }}>Read More</a>
+            <a href="/about" className="btn btn-white">Read More</a>
             <div className="space hidden-md hidden-lg"></div>
         </div>
     );

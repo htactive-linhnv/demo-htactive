@@ -97,7 +97,7 @@ const Banner = () => {
             )}
           </Element>
         ))}
-      </BannerAnim>
+      </BannerAnim >
       {showbar && <ProgressBar />}
     </div>
   )
