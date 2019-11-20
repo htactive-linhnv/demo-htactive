@@ -16,8 +16,8 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
     const colorList = [
         'red', 'blue', 'green', 'orange', 'pink', 'purple', 'yellow'
     ]
-    const colorSelect = colorList.map(item =>
-        <li className={`${item} ` + (item === color ? 'selected' : '')}
+    const colorSelect = colorList.map( (item, index) =>
+        <li key={index} className={`${item} ` + (item === color ? 'selected' : '')}
             data-style={item}
             title={item}
             onClick={() => {
@@ -25,7 +25,7 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
                 if (skinCSS) setTimeout(() => skinCSS.href = `skins/${item}.css`, 200)
                 changeColorClass(item)
             }} />
-    const colorSelect = colorList.map((item, index) => <li key={index} className={item} data-style={item} title={item} onClick={() => changeColor(item)} />
+   
     )
     const changeLayoutClass = (layout) => {
         let body = document.getElementsByTagName("BODY")[0]
