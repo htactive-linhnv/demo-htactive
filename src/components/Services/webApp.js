@@ -93,7 +93,7 @@ const WebApp = () => {
               className="image-boxes isotope-container row"
               style={{
                 position: "relative",
-                height: "701.328px",
+              
               }}
             >
               {data.map(item => (

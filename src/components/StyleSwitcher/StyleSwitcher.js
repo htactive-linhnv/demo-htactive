@@ -6,7 +6,7 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
     const colorList = [
         'red', 'blue', 'green', 'orange', 'pink', 'purple', 'yellow', 'blue', 'pink','green','purple', 'red'
     ]
-    const colorSelect = colorList.map(item => <li className={item} data-style={item} title={item} onClick={() => changeColor(item)} />
+    const colorSelect = colorList.map((item, index) => <li key={index} className={item} data-style={item} title={item} onClick={() => changeColor(item)} />
     )
     const changeLayoutClass = (layout) => {
         let body = document.getElementsByTagName("BODY")[0]

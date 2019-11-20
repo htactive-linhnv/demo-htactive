@@ -14,8 +14,10 @@ const Banner = () => {
   const [showbar, setBar] = useState(true)
   const handleProgressBar = e => {
     if (e === "after") {
+      console.log(e)
       setBar(true)
     } else {
+      console.log(e,"e before")
       setBar(false)
     }
   }
@@ -77,21 +79,22 @@ const Banner = () => {
             >
               {showbar && (
                 <BannerLeft
-                  showbar={showbar}
                   title={item.title}
                   lead={item.lead}
                   more={item.more}
                 />
               )}
-
-              {item.img !== "" && (
-                <img
-                  src={`${item.img}`}
-                  alt="mac"
-                  className="macImg fade-in-right-4"
-                />
-              )}
             </QueueAnim>
+            <div>
+              
+            </div>
+            {item.img !== "" && (
+              <img
+                src={`${item.img}`}
+                alt="mac"
+                className="macImg fade-in-right-4"
+              />
+            )}
           </Element>
         ))}
       </BannerAnim>

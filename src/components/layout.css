@@ -1,12 +1,7 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
-.dropdown-menu {
-  display: block !important;
-}
-.navbar-nav {
-  flex-direction: row !important;
-}
+
 .footer-nav {
   flex-direction: column !important;
 }
@@ -17,15 +12,11 @@ body {
   font-size: 24px;
   vertical-align: middle;
 }
-.slider-banner-container {
-  height: 450px;
-  background-size: cover;
-}
+
 .ScrollUpButton__Container {
   background-color: transparent !important;
   color: transparent !important;
-  height: 150px;
-  width: 150px;
+  height: 30px;
   position: fixed;
   right: 0;
   bottom: 20px;
@@ -54,6 +45,40 @@ body {
   bottom: 7px;
   cursor: pointer;
 }
+/*Home*/
+.list-card {
+  display: flex;
+}
+.banner-anim {
+  display: flex;
+  justify-content: space-between;
+}
+/*Portfolio*/
+.nav-pills li p {
+  border-radius: 0;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    color: #666666;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0!important;
+    cursor: pointer;
+}
+.nav-pills li.active p {
+  border: 1px solid #f3f3f3;
+  color: #e84c3d;
+  background-color: #fafafa;
+   
+}
+
+
+@media (min-width: 468px) {
+  .col-sm-4 {
+    flex: none!important;
+    max-width: 100%;
+  }
+}
 .tparrows {
   cursor: pointer;
 }
@@ -75,48 +100,14 @@ body {
   align-items: center;
   justify-content: center;
 }
-.banner-left-heading {
-  margin-top: 7%;
-}
-.banner-left-heading ul {
-  padding-left: 0 !important;
-  margin-top: 3em;
-}
-.banner-left-heading ul li {
-  margin-top: 1em;
-}
-.banner-left-heading ul li .right-text {
-  line-height: 33px;
-  font-size: 22px;
-  padding: 5px 5px 6px 5px;
-}
-.icon-check {
-  transition: all 0s ease 0s;
-  line-height: 33px;
-  border-width: 0px;
-  margin: 0px;
-  padding: 0px;
-  letter-spacing: 0px;
-  font-size: 22px;
-  padding: 5px;
-}
-.banner-right-mac {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
-}
+
 .footer-nav li a {
   background-color: transparent !important;
 }
 body {
   font-family: "Open Sans", sans-serif;
 }
-.dropdown-menu {
-  display: block !important;
-}
-.navbar-nav {
-  flex-direction: row !important;
-}
+
 .footer-nav {
   flex-direction: column !important;
 }
@@ -131,56 +122,15 @@ body {
 /*SERVICES*/
 
 /* Caption styles */
-.mc-caption {
+.banner {
+  width: 100%;
+  height: auto;
   position: relative;
-  top: -10%;
-}
-.tp-caption {
-  transition: none 0s ease 0s;
-  min-height: 0px;
-  min-width: 0px;
-  line-height: 54px;
-  border-width: 0px;
-  padding: 0px 15px;
-  letter-spacing: 0px;
-  font-size: 36px;
-  visibility: visible;
-  z-index: 0;
-  -webkit-animation: fade-in-right 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in-right 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-@-webkit-keyframes fade-in-right {
-  0% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes fade-in-right {
-  0% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 .next-symbol {
   font-size: 24px;
   vertical-align: middle;
-}
-.slider-banner-container {
-  height: 450px;
-  background-size: cover;
 }
 
 .tparrows {
@@ -204,37 +154,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.banner-left-wrapper {
-  position: absolute !important;
-  top: 12px;
-  left: 8%;
-}
-.banner-left-heading {
-  position: absolute;
-}
-.banner-left-heading ul {
-  padding-left: 0 !important;
-  margin-top: 3em;
-}
-.banner-left-heading ul li {
-  margin-top: 0.7em;
-  display: flex;
-}
-.banner-left-heading ul li .right-text {
-  line-height: 33px;
-  font-size: 22px;
-  padding: 4px 5px 6px 5px;
-}
 
-.icon-check {
-  transition: all 0s ease 0s;
-  line-height: 33px;
-  border-width: 0px;
-  margin: 0px;
-  letter-spacing: 0px;
-  font-size: 22px;
-  padding: 5px 10px 0 10px;
-}
 .fade-in-left-1 {
   -webkit-animation: fade-in-left 0.5s ease-out 0.1s alternate both;
   animation: fade-in-left 0.5s ease-out 0.1s alternate both;
@@ -422,23 +342,14 @@ body {
 
 /*------*/
 
-.macImg {
-  position: absolute;
-  right: 0;
-}
-
 /*Rc- animation slider banner*/
 
-.banner-anim {
-  position: relative;
-  overflow: hidden;
-  min-height: 72vh;
-}
 .banner-anim:hover .banner-anim-arrow,
 .banner-anim:hover .banner-anim-thumb {
   display: block;
 }
 .banner-anim-elem {
+  width: 100%;
   height: 100%;
 }
 .banner-anim-elem > * {
@@ -628,7 +539,6 @@ body {
   opacity: 0.5;
   z-index: 20;
 }
-
 div.style-switcher {
   background-color: #fff;
   color: #262626;
