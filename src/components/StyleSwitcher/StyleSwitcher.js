@@ -25,7 +25,6 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
                 if (skinCSS) setTimeout(() => skinCSS.href = `skins/${item}.css`, 200)
                 changeColorClass(item)
             }} />
-   
     )
     const changeLayoutClass = (layout) => {
         let body = document.getElementsByTagName("BODY")[0]
@@ -58,12 +57,12 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
                     <hr />
                     <h3>Layout Mode</h3>
                     <ul className="layoutChange">
-                        <li className={"wide" + (layout ==="wide" ? "selected" : "")} onClick={() => changeLayoutClass("wide")} >
+                        <li className="wide"  onClick={() => changeLayoutClass("wide")} >
                             <i className="fa fa-arrow-left pr-10" data-style="wid" title="wide" />
                             Wide
                             <i className="fa fa-arrow-right pl-10" />
                         </li>
-                        <li className={"boxed" + (layout ==="wide" ? "" : "selected")}  data-style="boxed" title="boxed" onClick={() => changeLayoutClass("boxed")} >
+                        <li className="boxed"  data-style="boxed" title="boxed" onClick={() => changeLayoutClass("boxed")} >
                             <i className="fa fa-arrow-right pr-10" />
                             Boxed
                             <i className="fa fa-arrow-left pl-10" />

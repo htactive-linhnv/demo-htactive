@@ -13,7 +13,6 @@ import { connect } from 'react-redux'
 
 const IndexPage = ({ data, color, footer }) => {
   console.log(localStorage.getItem("color"));
-  
   return (
     <Layout footer={footer}>
       <SEO title="Home" color={color}/>
