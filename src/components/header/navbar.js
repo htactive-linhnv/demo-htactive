@@ -1,8 +1,6 @@
 import React, {useState} from "react"
 
 const NavBar = ({color}) => {
-=======
-const NavBar = () => {
   const [openDrop, setOpenDrop]=useState(false)
   return (
     <nav className="navbar navbar-default" role="navigation">
