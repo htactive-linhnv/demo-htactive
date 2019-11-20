@@ -19,11 +19,12 @@ const HeaderFixed = ({ color }) => {
     case "yellow": logo = yellow; break
     default: logo = red; break;
   }
+const HeaderFixed = () => {
   return (
     <header className="header fixed clearfix">
       <div className="container">
-        <div className="row">
-          <div className="col-md-3">
+        <div className="row header-fixed">
+          <div className="col-md-3 ">
             <div className="header-left clearfix">
               <div className="logo">
                 <a href="">

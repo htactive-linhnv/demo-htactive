@@ -1,8 +1,11 @@
-import React, { useState } from "react"
+import React,{useState} from "react"
+
 
 const HeaderTop = () => {
   const [language, setLanguage] = useState("English")
   const [openDropdown, setOpenDropdown] = useState(false)
+  const [openToggle, setOpenToggle] = useState(false)
+
   return (
     <div className="header-top">
       <div className="container">
@@ -11,18 +14,18 @@ const HeaderTop = () => {
             <div className="header-top-first clearfix">
               <ul className="social-links clearfix hidden-xs">
                 <li className="twitter">
-                  <a target="_blank" href="https://twitter.com/hoangvhh">
+                  <a  href="https://twitter.com/hoangvhh">
                     <i className="fa fa-twitter"></i>
                   </a>
                 </li>
                 <li className="skype">
-                  <a target="_blank" href="skype:hoangvhh">
+                  <a  href="skype:hoangvhh">
                     <i className="fa fa-skype"></i>
                   </a>
                 </li>
                 <li className="linkedin">
                   <a
-                    target="_blank"
+                    
                     href="https://www.linkedin.com/in/hoang-pham-6236b8b7"
                   >
                     <i className="fa fa-linkedin"></i>
@@ -30,102 +33,107 @@ const HeaderTop = () => {
                 </li>
                 <li className="googleplus">
                   <a
-                    target="_blank"
+                    
                     href="https://plus.google.com/u/0/117715430853979848085"
                   >
                     <i className="fa fa-google-plus"></i>
                   </a>
                 </li>
                 <li className="youtube">
-                  <a target="_blank" href="http://www.youtube.com">
+                  <a  href="http://www.youtube.com">
                     <i className="fa fa-youtube-play"></i>
                   </a>
                 </li>
                 <li className="flickr">
                   <a
-                    target="_blank"
+                    
                     href="https://www.flickr.com/photos/124606867@N06/"
                   >
                     <i className="fa fa-flickr"></i>
                   </a>
                 </li>
                 <li className="facebook">
-                  <a target="_blank" href="https://www.facebook.com/htactive">
+                  <a  href="https://www.facebook.com/htactive">
                     <i className="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li className="pinterest">
-                  <a target="_blank" href="https://www.pinterest.com/vhhoang/">
+                  <a  href="https://www.pinterest.com/vhhoang/">
                     <i className="fa fa-pinterest"></i>
                   </a>
                 </li>
               </ul>
+           
               <div className="social-links hidden-lg hidden-md hidden-sm">
                 <div className="btn-group dropdown">
                   <button
                     type="button"
                     className="btn dropdown-toggle"
                     data-toggle="dropdown"
+                    onClick={()=>setOpenToggle(!openToggle)}
                   >
                     <i className="fa fa-share-alt"></i>
                   </button>
-                  <ul className="dropdown-menu dropdown-animation">
-                    <li className="twitter">
-                      <a target="_blank" href="https://twitter.com/hoangvhh">
-                        <i className="fa fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li className="skype">
-                      <a target="_blank" href="skype:hoangvhh">
-                        <i className="fa fa-skype"></i>
-                      </a>
-                    </li>
-                    <li className="linkedin">
-                      <a
-                        target="_blank"
-                        href="https://www.linkedin.com/in/hoang-pham-6236b8b7"
-                      >
-                        <i className="fa fa-linkedin"></i>
-                      </a>
-                    </li>
-                    <li className="googleplus">
-                      <a
-                        target="_blank"
-                        href="https://plus.google.com/u/0/117715430853979848085"
-                      >
-                        <i className="fa fa-google-plus"></i>
-                      </a>
-                    </li>
-                    <li className="youtube">
-                      <a target="_blank" href="http://www.youtube.com">
-                        <i className="fa fa-youtube-play"></i>
-                      </a>
-                    </li>
-                    <li className="flickr">
-                      <a
-                        target="_blank"
-                        href="https://www.flickr.com/photos/124606867@N06/"
-                      >
-                        <i className="fa fa-flickr"></i>
-                      </a>
-                    </li>
-                    <li className="facebook">
-                      <a
-                        target="_blank"
-                        href="https://www.facebook.com/htactive"
-                      >
-                        <i className="fa fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li className="pinterest">
-                      <a
-                        target="_blank"
-                        href="https://www.pinterest.com/vhhoang/"
-                      >
-                        <i className="fa fa-pinterest"></i>
-                      </a>
-                    </li>
-                  </ul>
+                  {openToggle && 
+                   <ul className="dropdown-menu dropdown-animation">
+                   <li className="twitter">
+                     <a  href="https://twitter.com/hoangvhh">
+                       <i className="fa fa-twitter"></i>
+                     </a>
+                   </li>
+                   <li className="skype">
+                     <a  href="skype:hoangvhh">
+                       <i className="fa fa-skype"></i>
+                     </a>
+                   </li>
+                   <li className="linkedin">
+                     <a
+                       
+                       href="https://www.linkedin.com/in/hoang-pham-6236b8b7"
+                     >
+                       <i className="fa fa-linkedin"></i>
+                     </a>
+                   </li>
+                   <li className="googleplus">
+                     <a
+                       
+                       href="https://plus.google.com/u/0/117715430853979848085"
+                     >
+                       <i className="fa fa-google-plus"></i>
+                     </a>
+                   </li>
+                   <li className="youtube">
+                     <a  href="http://www.youtube.com">
+                       <i className="fa fa-youtube-play"></i>
+                     </a>
+                   </li>
+                   <li className="flickr">
+                     <a
+                       
+                       href="https://www.flickr.com/photos/124606867@N06/"
+                     >
+                       <i className="fa fa-flickr"></i>
+                     </a>
+                   </li>
+                   <li className="facebook">
+                     <a
+                       
+                       href="https://www.facebook.com/htactive"
+                     >
+                       <i className="fa fa-facebook"></i>
+                     </a>
+                   </li>
+                   <li className="pinterest">
+                     <a
+                       
+                       href="https://www.pinterest.com/vhhoang/"
+                     >
+                       <i className="fa fa-pinterest"></i>
+                     </a>
+                   </li>
+                 </ul>
+                  }
+                 
                 </div>
               </div>
             </div>
