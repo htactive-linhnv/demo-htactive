@@ -1,6 +1,6 @@
 import React from "react"
 
-const NavBar = () => {
+const NavBar = ({color}) => {
   return (
     <nav className="navbar navbar-default" role="navigation">
     <div className="container-fluid">
@@ -23,7 +23,7 @@ const NavBar = () => {
         id="navbar-collapse-1"
       >
         <ul className="nav navbar-nav navbar-right">
-          <li className="active">
+          <li className={`${color} active`}>
             <a href="/">Home</a>
           </li>
           <li className="">

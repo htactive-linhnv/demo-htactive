@@ -1,12 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect, dispatch } from 'react-redux'
+import '../layoutCss/assets/plugins/style-switcher/style-switcher.css'
 const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeLayout }) => {
-    const [toggle, setToggle] = useState(false)
     const skinCSS = document.getElementById('skinCSS')
+    console.log("YOO");
+    const changeColorClass = (color) => {
+        changeColor(color);
+    }
+    if (localStorage.getItem('color')) {
+        if (skinCSS) setTimeout(() => skinCSS.href = `skins/${localStorage.getItem('color')}.css`, 200)
+        changeColorClass(localStorage.getItem('color'))
+    }
+    const [toggle, setToggle] = useState(true)
+    const [loading, setLoading] = useState(false)
     const colorList = [
-        'red', 'blue', 'green', 'orange', 'pink', 'purple', 'yellow', 'blue', 'pink','green','purple', 'red'
+        'red', 'blue', 'green', 'orange', 'pink', 'purple', 'yellow'
     ]
-    const colorSelect = colorList.map(item => <li className={item} data-style={item} title={item} onClick={() => changeColor(item)} />
+
+    const colorSelect = colorList.map(item =>
+        <li className={`${item} ` + (item === color ? 'selected' : '')}
+            data-style={item}
+            title={item}
+            onClick={() => {
+                localStorage.setItem("color", item)
+                if (skinCSS) setTimeout(() => skinCSS.href = `skins/${item}.css`, 200)
+                changeColorClass(item)
+            }} />
     )
     const changeLayoutClass = (layout) => {
         let body = document.getElementsByTagName("BODY")[0]
@@ -16,7 +35,7 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
     const toggleStyle = () => {
         setToggle(!toggle)
     }
-    if (skinCSS) setTimeout(() => skinCSS.href = `skins/${color}.css`, 200)
+
     return (
         <div>
             <span className="trigger" ><i className={"fa fa-linux " + (toggle ? "fade-out" : "fade-in")} onClick={toggleStyle}></i></span>
@@ -28,7 +47,7 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
                 <div className="clearfix body">
                     <h3>Predifined Colors</h3>
                     <ul className="styleChange">
-                       {colorSelect}
+                        {colorSelect}
                     </ul>
                     <hr />
                     <h3>Footer</h3>
@@ -39,11 +58,15 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
                     <hr />
                     <h3>Layout Mode</h3>
                     <ul className="layoutChange">
-                        <li className="wide" onClick={() => changeLayoutClass("wide")} >
-                            <i className="fa fa-arrow-left pr-10" />Wide<i className="fa fa-arrow-right pl-10" />
+                        <li className={"wide" + (layout ==="wide" ? "selected" : "")} onClick={() => changeLayoutClass("wide")} >
+                            <i className="fa fa-arrow-left pr-10" data-style="wid" title="wide" />
+                            Wide
+                            <i className="fa fa-arrow-right pl-10" />
                         </li>
-                        <li className="boxed selected" onClick={() => changeLayoutClass("boxed")} >
-                            <i className="fa fa-arrow-right pr-5" />Boxed<i className="fa fa-arrow-left pl-5" />
+                        <li className={"boxed" + (layout ==="wide" ? "" : "selected")}  data-style="boxed" title="boxed" onClick={() => changeLayoutClass("boxed")} >
+                            <i className="fa fa-arrow-right pr-10" />
+                            Boxed
+                            <i className="fa fa-arrow-left pl-10" />
                         </li>
                     </ul>
                     <h3>Patterns</h3>

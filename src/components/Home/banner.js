@@ -94,7 +94,7 @@ const Banner = () => {
             </QueueAnim>
           </Element>
         ))}
-      </BannerAnim>
+      </BannerAnim >
       {showbar && <ProgressBar />}
     </div>
   )
