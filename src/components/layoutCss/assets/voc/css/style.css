@@ -92,8 +92,6 @@ h6 {
     height: 70px;
     min-height: 40px;
   }
-
-
   .header-fixed {
     display: flex;
     flex-direction: row !important;

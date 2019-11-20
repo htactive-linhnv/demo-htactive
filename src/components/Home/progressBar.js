@@ -1,31 +1,24 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
-class ProgressBar extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      progressTime: 0,
+const ProgressBar = () => {
+  const [currentCount, setCount] = useState(0)
+  const timer = () => setCount(currentCount + 0.155)
+  useEffect(() => {
+    if (currentCount >= 100) {
+      return
     }
-  }
-  componentDidMount() {
-    this.timerID = setInterval(() => {
-      this.setState({
-        progressTime: (this.state.progressTime + 0.1),
-      })
-    }, 10)
-  }
-  componentWillUnmount() {
-    clearInterval(this.timerID)
-  }
-
-  render() {
-    let { progressTime } = this.state
-    return (
-      <div
-        className="tp-bannertimer tp-bottom "
-        style={{ width: `${progressTime}%` }}
-      ></div>
-    )
-  }
+    const id = setInterval(timer, 10)
+    return () => clearInterval(id)
+  }, [currentCount])
+  
+  return (
+  
+    <div
+      className="tp-bannertimer tp-bottom "
+      style={{ width: `${currentCount}%` }}
+    >
+       
+    </div>
+  )
 }
 export default ProgressBar
