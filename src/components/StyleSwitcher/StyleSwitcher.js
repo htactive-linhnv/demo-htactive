@@ -4,7 +4,7 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
     const [toggle, setToggle] = useState(false)
     const skinCSS = document.getElementById('skinCSS')
     const colorList = [
-        'red', 'blue', 'green', 'orange', 'pink', 'purple', 'yellow', 'blue', 'pink','purple', 'red'
+        'red', 'blue', 'green', 'orange', 'pink', 'purple', 'yellow', 'blue', 'pink','green','purple', 'red'
     ]
     const colorSelect = colorList.map((item, index) => <li key={index} className={item} data-style={item} title={item} onClick={() => changeColor(item)} />
     )
@@ -19,10 +19,10 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
     if (skinCSS) setTimeout(() => skinCSS.href = `skins/${color}.css`, 200)
     return (
         <div>
-            <a className={toggle ? "trigger fade-out" : "trigger fade-in"} href="#"><i className="fa fa-linux" onClick={toggleStyle}></i></a>
+            <span className="trigger" ><i className={"fa fa-linux " + (toggle ? "fade-out" : "fade-in")} onClick={toggleStyle}></i></span>
             <div className={"style-switcher opened" + (toggle ? " slide-in-left " : " slide-out-left ")} style={{ left: '0px' }}>
                 <div className="header">
-                    <a className="trigger" href="/"><i className="fa fa-times" onClick={toggleStyle} /></a>
+                    <span className="trigger" ><i className="fa fa-times" onClick={toggleStyle} /></span>
                     <h2>Style Switcher</h2>
                 </div>
                 <div className="clearfix body">
