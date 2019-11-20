@@ -681,7 +681,7 @@ div.style-switcher hr {
 div.style-switcher hr + h3 {
   margin-top: 0;
 }
-div.style-switcher a.trigger {
+div.style-switcher span.trigger {
   display: block;
   height: 45px;
   position: absolute;
@@ -697,7 +697,7 @@ div.style-switcher a.trigger {
   border: 1px solid #ddd;
   border-left: none;
 }
-div.style-switcher.opened a.trigger {
+div.style-switcher.opened span.trigger {
   right: -1px;
 }
 div.style-switcher ul {
@@ -925,6 +925,7 @@ div.style-switcher .dark-red:hover {
   top: 65px;
   left: 0;
   font-size: 1.8em;
+  overflow:auto;
 }
 
 .slide-in-left {
