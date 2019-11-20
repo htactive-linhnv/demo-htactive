@@ -1,5 +1,7 @@
 import React, {useState} from "react"
 
+const NavBar = ({color}) => {
+=======
 const NavBar = () => {
   const [openDrop, setOpenDrop]=useState(false)
   return (
@@ -24,7 +26,7 @@ const NavBar = () => {
          style={{display:`${openDrop?"block":"none"}`}}
       >
         <ul className="nav navbar-nav navbar-right">
-          <li className="active">
+          <li className={`${color} active`}>
             <a href="/">Home</a>
           </li>
           <li className="">

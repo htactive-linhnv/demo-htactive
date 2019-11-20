@@ -2,11 +2,11 @@ import React from "react"
 import HeaderTop from "./header-top"
 import HeaderFixed from './header-fixed'
 
-const Header = (props) => {
+const Header = ({ color }) => {
   return (
     <header>
       <HeaderTop />
-      <HeaderFixed/>
+      <HeaderFixed color={color} />
     </header>
   )
 }

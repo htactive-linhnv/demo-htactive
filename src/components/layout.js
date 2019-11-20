@@ -20,10 +20,10 @@ import "./layoutCss/assets/css/plugins.css"
 import "./layoutCss/assets/voc/css/animations.css"
 import "./layoutCss/assets/voc/css/style.css"
 import "./layout.css"
+import { connect } from 'react-redux'
 
 
-const Layout = ({ footer,children }) => {
-  const color = "gray"
+const Layout = ({ footer,children,color }) => {  
   return (
     <div className="page-wrapper">
       <StyleSwitcher></StyleSwitcher>
@@ -41,4 +41,7 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+const mapStateToProps = ({ color }) => {
+  return { color }
+}
+export default connect(mapStateToProps, null)(Layout)
