@@ -19,33 +19,32 @@ const HeaderFixed = ({ color }) => {
     case "yellow": logo = yellow; break
     default: logo = red; break;
   }
-const HeaderFixed = () => {
-  return (
-    <header className="header fixed clearfix">
-      <div className="container">
-        <div className="row header-fixed">
-          <div className="col-md-3 ">
-            <div className="header-left clearfix">
-              <div className="logo">
-                <a href="">
-                  <img id="logo" src={logo} alt="htactive" />
-                </a>
+      return (
+        <header className="header fixed clearfix">
+          <div className="container">
+            <div className="row header-fixed">
+              <div className="col-md-3 ">
+                <div className="header-left clearfix">
+                  <div className="logo">
+                    <a href="">
+                      <img id="logo" src={logo} alt="htactive" />
+                    </a>
+                  </div>
+                  <div className="site-slogan">
+                    Your Satisfaction Is Our Success
               </div>
-              <div className="site-slogan">
-                Your Satisfaction Is Our Success
+                </div>
+              </div>
+              <div className="col-md-9">
+                <div className="header-right clearfix">
+                  <div className="main-navigation animated">
+                    <NavBar color={color} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="col-md-9">
-            <div className="header-right clearfix">
-              <div className="main-navigation animated">
-                <NavBar color = {color} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-  )
-}
-export default HeaderFixed
+        </header>
+      )
+  }
+  export default HeaderFixed
