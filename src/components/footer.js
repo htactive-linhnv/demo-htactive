@@ -1,6 +1,7 @@
 import React from "react"
 
 import Logo from "../data/images/logo_dark_gray.png"
+import NavBar from "./Header/navbar"
 
 
 const Footer = ({footer}) => {
@@ -99,16 +100,16 @@ const Footer = ({footer}) => {
                       <a href="">Home</a>
                     </li>
                     <li className="">
-                      <a href="services">Service</a>
+                      <a href="/services">Service</a>
                     </li>
                     <li className="">
-                      <a href="products">Portfolios</a>
+                      <a href="/products">Portfolios</a>
                     </li>
                     <li className="">
-                      <a href="contact">Contact</a>
+                      <a href="/contact">Contact</a>
                     </li>
                     <li className="">
-                      <a href="news">Blogs</a>
+                      <a href="/news">Blogs</a>
                     </li>
                   </ul>
                 </nav>
@@ -140,43 +141,7 @@ const Footer = ({footer}) => {
               <p>Copyright © 2019 by HT Active. All Rights Reserved.</p>
             </div>
             <div className="col-md-6">
-              <nav className="navbar navbar-default" role="navigation">
-                <div className="navbar-header">
-                  <button
-                    type="button"
-                    className="navbar-toggle"
-                    data-toggle="collapse"
-                    data-target="#navbar-collapse-2"
-                  >
-                    <span className="sr-only">Toggle navigation</span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                  </button>
-                </div>
-                <div
-                  className="collapse navbar-collapse"
-                  id="navbar-collapse-2"
-                >
-                  <ul className="nav navbar-nav">
-                    <li className="active">
-                      <a href="">Home</a>
-                    </li>
-                    <li className="">
-                      <a href="services">Service</a>
-                    </li>
-                    <li className="">
-                      <a href="products">Portfolios</a>
-                    </li>
-                    <li className="">
-                      <a href="contact">Contact</a>
-                    </li>
-                    <li className="">
-                      <a href="news">Blogs</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+              <NavBar/>
             </div>
           </div>
         </div>

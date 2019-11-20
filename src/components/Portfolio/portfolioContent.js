@@ -96,7 +96,7 @@ const PortfolioContent = () => {
               style={{
                 display: "block",
                 position: "relative",
-                height: "1184.06px",
+               
               }}
             >
               {products.map((item, index) => (

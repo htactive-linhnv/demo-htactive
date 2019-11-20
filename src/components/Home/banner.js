@@ -49,7 +49,7 @@ const Banner = () => {
     <div className="banner">
       <BannerAnim
         autoPlay
-        autoPlaySpeed={10000}
+        autoPlaySpeed={1000000}
         autoPlayEffect={false}
         onChange={e => handleProgressBar(e)}
       >
@@ -57,7 +57,7 @@ const Banner = () => {
           <Element
             key={index}
             prefixCls="banner-user-elem"
-            className="container"            
+            className="container"
           >
             <BgElement
               key="bg"
@@ -77,22 +77,19 @@ const Banner = () => {
             >
               {showbar && (
                 <BannerLeft
-                  
                   title={item.title}
                   lead={item.lead}
                   more={item.more}
                 />
               )}
-
-              {item.img !== "" && (
-                <img
-                  src={`${item.img}`}
-                  alt="mac"
-                  className="macImg fade-in-right-4"
-                 
-                />
-              )}
             </QueueAnim>
+            {item.img !== "" && (
+              <img
+                src={`${item.img}`}
+                alt="mac"
+                className="macImg fade-in-right-4"
+              />
+            )}
           </Element>
         ))}
       </BannerAnim>

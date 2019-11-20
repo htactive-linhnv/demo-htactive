@@ -6,7 +6,7 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
     const colorList = [
         'red', 'blue', 'green', 'orange', 'pink', 'purple', 'yellow', 'blue', 'pink','purple', 'red'
     ]
-    const colorSelect = colorList.map(item => <li className={item} data-style={item} title={item} onClick={() => changeColor(item)} />
+    const colorSelect = colorList.map((item, index) => <li key={index} className={item} data-style={item} title={item} onClick={() => changeColor(item)} />
     )
     const changeLayoutClass = (layout) => {
         let body = document.getElementsByTagName("BODY")[0]
@@ -22,7 +22,7 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
             <a className={toggle ? "trigger fade-out" : "trigger fade-in"} href="#"><i className="fa fa-linux" onClick={toggleStyle}></i></a>
             <div className={"style-switcher opened" + (toggle ? " slide-in-left " : " slide-out-left ")} style={{ left: '0px' }}>
                 <div className="header">
-                    <a className="trigger" href="#"><i className="fa fa-times" onClick={toggleStyle} /></a>
+                    <a className="trigger" href="/"><i className="fa fa-times" onClick={toggleStyle} /></a>
                     <h2>Style Switcher</h2>
                 </div>
                 <div className="clearfix body">

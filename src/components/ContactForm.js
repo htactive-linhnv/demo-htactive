@@ -13,7 +13,7 @@ const ContactForm = () => {
                                 <h2 className="title"><strong>HT ACTIVE</strong></h2>
                                 <ul className="list">
                                     <li><strong /></li>
-                                    <li><i className="fa fa-home pr-10" /><abbr title="Address" />91 Vo Nhu Hung, Danang, Vietnam.</li>
+                                    <li><i className="fa fa-home pr-10" /><abbr title="Address" />150 Duy Tan, Danang, Vietnam.</li>
                                     <li><i className="fa fa-phone pr-10" /><abbr title="Phone" />0905 610 229</li>
                                     <li><i className="fa fa-skype pr-10" /><abbr title="Skype" />hoangvhh</li>
                                     <li><i className="fa fa-envelope pr-10" /><a href="mailto:services@htactive.com">recruit@htactive.com</a></li>

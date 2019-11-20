@@ -14,7 +14,7 @@ class BannerLeft extends React.Component {
             this.setState({
                 fadeOut: true
             })
-        }, 9000);
+        }, 900000);
     }
     componentWillUnmount() {
         clearTimeout(this.timerID)

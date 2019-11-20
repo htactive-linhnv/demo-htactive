@@ -8,8 +8,7 @@ const NavBar = () => {
       <div className="navbar-header">
         <button
           type="button"
-          className="navbar-toggle"
-        
+          className="navbar-toggle"        
           onClick={()=>setOpenDrop(!openDrop)}
         >
           <span className="sr-only">Toggle navigation</span>
