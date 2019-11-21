@@ -78,15 +78,11 @@
     right: 17% !important;
     top: 40px !important;
   }
-  .boxed .page-wrapper {
-    width: 970px;
-  }
+
   .fixed-header-on .header .logo {
     display: block;
   }
-  .fixed-header-on.boxed .header.fixed {
-    width: 970px;
-  }
+  
   .margin-top-clear {
     margin-top: 0 !important;
   }

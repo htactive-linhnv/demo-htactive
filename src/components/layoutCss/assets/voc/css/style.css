@@ -525,11 +525,7 @@ tbody {
 
 
 /* Large devices (Large desktops 1200px and up) */
-@media (min-width: 1200px) {
-  .boxed .page-wrapper {
-    width: 1170px;
-  }
-}
+
 
 /* Backgrounds
 ---------------------------------- */
@@ -906,7 +902,7 @@ tbody {
 /* Large devices (Large desktops 1200px and up) */
 @media (min-width: 1200px) {
   .fixed-header-on.boxed .header.fixed {
-    width: 1170px;
+    width: 1170px!important;
   }
 }
 
