@@ -527,7 +527,7 @@ body {
 }
 .banner-page .container {
   position: relative;
-  z-index: 2000;
+  z-index: 1000;
 }
 .banner-page .shield {
   position: absolute;

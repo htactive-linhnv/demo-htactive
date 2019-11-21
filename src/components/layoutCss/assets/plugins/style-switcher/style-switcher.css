@@ -284,3 +284,6 @@ div.style-switcher .dark-red {
 div.style-switcher .dark-red:hover {
 	background: #6c160f;
 }
+.hideStyleSwitcher {
+	display:none;
+}

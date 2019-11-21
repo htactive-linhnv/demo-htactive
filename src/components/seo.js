@@ -73,8 +73,7 @@ const SEO = ({ description, lang, meta, title }) => {
         },
       ].concat(meta)}
     >
-    <link rel="stylesheet" id="skinCSS" type="text/css" href="skins/red.css" />
-
+        <link rel="stylesheet" id="skinCSS" type="text/css" href="skins/.css" />
     </Helmet>
   )
 }
