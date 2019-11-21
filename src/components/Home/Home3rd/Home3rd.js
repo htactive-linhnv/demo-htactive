@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "../Home3rd/Home3rd.css"
 import TextCenter from "../TextCenter/TextCenter"
+import studioImg from "../../../data/images/studio.png"
 const Home3rd = ({ test }) => {
   const [toggleStatus, setToggleStatus] = useState(1)
   const toggleTab = status => {
@@ -30,7 +31,7 @@ const Home3rd = ({ test }) => {
         }}
         className={toggleStatus === position ? "active" : ""}
       >
-        <a role="tab" data-toggle="tab">
+        <a role="tab" data-toggle="tab" href="/">
           {item.tab_title_vn}
         </a>
       </li>
@@ -39,7 +40,10 @@ const Home3rd = ({ test }) => {
 
   return (
     <div className="container">
-      <TextCenter />
+      <TextCenter
+        head="WHY CHOOSE HT ACTIVE"
+        description="HT Active offers a great service in the design, development and programming of your website/application. We strive to offer the best solution for your business and impartial advice at an honest price. We are constantly investigating new technologies and recommend them when they make sense."
+      />
       <div className="vertical hc-tabs col-md-12">
         <div className="arrow hidden-sm hidden-xs">
           <i className="fa fa-caret-up" />
@@ -59,7 +63,7 @@ const Home3rd = ({ test }) => {
               <div className="col-md-12">
                 <p>{tabSelect.tab_desc_vn || null}}</p>
                 <img
-                  src="http://htactive.com/assets/voc/images/studio.png"
+                  src={studioImg}
                   alt=""
                 />
               </div>

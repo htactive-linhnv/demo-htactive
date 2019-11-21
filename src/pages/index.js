@@ -8,8 +8,8 @@ import FooterTop from "../components/FooterTop/FooterTop"
 import Banner from "../components/Home/banner"
 import BannerHome from "../components/BannerHome/BannerHome"
 import PageTop from "../components/Home/pageTop"
-import Services from "../components/Home/Home1st"
-import { connect } from "react-redux"
+import Services from "../components/Home/Home1st/Home1st"
+import { connect } from 'react-redux'
 import Helmet from "react-helmet"
 window.onload = () => {
   console.log(localStorage.getItem('color'),"???")

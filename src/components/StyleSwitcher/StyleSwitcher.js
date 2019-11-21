@@ -1,3 +1,5 @@
+
+  
 import React, { useState, useEffect } from "react"
 import { connect, dispatch } from "react-redux"
 import "../layoutCss/assets/plugins/style-switcher/style-switcher.css"
@@ -212,3 +214,4 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(StyleSwitcher)
+

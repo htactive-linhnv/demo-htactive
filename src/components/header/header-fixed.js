@@ -16,14 +16,14 @@ const HeaderFixed = ({ color }) => {
   }, [])
   return (
     <header
-      className={`header fixed ${scrollY > 182 ? "fixed-bar" : " "} clearfix`}
+      className={`header fixed ${scrollY > 182 ? "fixed-bar" : " "} clearfix`}     
     >
       <div className="container">
         <div className="row header-fixed">
           <div className={`col-md-3 ${scrollY > 182 ? "header-left-fixed" : ""}`}>
             <div className="header-left clearfix">
               <a
-                href="/"
+                href="/"             
               >
                 <div className={`logo ${scrollY > 182 ? "logo-fixed" : ""}`}></div>
               </a>

@@ -1,7 +1,5 @@
 import React from "react"
 import NavBar from "./Header/navbar"
-
-
 const Footer = ({footer}) => {
   return (
     <footer id="footer" className={footer}>
@@ -9,11 +7,11 @@ const Footer = ({footer}) => {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-xl-6" style={{marginLeft:"0!important"}}>
-              <div className="footer-content">               
+              <div className="footer-content">      
                   <a href="/">
-                  <div className="logo">
-                    </div>                  
-                  </a>        
+                    <div className="logo">
+                    </div>
+                  </a>             
                 <div className="row">
                   <div className="col-sm-12 col-md-6">
                     <p>Your satisfaction is our success!</p>

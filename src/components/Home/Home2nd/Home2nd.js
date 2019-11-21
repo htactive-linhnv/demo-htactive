@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import "../Home2nd/Home2nd.css"
 import ParagraphLeft from "../Home2nd/ParagraphLeft/ParagraphLeft"
 import { Collapse } from "antd"
@@ -27,24 +26,24 @@ export default ({ color, test }) => {
     </Panel>
   ))
   return (
-    <div className="container">
-      <TextCenter />
-      <div className="row home2nd">
-        <ParagraphLeft color={color} />
-        <div className="col-lg-6 col-md-12">
-          <div>
-            <QueueAnim className="demo-content">
-              <Collapse
-                defaultActiveKey={["1"]}
-                className="panel-group"
-                accordion
-              >
-                {dataRender}
-              </Collapse>
-            </QueueAnim>
+    <section className="main-container">
+      <div className="container">
+        <TextCenter 
+        head="ABOUT HT ACTIVE" 
+        description="HT Active is the team of Young and Brilliant people. We will help and support all you need about Software Solutions. We’re developers, designers, support specialists and gamers. We have all you needs." />
+        <div className="row home2nd">
+          <ParagraphLeft color={color} />
+          <div className="col-lg-6 col-md-12">
+            <div>
+              <QueueAnim className="demo-content">
+                <Collapse className="panel-group" accordion>
+                  {dataRender}
+                </Collapse>
+              </QueueAnim>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
