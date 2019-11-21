@@ -28,8 +28,9 @@ const StyleSwitcher = ({
     localStorage.setItem("color", color)
     changeColor(color)
   }
-  const colorSelect = colorList.map(item => (
+  const colorSelect = colorList.map((item, index) => (
     <li
+    key={index}
       className={`${item} ` + (item === color ? "selected" : "")}
       data-style={item}
       title={item}
