@@ -83,6 +83,10 @@ h6 {
   .banner-anim .col-sm-10 {
     width: auto!important;
 }
+.logo-fixed{
+  display:none!important;
+}
+
 }
 @media (min-width: 992px) {
   .title {

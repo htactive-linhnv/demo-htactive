@@ -8,7 +8,7 @@ import FooterTop from "../components/FooterTop/FooterTop"
 import Banner from "../components/Home/banner"
 import BannerHome from '../components/BannerHome/BannerHome'
 import PageTop from "../components/Home/pageTop"
-import Services from "../components/Home/Home1st"
+import Services from "../components/Home/Home1st/Home1st"
 import { connect } from 'react-redux'
 
 const IndexPage = ({ data, color, footer }) => {

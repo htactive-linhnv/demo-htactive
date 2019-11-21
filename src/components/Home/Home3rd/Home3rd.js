@@ -31,7 +31,7 @@ const Home3rd = ({ test }) => {
 
     return (
         <div className="container">
-        <TextCenter />
+        <TextCenter head="WHY CHOOSE HT ACTIVE" description="HT Active offers a great service in the design, development and programming of your website/application. We strive to offer the best solution for your business and impartial advice at an honest price. We are constantly investigating new technologies and recommend them when they make sense."/>
             <div className="vertical hc-tabs col-md-12">
                 <div className="arrow hidden-sm hidden-xs"><i className="fa fa-caret-up" /></div>
                 <ul className="nav nav-tabs" role="tablist">

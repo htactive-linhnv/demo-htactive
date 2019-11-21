@@ -4,9 +4,7 @@ body {
   line-height: 1.5 !important;
   color: #666666 !important;
 }
-.panel-group {
-  /* height:300px; */
-}
+
 .panel__name:after {
   font-family: "FontAwesome";
   content: "\f147";
@@ -66,9 +64,7 @@ body {
   padding: 0 10px !important;
   letter-spacing: 0.3px;
 }
-.test {
-  /* transition: visibility  2s, max-height  2s linear; */
-}
+
 .panel-toggle0-enter {
   height: 0px;
 }

@@ -12,11 +12,12 @@ const Footer = ({footer}) => {
           <div className="row">
             <div className="col-sm-12 col-md-12 col-xl-6" style={{marginLeft:"0!important"}}>
               <div className="footer-content">
-                <div className="logo">
+      
                   <a href="">
-                    <img src={Logo} alt="" />
+                    <div className="logo">
+                    </div>
                   </a>
-                </div>
+             
                 <div className="row">
                   <div className="col-sm-12 col-md-6">
                     <p>Your satisfaction is our success!</p>
