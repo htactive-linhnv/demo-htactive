@@ -180,7 +180,7 @@
     width: 750px;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .dl-horizontal dd {
       margin-left: 150px;
     }
@@ -201,6 +201,9 @@
     .navbar-nav {
       display: flex !important;
       flex-direction: row !important;
+    }
+    .box-style-1 .card-content {
+      height: 40px;  
     }
   }
 
