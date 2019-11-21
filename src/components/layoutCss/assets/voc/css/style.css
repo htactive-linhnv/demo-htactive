@@ -611,6 +611,7 @@ tbody {
 }
 .main-container {
   padding: 40px 0;
+  margin-bottom:50px;
 }
 .full-height .main-container {
   padding-top: 80px;

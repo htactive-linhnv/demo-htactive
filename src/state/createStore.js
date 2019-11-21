@@ -1,7 +1,6 @@
 import { createStore as reduxCreateStore } from "redux"
 
 const reducer = (state, action) => {
-
   switch (action.type) {
     case "CHANGE_COLOR":
       return Object.assign({}, state, {
@@ -9,17 +8,18 @@ const reducer = (state, action) => {
       })
     case "CHANGE_FOOTER":
       return Object.assign({}, state, {
-        footer:action.footer
+        footer: action.footer,
       })
     case "CHANGE_LAYOUT":
       return Object.assign({}, state, {
-        mode:action.mode
+        mode: action.mode,
       })
+      default: return state
   }
   return state
 }
 
-const initialState = { color: "red", footer: "" , mode: ""}
+const initialState = { color: "", footer: "", mode: "wide" }
 
 const createStore = () => reduxCreateStore(reducer, initialState)
 export default createStore

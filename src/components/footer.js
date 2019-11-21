@@ -1,18 +1,15 @@
 import React from "react"
-
-import Logo from "../data/images/logo_dark_gray.png"
 import NavBar from "./Header/navbar"
 
 
-const Footer = ({footer}) => {
+const Footer = () => {
   return (
-    <footer id="footer" className={footer}>
+    <footer id="footer">
       <div className="footer">
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-xl-6" style={{marginLeft:"0!important"}}>
-              <div className="footer-content">
-      
+              <div className="footer-content">      
                   <a href="">
                     <div className="logo">
                     </div>
@@ -24,33 +21,32 @@ const Footer = ({footer}) => {
                     <ul className="social-links circle">
                       <li className="facebook">
                         <a
-                          target="_blank"
+                  
                           href="https://www.facebook.com/htactive"
                         >
                           <i className="fa fa-facebook"></i>
                         </a>
                       </li>
                       <li className="twitter">
-                        <a target="_blank" href="https://twitter.com/hoangvhh">
+                        <a  href="https://twitter.com/hoangvhh">
                           <i className="fa fa-twitter"></i>
                         </a>
                       </li>
                       <li className="googleplus">
-                        <a
-                          target="_blank"
+                        <a                       
                           href="https://plus.google.com/u/0/117715430853979848085"
                         >
                           <i className="fa fa-google-plus"></i>
                         </a>
                       </li>
                       <li className="skype">
-                        <a target="_blank" href="skype:hoangvhh">
+                        <a  href="skype:hoangvhh">
                           <i className="fa fa-skype"></i>
                         </a>
                       </li>
                       <li className="linkedin">
                         <a
-                          target="_blank"
+                          
                           href="https://www.linkedin.com/in/hoang-pham-6236b8b7"
                         >
                           <i className="fa fa-linkedin"></i>

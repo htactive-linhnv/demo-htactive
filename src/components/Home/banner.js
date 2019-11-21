@@ -14,10 +14,8 @@ const Banner = () => {
   const [showbar, setBar] = useState(true)
   const handleProgressBar = e => {
     if (e === "after") {
-      console.log(e)
       setBar(true)
-    } else {
-      console.log(e,"e before")
+    } else { 
       setBar(false)
     }
   }

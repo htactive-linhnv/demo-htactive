@@ -1,21 +1,22 @@
 import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
-import Home2nd from '../components/Home/Home2nd/Home2nd'
-import Home3rd from '../components/Home/Home3rd/Home3rd'
+import Home2nd from "../components/Home/Home2nd/Home2nd"
+import Home3rd from "../components/Home/Home3rd/Home3rd"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FooterTop from "../components/FooterTop/FooterTop"
 import Banner from "../components/Home/banner"
-import BannerHome from '../components/BannerHome/BannerHome'
+import BannerHome from "../components/BannerHome/BannerHome"
 import PageTop from "../components/Home/pageTop"
 import Services from "../components/Home/Home1st/Home1st"
 import { connect } from 'react-redux'
 
 const IndexPage = ({ data, color, footer }) => {
-  console.log(localStorage.getItem("color"));
   return (
     <Layout footer={footer}>
-      <SEO title="Home" color={color}/>
+      <Helmet>
+      </Helmet>
+      <SEO title="Home" color={color} />
       <Banner></Banner>
       <PageTop />
       <Services color={color} />
@@ -30,15 +31,18 @@ const IndexPage = ({ data, color, footer }) => {
 const mapStateToProps = ({ color, footer }) => {
   return { color, footer }
 }
-export default connect(mapStateToProps, null)(IndexPage)
+export default connect(
+  mapStateToProps,
+  null
+)(IndexPage)
 
 export const query = graphql`
-query {
-    why : allMarkdownRemark {
+  query {
+    why: allMarkdownRemark {
       edges {
         node {
           frontmatter {
-            home_why_vn  {
+            home_why_vn {
               tab1_vn {
                 tab_desc_vn
                 tab_img_vn
@@ -63,8 +67,8 @@ query {
           }
         }
       }
-    },
-    about : allMarkdownRemark {
+    }
+    about: allMarkdownRemark {
       edges {
         node {
           frontmatter {
@@ -95,5 +99,4 @@ query {
       }
     }
   }
-  
 `

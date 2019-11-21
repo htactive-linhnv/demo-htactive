@@ -1,7 +1,15 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+.logo{
+  background-size: 200px 77px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 202px;
+  border: none;
+  height:80px;
 
+}
 .footer-nav {
   flex-direction: column !important;
 }
@@ -562,7 +570,7 @@ body {
 }
 .banner-page .container {
   position: relative;
-  z-index: 2000;
+  z-index: 1000;
 }
 .banner-page .shield {
   position: absolute;

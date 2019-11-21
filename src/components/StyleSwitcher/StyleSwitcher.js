@@ -198,4 +198,7 @@ const mapDispatchToProps = dispatch => {
     changeLayout: layout => dispatch({ type: CHANGE_LAYOUT, layout: layout }),
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(StyleSwitcher)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(StyleSwitcher)
