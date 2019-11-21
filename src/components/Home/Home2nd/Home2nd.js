@@ -36,7 +36,8 @@ export default ({ color, test }) => {
           <div className="col-lg-6 col-md-12">
             <div>
               <QueueAnim className="demo-content">
-                <Collapse className="panel-group" accordion>
+                <Collapse className="panel-group" accordion
+                defaultActiveKey={1}>
                   {dataRender}
                 </Collapse>
               </QueueAnim>
