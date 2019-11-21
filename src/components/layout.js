@@ -24,6 +24,7 @@ import "./minWidth992.css"
 import "./maxWidth991.css"
 import "./minWidth768.css"
 import "./maxWidth768.css"
+import "./maxWidth480.css"
 import { connect } from 'react-redux'
 
 

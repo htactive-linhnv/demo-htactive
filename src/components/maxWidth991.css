@@ -1,3 +1,9 @@
+@media (max-width: 1022px) {
+  .logo-fixed{
+      display:none!important;
+    }
+  
+}
 @media (max-width: 991px) {
     .logo img,
     .header-small .logo img {
@@ -22,9 +28,7 @@
       .banner-anim .col-sm-10 {
         width: auto!important;
     }
-    .logo-fixed{
-      display:none!important;
-    }
+  
     .portfolio-item.vertical-divider-left,
     .side.vertical-divider-left {
       border-left: none;

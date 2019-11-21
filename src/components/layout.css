@@ -34,6 +34,9 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
+.nav {
+  flex-wrap: nowrap!important;
+}
 .logo {
   width: 200px;
   height: 78px;
@@ -1085,5 +1088,33 @@ div.style-switcher .dark-red:hover {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
+  }
+}
+
+
+/*Boxed*/
+
+@media (min-width: 768px){
+  .fixed-header-on.boxed .header.fixed {
+    width: 750px;
+  }
+  .boxed .page-wrapper {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .boxed .page-wrapper {
+    width: 970px;
+  }
+  .fixed-header-on.boxed .header.fixed {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .boxed .page-wrapper {
+    width: 1170px;
+  }
+  .fixed-header-on.boxed .header.fixed {
+    width: 1170px;
   }
 }
