@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "../Home3rd/Home3rd.css"
 import TextCenter from "../TextCenter/TextCenter"
+import studioImg from "../../../data/images/studio.png"
 const Home3rd = ({ test }) => {
   const [toggleStatus, setToggleStatus] = useState(1)
   const toggleTab = status => {
@@ -30,7 +31,7 @@ const Home3rd = ({ test }) => {
         }}
         className={toggleStatus === position ? "active" : ""}
       >
-        <a role="tab" data-toggle="tab">
+        <a role="tab" data-toggle="tab" href="/">
           {item.tab_title_vn}
         </a>
       </li>
@@ -62,7 +63,7 @@ const Home3rd = ({ test }) => {
               <div className="col-md-12">
                 <p>{tabSelect.tab_desc_vn || null}}</p>
                 <img
-                  src="http://htactive.com/assets/voc/images/studio.png"
+                  src={studioImg}
                   alt=""
                 />
               </div>

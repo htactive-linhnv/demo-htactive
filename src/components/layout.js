@@ -20,6 +20,10 @@ import "./layoutCss/assets/css/plugins.css"
 import "./layoutCss/assets/voc/css/animations.css"
 import "./layoutCss/assets/voc/css/style.css"
 import "./layout.css"
+import "./minWidth992.css"
+import "./maxWidth991.css"
+import "./minWidth768.css"
+import "./maxWidth768.css"
 import { connect } from 'react-redux'
 
 
