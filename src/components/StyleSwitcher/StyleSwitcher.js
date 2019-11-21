@@ -24,7 +24,7 @@ const StyleSwitcher = ({
     "yellow",
   ]
   const changeColorClass = color => {
-    if (skinCSS) setTimeout(() => (skinCSS.href = `skins/${color}.css`), 100)
+    if (skinCSS) setTimeout(() => (skinCSS.href = `skins/${color}.css`), 200)
     localStorage.setItem("color", color)
     changeColor(color)
   }
@@ -51,7 +51,7 @@ const StyleSwitcher = ({
     changeColor("red")  
     changeLayoutClass("wide")
     changeFooter("")
-    if (skinCSS) setTimeout(() => (skinCSS.href = `skins/red.css`), 100)
+    if (skinCSS) setTimeout(() => (skinCSS.href = `skins/red.css`), 150)
     localStorage.setItem("color", color)
   }
   return (
