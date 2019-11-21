@@ -19,8 +19,7 @@ const NavBar = ({color}) => {
       </div>
 
       <div
-        className="collapse navbar-collapse"
-         onMouseLeave={()=> setOpenDrop(false)}
+        className="collapse navbar-collapse"      
          style={{display:`${openDrop?"block":"none"}`}}
       >
         <ul className="nav navbar-nav navbar-right">
@@ -28,16 +27,16 @@ const NavBar = ({color}) => {
             <a href="/">Home</a>
           </li>
           <li className="">
-            <a href="services">Service</a>
+            <a href="/services">Service</a>
           </li>
           <li className="">
-            <a href="portfolio">Portfolios</a>
+            <a href="/portfolio">Portfolios</a>
           </li>
           <li className="">
-            <a href="blog">Blogs</a>
+            <a href="/blog">Blogs</a>
           </li>
           <li className="">
-            <a href="contact">Contact</a>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
       </div>

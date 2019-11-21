@@ -13,10 +13,6 @@ import { connect } from "react-redux"
 import Helmet from "react-helmet"
 
 const IndexPage = ({ data, color, footer }) => {
-  // console.log(localStorage.getItem("color"));
-  //   if (localStorage.getItem("color")) {
-  //     const skinCSS = document.getElementById("skinCSS")      
-  //     if (skinCSS) skinCSS.href = `skins/${localStorage.getItem("color")}.css`
   return (
     <Layout footer={footer}>
       <Helmet>
@@ -29,7 +25,7 @@ const IndexPage = ({ data, color, footer }) => {
       <BannerHome />
       <Home3rd test={data} />
       <FooterTop />
-    </Layout>
+    </Layout >
   )
 }
 
