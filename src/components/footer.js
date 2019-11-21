@@ -2,9 +2,9 @@ import React from "react"
 import NavBar from "./Header/navbar"
 
 
-const Footer = () => {
+const Footer = ({footer}) => {
   return (
-    <footer id="footer">
+    <footer id="footer" className={footer}>
       <div className="footer">
         <div className="container">
           <div className="row">

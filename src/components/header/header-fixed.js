@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import NavBar from "./navbar"
-
 const HeaderFixed = ({ color }) => {
   const [scrollY, setScrollY] = useState(0)
   const logit = () => {
@@ -15,20 +14,23 @@ const HeaderFixed = ({ color }) => {
       window.removeEventListener("scroll", logit)
     }
   }, [])
-
   return (
     <header
-      className="header fixed clearfix"
-      style={{ position: `${scrollY > 182 ? "fixed" : "relative"}`, top: "0", right:"0", left:"0" ,zIndex:"200000"}}
-    >    
+      className={`header fixed ${scrollY > 182 ? "fixed-bar" : " "} clearfix`}
+    >
       <div className="container">
         <div className="row header-fixed">
-          <div className="col-md-3 ">
+          <div className={`col-md-3 ${scrollY > 182 ? "header-left-fixed" : ""}`}>
             <div className="header-left clearfix">
-              <a href="/">
-                <div className="logo" style={{}}></div>
+              <a
+                href="/"
+              >
+                <div className={`logo ${scrollY > 182 ? "logo-fixed" : ""}`}></div>
               </a>
-              <div className="site-slogan">
+              <div
+                className="site-slogan"
+                style={{ display: `${scrollY > 182 ? "none" : "block"}` }}
+              >
                 Your Satisfaction Is Our Success
               </div>
             </div>

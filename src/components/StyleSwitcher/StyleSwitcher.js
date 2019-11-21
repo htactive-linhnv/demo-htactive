@@ -10,7 +10,7 @@ const StyleSwitcher = ({
   changeFooter,
   changeLayout,
 }) => {
-  const skinCSS = document.getElementById("skinCSS")
+  let skinCSS = document.getElementById("skinCSS")
   const [toggle, setToggle] = useState(3)
   const colorList = [
     "red",
@@ -22,10 +22,9 @@ const StyleSwitcher = ({
     "yellow",
   ]
   const changeColorClass = color => {
-    console.log(skinCSS, "????")
-    changeColor(color)
     if (skinCSS) setTimeout(() => (skinCSS.href = `skins/${color}.css`), 100)
     localStorage.setItem("color", color)
+    changeColor(color)
   }
   const colorSelect = colorList.map(item => (
     <li
@@ -46,7 +45,7 @@ const StyleSwitcher = ({
     setToggle(type)
   }
   const resetAll = () => {
-    changeColor("red")
+    changeColor("red")  
     changeLayoutClass("wide")
     changeFooter("")
     if (skinCSS) setTimeout(() => (skinCSS.href = `skins/red.css`), 100)
@@ -56,7 +55,7 @@ const StyleSwitcher = ({
     <div>
       <span className="trigger">
         <i
-          className={"fa fa-linux " + (toggle === 2 ? "fade-out" : "fade-in")}
+          className={"fa fa-gears " + (toggle === 2 ? "fade-out" : "fade-in")}
           onClick={() => toggleStyle(2)}
         ></i>
       </span>
