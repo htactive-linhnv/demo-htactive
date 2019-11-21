@@ -11,10 +11,6 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 const SEO = ({ description, lang, meta, title }) => {
-  // const skinCSS = document.getElementById('skinCSS')
-  // console.log(localStorage.getItem('color'),"yo",skinCSS)
-  // if (skinCSS) setTimeout(() => skinCSS.href = `skins/${localStorage.getItem('color')}.css`, 0)
-
   const { site } = useStaticQuery(
     graphql`
       query {
