@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect, dispatch } from 'react-redux'
 import '../layoutCss/assets/plugins/style-switcher/style-switcher.css'
 const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeLayout }) => {
-    const skinCSS = document.getElementById('skinCSS')
-    console.log("YOO");
+    const skinCSS = document.getElementById('skinCSS')   
     const changeColorClass = (color) => {
         changeColor(color);
     }
@@ -16,8 +15,9 @@ const StyleSwitcher = ({ data, color, footer, changeColor, changeFooter, changeL
     const colorList = [
         'red', 'blue', 'green', 'orange', 'pink', 'purple', 'yellow'
     ]
-    const colorSelect = colorList.map(item =>
-        <li className={`${item} ` + (item === color ? 'selected' : '')}
+    const colorSelect = colorList.map((item, index) =>
+        <li key={index}
+        className={`${item} ` + (item === color ? 'selected' : '')}
             data-style={item}
             title={item}
             onClick={() => {

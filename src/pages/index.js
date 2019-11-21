@@ -12,7 +12,8 @@ import Services from "../components/Home/Home1st"
 import { connect } from 'react-redux'
 
 const IndexPage = ({ data, color, footer }) => {
-  console.log(localStorage.getItem("color"));
+
+ 
   return (
     <Layout footer={footer}>
       <SEO title="Home" color={color}/>
@@ -23,6 +24,7 @@ const IndexPage = ({ data, color, footer }) => {
       <BannerHome />
       <Home3rd test={data} />
       <FooterTop />
+    
     </Layout >
   )
 }

@@ -9,7 +9,7 @@ const ProgressBar = () => {
     }
     const id = setInterval(timer, 10)
     return () => clearInterval(id)
-  }, [currentCount])
+  }, [timer])
   
   return (
   
