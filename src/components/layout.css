@@ -1,14 +1,13 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
-.logo{
+.logo {
   background-size: 200px 77px;
   background-position: center;
   background-repeat: no-repeat;
   width: 202px;
   border: none;
-  height:80px;
-
+  height: 80px;
 }
 .footer-nav {
   flex-direction: column !important;
@@ -591,7 +590,7 @@ div.style-switcher {
   width: 225px;
   position: fixed;
   top: 65px;
-  z-index: 1002;
+  z-index: 300000;
   left: -227px;
 }
 div.style-switcher .header {
@@ -871,19 +870,48 @@ div.style-switcher .dark-red {
 div.style-switcher .dark-red:hover {
   background: #6c160f;
 }
-.fa-linux {
+.fa-gears {
   color: rgb(88, 88, 88);
   border: 1px solid rgb(221, 220, 220);
   padding: 12px;
   background: #eee;
   position: fixed;
-  z-index: 10000;
-  top: 65px;
+  z-index: 300000;
+  top: 75px;
   left: 0;
-  font-size: 1.8em;
+  font-size: 1.6em;
   overflow: auto;
 }
-
+.logo {
+  background-image: url("../data/images/logo_red.png");
+}
+.fixed-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 !important;
+  z-index: 200000;
+  -webkit-animation: fade-in-top 0.6s ease-in-out both;
+  animation: fade-in-top 0.6s ease-in-out both;
+}
+.header-left-fixed {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.logo {
+  width: 200px;
+  height: 78px;
+  background-size: 200px 78px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+.logo-fixed {
+  width: 130px !important;
+  height: 50px !important;
+  background-size: 130px 50px;
+}
 .slide-in-left {
   -webkit-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     backwards;
@@ -1059,4 +1087,3 @@ div.style-switcher .dark-red:hover {
     opacity: 1;
   }
 }
-
