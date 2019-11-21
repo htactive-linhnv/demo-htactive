@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 import Header from "./header/header"
 import Footer from "./footer"
-// import StyleSwitcher from '../components/StyleSwitcher/StyleSwitcher'
+import StyleSwitcher from '../components/StyleSwitcher/StyleSwitcher'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./layoutCss/assets/css/bootstrap.css"
 import "./layoutCss/assets/css/carousel.css"
@@ -26,7 +26,7 @@ import { connect } from 'react-redux'
 const Layout = ({ footer,children,color }) => {  
   return (
     <div className="page-wrapper">
-      {/* <StyleSwitcher></StyleSwitcher> */}
+      <StyleSwitcher></StyleSwitcher>
       <Header color={color} />
       <main>{children}</main>
       <Footer footer={footer}/>
