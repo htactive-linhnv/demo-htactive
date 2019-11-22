@@ -849,12 +849,7 @@ a.text-dark:hover {
   display: block !important;
 }
 /*  IE10 and windows phone 8 fix. */
-@-webkit-viewport {
-  width: device-width;
-}
-@-moz-viewport {
-  width: device-width;
-}
+
 @-ms-viewport {
   width: device-width;
 }

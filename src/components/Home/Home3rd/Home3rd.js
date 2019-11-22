@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from 'gatsby'
+import {Link } from "gatsby"
 import "../Home3rd/Home3rd.css"
 import TextCenter from "../TextCenter/TextCenter"
 import studioImg from "../../../data/images/studio.png"

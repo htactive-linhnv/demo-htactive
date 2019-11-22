@@ -1,4 +1,5 @@
 import React from "react"
+import {Link } from "gatsby"
 
 
 const PageTop = () => {
@@ -10,13 +11,13 @@ const PageTop = () => {
                         <div className="call-to-action">
 
                             <p className="lead">We strive to offer the best solution for your business.</p>
-                            <a className="btn btn-white more" href="/services">
+                            <Link className="btn btn-white more" to="/services">
                                 Read More<i className="pl-10 fa fa-info"></i>
-                            </a>
+                            </Link>
 
-                            <a href="/contact" className="btn btn-default contact">
+                            <Link to="/contact" className="btn btn-default contact">
                                 Contact<i className="pl-10 fa fa-phone"></i>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
