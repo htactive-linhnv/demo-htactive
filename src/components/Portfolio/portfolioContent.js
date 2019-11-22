@@ -55,7 +55,9 @@ const PortfolioContent = () => {
     },
   ]
   const [products, setProducts] = useState(data)
-  const handleFilter = (value) => {    
+  const [active, setActive] = useState(1)
+  const handleFilter = value => {
+    setActive(value)
     if (value === "all") {
       setProducts(data)
     } else {
@@ -69,22 +71,35 @@ const PortfolioContent = () => {
   return (
     <section className="main-container">
       <div className="container">
+        {console.log(active)}
         <div className="row">
           {/* main start */}
           {/* ================ */}
           <div className="main col-md-12">
             <div className="filters">
               <ul className="nav nav-pills">
-                <li className="active" onClick={() => handleFilter("all")}>
+                <li
+                  className={`${active === "all" ? "active" : " "}`}
+                  onClick={() => handleFilter("all")}
+                >
                   <p>All</p>
                 </li>
-                <li onClick={() => handleFilter("web")}>
+                <li
+                  className={`${active === "web" ? "active" : " "}`}
+                  onClick={() => handleFilter("web")}
+                >
                   <p>Web</p>
                 </li>
-                <li onClick={() => handleFilter("mobile-app")}>
+                <li
+                  className={`${active === "mobile-app" ? "active" : " "}`}
+                  onClick={() => handleFilter("mobile-app")}
+                >
                   <p>Mobile Application</p>
                 </li>
-                <li onClick={() => handleFilter("mobile-game")}>
+                <li
+                  className={`${active === "mobile-game" ? "active" : " "}`}
+                  onClick={() => handleFilter("mobile-game")}
+                >
                   <p>Mobile Game</p>
                 </li>
               </ul>
@@ -96,7 +111,6 @@ const PortfolioContent = () => {
               style={{
                 display: "block",
                 position: "relative",
-               
               }}
             >
               {products.map((item, index) => (

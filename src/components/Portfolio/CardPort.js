@@ -2,7 +2,7 @@ import React from "react"
 
 const CardPort = ({ image, title, content, link }) => {
   return (
-    <div className="col-md-3 col-sm-6 isotope-item fWeb">
+    <div className="col-md-3 col-sm-6 isotope-item fWeb fade-in-bottom-1">
       <div className="image-box">
         <div className="overlay-container">
           <img src={image} alt={title} />
