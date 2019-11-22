@@ -91,7 +91,7 @@ const Footer = ({footer}) => {
                 <nav>
                   <ul className="nav nav-pills nav-stacked footer-nav">
                     <li className="active">
-                      <Link to="">Home</Link>
+                      <Link to="/">Home</Link>
                     </li>
                     <li className="">
                       <Link to="/services">Service</Link>
@@ -113,6 +113,7 @@ const Footer = ({footer}) => {
               <div className="footer-content">
                 <h2>CONNECT WITH US!</h2>
                 <iframe
+                title="ht active pages"
                   src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhtactive%2F&amp;tabs&amp;width=340&amp;height=214&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=1780445882280832"
                   width="340"
                   height="214"

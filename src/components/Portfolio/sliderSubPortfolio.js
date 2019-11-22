@@ -1,15 +1,19 @@
 import React, { useState, useEffect, useRef } from "react"
+import { connect } from "react-redux"
 
 import htImg1 from "../../data/images/htactive-1.png"
 import htImg2 from "../../data/images/htactive-2.png"
 import htImg3 from "../../data/images/htactive-3.png"
+import ItemSlider from "./SubSliderItem"
+import BigSlider from "./bigSlider"
 
-const SubSlider = () => {
+const SubSlider = ({changeHideHeader}) => {
   const [item, setItem] = useState(1)
+  const [openBigSlider, setOpenSlider] = useState(false)
   const listImg = [
-    { name: htImg1, id: 1 },
-    { name: htImg2, id: 2 },
-    { name: htImg3, id: 3 },
+    { src: htImg1, id: 1, title: "HT Active 1" },
+    { src: htImg2, id: 2, title: "HT Active 2" },
+    { src: htImg3, id: 3, title: "HT Active 3" },
   ]
   const prevItemRef = useRef()
   useEffect(() => {
@@ -17,73 +21,34 @@ const SubSlider = () => {
   })
   const prevItem = prevItemRef.current
 
+  const handleOpenSlider = () => {
+      setOpenSlider(true)
+      changeHideHeader()
+  }
   return (
-    <div className="tab-pane" style={{ width: "600px" }}>
+    <div className="tab-pane">
+      {openBigSlider && <BigSlider listImg={listImg}/>}
       <div
-        className="owl-carousel content-slider-with-controls-bottom owl-theme"
+        className={`owl-carousel content-slider-with-controls-bottom owl-theme `}
         style={{ opacity: 1, display: "block" }}
       >
         <div className="owl-wrapper-outer">
           <div
             className="owl-wrapper"
-            style={{ width: "2160px", left: "0px", display: " block" }}
+            style={{ width: "100%", left: "0px", display: " block" }}
           >
-            {item === 1 && (
-              <div
-                className={`slide-item ${
-                  prevItem < item ? "fade-in-left-1" : "fade-in-right-1"
-                }`}
-                style={{ width: "360px" }}
-              >
-                <div className="overlay-container">
-                  <img src={htImg1} alt="HT Active 1" />
-                  <a
-                    href={htImg1}
-                    className="popup-img overlay"
-                    title="HT Active 1"
-                  >
-                    <i className="fa fa-search-plus" />
-                  </a>
-                </div>
-              </div>
-            )}
-            {item === 2 && (
-              <div
-                className={`slide-item ${
-                  prevItem < item ? "fade-in-left-1" : "fade-in-right-1"
-                }`}
-                style={{ width: "360px" }}
-              >
-                <div className="overlay-container">
-                  <img src={htImg2} alt="HT Active 2" />
-                  <a
-                    href={htImg2}
-                    className="popup-img overlay"
-                    title="HT Active 2"
-                  >
-                    <i className="fa fa-search-plus" />
-                  </a>
-                </div>
-              </div>
-            )}
-            {item === 3 && (
-              <div
-                className={`slide-item ${
-                  prevItem < item ? "fade-in-left-1" : "fade-in-right-1"
-                }`}
-                style={{ width: "360px" }}
-              >
-                <div className="overlay-container">
-                  <img src={htImg3} alt="HT Active 3" />
-                  <a
-                    href={htImg3}
-                    className="popup-img overlay"
-                    title="HT Active 3"
-                  >
-                    <i className="fa fa-search-plus" />
-                  </a>
-                </div>
-              </div>
+            {listImg.map(
+              img =>
+                item === img.id && (
+                  <ItemSlider
+                    key={img.id}
+                    src={img.src}
+                    title={img.title}
+                    prevItem={prevItem}
+                    item={item}
+                    handleOpenSlider={handleOpenSlider}
+                  />
+                )
             )}
           </div>
         </div>
@@ -119,4 +84,16 @@ const SubSlider = () => {
     </div>
   )
 }
-export default SubSlider
+const mapStateToProps = ({ display }) => {
+  return { display }
+}
+const mapDispatchToProps = dispatch => {
+  return {
+    changeHideHeader: () =>
+      dispatch({ type: `HIDE_HEADER`, display: false })   
+  }
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SubSlider)

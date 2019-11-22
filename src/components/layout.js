@@ -1,17 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
+import { TinyButton as ScrollUpButton } from "react-scroll-up-button"
 import Header from "./Header/header"
 import Footer from "./footer"
-import StyleSwitcher from '../components/StyleSwitcher/StyleSwitcher'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import StyleSwitcher from "../components/StyleSwitcher/StyleSwitcher"
+import "bootstrap/dist/css/bootstrap.min.css"
 import "./layoutCss/assets/css/bootstrap.css"
 import "./layoutCss/assets/css/carousel.css"
 import "./layoutCss/assets/css/icons.css"
@@ -25,20 +18,27 @@ import "./ResponsiveCss/maxWidth991.css"
 import "./ResponsiveCss/minWidth768.css"
 import "./ResponsiveCss/maxWidth768.css"
 import "./ResponsiveCss/maxWidth480.css"
-import { connect } from 'react-redux'
+import { connect } from "react-redux"
+
+const Layout = ({ footer, children, color , display}) => {
 
 
-const Layout = ({ footer,children,color }) => {  
   return (
     <div className="page-wrapper">
-      <StyleSwitcher></StyleSwitcher>
-      <Header color={color} />
+      {display && (
+        <>
+          <StyleSwitcher />
+          <Header color={color} />
+        </>
+      )}
+
       <main>{children}</main>
-      <Footer footer={footer}/>
-      <ScrollUpButton AnimationDuration={1500} ShowAtPosition={0}
-      />
-      <div ><i className="fa fa-angle-up"></i></div>
-    </div >
+      <Footer footer={footer} />
+      <ScrollUpButton AnimationDuration={1500} ShowAtPosition={0} />
+      <div>
+        <i className="fa fa-angle-up"></i>
+      </div>
+    </div>
   )
 }
 
@@ -46,7 +46,7 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-const mapStateToProps = ({ color }) => {
-  return { color }
+const mapStateToProps = ({ color,display }) => {
+  return { color,display }
 }
 export default connect(mapStateToProps, null)(Layout)

@@ -5372,7 +5372,11 @@ ul.tweets li span {
 .ie8 a.overlay i {
   display: none;
 }
-.ie8 .overlay-container:hover a.overlay i,
+.ie8 .slide-overlay i {
+  display: none;
+}
+
+.ie8 .overlay-container:hover .slide-overlay i,
 .ie8 .overlay-container:hover .overlay {
   display: block;
 }
