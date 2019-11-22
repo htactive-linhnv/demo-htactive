@@ -70,12 +70,12 @@ const PortfolioContent = () => {
 
   return (
     <section className="main-container">
-      <div className="container">
-        {console.log(active)}
+      <div className="container"> 
         <div className="row">
           {/* main start */}
           {/* ================ */}
           <div className="main col-md-12">
+          <div className="shield"></div>
             <div className="filters">
               <ul className="nav nav-pills">
                 <li

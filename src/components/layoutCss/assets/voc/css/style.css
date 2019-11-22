@@ -5297,17 +5297,7 @@ ul.tweets li span {
 .gray-bg .owl-next {
   background-color: #ffffff;
 }
-.owl-controls .owl-buttons div:after {
-  font-family: "fontello";
-  font-size: 18px;
-  line-height: 26px;
-}
-.owl-prev:after {
-  content: "\e87c";
-}
-.owl-next:after {
-  content: "\e87d";
-}
+
 .no-touch .owl-controls.clickable .owl-buttons div:hover {
   filter: Alpha(Opacity=100);
   opacity: 1;
@@ -5382,7 +5372,11 @@ ul.tweets li span {
 .ie8 a.overlay i {
   display: none;
 }
-.ie8 .overlay-container:hover a.overlay i,
+.ie8 .slide-overlay i {
+  display: none;
+}
+
+.ie8 .overlay-container:hover .slide-overlay i,
 .ie8 .overlay-container:hover .overlay {
   display: block;
 }
