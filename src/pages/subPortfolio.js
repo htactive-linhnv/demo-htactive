@@ -2,9 +2,8 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
  
-import htImg1 from "../data/images/htactive-1.png"
-import htImg2 from "../data/images/htactive-2.png"
-import htImg3 from "../data/images/htactive-3.png"
+
+import SubSlider from "../components/Portfolio/sliderSubPortfolio"
  
 class subPortfolio extends React.Component {
   constructor() {
@@ -71,92 +70,8 @@ class subPortfolio extends React.Component {
                       </li>
                     </ul>
                     {/* Tab panes start*/}
-                    <div className="tab-content clear-style">
-                      <div className="tab-pane active" id="product-images">
-                        <div
-                          className="owl-carousel content-slider-with-controls-bottom owl-theme"
-                          style={{ opacity: 1, display: "block" }}
-                        >
-                          <div className="owl-wrapper-outer">
-                            <div
-                              className="owl-wrapper"
-                              style={{
-                                width: "2160px",
-                                left: "0px",
-                                display: "block",
-                              }}
-                            >
-                              <div
-                                className="owl-item"
-                                style={{ width: "360px" }}
-                              >
-                                <div className="overlay-container">
-                                  <img src={htImg1} alt="HT Active 1" />
-                                  <a
-                                    href={htImg1}
-                                    className="popup-img overlay"
-                                    title="HT Active 1"
-                                  >
-                                    <i className="fa fa-search-plus" />
-                                  </a>
-                                </div>
-                              </div>
-                              <div
-                                className="owl-item"
-                                style={{ width: "360px" }}
-                              >
-                                <div className="overlay-container">
-                                  <img src={htImg2} alt="HT Active 2" />
-                                  <a
-                                    href={htImg2}
-                                    className="popup-img overlay"
-                                    title="HT Active 2"
-                                  >
-                                    <i className="fa fa-search-plus" />
-                                  </a>
-                                </div>
-                              </div>
-                              <div
-                                className="owl-item"
-                                style={{ width: "360px" }}
-                              >
-                                <div className="overlay-container">
-                                  <img src={htImg3} alt="HT Active 3" />
-                                  <a
-                                    href={htImg3}
-                                    className="popup-img overlay"
-                                    title="HT Active 3"
-                                  >
-                                    <i className="fa fa-search-plus" />
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="owl-controls clickable">
-                            <div className="owl-pagination">
-                              <div className="owl-page active">
-                                <span></span>
-                              </div>
-                              <div className="owl-page">
-                                <span></span>
-                              </div>
-                              <div className="owl-page">
-                                <span></span>
-                              </div>
-                            </div>
-                            <div className="owl-buttons">
-                              <div className="owl-prev">
-                                <span>&lt;</span>
-                              </div>
-                              <div className="owl-next">
-                                <span>&gt;</span>
-                              </div>
-                            </div>
-                            <div />
-                          </div>
-                        </div>
-                      </div>
+                    <div className="tab-content clear-style">                     
+                     <SubSlider/>
                       <div className="tab-pane" id="product-video">
                         <div className="embed-responsive embed-responsive-16by9"></div>
                       </div>
