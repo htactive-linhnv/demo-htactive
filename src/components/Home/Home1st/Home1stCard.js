@@ -1,4 +1,6 @@
 import React from "react"
+import {Link } from "gatsby"
+
 
 const Home1stCard =({icon, title, lead, id, scrollY})=> {
 return (
@@ -11,9 +13,9 @@ return (
       <i className={icon}></i>
       <h2 className="card-title">{title}</h2>
       <p className="card-content">{lead}</p>
-      <a href="/services" className="btn-default btn">
+      <Link to="/services" className="btn-default btn">
         Read More
-      </a>
+      </Link>
     </div>
   </div>
 )}

@@ -1,5 +1,6 @@
 import React from "react"
 import NavBar from "./Header/navbar"
+import {Link } from "gatsby"
 const Footer = ({footer}) => {
   return (
     <footer id="footer" className={footer}>
@@ -8,17 +9,16 @@ const Footer = ({footer}) => {
           <div className="row">
             <div className="col-sm-12 col-md-12 col-xl-6" style={{marginLeft:"0!important"}}>
               <div className="footer-content">      
-                  <a href="/">
+                  <Link to="/">
                     <div className="logo">
                     </div>
-                  </a>             
+                  </Link>             
                 <div className="row">
                   <div className="col-sm-12 col-md-6">
                     <p>Your satisfaction is our success!</p>
                     <ul className="social-links circle">
                       <li className="facebook">
-                        <a
-                  
+                        <a                  
                           href="https://www.facebook.com/htactive"
                         >
                           <i className="fa fa-facebook"></i>
@@ -79,9 +79,9 @@ const Footer = ({footer}) => {
                     </ul>
                   </div>
                 </div>
-                <a href="/about" className="link">
+                <Link to="/about" className="link">
                   <span>About Us</span>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="space-bottom hidden-lg hidden-xs"></div>
@@ -91,19 +91,19 @@ const Footer = ({footer}) => {
                 <nav>
                   <ul className="nav nav-pills nav-stacked footer-nav">
                     <li className="active">
-                      <a href="">Home</a>
+                      <Link to="">Home</Link>
                     </li>
                     <li className="">
-                      <a href="/services">Service</a>
+                      <Link to="/services">Service</Link>
                     </li>
                     <li className="">
-                      <a href="/products">Portfolios</a>
+                      <Link to="/products">Portfolios</Link>
                     </li>
                     <li className="">
-                      <a href="/contact">Contact</a>
+                      <Link to="/contact">Contact</Link>
                     </li>
                     <li className="">
-                      <a href="/news">Blogs</a>
+                      <Link to="/news">Blogs</Link>
                     </li>
                   </ul>
                 </nav>
