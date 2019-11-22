@@ -11,11 +11,7 @@ import PageTop from "../components/Home/pageTop"
 import Services from "../components/Home/Home1st/Home1st"
 import { connect } from 'react-redux'
 import Helmet from "react-helmet"
-window.onload = () => {
-  console.log(localStorage.getItem('color'),"???")
-  let skinCSS = document.getElementById("skinCSS")
-  console.log(skinCSS)
-}
+
 
 const IndexPage = ({ data, color, footer }) => {
   return (
