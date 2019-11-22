@@ -32,9 +32,9 @@ const Home3rd = ({ test }) => {
         }}
         className={toggleStatus === position ? "active" : ""}
       >
-        <a role="tab" data-toggle="tab" href="/">
+        <Link role="tab" data-toggle="tab" >
           {item.tab_title_vn}
-        </a>
+        </Link>
       </li>
     )
   })
