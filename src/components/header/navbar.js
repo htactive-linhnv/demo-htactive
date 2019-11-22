@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import { Link } from 'gatsby'
 const NavBar = ({ color }) => {
   const navItem = ["home", "services", "portfolio", "blog", "contact"]
   const currentPage = navItem.filter(item =>
@@ -29,19 +29,19 @@ const NavBar = ({ color }) => {
         >
           <ul className="nav navbar-nav navbar-right">
             <li className={`${color} ` + (pageIndex === -1 ? "active" : "")}>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li className={`${color} ` + (pageIndex === 1 ? "active" : "")}>
-              <a href="/services">Service</a>
+              <Link to="/services">Service</Link>
             </li>
             <li className={`${color} ` + (pageIndex === 2 ? "active" : "")}>
-              <a href="/portfolio">Portfolios</a>
+              <Link to="/portfolio">Portfolios</Link>
             </li>
             <li className={`${color} ` + (pageIndex === 3 ? "active" : "")}>
-              <a href="/blog">Blogs</a>
+              <Link to="/blog">Blogs</Link>
             </li>
             <li className={`${color} ` + (pageIndex === 4 ? "active" : "")}>
-              <a href="/contact">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
