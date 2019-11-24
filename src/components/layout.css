@@ -1177,3 +1177,7 @@ div.style-switcher .dark-red:hover {
   opacity: 0.9;
   z-index: 100000;
 }
+
+.something{
+  display:none;
+}
