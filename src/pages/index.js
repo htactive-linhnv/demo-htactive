@@ -1,5 +1,5 @@
-import React, { useEffect } from "react"
-import { Link, graphql } from "gatsby"
+import React from "react"
+import { graphql } from "gatsby"
 import Home2nd from "../components/Home/Home2nd/Home2nd"
 import Home3rd from "../components/Home/Home3rd/Home3rd"
 import Layout from "../components/layout"
@@ -9,15 +9,13 @@ import Banner from "../components/Home/banner"
 import BannerHome from "../components/BannerHome/BannerHome"
 import PageTop from "../components/Home/pageTop"
 import Services from "../components/Home/Home1st/Home1st"
-import { connect } from 'react-redux'
+import { connect } from "react-redux"
 import Helmet from "react-helmet"
-
 
 const IndexPage = ({ data, color, footer }) => {
   return (
     <Layout footer={footer}>
-      <Helmet>
-      </Helmet>
+      <Helmet></Helmet>
       <SEO title="Home" color={color} />
       <Banner></Banner>
       <PageTop />
@@ -26,17 +24,14 @@ const IndexPage = ({ data, color, footer }) => {
       <BannerHome />
       <Home3rd test={data} />
       <FooterTop />
-    </Layout >
+    </Layout>
   )
 }
 
 const mapStateToProps = ({ color, footer }) => {
   return { color, footer }
 }
-export default connect(
-  mapStateToProps,
-  null
-)(IndexPage)
+export default connect(mapStateToProps, null)(IndexPage)
 
 export const query = graphql`
   query {

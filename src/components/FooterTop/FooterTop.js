@@ -25,40 +25,14 @@ const FooterTop = () => {
     }, 5000)
   }, [])
 
-  const text = `
-A dog is a type of domesticated animal.
-Known for its loyalty and faithfulness,
-it can be found as a welcome guest in many households across the world.
-`
+
   return (
     //    <div></div>
     <div className="section text-muted footer-top clearfix">
       <div className="container">
         <div className="row ">
           <div className="col-xl-6 col-sm-12">
-            {/* <OwlCarousel
-                            className="owl-theme owl-wrapper"
-                            autoplay
-                            item={6}
-                            autoplayTimeout={5000}
-                            fluidSpeed={1000}
-                            animateIn
-                            rewind
-                            autoWidth
-                            fallbackEasing
-                        >
-                            <div className="item"><img src={img1} alt="" /></div>
-                            <div className="item"><img src={img2} alt="" /></div>
-                            <div className="item"><img src={img3} alt="" /></div>
-                            <div className="item"><img src={img4} alt="" /></div>
-                            <div className="item"><img src={img5} alt="" /></div>
-                            <div className="item"><img src={img6} alt="" /></div>
-                            <div className="item"><img src={img7} alt="" /></div>
-                            <div className="item"><img src={img1} alt="" /></div>
-                            <div className="item"><img src={img2} alt="" /></div>
-                            <div className="item"><img src={img4} alt="" /></div>
-                            <div className="item"><img src={img5} alt="" /></div>
-                        </OwlCarousel> */}
+        
             <div
               className="owl-carousel clients owl-theme"
               style={{ opacity: 1, display: "block" }}

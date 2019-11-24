@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Banner from "../components/Portfolio/banner"
 import PortfolioContent from "../components/Portfolio/portfolioContent"
-const PortfolioPage = () => (
+const PortfolioPage = ({handleDisplay}) => (
  <Layout>
    <SEO title="Portfolio" />
    <Parallax bgImage={PortfolioBanner} strength={500}>
@@ -13,7 +13,7 @@ const PortfolioPage = () => (
        <Banner />
      </div>
    </Parallax>
-   <PortfolioContent/>
+   <PortfolioContent handleDisplay={handleDisplay}/>
  </Layout>
 )
 export default PortfolioPage

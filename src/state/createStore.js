@@ -18,11 +18,15 @@ const reducer = (state, action) => {
       return Object.assign({}, state, {
         open: action.open,
       })
+      case "HIDE_HEADER":
+        console.log("hide header")
+        return Object.assign({}, state, {
+          display: action.display,
+        })
       default: return state
   }
 }
 
-const initialState = { color: "", footer: "", mode: "wide",open:false }
-
+const initialState = { color: "", footer: "", mode: "wide",open:false, display: "true" }
 const createStore = () => reduxCreateStore(reducer, initialState)
 export default createStore

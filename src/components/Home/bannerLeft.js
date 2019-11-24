@@ -6,7 +6,7 @@ const BannerLeft = props => {
   const [fadeOut, setFadeOut] = useState(false)
   const timer = () => setFadeOut(true)
   useEffect(() => {
-    const id = setTimeout(timer, 1850000000)
+    const id = setTimeout(timer,8500)
     return () => clearTimeout(id)
   }, [fadeOut])
   return (

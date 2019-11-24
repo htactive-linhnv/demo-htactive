@@ -1,7 +1,7 @@
 import React from "react"
 
 const Card = ({ image, title, content }) => {
-  console.log(image, title, content)
+ 
   return (
     <div className="col-md-3 col-sm-6 isotope-item web-design">
       <div className="image-box">

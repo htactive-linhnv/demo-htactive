@@ -1,17 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
+import { TinyButton as ScrollUpButton } from "react-scroll-up-button"
 import Header from "./Header/header"
 import Footer from "./footer"
-import StyleSwitcher from '../components/StyleSwitcher/StyleSwitcher'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import StyleSwitcher from "../components/StyleSwitcher/StyleSwitcher"
+import "bootstrap/dist/css/bootstrap.min.css"
 import "./layoutCss/assets/css/bootstrap.css"
 import "./layoutCss/assets/css/carousel.css"
 import "./layoutCss/assets/css/icons.css"
@@ -34,11 +27,12 @@ const Layout = ({ footer,children,color,open}) => {
       <StyleSwitcher></StyleSwitcher>
       <Header color={color} />
       <main>{children}</main>
-      <Footer footer={footer}/>
-      <ScrollUpButton AnimationDuration={1500} ShowAtPosition={0}
-      />
-      <div ><i className="fa fa-angle-up"></i></div>
-    </div >
+      <Footer footer={footer} />
+      <ScrollUpButton AnimationDuration={1500} ShowAtPosition={0} />
+      <div>
+        <i className="fa fa-angle-up"></i>
+      </div>
+    </div>
   )
 }
 
