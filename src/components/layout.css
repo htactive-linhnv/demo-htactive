@@ -1091,7 +1091,9 @@ div.style-switcher .dark-red:hover {
   }
 }
 
-
+.blur-bg {
+  filter:blur(8px);
+}
 /*Boxed*/
 
 @media (min-width: 768px){

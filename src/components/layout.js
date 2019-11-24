@@ -20,17 +20,17 @@ import "./layoutCss/assets/css/plugins.css"
 import "./layoutCss/assets/voc/css/animations.css"
 import "./layoutCss/assets/voc/css/style.css"
 import "./layout.css"
-import "./minWidth992.css"
-import "./maxWidth991.css"
-import "./minWidth768.css"
-import "./maxWidth768.css"
-import "./maxWidth480.css"
+import "./ResponsiveCss/minWidth992.css"
+import "./ResponsiveCss/maxWidth991.css"
+import "./ResponsiveCss/minWidth768.css"
+import "./ResponsiveCss/maxWidth768.css"
+import "./ResponsiveCss/maxWidth480.css"
 import { connect } from 'react-redux'
 
 
-const Layout = ({ footer,children,color }) => {  
+const Layout = ({ footer,children,color,open}) => {  
   return (
-    <div className="page-wrapper">
+    <div className={ "page-wrapper " +  (open ? "blur-bg" : "")}>
       <StyleSwitcher></StyleSwitcher>
       <Header color={color} />
       <main>{children}</main>
@@ -46,7 +46,7 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-const mapStateToProps = ({ color }) => {
-  return { color }
+const mapStateToProps = ({ color,open}) => {
+  return { color,open }
 }
 export default connect(mapStateToProps, null)(Layout)

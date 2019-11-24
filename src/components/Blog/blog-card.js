@@ -1,4 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
+import { Link } from "gatsby"
+import "../Blog/blog-card.css"
+import { useModal } from "react-modal-hook"
+import ReactModal from "react-modal"
+import { RemoveScrollBar } from "react-remove-scroll-bar"
+import { connect } from "react-redux"
 
 const CardBlog = ({
   src,
@@ -11,25 +17,75 @@ const CardBlog = ({
   tag,
   linkBlog,
   linkImg,
+  toggleOverlay
 }) => {
+  const [open, setOpen] = useState(false)
+  const [showModal, hideModal] = useModal(() => (
+    <ReactModal isOpen>
+      <div
+        style={{ width: "100%" }}
+        onClick={() => {
+          hideModal()
+          setOpen(false)
+          toggleOverlay(false)
+        }}
+      >
+        <div>&nbsp;</div>
+        <img src={src}></img>
+      </div>
+    </ReactModal>
+  ))
   return (
     <div className="masonry-grid-item col-sm-12 col-md-6 col-lg-4 col-lg-4">
+      {open && <RemoveScrollBar />}
       <article className="clearfix blogpost">
         <div className="overlay-container blog-overlay">
+          <button
+            className="overlay-btn"
+            style={{
+              position: "absolute",
+              top: "86px",
+              left: "180px",
+              zIndex: "10",
+              width: 50,
+              height: 30,
+              background: "transparent",
+              border: "none",
+              color: "transparent",
+            }}
+            onClick={() => {
+              showModal()
+              setOpen(true)
+              toggleOverlay(true)
+            }}
+          >
+            Click
+          </button>
+          <Link
+            to={linkBlog}
+            className="link-btn"
+            style={{
+              position: "absolute",
+              top: "86px",
+              left: "130px",
+              zIndex: "10",
+              width: 50,
+              height: 30,
+              background: "transparent",
+              border: "none",
+              color: "transparent",
+            }}
+          ></Link>
           <img
             src={src}
             alt="Những Material component tuyệt vời trong React Native."
           />
-          <div className="overlay">
+          <div className={"overlay "}>
             <div className="overlay-links">
-              <a href={linkBlog}>
+              <Link to={"/"}>
                 <i className="fa fa-link" />
-              </a>
-              <a
-                href={linkImg}
-                className="popup-img-single"
-                title="image title"
-              >
+              </Link>
+              <a href={"/"} className="popup-img-single" title="image title">
                 <i className="fa fa-search-plus" />
               </a>
             </div>
@@ -63,12 +119,20 @@ const CardBlog = ({
               <i className="fa fa-tags pr-5" /> <a href="/blog">{tag}</a>
             </li>
           </ul>
-          <a className="pull-right link" href={linkBlog}>
+          <Link className="pull-right link" to={linkBlog}>
             <span>Read more</span>
-          </a>
+          </Link>
         </footer>
       </article>
     </div>
   )
 }
-export default CardBlog
+const mapDispatchToProps = dispatch => {
+  return {
+    toggleOverlay: open => dispatch({ type: `TOGGLE_OVERLAY`, open: open }),
+  }
+}
+export default connect(
+  null,
+  mapDispatchToProps
+)(CardBlog)

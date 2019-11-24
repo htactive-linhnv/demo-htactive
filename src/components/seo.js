@@ -5,12 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useRef, useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import { connect, dispatch } from "react-redux"
-import StyleSwitcher from "./StyleSwitcher/StyleSwitcher"
+import { connect } from "react-redux"
 
 const SEO = ({
   description,
@@ -35,14 +34,11 @@ const SEO = ({
     if (localLayout) {
       changeLayoutRedux(localLayout)
       let body = document.getElementsByTagName("BODY")[0]
-      body.className = localLayout
+      if(body) body.className = localLayout
     }
     if (localFooter) {
       changeFooterRedux(localFooter)
     }
-  }
-  const change = () => {
-    changeColorRedux("pink")
   }
   useEffect(() => {
     getLocalStyle()
@@ -69,7 +65,7 @@ const SEO = ({
         htmlAttributes={{
           lang,
         }}
-        title={title}
+        title={" HT Active"}
         titleTemplate={`%s | ${site.siteMetadata.title}`}
         meta={[
           {
@@ -134,7 +130,8 @@ const mapStateToProps = ({ color, footer, mode }) => {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    changeFooterRedux: footer => dispatch({ type: `CHANGE_FOOTER`, footer: footer }),
+    changeFooterRedux: footer =>
+      dispatch({ type: `CHANGE_FOOTER`, footer: footer }),
     changeColorRedux: color => dispatch({ type: `CHANGE_COLOR`, color: color }),
     changeLayoutRedux: mode => dispatch({ type: `CHANGE_LAYOUT`, mode: mode }),
   }
