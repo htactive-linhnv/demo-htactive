@@ -21,13 +21,13 @@ const SubSlider = ({changeHideHeader}) => {
   })
   const prevItem = prevItemRef.current
 
-  const handleOpenSlider = () => {
-      setOpenSlider(true)
-      changeHideHeader()
+  const handleOpenSlider = (value) => {
+      setOpenSlider(value)
+      changeHideHeader(!value)
   }
   return (
     <div className="tab-pane">
-      {openBigSlider && <BigSlider listImg={listImg}/>}
+      {openBigSlider && <BigSlider listImg={listImg}  handleOpenSlider={handleOpenSlider}/>}
       <div
         className={`owl-carousel content-slider-with-controls-bottom owl-theme `}
         style={{ opacity: 1, display: "block" }}
@@ -89,8 +89,8 @@ const mapStateToProps = ({ display }) => {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    changeHideHeader: () =>
-      dispatch({ type: `HIDE_HEADER`, display: false })   
+    changeHideHeader: (value) =>
+      dispatch({ type: `HIDE_HEADER`, display: value })   
   }
 }
 export default connect(

@@ -1,13 +1,9 @@
 import React, { useState } from "react"
-import { Link } from 'gatsby'
-const NavBar = ({ color }) => {
-  const navItem = ["home", "services", "portfolio", "blog", "contact"]
-  // const currentPage = navItem.filter(item =>
-  //   if(window) window.location.href.includes(item)
-  // )
-  // const pageIndex = navItem.indexOf(currentPage[0])
+import { connect } from "react-redux"
+import { Link } from "gatsby"
+const NavBar = ({ color, active, changeActive }) => {
   const [openDrop, setOpenDrop] = useState(false)
-  pageIndex = 1;
+
   return (
     <nav className="navbar navbar-default" role="navigation">
       <div className="container-fluid">
@@ -29,19 +25,34 @@ const NavBar = ({ color }) => {
           style={{ display: `${openDrop ? "block" : "none"}` }}
         >
           <ul className="nav navbar-nav navbar-right">
-            <li className={`${color} ` + (pageIndex === -1 ? "active" : "")}>
+            <li
+              className={`${color} ${active === "1" ? "active" : ""} `}
+              onClick={() => changeActive("1")}
+            >
               <Link to="/">Home</Link>
             </li>
-            <li className={`${color} ` + (pageIndex === 1 ? "active" : "")}>
+            <li
+              className={`${color} ${active === "2" ? "active" : ""} `}
+              onClick={() => changeActive("2")}
+            >
               <Link to="/services">Service</Link>
             </li>
-            <li className={`${color} ` + (pageIndex === 2 ? "active" : "")}>
+            <li
+              className={`${color} ${active === "3" ? "active" : ""} `}
+              onClick={() => changeActive("3")}
+            >
               <Link to="/portfolio">Portfolios</Link>
             </li>
-            <li className={`${color} ` + (pageIndex === 3 ? "active" : "")}>
+            <li
+              className={`${color} ${active === "4" ? "active" : ""} `}
+              onClick={() => changeActive("4")}
+            >
               <Link to="/blog">Blogs</Link>
             </li>
-            <li className={`${color} ` + (pageIndex === 4 ? "active" : "")}>
+            <li
+              className={`${color} ${active === "5" ? "active" : ""} `}
+              onClick={() => changeActive("5")}
+            >
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
@@ -50,4 +61,13 @@ const NavBar = ({ color }) => {
     </nav>
   )
 }
-export default NavBar
+
+const mapStateToProps = ({ active }) => {
+  return { active }
+}
+const mapDispatchToProps = dispatch => {
+  return {
+    changeActive: value => dispatch({ type: `ACTIVE_NAVBAR`, active: value }),
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar)

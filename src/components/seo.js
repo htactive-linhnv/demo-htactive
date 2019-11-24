@@ -33,6 +33,7 @@ const SEO = ({
     }
     if (localLayout) {
       changeLayoutRedux(localLayout)
+    
       let body = document.getElementsByTagName("BODY")[0]
       if(body) body.className = localLayout
     }
@@ -136,7 +137,4 @@ const mapDispatchToProps = dispatch => {
     changeLayoutRedux: mode => dispatch({ type: `CHANGE_LAYOUT`, mode: mode }),
   }
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SEO)
+export default connect(mapStateToProps, mapDispatchToProps)(SEO)

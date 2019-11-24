@@ -38,7 +38,7 @@ const StyleSwitcher = ({
   }
   const changeLayout = layout => {
     localStorage.setItem("layout", layout)
-    const body = document.getElementsByClassName("BODY")[0]
+    const body = document.getElementsByTagName("BODY")[0]
     if(body) body.className = layout
     changeLayoutRedux(layout)
   }

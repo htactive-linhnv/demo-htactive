@@ -10,7 +10,7 @@ const ItemSlider = ({ prevItem, item, src, title, handleOpenSlider }) => {
     >
       <div className="overlay-container">
         <img src={src} alt={title} />
-        <span className="popup-img overlay slide-overlay " onClick={()=>handleOpenSlider()} title={title}>
+        <span className="popup-img overlay slide-overlay " onClick={()=>handleOpenSlider(true)} title={title}>
           <i className="fa fa-search-plus" />
         </span>
       </div>
