@@ -7,7 +7,7 @@ const Blog = () => {
   return (
     <Layout>
       <SEO title="Blog" />;
-     < BlogContent/>
+      <BlogContent/>
     </Layout>
   )
 }

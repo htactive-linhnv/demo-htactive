@@ -457,7 +457,7 @@ tbody {
 
 /* Boxed Layout
 ---------------------------------- */
-.boxed .page-wrapper {
+.boxed .page-wrapper  {
   margin-right: auto;
   margin-left: auto;
   position: relative;

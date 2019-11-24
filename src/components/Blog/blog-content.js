@@ -1,5 +1,6 @@
 import React from "react"
 import CardBlog from "./blog-card"
+import { ModalProvider } from "react-modal-hook"
 
 const BlogContent = () => {
   const data = [
@@ -75,34 +76,36 @@ const BlogContent = () => {
     },
   ]
   return (
-    <section className="main-container" style={{ marginTop: "10px" }}>
-      <div className="container">
-        <div className="row">
-          {/* main start */}
-          {/* ================ */}
-          <div className="main col-md-12">
-            <div className="masonry-grid row">
-              {data.map((item, index) => (
-                <CardBlog
-                  key={index}
-                  src={item.src}
-                  postday={item.postday}
-                  postmonth={item.postmonth}
-                  cardTitle={item.cardTitle}
-                  author={item.author}
-                  cardContent={item.cardContent}
-                  commend={item.commend}
-                  tag={item.tag}
-                  linkImg={item.linkImg}
-                  linkBlog={item.linkBlog}
-                />
-              ))}
+    <ModalProvider>
+      <section className="main-container" style={{ marginTop: "10px" }}>
+        <div className="container">
+          <div className="row">
+            {/* main start */}
+            {/* ================ */}
+            <div className="main col-md-12">
+              <div className="masonry-grid row">
+                {data.map((item, index) => (
+                  <CardBlog
+                    key={index}
+                    src={item.src}
+                    postday={item.postday}
+                    postmonth={item.postmonth}
+                    cardTitle={item.cardTitle}
+                    author={item.author}
+                    cardContent={item.cardContent}
+                    commend={item.commend}
+                    tag={item.tag}
+                    linkImg={item.linkImg}
+                    linkBlog={item.linkBlog}
+                  />
+                ))}
+              </div>
+              {/* masonry grid end */}
             </div>
-            {/* masonry grid end */}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </ModalProvider>
   )
 }
 export default BlogContent
