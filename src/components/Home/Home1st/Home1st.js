@@ -29,6 +29,7 @@ const Services = () => {
     },
   ]
   const logit = () => {
+    if(window)
     setScrollY(window.pageYOffset)
   }
   useEffect(() => {
