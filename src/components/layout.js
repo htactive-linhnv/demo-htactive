@@ -40,7 +40,7 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-const mapStateToProps = ({ color,open}) => {
-  return { color,open }
+const mapStateToProps = ({ color,open,footer}) => {
+  return { color,open,footer }
 }
 export default connect(mapStateToProps, null)(Layout)

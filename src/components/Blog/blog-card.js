@@ -99,7 +99,7 @@ const CardBlog = ({
           <div className="blogpost-content">
             <header>
               <h2 className="title">
-                <a href="blogPost">{cardTitle}</a>
+                <a href="blogPost" class="post-title">{cardTitle}</a>
               </h2>
               <div className="submitted">
                 <i className="fa fa-user pr-5" /> by{" "}
