@@ -5,12 +5,12 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useRef, useEffect, useState } from "react"
+import React, { useEffect} from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import { connect, dispatch } from "react-redux"
-import StyleSwitcher from "./StyleSwitcher/StyleSwitcher"
+import { connect} from "react-redux"
+
 
 const SEO = ({
   description,
@@ -40,10 +40,7 @@ const SEO = ({
     if (localFooter) {
       changeFooterRedux(localFooter)
     }
-  }
-  const change = () => {
-    changeColorRedux("pink")
-  }
+  }  
   useEffect(() => {
     getLocalStyle()
   })

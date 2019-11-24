@@ -1,7 +1,7 @@
 import React from "react"
 import BannerAnim from "rc-banner-anim"
 import { RemoveScrollBar } from "react-remove-scroll-bar"
-import { Button, Icon } from "antd"
+import { Button } from "antd"
 
 const { Element } = BannerAnim
 const BgElement = Element.BgElement
