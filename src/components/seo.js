@@ -5,12 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useEffect} from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import { connect} from "react-redux"
-
+import { connect } from "react-redux"
 
 const SEO = ({
   description,
@@ -34,13 +33,14 @@ const SEO = ({
     }
     if (localLayout) {
       changeLayoutRedux(localLayout)
-      const body = document.getElementsByTagName("BODY")[0]
-      if (body) body.className = localLayout
+    
+      let body = document.getElementsByTagName("BODY")[0]
+      if(body) body.className = localLayout
     }
     if (localFooter) {
       changeFooterRedux(localFooter)
     }
-  }  
+  }
   useEffect(() => {
     getLocalStyle()
   })
@@ -66,7 +66,7 @@ const SEO = ({
         htmlAttributes={{
           lang,
         }}
-        title={title}
+        title={" HT Active"}
         titleTemplate={`%s | ${site.siteMetadata.title}`}
         meta={[
           {

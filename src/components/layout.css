@@ -1091,6 +1091,9 @@ div.style-switcher .dark-red:hover {
   }
 }
 
+.blur-bg {
+  filter:blur(8px);
+}
 /*Boxed*/
 
 @media (min-width: 768px) {
@@ -1193,4 +1196,8 @@ div.style-switcher .dark-red:hover {
   background-color: #394346;
   opacity: 0.9;
   z-index: 100000;
+}
+
+.something{
+  display:none;
 }

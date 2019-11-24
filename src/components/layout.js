@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button"
-import Header from "./Header/header"
+import Header from "./header/header"
 import Footer from "./footer"
 import StyleSwitcher from "../components/StyleSwitcher/StyleSwitcher"
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -18,20 +18,14 @@ import "./ResponsiveCss/maxWidth991.css"
 import "./ResponsiveCss/minWidth768.css"
 import "./ResponsiveCss/maxWidth768.css"
 import "./ResponsiveCss/maxWidth480.css"
-import { connect } from "react-redux"
-
-const Layout = ({ footer, children, color , display}) => {
+import { connect } from 'react-redux'
 
 
+const Layout = ({ footer,children,color,open}) => {  
   return (
-    <div className="page-wrapper">
-      {display && (
-        <>
-          <StyleSwitcher />
-          <Header color={color} />
-        </>
-      )}
-
+    <div className={ "page-wrapper " +  (open ? "blur-bg" : "")}>
+      <StyleSwitcher></StyleSwitcher>
+      <Header color={color} />
       <main>{children}</main>
       <Footer footer={footer} />
       <ScrollUpButton AnimationDuration={1500} ShowAtPosition={0} />
@@ -46,7 +40,7 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-const mapStateToProps = ({ color,display }) => {
-  return { color,display }
+const mapStateToProps = ({ color,open}) => {
+  return { color,open }
 }
 export default connect(mapStateToProps, null)(Layout)

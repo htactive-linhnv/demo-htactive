@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import { Link } from "gatsby"
 const NavBar = ({ color, active, changeActive }) => {
   const [openDrop, setOpenDrop] = useState(false)
+
   return (
     <nav className="navbar navbar-default" role="navigation">
       <div className="container-fluid">

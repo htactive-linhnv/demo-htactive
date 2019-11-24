@@ -14,6 +14,10 @@ const reducer = (state, action) => {
       return Object.assign({}, state, {
         mode: action.mode,
       })
+    case "TOGGLE_OVERLAY":
+      return Object.assign({}, state, {
+        open: action.open,
+      })
     case "HIDE_HEADER":
       return Object.assign({}, state, {
         display: action.display,
@@ -29,6 +33,7 @@ const reducer = (state, action) => {
 
 const initialState = {
   color: "",
+  open: false,
   footer: "",
   mode: "wide",
   display: true,
