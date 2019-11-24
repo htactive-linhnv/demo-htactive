@@ -1164,7 +1164,27 @@ div.style-switcher .dark-red:hover {
   right: 0;
   z-index: 1500000;
 }
-.shield {
+.big-slider .banner-anim {
+  position: relative;
+  top: 40px;
+  z-index: 20000000;
+}
+.big-slider .banner-anim-thumb {
+  display: none!important;
+}
+.big-slider .big-slider-close {
+  position: absolute;
+  top: 20px;
+  z-index: 20000000;
+  right: 40%;
+  background-color:transparent!important;
+  border-color: transparent!important;
+  
+}
+.big-slider .big-slider-close .anticon{
+  vertical-align: 0!important;
+}
+.big-slider .shield {
   position: fixed;
   top: 0;
   right: 0;

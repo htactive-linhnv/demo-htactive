@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button"
 import Header from "./Header/header"

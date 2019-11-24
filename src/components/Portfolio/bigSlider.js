@@ -1,16 +1,24 @@
 import React from "react"
 import BannerAnim from "rc-banner-anim"
-import {RemoveScrollBar} from 'react-remove-scroll-bar'
+import { RemoveScrollBar } from "react-remove-scroll-bar"
+import { Button, Icon } from "antd"
 
 const { Element } = BannerAnim
 const BgElement = Element.BgElement
 
-const BigSlider = ({ listImg }) => {
+const BigSlider = ({ listImg, handleOpenSlider}) => {
   return (
     <>
-    <RemoveScrollBar />
-    <div className="shield"/>
+      <RemoveScrollBar />
       <div className="big-slider">
+        <div className="shield" />
+        <Button
+          type="primary"
+          shape="circle"
+          icon="close"
+          className="big-slider-close"
+          onClick={()=>handleOpenSlider(false)}
+        ></Button>
         <BannerAnim autoPlayEffect={false}>
           {listImg.map(item => (
             <Element key={item.id} prefixCls="banner-user-elem">
@@ -18,7 +26,7 @@ const BigSlider = ({ listImg }) => {
                 key="bg"
                 className="bg"
                 style={{
-                    top:"20px",
+                  top: "20px",
                   width: "100%",
                   height: "100%",
                   backgroundImage: `url(${item.src})`,
@@ -30,8 +38,8 @@ const BigSlider = ({ listImg }) => {
               />
             </Element>
           ))}
-        </BannerAnim>     
-    </div>
+        </BannerAnim>
+      </div>
     </>
   )
 }

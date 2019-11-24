@@ -34,8 +34,8 @@ const SEO = ({
     }
     if (localLayout) {
       changeLayoutRedux(localLayout)
-      let body = document.getElementsByTagName("BODY")[0]
-      body.className = localLayout
+      const body = document.getElementsByTagName("BODY")[0]
+      if (body) body.className = localLayout
     }
     if (localFooter) {
       changeFooterRedux(localFooter)
@@ -134,12 +134,10 @@ const mapStateToProps = ({ color, footer, mode }) => {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    changeFooterRedux: footer => dispatch({ type: `CHANGE_FOOTER`, footer: footer }),
+    changeFooterRedux: footer =>
+      dispatch({ type: `CHANGE_FOOTER`, footer: footer }),
     changeColorRedux: color => dispatch({ type: `CHANGE_COLOR`, color: color }),
     changeLayoutRedux: mode => dispatch({ type: `CHANGE_LAYOUT`, mode: mode }),
   }
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SEO)
+export default connect(mapStateToProps, mapDispatchToProps)(SEO)

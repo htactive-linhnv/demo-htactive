@@ -15,16 +15,25 @@ const reducer = (state, action) => {
         mode: action.mode,
       })
     case "HIDE_HEADER":
-      console.log("hide header")
       return Object.assign({}, state, {
         display: action.display,
+      })
+    case "ACTIVE_NAVBAR":
+      return Object.assign({}, state, {
+        active: action.active,
       })
     default:
       return state
   }
 }
 
-const initialState = { color: "", footer: "", mode: "wide", display: "true" }
+const initialState = {
+  color: "",
+  footer: "",
+  mode: "wide",
+  display: true,
+  active: "1",
+}
 
 const createStore = () => reduxCreateStore(reducer, initialState)
 export default createStore

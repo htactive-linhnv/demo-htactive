@@ -38,7 +38,8 @@ const StyleSwitcher = ({
   }
   const changeLayout = layout => {
     localStorage.setItem("layout", layout)
-    document.getElementsByTagName("BODY")[0].className = layout
+    const body = document.getElementsByTagName("BODY")[0]
+    if(body) body.className = layout
     changeLayoutRedux(layout)
   }
   const changeFooter = footer => {
