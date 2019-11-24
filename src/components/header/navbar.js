@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 const NavBar = ({ color }) => {
   const navItem = ["home", "services", "portfolio", "blog", "contact"]
   const currentPage = navItem.filter(item =>
-    window.location.href.includes(item)
+    if(window) window.location.href.includes(item)
   )
   const pageIndex = navItem.indexOf(currentPage[0])
   const [openDrop, setOpenDrop] = useState(false)
