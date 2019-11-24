@@ -27,19 +27,33 @@ const StyleSwitcher = ({
       data-style={item}
       title={item}
       onClick={() => {
-        changeColor(item)
+        changeColor(item,mode)
       }}
     />
   ))
   // style switch functions
-  const changeColor = color => {
+  const changeColor = (color,layout) => {
     localStorage.setItem("color", color)
+     let body = document.getElementsByTagName("BODY")[0]
+     changeColorRedux(color)
+    if (layout) {
+      if (body) body.className = `${layout} ${color}`
+    } else {
+      if (body) body.className = `${color}`
+    }
     changeColorRedux(color)
+
   }
+  
   const changeLayout = layout => {
     localStorage.setItem("layout", layout)
     const body = document.getElementsByTagName("BODY")[0]
     if(body) body.className = layout
+    if (color) {
+      if (body) body.className = `${layout} ${color}`
+    } else {
+      if (body) body.className = `${layout}`
+    }
     changeLayoutRedux(layout)
   }
   const changeFooter = footer => {
@@ -204,6 +218,7 @@ const StyleSwitcher = ({
     </div>
   )
 }
+
 const mapStateToProps = ({ color, footer, mode }) => {
   return { color, footer, mode }
 }

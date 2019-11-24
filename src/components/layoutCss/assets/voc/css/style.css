@@ -5427,3 +5427,1718 @@ p.cutline {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+
+/*
+Theme Name: iDea - Clean & Powerful Bootstrap Theme
+Author: HtmlCoder
+Author URI: http://www.blue .htmlcoder.blue .me
+Author e-mail: htmlcoder.blue .me@gmail.blue .com
+Version: 1.blue .2.blue .1
+Created: September 2014
+License URI: http://support.blue .wrapbootstrap.blue .com/
+File Description: Blue Skin
+*/
+
+/* 1 Typography
+----------------------------------------------------------------------------- */
+
+mark,
+.blue .mark {
+	background-color: #3d78d8;
+	color: #ffffff;
+}
+.blue .table > thead > tr > th {
+	border-bottom: 1px solid #3d78d8;
+	background-color: #3d78d8;
+	color: #fff;
+}
+.blue .table-bordered {
+	border-color: #3d78d8;
+}
+
+/* 2 Layout
+----------------------------------------------------------------------------- */
+.blue .default-bg {
+	background-color: #3d78d8;
+	color: #ffffff;
+}
+
+/* Backgrounds
+---------------------------------- */
+.blue .default-translucent-bg:after {
+	background-color: rgba(61,120,216,0.blue .7);
+}
+
+/* 3 Pages
+----------------------------------------------------------------------------- */
+.blue .blogpost .blue .post-info {
+	background-color: #3d78d8;
+	color: #fff;
+}
+.blue .blogpost .blue .side .blue .social-links li a {
+	background-color: transparent;
+	border-color: transparent;
+	color: #3d78d8;
+}
+.blue .blogpost ul.blue .links li a:hover {
+	color: #3d78d8;
+}
+
+/* timeline layout */
+.blue .timeline-date-label {
+	color: #3d78d8;
+}
+@media (min-width:768px) {
+	.blue .timeline .blue .timeline-item:before {
+		background-color: #fff;
+		border: 1px solid #3d78d8;
+	}
+}
+
+/* 4 Template Components
+----------------------------------------------------------------------------- */
+/* Buttons
+---------------------------------- */
+/* Gray Buttons */
+.blue .btn-gray:hover,
+.blue .btn-gray:focus,
+.blue .btn-gray:active,
+.blue .btn-gray.blue .active,
+.blue .open .blue .dropdown-toggle.blue .btn-gray {
+	color: #ffffff;
+	background-color: #3d78d8;
+	border-color: #3d78d8;
+}
+
+/* Light Gray Buttons */
+.blue .btn-light-gray:hover,
+.blue .btn-light-gray:focus,
+.blue .btn-light-gray:active,
+.blue .btn-light-gray.blue .active,
+.blue .open .blue .dropdown-toggle.blue .btn-light-gray {
+	color: #ffffff;
+	background-color: #3d78d8;
+	border-color: #3d78d8;
+}
+
+/* Default Buttons */
+.blue .btn-default {
+	background-color: #3d78d8;
+	color: #fff !important;
+	border-color: #2c5fb3;
+}
+.blue .btn-default:hover,
+.blue .btn-default:focus,
+.blue .btn-default:active,
+.blue .btn-default.blue .active,
+.blue .open .blue .dropdown-toggle.blue .btn-default {
+	color: #fff !important;
+	background-color: #2c5fb3;
+	border-color: #2c5fb3;
+}
+.blue .btn-default.blue .disabled,
+.blue .btn-default[disabled],
+fieldset[disabled] .blue .btn-default {
+	background-color: #2c5fb3;
+	border-color: #2c5fb3;
+}
+
+/* Button with transparent bg
+---------------------------------- */
+.blue .btn-white {
+	background-color: transparent;
+	color: #2c5fb3;
+	border: 1px solid #3d78d8;
+}
+.blue .btn-white:hover,
+.blue .btn-white:focus,
+.blue .btn-white:active,
+.blue .btn-white.blue .active,
+.blue .open .blue .dropdown-toggle.blue .btn-white {
+	color: #fff;
+	background-color: #2c5fb3;
+	border-color: #2c5fb3;
+}
+
+/* Forms
+---------------------------------- */
+.blue .default-bg .blue .form-control {
+	border-color: #3d78d8;
+	background-color: rgba(0, 0, 0, 0.blue .2);
+	-webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, blue .35);
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, blue .35);
+	color: #ffffff;
+}
+.blue .default-bg .blue .form-control:focus {
+	border-color: #3d78d8;
+	background-color: rgba(0, 0, 0, 0.blue .25);
+}
+.blue .default-bg .blue .input-group-addon {
+	background-color: #2c5fb3;
+	border-color: #3d78d8;
+	color: #fff;
+}
+.blue .dropdown .blue .active>a>.blue .badge,
+.blue .dropdown a:hover .blue .badge,
+.blue .dropdown .blue .open > a > .blue .badge {
+	border-color: #3d78d8;
+}
+
+/* Pager
+---------------------------------- */
+ul.blue .pagination li > a:hover {
+	background-color: transparent;
+	color: #ffffff;
+	background-color: #3d78d8;
+	border-color: #3d78d8;
+}
+ul.blue .pagination li.blue .active a,
+.blue .pagination > .blue .active > a:hover,
+.blue .pagination > .blue .active > a:focus {
+	color: #ffffff;
+	background-color: #3d78d8;
+	border-color: #3d78d8;
+}
+
+/* Tabs
+---------------------------------- */
+.blue .nav-tabs > li.blue .active > a:after {
+	background-color: #3d78d8!important;
+}
+
+@media (max-width:480px) {
+	.blue .nav-tabs > li > a:hover:after {
+		background-color: #3d78d8;
+	}
+}
+
+/* Horizontal tabs version 2 */
+.blue .tabs-style-2 .blue .nav-tabs {
+	border-bottom: 1px solid #3d78d8;
+}
+.blue .tabs-style-2 .blue .nav-tabs > li.blue .active > a,
+.blue .tabs-style-2 .blue .nav-tabs > li.blue .active > a:hover,
+.blue .tabs-style-2 .blue .nav-tabs > li.blue .active > a:focus,
+.blue .tabs-style-2 .blue .nav-tabs > li > a:hover {
+	border: 1px solid #3d78d8;
+	background-color: #3d78d8;
+	color: #fff;
+}
+
+/* vertical tabs */
+.blue .vertical .blue .nav-tabs > li > a:hover:after {
+	background-color: #3d78d8;
+}
+
+/* Nav pills
+---------------------------------- */
+.blue .nav-pills > li.blue .active > a,
+.blue .nav-pills > li.blue .active > a:hover,
+.blue .nav-pills > li.blue .active > a:focus,
+.blue .nav-pills > li > a:hover,
+.blue .nav-pills > li > a:focus {
+	border: 1px solid #f3f3f3;
+	color: #3d78d8;
+	background-color: #fafafa;
+}
+.blue .nav-pills > li.blue .active > a:after {
+	color: #3d78d8;
+}
+.blue .nav-pills > li.blue .active > a:hover:after,
+.blue .nav-pills > li.blue .active > a:focus:after,
+.blue .nav-pills > li > a:hover:after,
+.blue .nav-pills > li > a:focus:after {
+	color: #3d78d8;
+}
+.blue .light .blue .footer-content .blue .nav-pills > li.blue .active > a:hover,
+.blue .light .blue .footer-content .blue .nav-pills > li > a:hover {
+	color: #2c5fb3;
+}
+.blue .nav-pills > .blue .active > a > .blue .badge {
+	color: #2c5fb3;
+	background-color: #fff;
+	border-color: #2c5fb3;	
+}
+/* Collapse
+---------------------------------- */
+.blue .panel-heading a {
+	background-color: #3d78d8;
+	color: #ffffff;
+}
+.blue .panel-heading a:hover,
+.blue .panel-transparent .blue .panel-heading a:hover {
+	background-color: #3d78d8;
+	color: #ffffff;
+}
+
+/* Progress bars
+---------------------------------- */
+.blue .progress-bar-default {
+	background-color: #3d78d8;
+}
+
+/* Modals
+---------------------------------- */
+.blue .modal-content .blue .modal-header {
+	background-color: #3d78d8;
+}
+
+/* Images and Images overlay
+---------------------------------- */
+.blue .overlay a {
+	color: #3d78d8;
+	background-color: #ffffff;
+}
+.blue .overlay-links a + a {
+	color: #ffffff;
+	background-color: #3d78d8;
+}
+a.blue .overlay i {
+	color: #3d78d8;
+}
+
+/* 5 Navigations
+----------------------------------------------------------------------------- */
+/* first level active menu items on hover/focus */
+.blue .navbar-default .blue .navbar-nav > .blue .active > a,
+.blue .navbar-default .blue .navbar-nav > .blue .active > a:focus {
+	color: #3d78d8;
+	background-color: transparent;
+}
+
+.blue .main-navigation .blue .navbar-nav > .blue .open > a, 
+.blue .main-navigation .blue .navbar-nav > .blue .open > a:hover, 
+.blue .main-navigation .blue .navbar-nav > .blue .open > a:focus { 
+	color: #666666; 
+	background-color: #fafafa; 
+}
+
+/* second level menu items on focus/hover and when opened */
+.blue .dropdown-menu > li > a:hover,
+.blue .dropdown-menu > li > a:focus,
+.blue .nav .blue .open > a,
+.blue .nav .blue .open > a:hover,
+.blue .nav .blue .open > a:focus,
+.blue .dropdown-menu > .blue .active > a,
+.blue .dropdown-menu > .blue .active > a:hover,
+.blue .dropdown-menu > .blue .active > a:focus,
+.blue .dropdown-menu .blue .menu > .blue .active > a,
+.blue .dropdown-menu .blue .menu > .blue .active > a:hover,
+.blue .dropdown-menu .blue .menu > .blue .active > a:focus {
+	background-color: #ffffff;
+	color: #3d78d8;
+	border-color: #f1f1f1;
+}
+#offcanvas .blue .nav .blue .open > a,
+#offcanvas .blue .nav .blue .open > a:hover,
+#offcanvas .blue .nav .blue .open > a:focus,
+#offcanvas .blue .nav > li > a:hover, 
+#offcanvas .blue .nav > li > a:focus,
+#offcanvas .blue .navbar-nav > li.blue .active > a {
+	color: #3d78d8;
+	background-color: #ffffff;
+}
+
+/* mega menu menu items on focus/hover and when opened */
+.blue .mega-menu .blue .menu > li > a:hover,
+.blue .mega-menu .blue .menu > li > a:focus {
+	background-color: #ffffff;
+	color: #3d78d8;
+	border-color: #f1f1f1;
+}
+
+/* arrows for parent menu items */
+.blue .navbar-default .blue .navbar-nav > .blue .active.blue .dropdown > a:before {
+	color: #3d78d8;
+}
+.blue .navbar-default .blue .navbar-nav > .blue .dropdown.blue .open > a:before { 
+	color: #e5e5e5; 
+}
+.blue .dropdown .blue .dropdown.blue .open>a:before,
+.blue .transparent.blue .header:not(.blue .dark) .blue .dropdown .blue .dropdown.blue .open>a:before {
+	color: #3d78d8;
+}
+
+/* mobile menu toggle button on hover/focus */
+.blue .navbar-default .blue .navbar-toggle:hover,
+.blue .navbar-default .blue .navbar-toggle:focus {
+	background-color: #fafafa;
+	border-color: #3d78d8;
+}
+.blue .navbar-default .blue .navbar-toggle:hover .blue .icon-bar,
+.blue .navbar-default .blue .navbar-toggle:focus .blue .icon-bar {
+	background-color: #3d78d8;
+}
+@media (max-width:767px) {
+	.blue .navbar-default .blue .navbar-nav .blue .open .blue .dropdown-menu > .blue .active > a, 
+	.blue .navbar-default .blue .navbar-nav .blue .open .blue .dropdown-menu > .blue .active > a:hover, 
+	.blue .navbar-default .blue .navbar-nav .blue .open .blue .dropdown-menu > .blue .active > a:focus { 
+		color: #3d78d8; 
+		background-color: transparent; 
+	}
+	
+	/* first level items hover and focus states */
+	.blue .navbar-default .blue .navbar-nav > li > a:hover,
+	.blue .navbar-default .blue .navbar-nav > li > a:focus,
+	.blue .navbar-default .blue .navbar-nav > .blue .active > a:hover,
+	.blue .navbar-default .blue .navbar-nav > .blue .active > a:focus {
+		color: #3d78d8;
+		background-color: #fff;
+	}
+	
+	/* second level items on hover/focus */
+	.blue .navbar-default .blue .navbar-nav .blue .open .blue .dropdown-menu > li > a:hover,
+	.blue .navbar-default .blue .navbar-nav .blue .open .blue .dropdown-menu > li > a:focus {
+		color: #3d78d8;
+	}
+}
+
+/* Subfooter navigation
+---------------------------------- */
+.blue .subfooter .blue .navbar-default .blue .nav > li > a:hover,
+.blue .subfooter .blue .navbar-default .blue .nav > .blue .active > a:hover,
+.blue .subfooter .blue .navbar-default .blue .nav > .blue .active > a:focus {
+	background-color: transparent;
+	color: #3d78d8;
+}
+
+/* 6 Blocks/Widgets
+----------------------------------------------------------------------------- */
+/* Boxes
+---------------------------------- */
+.blue .box.blue .gray-bg:hover {
+	color: #3d78d8;
+}
+.blue .box.blue .default-bg:hover {
+	background-color: #fff;
+	border: 1px solid #3d78d8;
+}
+.blue .box.blue .default-bg:hover * {
+	color: #3d78d8;
+}
+.blue .box-style-1:not(.blue .team-member):hover i {
+	color: #3d78d8;
+}
+.blue .box-style-1.blue .default-bg:hover i, 
+.blue .box-style-1.blue .dark-bg:hover i {
+	color: inherit;
+}
+.blue .box-style-2:hover .blue .default-bg {
+	background-color: #fff;
+	border: 1px solid #3d78d8;
+}
+.blue .box-style-2:hover .blue .default-bg * {
+	color: #3d78d8;
+}
+.blue .box-style-2:hover .blue .white-bg * {
+	color: #3d78d8;
+}
+.blue .box-style-3:hover .blue .default-bg {
+	background-color: #fff;
+	border: 1px solid #3d78d8;
+}
+.blue .box-style-3:hover .blue .default-bg * {
+	color: #3d78d8;
+}
+.blue .box-style-3:hover .blue .white-bg * {
+	color: #3d78d8;
+}
+
+/* Tags cloud block
+---------------------------------- */
+.blue .tag a:hover {
+	color: #ffffff;
+	background-color: #3d78d8;
+	border-color: #3d78d8;
+}
+
+/* Social icons block
+---------------------------------- */
+
+.blue .social-links li a:hover {
+	background-color: transparent;
+	border-color: #2c5fb3;
+	color: #2c5fb3;
+}
+.blue .social-links .blue .dropdown.blue .open>button>i:before {
+	content: "\f00d";
+	color: #3d78d8;
+}
+.blue .header-top .blue .social-links li a:hover {
+	color: #2c5fb3;
+}
+
+/* search and login
+---------------------------------- */
+.blue .header-top-dropdown .blue .dropdown.blue .open>button,
+.blue .header-top-dropdown .blue .dropdown>button:hover {
+
+	color: #3d78d8;
+}
+
+/* Pricing tables
+---------------------------------- */
+.blue .plan .blue .popover-title {
+	background-color: #3d78d8;
+	color: #ffffff;
+}
+.blue .gray .blue .plan .blue .header h3 {
+	color: #3d78d8;
+}
+.blue .white .blue .plan .blue .header {
+	color: #fff;
+	background: #3d78d8;
+}
+.blue .stripped .blue .header {
+	background: #3d78d8;
+	-webkit-box-shadow: 0px 0px 60px #2c5fb3 inset;
+	-moz-box-shadow: 0px 0px 60px #2c5fb3 inset;
+	box-shadow: 0px 0px 60px #2c5fb3 inset;
+	color: #fff;
+}
+
+/* 7 Main Slideshow
+----------------------------------------------------------------------------- */
+/* Slider Revolution captions */
+.blue .default_bg {
+	background-color: #3d78d8;
+	color: #fff;
+}
+
+/* Revolution Nav Controls */
+.blue .tparrows.blue .round:hover {
+	color: #ffffff;
+	background-color: #3d78d8;
+}
+.blue .tp-bullets.blue .simplebullets.blue .round .blue .bullet:hover,
+.blue .tp-bullets.blue .simplebullets.blue .round .blue .bullet.blue .selected {
+	background-color: #3d78d8;
+}
+.blue .tp-bannertimer {
+	background-color: rgba(61,120,216,0.blue .7);
+}
+
+/* 8 Owl carousel
+----------------------------------------------------------------------------- */
+.blue .owl-prev {
+	background-color: #3d78d8;
+	color: #f1f1f1;
+}
+.blue .owl-next {
+	background-color: #f1f1f1;
+	color: #3d78d8;
+}
+.blue .content-slider-with-controls .blue .owl-buttons div,
+.blue .content-slider-with-controls-autoplay .blue .owl-buttons div {
+	background-color: #3d78d8;
+	color: #f1f1f1;
+}
+.blue .content-slider-with-controls .blue .owl-prev:hover,
+.blue .content-slider-with-controls .blue .owl-next:hover,
+.blue .content-slider-with-controls-autoplay .blue .owl-prev:hover,
+.blue .content-slider-with-controls-autoplay .blue .owl-next:hover {
+	background-color: #f1f1f1;
+	color: #3d78d8;
+}
+.blue .owl-controls .blue .owl-page.blue .active span,
+.blue .owl-controls.blue .clickable .blue .owl-page:hover span {
+	background: #3d78d8;
+}
+
+img.blue .product-image
+{
+		background-color: #3d78d8;
+}
+.blue .nav-tabs > li.active > a:after {
+	background-color: #3d78d8!important;
+}
+
+.blue .banner-anim-arrow-default.next:hover,
+.blue .banner-anim-arrow-default.prev:hover,
+.blue .tp-bannertimer,
+.blue .banner-anim-arrow-default.next:hover {
+    background-color: #3d78d8;
+}
+.blue .banner-anim-thumb-default span:active, .blue .banner-anim-thumb-default span.active {
+  background-color: #3d78d8;
+}
+.blue .tabs-style-2 .nav-tabs > li.active > a,
+.blue .tabs-style-2 .nav-tabs > li.active > a:hover,
+.blue .tabs-style-2 .nav-tabs > li.active > a:focus,
+.blue .tabs-style-2 .nav-tabs > li > a:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #3d78d8;
+  background-color: #3d78d8;
+  color: #fff;
+}
+.blue .vertical .nav-tabs > li > a:hover:after {
+  width: 3px;
+  content: "";
+  background-color: #3d78d8;
+  height: 102%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.blue .box-style-1:not(.team-member):hover i {
+  color: #3d78d8;
+}
+.blue .banner-anim-thumb >span:hover {
+  background:#3d78d8;
+}
+.blue .blogpost .post-info {
+  background-color: #3d78d8;
+  color: #fff;
+}
+
+.submitted a, .blue .text-default {
+	color: #3d78d8;
+}
+.blue .title >a:hover {
+  color:#3d78d8;
+}
+.blue  .blogpost .side .social-links li a {
+	color: #3d78d8;
+}
+.blue code{
+	color: #3d78d8;
+}
+.blue .list li a {
+  color: #3d78d8;
+}
+
+mark,
+.pink .mark {
+	background-color: #db7093;
+	color: #ffffff;
+}
+.pink .table > thead > tr > th {
+	border-bottom: 1px solid #db7093;
+	background-color: #db7093;
+	color: #fff;
+}
+.pink .table-bordered {
+	border-color: #db7093;
+}
+
+/* 2 Layout
+----------------------------------------------------------------------------- */
+.pink .default-bg {
+	background-color: #db7093;
+	color: #ffffff;
+}
+
+/* Backgrounds
+---------------------------------- */
+.pink .default-translucent-bg:after {
+	background-color: rgba(61,120,216,0.pink .7);
+}
+
+/* 3 Pages
+----------------------------------------------------------------------------- */
+.pink .blogpost .pink .post-info {
+	background-color: #db7093;
+	color: #fff;
+}
+.pink .blogpost .pink .side .pink .social-links li a {
+	background-color: transparent;
+	border-color: transparent;
+	color: #db7093;
+}
+.pink .blogpost ul.pink .links li a:hover {
+	color: #db7093;
+}
+
+/* timeline layout */
+.pink .timeline-date-label {
+	color: #db7093;
+}
+@media (min-width:768px) {
+	.pink .timeline .pink .timeline-item:before {
+		background-color: #fff;
+		border: 1px solid #db7093;
+	}
+}
+
+/* 4 Template Components
+----------------------------------------------------------------------------- */
+/* Buttons
+---------------------------------- */
+/* Gray Buttons */
+.pink .btn-gray:hover,
+.pink .btn-gray:focus,
+.pink .btn-gray:active,
+.pink .btn-gray.pink .active,
+.pink .open .pink .dropdown-toggle.pink .btn-gray {
+	color: #ffffff;
+	background-color: #db7093;
+	border-color: #db7093;
+}
+
+/* Light Gray Buttons */
+.pink .btn-light-gray:hover,
+.pink .btn-light-gray:focus,
+.pink .btn-light-gray:active,
+.pink .btn-light-gray.pink .active,
+.pink .open .pink .dropdown-toggle.pink .btn-light-gray {
+	color: #ffffff;
+	background-color: #db7093;
+	border-color: #db7093;
+}
+
+/* Default Buttons */
+.pink .btn-default {
+	background-color: #db7093;
+	color: #fff !important;
+	border-color: #c86384;
+}
+.pink .btn-default:hover,
+.pink .btn-default:focus,
+.pink .btn-default:active,
+.pink .btn-default.pink .active,
+.pink .open .pink .dropdown-toggle.pink .btn-default {
+	color: #fff !important;
+	background-color: #c86384;
+	border-color: #c86384;
+}
+.pink .btn-default.pink .disabled,
+.pink .btn-default[disabled],
+fieldset[disabled] .pink .btn-default {
+	background-color: #c86384;
+	border-color: #c86384;
+}
+
+/* Button with transparent bg
+---------------------------------- */
+.pink .btn-white {
+	background-color: transparent;
+	color: #c86384;
+	border: 1px solid #db7093;
+}
+.pink .btn-white:hover,
+.pink .btn-white:focus,
+.pink .btn-white:active,
+.pink .btn-white.pink .active,
+.pink .open .pink .dropdown-toggle.pink .btn-white {
+	color: #fff;
+	background-color: #c86384;
+	border-color: #c86384;
+}
+
+/* Forms
+---------------------------------- */
+.pink .default-bg .pink .form-control {
+	border-color: #db7093;
+	background-color: rgba(0, 0, 0, 0.pink .2);
+	-webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, pink .35);
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, pink .35);
+	color: #ffffff;
+}
+.pink .default-bg .pink .form-control:focus {
+	border-color: #db7093;
+	background-color: rgba(0, 0, 0, 0.pink .25);
+}
+.pink .default-bg .pink .input-group-addon {
+	background-color: #c86384;
+	border-color: #db7093;
+	color: #fff;
+}
+.pink .dropdown .pink .active>a>.pink .badge,
+.pink .dropdown a:hover .pink .badge,
+.pink .dropdown .pink .open > a > .pink .badge {
+	border-color: #db7093;
+}
+
+/* Pager
+---------------------------------- */
+ul.pink .pagination li > a:hover {
+	background-color: transparent;
+	color: #ffffff;
+	background-color: #db7093;
+	border-color: #db7093;
+}
+ul.pink .pagination li.pink .active a,
+.pink .pagination > .pink .active > a:hover,
+.pink .pagination > .pink .active > a:focus {
+	color: #ffffff;
+	background-color: #db7093;
+	border-color: #db7093;
+}
+
+/* Tabs
+---------------------------------- */
+.pink .nav-tabs > li.pink .active > a:after {
+	background-color: #db7093!important;
+}
+
+@media (max-width:480px) {
+	.pink .nav-tabs > li > a:hover:after {
+		background-color: #db7093;
+	}
+}
+
+/* Horizontal tabs version 2 */
+.pink .tabs-style-2 .pink .nav-tabs {
+	border-bottom: 1px solid #db7093;
+}
+.pink .tabs-style-2 .pink .nav-tabs > li.pink .active > a,
+.pink .tabs-style-2 .pink .nav-tabs > li.pink .active > a:hover,
+.pink .tabs-style-2 .pink .nav-tabs > li.pink .active > a:focus,
+.pink .tabs-style-2 .pink .nav-tabs > li > a:hover {
+	border: 1px solid #db7093;
+	background-color: #db7093;
+	color: #fff;
+}
+
+/* vertical tabs */
+.pink .vertical .pink .nav-tabs > li > a:hover:after {
+	background-color: #db7093;
+}
+
+/* Nav pills
+---------------------------------- */
+.pink .nav-pills > li.pink .active > a,
+.pink .nav-pills > li.pink .active > a:hover,
+.pink .nav-pills > li.pink .active > a:focus,
+.pink .nav-pills > li > a:hover,
+.pink .nav-pills > li > a:focus {
+	border: 1px solid #f3f3f3;
+	color: #db7093;
+	background-color: #fafafa;
+}
+.pink .nav-pills > li.pink .active > a:after {
+	color: #db7093;
+}
+.pink .nav-pills > li.pink .active > a:hover:after,
+.pink .nav-pills > li.pink .active > a:focus:after,
+.pink .nav-pills > li > a:hover:after,
+.pink .nav-pills > li > a:focus:after {
+	color: #db7093;
+}
+.pink .light .pink .footer-content .pink .nav-pills > li.pink .active > a:hover,
+.pink .light .pink .footer-content .pink .nav-pills > li > a:hover {
+	color: #c86384;
+}
+.pink .nav-pills > .pink .active > a > .pink .badge {
+	color: #c86384;
+	background-color: #fff;
+	border-color: #c86384;	
+}
+/* Collapse
+---------------------------------- */
+.pink .panel-heading a {
+	background-color: #db7093;
+	color: #ffffff;
+}
+.pink .panel-heading a:hover,
+.pink .panel-transparent .pink .panel-heading a:hover {
+	background-color: #db7093;
+	color: #ffffff;
+}
+
+/* Progress bars
+---------------------------------- */
+.pink .progress-bar-default {
+	background-color: #db7093;
+}
+
+/* Modals
+---------------------------------- */
+.pink .modal-content .pink .modal-header {
+	background-color: #db7093;
+}
+
+/* Images and Images overlay
+---------------------------------- */
+.pink .overlay a {
+	color: #db7093;
+	background-color: #ffffff;
+}
+.pink .overlay-links a + a {
+	color: #ffffff;
+	background-color: #db7093;
+}
+a.pink .overlay i {
+	color: #db7093;
+}
+
+/* 5 Navigations
+----------------------------------------------------------------------------- */
+/* first level active menu items on hover/focus */
+.pink .navbar-default .pink .navbar-nav > .pink .active > a,
+.pink .navbar-default .pink .navbar-nav > .pink .active > a:focus {
+	color: #db7093;
+	background-color: transparent;
+}
+
+.pink .main-navigation .pink .navbar-nav > .pink .open > a, 
+.pink .main-navigation .pink .navbar-nav > .pink .open > a:hover, 
+.pink .main-navigation .pink .navbar-nav > .pink .open > a:focus { 
+	color: #666666; 
+	background-color: #fafafa; 
+}
+
+/* second level menu items on focus/hover and when opened */
+.pink .dropdown-menu > li > a:hover,
+.pink .dropdown-menu > li > a:focus,
+.pink .nav .pink .open > a,
+.pink .nav .pink .open > a:hover,
+.pink .nav .pink .open > a:focus,
+.pink .dropdown-menu > .pink .active > a,
+.pink .dropdown-menu > .pink .active > a:hover,
+.pink .dropdown-menu > .pink .active > a:focus,
+.pink .dropdown-menu .pink .menu > .pink .active > a,
+.pink .dropdown-menu .pink .menu > .pink .active > a:hover,
+.pink .dropdown-menu .pink .menu > .pink .active > a:focus {
+	background-color: #ffffff;
+	color: #db7093;
+	border-color: #f1f1f1;
+}
+#offcanvas .pink .nav .pink .open > a,
+#offcanvas .pink .nav .pink .open > a:hover,
+#offcanvas .pink .nav .pink .open > a:focus,
+#offcanvas .pink .nav > li > a:hover, 
+#offcanvas .pink .nav > li > a:focus,
+#offcanvas .pink .navbar-nav > li.pink .active > a {
+	color: #db7093;
+	background-color: #ffffff;
+}
+
+/* mega menu menu items on focus/hover and when opened */
+.pink .mega-menu .pink .menu > li > a:hover,
+.pink .mega-menu .pink .menu > li > a:focus {
+	background-color: #ffffff;
+	color: #db7093;
+	border-color: #f1f1f1;
+}
+
+/* arrows for parent menu items */
+.pink .navbar-default .pink .navbar-nav > .pink .active.pink .dropdown > a:before {
+	color: #db7093;
+}
+.pink .navbar-default .pink .navbar-nav > .pink .dropdown.pink .open > a:before { 
+	color: #e5e5e5; 
+}
+.pink .dropdown .pink .dropdown.pink .open>a:before,
+.pink .transparent.pink .header:not(.pink .dark) .pink .dropdown .pink .dropdown.pink .open>a:before {
+	color: #db7093;
+}
+
+/* mobile menu toggle button on hover/focus */
+.pink .navbar-default .pink .navbar-toggle:hover,
+.pink .navbar-default .pink .navbar-toggle:focus {
+	background-color: #fafafa;
+	border-color: #db7093;
+}
+.pink .navbar-default .pink .navbar-toggle:hover .pink .icon-bar,
+.pink .navbar-default .pink .navbar-toggle:focus .pink .icon-bar {
+	background-color: #db7093;
+}
+@media (max-width:767px) {
+	.pink .navbar-default .pink .navbar-nav .pink .open .pink .dropdown-menu > .pink .active > a, 
+	.pink .navbar-default .pink .navbar-nav .pink .open .pink .dropdown-menu > .pink .active > a:hover, 
+	.pink .navbar-default .pink .navbar-nav .pink .open .pink .dropdown-menu > .pink .active > a:focus { 
+		color: #db7093; 
+		background-color: transparent; 
+	}
+	
+	/* first level items hover and focus states */
+	.pink .navbar-default .pink .navbar-nav > li > a:hover,
+	.pink .navbar-default .pink .navbar-nav > li > a:focus,
+	.pink .navbar-default .pink .navbar-nav > .pink .active > a:hover,
+	.pink .navbar-default .pink .navbar-nav > .pink .active > a:focus {
+		color: #db7093;
+		background-color: #fff;
+	}
+	
+	/* second level items on hover/focus */
+	.pink .navbar-default .pink .navbar-nav .pink .open .pink .dropdown-menu > li > a:hover,
+	.pink .navbar-default .pink .navbar-nav .pink .open .pink .dropdown-menu > li > a:focus {
+		color: #db7093;
+	}
+}
+
+/* Subfooter navigation
+---------------------------------- */
+.pink .subfooter .pink .navbar-default .pink .nav > li > a:hover,
+.pink .subfooter .pink .navbar-default .pink .nav > .pink .active > a:hover,
+.pink .subfooter .pink .navbar-default .pink .nav > .pink .active > a:focus {
+	background-color: transparent;
+	color: #db7093;
+}
+
+/* 6 Blocks/Widgets
+----------------------------------------------------------------------------- */
+/* Boxes
+---------------------------------- */
+.pink .box.pink .gray-bg:hover {
+	color: #db7093;
+}
+.pink .box.pink .default-bg:hover {
+	background-color: #fff;
+	border: 1px solid #db7093;
+}
+.pink .box.pink .default-bg:hover * {
+	color: #db7093;
+}
+.pink .box-style-1:not(.pink .team-member):hover i {
+	color: #db7093;
+}
+.pink .box-style-1.pink .default-bg:hover i, 
+.pink .box-style-1.pink .dark-bg:hover i {
+	color: inherit;
+}
+.pink .box-style-2:hover .pink .default-bg {
+	background-color: #fff;
+	border: 1px solid #db7093;
+}
+.pink .box-style-2:hover .pink .default-bg * {
+	color: #db7093;
+}
+.pink .box-style-2:hover .pink .white-bg * {
+	color: #db7093;
+}
+.pink .box-style-3:hover .pink .default-bg {
+	background-color: #fff;
+	border: 1px solid #db7093;
+}
+.pink .box-style-3:hover .pink .default-bg * {
+	color: #db7093;
+}
+.pink .box-style-3:hover .pink .white-bg * {
+	color: #db7093;
+}
+
+/* Tags cloud block
+---------------------------------- */
+.pink .tag a:hover {
+	color: #ffffff;
+	background-color: #db7093;
+	border-color: #db7093;
+}
+
+/* Social icons block
+---------------------------------- */
+
+.pink .social-links li a:hover {
+	background-color: transparent;
+	border-color: #c86384;
+	color: #c86384;
+}
+.pink .social-links .pink .dropdown.pink .open>button>i:before {
+	content: "\f00d";
+	color: #db7093;
+}
+.pink .header-top .pink .social-links li a:hover {
+	color: #c86384;
+}
+
+/* search and login
+---------------------------------- */
+.pink .header-top-dropdown .pink .dropdown.pink .open>button,
+.pink .header-top-dropdown .pink .dropdown>button:hover {
+
+	color: #db7093;
+}
+
+/* Pricing tables
+---------------------------------- */
+.pink .plan .pink .popover-title {
+	background-color: #db7093;
+	color: #ffffff;
+}
+.pink .gray .pink .plan .pink .header h3 {
+	color: #db7093;
+}
+.pink .white .pink .plan .pink .header {
+	color: #fff;
+	background: #db7093;
+}
+.pink .stripped .pink .header {
+	background: #db7093;
+	-webkit-box-shadow: 0px 0px 60px #c86384 inset;
+	-moz-box-shadow: 0px 0px 60px #c86384 inset;
+	box-shadow: 0px 0px 60px #c86384 inset;
+	color: #fff;
+}
+
+/* 7 Main Slideshow
+----------------------------------------------------------------------------- */
+/* Slider Revolution captions */
+.pink .default_bg {
+	background-color: #db7093;
+	color: #fff;
+}
+
+/* Revolution Nav Controls */
+.pink .tparrows.pink .round:hover {
+	color: #ffffff;
+	background-color: #db7093;
+}
+.pink .tp-bullets.pink .simplebullets.pink .round .pink .bullet:hover,
+.pink .tp-bullets.pink .simplebullets.pink .round .pink .bullet.pink .selected {
+	background-color: #db7093;
+}
+.pink .tp-bannertimer {
+	background-color: rgba(61,120,216,0.pink .7);
+}
+
+/* 8 Owl carousel
+----------------------------------------------------------------------------- */
+.pink .owl-prev {
+	background-color: #db7093;
+	color: #f1f1f1;
+}
+.pink .owl-next {
+	background-color: #f1f1f1;
+	color: #db7093;
+}
+.pink .content-slider-with-controls .pink .owl-buttons div,
+.pink .content-slider-with-controls-autoplay .pink .owl-buttons div {
+	background-color: #db7093;
+	color: #f1f1f1;
+}
+.pink .content-slider-with-controls .pink .owl-prev:hover,
+.pink .content-slider-with-controls .pink .owl-next:hover,
+.pink .content-slider-with-controls-autoplay .pink .owl-prev:hover,
+.pink .content-slider-with-controls-autoplay .pink .owl-next:hover {
+	background-color: #f1f1f1;
+	color: #db7093;
+}
+.pink .owl-controls .pink .owl-page.pink .active span,
+.pink .owl-controls.pink .clickable .pink .owl-page:hover span {
+	background: #db7093;
+}
+
+img.pink .product-image
+{
+		background-color: #db7093;
+}
+.pink .nav-tabs > li.active > a:after {
+	background-color: #db7093!important;
+}
+
+.pink .banner-anim-arrow-default.next:hover,
+.pink .banner-anim-arrow-default.prev:hover,
+.pink .tp-bannertimer,
+.pink .banner-anim-arrow-default.next:hover {
+    background-color: #db7093;
+}
+.pink .banner-anim-thumb-default span:active, .pink .banner-anim-thumb-default span.active {
+  background-color: #db7093;
+}
+.pink .tabs-style-2 .nav-tabs > li.active > a,
+.pink .tabs-style-2 .nav-tabs > li.active > a:hover,
+.pink .tabs-style-2 .nav-tabs > li.active > a:focus,
+.pink .tabs-style-2 .nav-tabs > li > a:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #db7093;
+  background-color: #db7093;
+  color: #fff;
+}
+.pink .vertical .nav-tabs > li > a:hover:after {
+  width: 3px;
+  content: "";
+  background-color: #db7093;
+  height: 102%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.pink .box-style-1:not(.team-member):hover i {
+  color: #db7093;
+}
+.pink .banner-anim-thumb >span:hover {
+  background:#db7093;
+}
+.pink .blogpost .post-info {
+  background-color: #db7093;
+  color: #fff;
+}
+
+.submitted a, .pink .text-default {
+	color: #db7093;
+}
+
+.pink .title >a:hover {
+  color:#db7093;
+}
+.pink  .blogpost .side .social-links li a {
+	color: #db7093;
+}
+.pink code{
+	color: #db7093;
+}
+.pink .list li a {
+  color: #db7093;
+}
+
+mark,
+.orange .mark {
+	background-color: #ffa500;
+	color: #ffffff;
+}
+.orange .table > thead > tr > th {
+	border-bottom: 1px solid #ffa500;
+	background-color: #ffa500;
+	color: #fff;
+}
+.orange .table-bordered {
+	border-color: #ffa500;
+}
+
+/* 2 Layout
+----------------------------------------------------------------------------- */
+.orange .default-bg {
+	background-color: #ffa500;
+	color: #ffffff;
+}
+
+/* Backgrounds
+---------------------------------- */
+.orange .default-translucent-bg:after {
+	background-color: rgba(61,120,216,0.orange .7);
+}
+
+/* 3 Pages
+----------------------------------------------------------------------------- */
+.orange .blogpost .orange .post-info {
+	background-color: #ffa500;
+	color: #fff;
+}
+.orange .blogpost .orange .side .orange .social-links li a {
+	background-color: transparent;
+	border-color: transparent;
+	color: #ffa500;
+}
+.orange .blogpost ul.orange .links li a:hover {
+	color: #ffa500;
+}
+
+/* timeline layout */
+.orange .timeline-date-label {
+	color: #ffa500;
+}
+@media (min-width:768px) {
+	.orange .timeline .orange .timeline-item:before {
+		background-color: #fff;
+		border: 1px solid #ffa500;
+	}
+}
+
+/* 4 Template Components
+----------------------------------------------------------------------------- */
+/* Buttons
+---------------------------------- */
+/* Gray Buttons */
+.orange .btn-gray:hover,
+.orange .btn-gray:focus,
+.orange .btn-gray:active,
+.orange .btn-gray.orange .active,
+.orange .open .orange .dropdown-toggle.orange .btn-gray {
+	color: #ffffff;
+	background-color: #ffa500;
+	border-color: #ffa500;
+}
+
+/* Light Gray Buttons */
+.orange .btn-light-gray:hover,
+.orange .btn-light-gray:focus,
+.orange .btn-light-gray:active,
+.orange .btn-light-gray.orange .active,
+.orange .open .orange .dropdown-toggle.orange .btn-light-gray {
+	color: #ffffff;
+	background-color: #ffa500;
+	border-color: #ffa500;
+}
+
+/* Default Buttons */
+.orange .btn-default {
+	background-color: #ffa500;
+	color: #fff !important;
+	border-color: #e09200;
+}
+.orange .btn-default:hover,
+.orange .btn-default:focus,
+.orange .btn-default:active,
+.orange .btn-default.orange .active,
+.orange .open .orange .dropdown-toggle.orange .btn-default {
+	color: #fff !important;
+	background-color: #e09200;
+	border-color: #e09200;
+}
+.orange .btn-default.orange .disabled,
+.orange .btn-default[disabled],
+fieldset[disabled] .orange .btn-default {
+	background-color: #e09200;
+	border-color: #e09200;
+}
+
+/* Button with transparent bg
+---------------------------------- */
+.orange .btn-white {
+	background-color: transparent;
+	color: #e09200;
+	border: 1px solid #ffa500;
+}
+.orange .btn-white:hover,
+.orange .btn-white:focus,
+.orange .btn-white:active,
+.orange .btn-white.orange .active,
+.orange .open .orange .dropdown-toggle.orange .btn-white {
+	color: #fff;
+	background-color: #e09200;
+	border-color: #e09200;
+}
+
+/* Forms
+---------------------------------- */
+.orange .default-bg .orange .form-control {
+	border-color: #ffa500;
+	background-color: rgba(0, 0, 0, 0.orange .2);
+	-webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, orange .35);
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, orange .35);
+	color: #ffffff;
+}
+.orange .default-bg .orange .form-control:focus {
+	border-color: #ffa500;
+	background-color: rgba(0, 0, 0, 0.orange .25);
+}
+.orange .default-bg .orange .input-group-addon {
+	background-color: #e09200;
+	border-color: #ffa500;
+	color: #fff;
+}
+.orange .dropdown .orange .active>a>.orange .badge,
+.orange .dropdown a:hover .orange .badge,
+.orange .dropdown .orange .open > a > .orange .badge {
+	border-color: #ffa500;
+}
+
+/* Pager
+---------------------------------- */
+ul.orange .pagination li > a:hover {
+	background-color: transparent;
+	color: #ffffff;
+	background-color: #ffa500;
+	border-color: #ffa500;
+}
+ul.orange .pagination li.orange .active a,
+.orange .pagination > .orange .active > a:hover,
+.orange .pagination > .orange .active > a:focus {
+	color: #ffffff;
+	background-color: #ffa500;
+	border-color: #ffa500;
+}
+
+/* Tabs
+---------------------------------- */
+.orange .nav-tabs > li.orange .active > a:after {
+	background-color: #ffa500!important;
+}
+
+@media (max-width:480px) {
+	.orange .nav-tabs > li > a:hover:after {
+		background-color: #ffa500;
+	}
+}
+
+/* Horizontal tabs version 2 */
+.orange .tabs-style-2 .orange .nav-tabs {
+	border-bottom: 1px solid #ffa500;
+}
+.orange .tabs-style-2 .orange .nav-tabs > li.orange .active > a,
+.orange .tabs-style-2 .orange .nav-tabs > li.orange .active > a:hover,
+.orange .tabs-style-2 .orange .nav-tabs > li.orange .active > a:focus,
+.orange .tabs-style-2 .orange .nav-tabs > li > a:hover {
+	border: 1px solid #ffa500;
+	background-color: #ffa500;
+	color: #fff;
+}
+
+/* vertical tabs */
+.orange .vertical .orange .nav-tabs > li > a:hover:after {
+	background-color: #ffa500;
+}
+
+/* Nav pills
+---------------------------------- */
+.orange .nav-pills > li.orange .active > a,
+.orange .nav-pills > li.orange .active > a:hover,
+.orange .nav-pills > li.orange .active > a:focus,
+.orange .nav-pills > li > a:hover,
+.orange .nav-pills > li > a:focus {
+	border: 1px solid #f3f3f3;
+	color: #ffa500;
+	background-color: #fafafa;
+}
+.orange .nav-pills > li.orange .active > a:after {
+	color: #ffa500;
+}
+.orange .nav-pills > li.orange .active > a:hover:after,
+.orange .nav-pills > li.orange .active > a:focus:after,
+.orange .nav-pills > li > a:hover:after,
+.orange .nav-pills > li > a:focus:after {
+	color: #ffa500;
+}
+.orange .light .orange .footer-content .orange .nav-pills > li.orange .active > a:hover,
+.orange .light .orange .footer-content .orange .nav-pills > li > a:hover {
+	color: #e09200;
+}
+.orange .nav-pills > .orange .active > a > .orange .badge {
+	color: #e09200;
+	background-color: #fff;
+	border-color: #e09200;	
+}
+/* Collapse
+---------------------------------- */
+.orange .panel-heading a {
+	background-color: #ffa500;
+	color: #ffffff;
+}
+.orange .panel-heading a:hover,
+.orange .panel-transparent .orange .panel-heading a:hover {
+	background-color: #ffa500;
+	color: #ffffff;
+}
+
+/* Progress bars
+---------------------------------- */
+.orange .progress-bar-default {
+	background-color: #ffa500;
+}
+
+/* Modals
+---------------------------------- */
+.orange .modal-content .orange .modal-header {
+	background-color: #ffa500;
+}
+
+/* Images and Images overlay
+---------------------------------- */
+.orange .overlay a {
+	color: #ffa500;
+	background-color: #ffffff;
+}
+.orange .overlay-links a + a {
+	color: #ffffff;
+	background-color: #ffa500;
+}
+a.orange .overlay i {
+	color: #ffa500;
+}
+
+/* 5 Navigations
+----------------------------------------------------------------------------- */
+/* first level active menu items on hover/focus */
+.orange .navbar-default .orange .navbar-nav > .orange .active > a,
+.orange .navbar-default .orange .navbar-nav > .orange .active > a:focus {
+	color: #ffa500;
+	background-color: transparent;
+}
+
+.orange .main-navigation .orange .navbar-nav > .orange .open > a, 
+.orange .main-navigation .orange .navbar-nav > .orange .open > a:hover, 
+.orange .main-navigation .orange .navbar-nav > .orange .open > a:focus { 
+	color: #666666; 
+	background-color: #fafafa; 
+}
+
+/* second level menu items on focus/hover and when opened */
+.orange .dropdown-menu > li > a:hover,
+.orange .dropdown-menu > li > a:focus,
+.orange .nav .orange .open > a,
+.orange .nav .orange .open > a:hover,
+.orange .nav .orange .open > a:focus,
+.orange .dropdown-menu > .orange .active > a,
+.orange .dropdown-menu > .orange .active > a:hover,
+.orange .dropdown-menu > .orange .active > a:focus,
+.orange .dropdown-menu .orange .menu > .orange .active > a,
+.orange .dropdown-menu .orange .menu > .orange .active > a:hover,
+.orange .dropdown-menu .orange .menu > .orange .active > a:focus {
+	background-color: #ffffff;
+	color: #ffa500;
+	border-color: #f1f1f1;
+}
+#offcanvas .orange .nav .orange .open > a,
+#offcanvas .orange .nav .orange .open > a:hover,
+#offcanvas .orange .nav .orange .open > a:focus,
+#offcanvas .orange .nav > li > a:hover, 
+#offcanvas .orange .nav > li > a:focus,
+#offcanvas .orange .navbar-nav > li.orange .active > a {
+	color: #ffa500;
+	background-color: #ffffff;
+}
+
+/* mega menu menu items on focus/hover and when opened */
+.orange .mega-menu .orange .menu > li > a:hover,
+.orange .mega-menu .orange .menu > li > a:focus {
+	background-color: #ffffff;
+	color: #ffa500;
+	border-color: #f1f1f1;
+}
+
+/* arrows for parent menu items */
+.orange .navbar-default .orange .navbar-nav > .orange .active.orange .dropdown > a:before {
+	color: #ffa500;
+}
+.orange .navbar-default .orange .navbar-nav > .orange .dropdown.orange .open > a:before { 
+	color: #e5e5e5; 
+}
+.orange .dropdown .orange .dropdown.orange .open>a:before,
+.orange .transparent.orange .header:not(.orange .dark) .orange .dropdown .orange .dropdown.orange .open>a:before {
+	color: #ffa500;
+}
+
+/* mobile menu toggle button on hover/focus */
+.orange .navbar-default .orange .navbar-toggle:hover,
+.orange .navbar-default .orange .navbar-toggle:focus {
+	background-color: #fafafa;
+	border-color: #ffa500;
+}
+.orange .navbar-default .orange .navbar-toggle:hover .orange .icon-bar,
+.orange .navbar-default .orange .navbar-toggle:focus .orange .icon-bar {
+	background-color: #ffa500;
+}
+@media (max-width:767px) {
+	.orange .navbar-default .orange .navbar-nav .orange .open .orange .dropdown-menu > .orange .active > a, 
+	.orange .navbar-default .orange .navbar-nav .orange .open .orange .dropdown-menu > .orange .active > a:hover, 
+	.orange .navbar-default .orange .navbar-nav .orange .open .orange .dropdown-menu > .orange .active > a:focus { 
+		color: #ffa500; 
+		background-color: transparent; 
+	}
+	
+	/* first level items hover and focus states */
+	.orange .navbar-default .orange .navbar-nav > li > a:hover,
+	.orange .navbar-default .orange .navbar-nav > li > a:focus,
+	.orange .navbar-default .orange .navbar-nav > .orange .active > a:hover,
+	.orange .navbar-default .orange .navbar-nav > .orange .active > a:focus {
+		color: #ffa500;
+		background-color: #fff;
+	}
+	
+	/* second level items on hover/focus */
+	.orange .navbar-default .orange .navbar-nav .orange .open .orange .dropdown-menu > li > a:hover,
+	.orange .navbar-default .orange .navbar-nav .orange .open .orange .dropdown-menu > li > a:focus {
+		color: #ffa500;
+	}
+}
+
+/* Subfooter navigation
+---------------------------------- */
+.orange .subfooter .orange .navbar-default .orange .nav > li > a:hover,
+.orange .subfooter .orange .navbar-default .orange .nav > .orange .active > a:hover,
+.orange .subfooter .orange .navbar-default .orange .nav > .orange .active > a:focus {
+	background-color: transparent;
+	color: #ffa500;
+}
+
+/* 6 Blocks/Widgets
+----------------------------------------------------------------------------- */
+/* Boxes
+---------------------------------- */
+.orange .box.orange .gray-bg:hover {
+	color: #ffa500;
+}
+.orange .box.orange .default-bg:hover {
+	background-color: #fff;
+	border: 1px solid #ffa500;
+}
+.orange .box.orange .default-bg:hover * {
+	color: #ffa500;
+}
+.orange .box-style-1:not(.orange .team-member):hover i {
+	color: #ffa500;
+}
+.orange .box-style-1.orange .default-bg:hover i, 
+.orange .box-style-1.orange .dark-bg:hover i {
+	color: inherit;
+}
+.orange .box-style-2:hover .orange .default-bg {
+	background-color: #fff;
+	border: 1px solid #ffa500;
+}
+.orange .box-style-2:hover .orange .default-bg * {
+	color: #ffa500;
+}
+.orange .box-style-2:hover .orange .white-bg * {
+	color: #ffa500;
+}
+.orange .box-style-3:hover .orange .default-bg {
+	background-color: #fff;
+	border: 1px solid #ffa500;
+}
+.orange .box-style-3:hover .orange .default-bg * {
+	color: #ffa500;
+}
+.orange .box-style-3:hover .orange .white-bg * {
+	color: #ffa500;
+}
+
+/* Tags cloud block
+---------------------------------- */
+.orange .tag a:hover {
+	color: #ffffff;
+	background-color: #ffa500;
+	border-color: #ffa500;
+}
+
+/* Social icons block
+---------------------------------- */
+
+.orange .social-links li a:hover {
+	background-color: transparent;
+	border-color: #e09200;
+	color: #e09200;
+}
+.orange .social-links .orange .dropdown.orange .open>button>i:before {
+	content: "\f00d";
+	color: #ffa500;
+}
+.orange .header-top .orange .social-links li a:hover {
+	color: #e09200;
+}
+
+/* search and login
+---------------------------------- */
+.orange .header-top-dropdown .orange .dropdown.orange .open>button,
+.orange .header-top-dropdown .orange .dropdown>button:hover {
+
+	color: #ffa500;
+}
+
+/* Pricing tables
+---------------------------------- */
+.orange .plan .orange .popover-title {
+	background-color: #ffa500;
+	color: #ffffff;
+}
+.orange .gray .orange .plan .orange .header h3 {
+	color: #ffa500;
+}
+.orange .white .orange .plan .orange .header {
+	color: #fff;
+	background: #ffa500;
+}
+.orange .stripped .orange .header {
+	background: #ffa500;
+	-webkit-box-shadow: 0px 0px 60px #e09200 inset;
+	-moz-box-shadow: 0px 0px 60px #e09200 inset;
+	box-shadow: 0px 0px 60px #e09200 inset;
+	color: #fff;
+}
+
+/* 7 Main Slideshow
+----------------------------------------------------------------------------- */
+/* Slider Revolution captions */
+.orange .default_bg {
+	background-color: #ffa500;
+	color: #fff;
+}
+
+/* Revolution Nav Controls */
+.orange .tparrows.orange .round:hover {
+	color: #ffffff;
+	background-color: #ffa500;
+}
+.orange .tp-bullets.orange .simplebullets.orange .round .orange .bullet:hover,
+.orange .tp-bullets.orange .simplebullets.orange .round .orange .bullet.orange .selected {
+	background-color: #ffa500;
+}
+.orange .tp-bannertimer {
+	background-color: rgba(61,120,216,0.orange .7);
+}
+
+/* 8 Owl carousel
+----------------------------------------------------------------------------- */
+.orange .owl-prev {
+	background-color: #ffa500;
+	color: #f1f1f1;
+}
+.orange .owl-next {
+	background-color: #f1f1f1;
+	color: #ffa500;
+}
+.orange .content-slider-with-controls .orange .owl-buttons div,
+.orange .content-slider-with-controls-autoplay .orange .owl-buttons div {
+	background-color: #ffa500;
+	color: #f1f1f1;
+}
+.orange .content-slider-with-controls .orange .owl-prev:hover,
+.orange .content-slider-with-controls .orange .owl-next:hover,
+.orange .content-slider-with-controls-autoplay .orange .owl-prev:hover,
+.orange .content-slider-with-controls-autoplay .orange .owl-next:hover {
+	background-color: #f1f1f1;
+	color: #ffa500;
+}
+.orange .owl-controls .orange .owl-page.orange .active span,
+.orange .owl-controls.orange .clickable .orange .owl-page:hover span {
+	background: #ffa500;
+}
+
+img.orange .product-image
+{
+		background-color: #ffa500;
+}
+.orange .nav-tabs > li.active > a:after {
+	background-color: #ffa500!important;
+}
+
+.orange .banner-anim-arrow-default.next:hover,
+.orange .banner-anim-arrow-default.prev:hover,
+.orange .tp-bannertimer,
+.orange .banner-anim-arrow-default.next:hover {
+    background-color: #ffa500;
+}
+.orange .banner-anim-thumb-default span:active, .orange .banner-anim-thumb-default span.active {
+  background-color: #ffa500;
+}
+.orange .tabs-style-2 .nav-tabs > li.active > a,
+.orange .tabs-style-2 .nav-tabs > li.active > a:hover,
+.orange .tabs-style-2 .nav-tabs > li.active > a:focus,
+.orange .tabs-style-2 .nav-tabs > li > a:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #ffa500;
+  background-color: #ffa500;
+  color: #fff;
+}
+.orange .vertical .nav-tabs > li > a:hover:after {
+  width: 3px;
+  content: "";
+  background-color: #ffa500;
+  height: 102%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.orange .box-style-1:not(.team-member):hover i {
+  color: #ffa500;
+}
+.orange .banner-anim-thumb >span:hover {
+  background:#ffa500;
+}
+.orange .blogpost .post-info {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+.submitted a, .orange .text-default {
+	color: #ffa500;
+}
+
+.orange .title >a:hover {
+  color:#ffa500;
+}
+.orange  .blogpost .side .social-links li a {
+	color: #ffa500;
+}
+.orange code{
+	color: #ffa500;
+}
+.orange .list li a {
+  color: #ffa500;
+}
