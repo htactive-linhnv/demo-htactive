@@ -1,5 +1,5 @@
 import React from "react"
-import NavBar from "./Header/navbar"
+import NavBar from "./Header/navbar
 import {Link } from "gatsby"
 const Footer = ({footer}) => {
   return (
