@@ -30,6 +30,7 @@ const SEO = ({
     const localFooter = localStorage.getItem("footer")
     if (localLayout) {
       changeLayoutRedux(localLayout)
+    
       let body = document.getElementsByTagName("BODY")[0]
       if (localColor) {
         changeColorRedux(localColor)
@@ -139,7 +140,4 @@ const mapDispatchToProps = dispatch => {
     changeLayoutRedux: mode => dispatch({ type: `CHANGE_LAYOUT`, mode: mode }),
   }
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SEO)
+export default connect(mapStateToProps, mapDispatchToProps)(SEO)

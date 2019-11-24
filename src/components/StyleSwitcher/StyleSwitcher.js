@@ -39,7 +39,7 @@ const StyleSwitcher = ({
     if (layout) {
       if (body) body.className = `${layout} ${color}`
     } else {
-      if (body) body.className = `${layout}`
+      if (body) body.className = `${color}`
     }
     changeColorRedux(color)
 
@@ -47,8 +47,13 @@ const StyleSwitcher = ({
   
   const changeLayout = layout => {
     localStorage.setItem("layout", layout)
-    let body = document.getElementsByTagName("BODY")[0]
-    if(body) body.classList.add(`${layout}`)
+    const body = document.getElementsByTagName("BODY")[0]
+    if(body) body.className = layout
+    if (color) {
+      if (body) body.className = `${layout} ${color}`
+    } else {
+      if (body) body.className = `${layout}`
+    }
     changeLayoutRedux(layout)
   }
   const changeFooter = footer => {
