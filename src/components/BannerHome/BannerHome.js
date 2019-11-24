@@ -8,7 +8,7 @@ const BannerHome = () => {
     className="section parallax light-translucent-bg parallax-bg-"
     layers={[
         {
-            image: 'http://localhost:8000/static/portfolio-3-8131bf4168dcf035b6fd4a32a0696a7f.jpg',
+            image: '/static/portfolio-3-8131bf4168dcf035b6fd4a32a0696a7f.jpg',
             amount: 0.7,
         }
     ]}
