@@ -5566,8 +5566,8 @@ fieldset[disabled] .blue .btn-default {
 .blue .default-bg .blue .form-control {
 	border-color: #3d78d8;
 	background-color: rgba(0, 0, 0, 0.blue .2);
-	-webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, .blue .35);
-	box-shadow: inset 0 2px 3px rgba(0, 0, 0, .blue .35);
+	-webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, blue .35);
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, blue .35);
 	color: #ffffff;
 }
 .blue .default-bg .blue .form-control:focus {
@@ -6132,8 +6132,8 @@ fieldset[disabled] .pink .btn-default {
 .pink .default-bg .pink .form-control {
 	border-color: #db7093;
 	background-color: rgba(0, 0, 0, 0.pink .2);
-	-webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, .pink .35);
-	box-shadow: inset 0 2px 3px rgba(0, 0, 0, .pink .35);
+	-webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, pink .35);
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, pink .35);
 	color: #ffffff;
 }
 .pink .default-bg .pink .form-control:focus {
@@ -6699,8 +6699,8 @@ fieldset[disabled] .orange .btn-default {
 .orange .default-bg .orange .form-control {
 	border-color: #ffa500;
 	background-color: rgba(0, 0, 0, 0.orange .2);
-	-webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, .orange .35);
-	box-shadow: inset 0 2px 3px rgba(0, 0, 0, .orange .35);
+	-webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, orange .35);
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, orange .35);
 	color: #ffffff;
 }
 .orange .default-bg .orange .form-control:focus {
