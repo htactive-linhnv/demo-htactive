@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button"
-import Header from "./Header/header"
+import Header from "./Header2/header
 import Footer from "./footer"
 import StyleSwitcher from "../components/StyleSwitcher/StyleSwitcher"
 import "bootstrap/dist/css/bootstrap.min.css"
