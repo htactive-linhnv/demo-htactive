@@ -28,18 +28,21 @@ const SEO = ({
     const localColor = localStorage.getItem("color")
     const localLayout = localStorage.getItem("layout")
     const localFooter = localStorage.getItem("footer")
-    if (localColor) {
-      changeColorRedux(localColor)
-    }
     if (localLayout) {
       changeLayoutRedux(localLayout)
       let body = document.getElementsByTagName("BODY")[0]
-      if(body) body.className = localLayout
+      if (localColor) {
+        changeColorRedux(localColor)
+        if (body) body.className = `${localLayout} ${localColor}`
+      } else {
+        if (body) body.className = `${localLayout}`
+      }
     }
     if (localFooter) {
       changeFooterRedux(localFooter)
     }
   }
+
   useEffect(() => {
     getLocalStyle()
   })
@@ -102,12 +105,12 @@ const SEO = ({
           },
         ].concat(meta)}
       >
-        <link
+        {/* <link
           rel="stylesheet"
           id="skinCSS"
           type="text/css"
           href={`skins/${color}.css`}
-        />
+        /> */}
       </Helmet>
     </>
   )

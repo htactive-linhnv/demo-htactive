@@ -1,73 +1,53 @@
-/*
-Theme Name: iDea - Clean & Powerful Bootstrap Theme
-Author: HtmlCoder
-Author URI: http://www.htmlcoder.me
-Author e-mail: htmlcoder.me@gmail.com
-Version: 1.2.1
-Created: September 2014
-License URI: http://support.wrapbootstrap.com/
-File Description: Pink Skin
-*/
-
-/* 1 Typography
------------------------------------------------------------------------------ */
-a, .text-default {
-	color: #db7093!important;
-}
-a:hover,
-a:focus {
-	color: #c86384!important;
-}
 mark,
-.mark {
-	background-color: #db7093!important;
+.orange .mark {
+	background-color: #ffa500;
 	color: #ffffff;
 }
-.table > thead > tr > th {
-	border-bottom: 1px solid #db7093!important;
-	background-color: #db7093!important;
+.orange .table > thead > tr > th {
+	border-bottom: 1px solid #ffa500;
+	background-color: #ffa500;
 	color: #fff;
 }
-.table-bordered {
-	border-color: #db7093!important;
+.orange .table-bordered {
+	border-color: #ffa500;
 }
 
 /* 2 Layout
 ----------------------------------------------------------------------------- */
-.default-bg {
-	background-color: #db7093!important;
+.orange .default-bg {
+	background-color: #ffa500;
 	color: #ffffff;
 }
 
 /* Backgrounds
 ---------------------------------- */
-.default-translucent-bg:after {
-	background-color: rgba(219,112,147,0.7);
+.orange .default-translucent-bg:after {
+	background-color: rgba(61,120,216,0.orange .7);
 }
 
 /* 3 Pages
 ----------------------------------------------------------------------------- */
-.blogpost .post-info {
-	background-color: #db7093!important;
+.orange .blogpost .orange .post-info {
+	background-color: #ffa500;
 	color: #fff;
 }
-.blogpost .side .social-links li a {
+.orange .blogpost .orange .side .orange .social-links li a {
 	background-color: transparent;
 	border-color: transparent;
-	color: #db7093!important;
+	color: #ffa500;
 }
-.blogpost ul.links li a:hover {
-	color: #db7093!important;
+.orange .blogpost ul.orange .links li a:hover {
+	color: #ffa500;
 }
 
 /* timeline layout */
-.timeline-date-label {
-	color: #db7093!important;
+.orange .timeline-date-label {
+	color: #ffa500;
 }
 @media (min-width:768px) {
-	.timeline .timeline-item:before {
+	.orange .timeline .orange .timeline-item:before {
 		background-color: #fff;
-		border: 1px solid #db7093!important;
+		border: 1px solid #ffa500;
 	}
 }
 
@@ -76,458 +56,511 @@ mark,
 /* Buttons
 ---------------------------------- */
 /* Gray Buttons */
-.btn-gray:hover,
-.btn-gray:focus,
-.btn-gray:active,
-.btn-gray.active,
-.open .dropdown-toggle.btn-gray {
+.orange .btn-gray:hover,
+.orange .btn-gray:focus,
+.orange .btn-gray:active,
+.orange .btn-gray.orange .active,
+.orange .open .orange .dropdown-toggle.orange .btn-gray {
 	color: #ffffff;
-	background-color: #db7093!important;
-	border-color: #db7093!important;
+	background-color: #ffa500;
+	border-color: #ffa500;
 }
 
 /* Light Gray Buttons */
-.btn-light-gray:hover,
-.btn-light-gray:focus,
-.btn-light-gray:active,
-.btn-light-gray.active,
-.open .dropdown-toggle.btn-light-gray {
+.orange .btn-light-gray:hover,
+.orange .btn-light-gray:focus,
+.orange .btn-light-gray:active,
+.orange .btn-light-gray.orange .active,
+.orange .open .orange .dropdown-toggle.orange .btn-light-gray {
 	color: #ffffff;
-	background-color: #db7093!important;
-	border-color: #db7093!important;
+	background-color: #ffa500;
+	border-color: #ffa500;
 }
 
 /* Default Buttons */
-.btn-default {
-	background-color: #db7093!important;
+.orange .btn-default {
+	background-color: #ffa500;
 	color: #fff !important;
-	border-color: #c86384!important;
+	border-color: #e09200;
 }
-.btn-default:hover,
-.btn-default:focus,
-.btn-default:active,
-.btn-default.active,
-.open .dropdown-toggle.btn-default {
+.orange .btn-default:hover,
+.orange .btn-default:focus,
+.orange .btn-default:active,
+.orange .btn-default.orange .active,
+.orange .open .orange .dropdown-toggle.orange .btn-default {
 	color: #fff !important;
-	background-color: #c86384!important;
-	border-color: #c86384!important;
+	background-color: #e09200;
+	border-color: #e09200;
 }
-.btn-default.disabled,
-.btn-default[disabled],
-fieldset[disabled] .btn-default {
-	background-color: #c86384!important;
-	border-color: #c86384!important;
+.orange .btn-default.orange .disabled,
+.orange .btn-default[disabled],
+fieldset[disabled] .orange .btn-default {
+	background-color: #e09200;
+	border-color: #e09200;
 }
 
 /* Button with transparent bg
 ---------------------------------- */
-.btn-white {
+.orange .btn-white {
 	background-color: transparent;
-	color: #c86384!important;
-	border: 1px solid #db7093!important;
+	color: #e09200;
+	border: 1px solid #ffa500;
 }
-.btn-white:hover,
-.btn-white:focus,
-.btn-white:active,
-.btn-white.active,
-.open .dropdown-toggle.btn-white {
+.orange .btn-white:hover,
+.orange .btn-white:focus,
+.orange .btn-white:active,
+.orange .btn-white.orange .active,
+.orange .open .orange .dropdown-toggle.orange .btn-white {
 	color: #fff;
-	background-color: #c86384!important;
-	border-color: #c86384!important;
+	background-color: #e09200;
+	border-color: #e09200;
 }
 
 /* Forms
 ---------------------------------- */
-.default-bg .form-control {
-	border-color: #db7093!important;
-	background-color: rgba(0, 0, 0, 0.2);
-	-webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, .35);
-	box-shadow: inset 0 2px 3px rgba(0, 0, 0, .35);
+.orange .default-bg .orange .form-control {
+	border-color: #ffa500;
+	background-color: rgba(0, 0, 0, 0.orange .2);
+	-webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, .orange .35);
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, .orange .35);
 	color: #ffffff;
 }
-.default-bg .form-control:focus {
-	border-color: #db7093!important;
-	background-color: rgba(0, 0, 0, 0.25);
+.orange .default-bg .orange .form-control:focus {
+	border-color: #ffa500;
+	background-color: rgba(0, 0, 0, 0.orange .25);
 }
-.default-bg .input-group-addon {
-	background-color: #c86384!important;
-	border-color: #db7093!important;
+.orange .default-bg .orange .input-group-addon {
+	background-color: #e09200;
+	border-color: #ffa500;
 	color: #fff;
 }
-.dropdown .active>a>.badge,
-.dropdown a:hover .badge,
-.dropdown .open > a > .badge {
-	border-color: #db7093!important;
+.orange .dropdown .orange .active>a>.orange .badge,
+.orange .dropdown a:hover .orange .badge,
+.orange .dropdown .orange .open > a > .orange .badge {
+	border-color: #ffa500;
 }
 
 /* Pager
 ---------------------------------- */
-ul.pagination li > a:hover {
+ul.orange .pagination li > a:hover {
 	background-color: transparent;
 	color: #ffffff;
-	background-color: #db7093!important;
-	border-color: #db7093!important;
+	background-color: #ffa500;
+	border-color: #ffa500;
 }
-ul.pagination li.active a,
-.pagination > .active > a:hover,
-.pagination > .active > a:focus {
+ul.orange .pagination li.orange .active a,
+.orange .pagination > .orange .active > a:hover,
+.orange .pagination > .orange .active > a:focus {
 	color: #ffffff;
-	background-color: #db7093!important;
-	border-color: #db7093!important;
+	background-color: #ffa500;
+	border-color: #ffa500;
 }
 
 /* Tabs
 ---------------------------------- */
-.nav-tabs > li.active > a:after {
-	background-color: #db7093!important;
+.orange .nav-tabs > li.orange .active > a:after {
+	background-color: #ffa500!important;
 }
-.tab-content:after {
-	background-color: #db7093!important;
-}
+
 @media (max-width:480px) {
-	.nav-tabs > li > a:hover:after {
-		background-color: #db7093!important;
+	.orange .nav-tabs > li > a:hover:after {
+		background-color: #ffa500;
 	}
 }
 
 /* Horizontal tabs version 2 */
-.tabs-style-2 .nav-tabs {
-	border-bottom: 1px solid #db7093!important;
+.orange .tabs-style-2 .orange .nav-tabs {
+	border-bottom: 1px solid #ffa500;
 }
-.tabs-style-2 .nav-tabs > li.active > a,
-.tabs-style-2 .nav-tabs > li.active > a:hover,
-.tabs-style-2 .nav-tabs > li.active > a:focus,
-.tabs-style-2 .nav-tabs > li > a:hover {
-	border: 1px solid #db7093!important;
-	background-color: #db7093!important;
+.orange .tabs-style-2 .orange .nav-tabs > li.orange .active > a,
+.orange .tabs-style-2 .orange .nav-tabs > li.orange .active > a:hover,
+.orange .tabs-style-2 .orange .nav-tabs > li.orange .active > a:focus,
+.orange .tabs-style-2 .orange .nav-tabs > li > a:hover {
+	border: 1px solid #ffa500;
+	background-color: #ffa500;
 	color: #fff;
 }
 
 /* vertical tabs */
-.vertical .nav-tabs > li > a:hover:after {
-	background-color: #db7093!important;
+.orange .vertical .orange .nav-tabs > li > a:hover:after {
+	background-color: #ffa500;
 }
 
 /* Nav pills
 ---------------------------------- */
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:hover,
-.nav-pills > li.active > a:focus,
-.nav-pills > li > a:hover,
-.nav-pills > li > a:focus {
+.orange .nav-pills > li.orange .active > a,
+.orange .nav-pills > li.orange .active > a:hover,
+.orange .nav-pills > li.orange .active > a:focus,
+.orange .nav-pills > li > a:hover,
+.orange .nav-pills > li > a:focus {
 	border: 1px solid #f3f3f3;
-	color: #db7093!important;
+	color: #ffa500;
 	background-color: #fafafa;
 }
-.nav-pills > li.active > a:after {
-	color: #db7093!important;
+.orange .nav-pills > li.orange .active > a:after {
+	color: #ffa500;
 }
-.nav-pills > li.active > a:hover:after,
-.nav-pills > li.active > a:focus:after,
-.nav-pills > li > a:hover:after,
-.nav-pills > li > a:focus:after {
-	color: #db7093!important;
+.orange .nav-pills > li.orange .active > a:hover:after,
+.orange .nav-pills > li.orange .active > a:focus:after,
+.orange .nav-pills > li > a:hover:after,
+.orange .nav-pills > li > a:focus:after {
+	color: #ffa500;
 }
-.light .footer-content .nav-pills > li.active > a:hover,
-.light .footer-content .nav-pills > li > a:hover {
-	color: #c86384!important;
+.orange .light .orange .footer-content .orange .nav-pills > li.orange .active > a:hover,
+.orange .light .orange .footer-content .orange .nav-pills > li > a:hover {
+	color: #e09200;
 }
-.nav-pills > .active > a > .badge {
-	color: #db7093!important;
+.orange .nav-pills > .orange .active > a > .orange .badge {
+	color: #e09200;
 	background-color: #fff;
-	border-color: #db7093!important;	
+	border-color: #e09200;	
 }
-
 /* Collapse
 ---------------------------------- */
-.panel-heading a {
-	background-color: #db7093!important;
+.orange .panel-heading a {
+	background-color: #ffa500;
 	color: #ffffff;
 }
-.panel-heading a:hover,
-.panel-transparent .panel-heading a:hover {
-	background-color: #db7093!important;
+.orange .panel-heading a:hover,
+.orange .panel-transparent .orange .panel-heading a:hover {
+	background-color: #ffa500;
 	color: #ffffff;
 }
 
 /* Progress bars
 ---------------------------------- */
-.progress-bar-default {
-	background-color: #db7093!important;
+.orange .progress-bar-default {
+	background-color: #ffa500;
 }
 
 /* Modals
 ---------------------------------- */
-.modal-content .modal-header {
-	background-color: #db7093!important;
+.orange .modal-content .orange .modal-header {
+	background-color: #ffa500;
 }
 
 /* Images and Images overlay
 ---------------------------------- */
-.overlay a {
-	color: #db7093!important;
+.orange .overlay a {
+	color: #ffa500;
 	background-color: #ffffff;
 }
-.overlay-links a + a {
+.orange .overlay-links a + a {
 	color: #ffffff;
-	background-color: #db7093!important;
+	background-color: #ffa500;
 }
-a.overlay i {
-	color: #db7093!important;
+a.orange .overlay i {
+	color: #ffa500;
 }
 
 /* 5 Navigations
 ----------------------------------------------------------------------------- */
 /* first level active menu items on hover/focus */
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:focus {
-	color: #db7093!important;
+.orange .navbar-default .orange .navbar-nav > .orange .active > a,
+.orange .navbar-default .orange .navbar-nav > .orange .active > a:focus {
+	color: #ffa500;
 	background-color: transparent;
 }
 
-.main-navigation .navbar-nav > .open > a, 
-.main-navigation .navbar-nav > .open > a:hover, 
-.main-navigation .navbar-nav > .open > a:focus { 
+.orange .main-navigation .orange .navbar-nav > .orange .open > a, 
+.orange .main-navigation .orange .navbar-nav > .orange .open > a:hover, 
+.orange .main-navigation .orange .navbar-nav > .orange .open > a:focus { 
 	color: #666666; 
 	background-color: #fafafa; 
 }
 
 /* second level menu items on focus/hover and when opened */
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus,
-.nav .open > a,
-.nav .open > a:hover,
-.nav .open > a:focus,
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus,
-.dropdown-menu .menu > .active > a,
-.dropdown-menu .menu > .active > a:hover,
-.dropdown-menu .menu > .active > a:focus {
+.orange .dropdown-menu > li > a:hover,
+.orange .dropdown-menu > li > a:focus,
+.orange .nav .orange .open > a,
+.orange .nav .orange .open > a:hover,
+.orange .nav .orange .open > a:focus,
+.orange .dropdown-menu > .orange .active > a,
+.orange .dropdown-menu > .orange .active > a:hover,
+.orange .dropdown-menu > .orange .active > a:focus,
+.orange .dropdown-menu .orange .menu > .orange .active > a,
+.orange .dropdown-menu .orange .menu > .orange .active > a:hover,
+.orange .dropdown-menu .orange .menu > .orange .active > a:focus {
 	background-color: #ffffff;
-	color: #db7093!important;
+	color: #ffa500;
 	border-color: #f1f1f1;
 }
-#offcanvas .nav .open > a,
-#offcanvas .nav .open > a:hover,
-#offcanvas .nav .open > a:focus,
-#offcanvas .nav > li > a:hover, 
-#offcanvas .nav > li > a:focus,
-#offcanvas .navbar-nav > li.active > a {
-	color: #db7093!important;
+#offcanvas .orange .nav .orange .open > a,
+#offcanvas .orange .nav .orange .open > a:hover,
+#offcanvas .orange .nav .orange .open > a:focus,
+#offcanvas .orange .nav > li > a:hover, 
+#offcanvas .orange .nav > li > a:focus,
+#offcanvas .orange .navbar-nav > li.orange .active > a {
+	color: #ffa500;
 	background-color: #ffffff;
 }
 
 /* mega menu menu items on focus/hover and when opened */
-.mega-menu .menu > li > a:hover,
-.mega-menu .menu > li > a:focus {
+.orange .mega-menu .orange .menu > li > a:hover,
+.orange .mega-menu .orange .menu > li > a:focus {
 	background-color: #ffffff;
-	color: #db7093!important;
+	color: #ffa500;
 	border-color: #f1f1f1;
 }
 
 /* arrows for parent menu items */
-.navbar-default .navbar-nav > .active.dropdown > a:before {
-	color: #db7093!important;
+.orange .navbar-default .orange .navbar-nav > .orange .active.orange .dropdown > a:before {
+	color: #ffa500;
 }
-.navbar-default .navbar-nav > .dropdown.open > a:before { 
+.orange .navbar-default .orange .navbar-nav > .orange .dropdown.orange .open > a:before { 
 	color: #e5e5e5; 
 }
-.dropdown .dropdown.open>a:before,
-.transparent.header:not(.dark) .dropdown .dropdown.open>a:before {
-	color: #db7093!important;
+.orange .dropdown .orange .dropdown.orange .open>a:before,
+.orange .transparent.orange .header:not(.orange .dark) .orange .dropdown .orange .dropdown.orange .open>a:before {
+	color: #ffa500;
 }
 
 /* mobile menu toggle button on hover/focus */
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
+.orange .navbar-default .orange .navbar-toggle:hover,
+.orange .navbar-default .orange .navbar-toggle:focus {
 	background-color: #fafafa;
-	border-color: #db7093!important;
+	border-color: #ffa500;
 }
-.navbar-default .navbar-toggle:hover .icon-bar,
-.navbar-default .navbar-toggle:focus .icon-bar {
-	background-color: #db7093!important;
+.orange .navbar-default .orange .navbar-toggle:hover .orange .icon-bar,
+.orange .navbar-default .orange .navbar-toggle:focus .orange .icon-bar {
+	background-color: #ffa500;
 }
 @media (max-width:767px) {
-	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, 
-	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, 
-	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus { 
-		color: #db7093!important; 
+	.orange .navbar-default .orange .navbar-nav .orange .open .orange .dropdown-menu > .orange .active > a, 
+	.orange .navbar-default .orange .navbar-nav .orange .open .orange .dropdown-menu > .orange .active > a:hover, 
+	.orange .navbar-default .orange .navbar-nav .orange .open .orange .dropdown-menu > .orange .active > a:focus { 
+		color: #ffa500; 
 		background-color: transparent; 
 	}
 	
 	/* first level items hover and focus states */
-	.navbar-default .navbar-nav > li > a:hover,
-	.navbar-default .navbar-nav > li > a:focus,
-	.navbar-default .navbar-nav > .active > a:hover,
-	.navbar-default .navbar-nav > .active > a:focus {
-		color: #db7093!important;
+	.orange .navbar-default .orange .navbar-nav > li > a:hover,
+	.orange .navbar-default .orange .navbar-nav > li > a:focus,
+	.orange .navbar-default .orange .navbar-nav > .orange .active > a:hover,
+	.orange .navbar-default .orange .navbar-nav > .orange .active > a:focus {
+		color: #ffa500;
 		background-color: #fff;
 	}
 	
 	/* second level items on hover/focus */
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-		color: #db7093!important;
+	.orange .navbar-default .orange .navbar-nav .orange .open .orange .dropdown-menu > li > a:hover,
+	.orange .navbar-default .orange .navbar-nav .orange .open .orange .dropdown-menu > li > a:focus {
+		color: #ffa500;
 	}
 }
 
 /* Subfooter navigation
 ---------------------------------- */
-.subfooter .navbar-default .nav > li > a:hover,
-.subfooter .navbar-default .nav > .active > a:hover,
-.subfooter .navbar-default .nav > .active > a:focus {
+.orange .subfooter .orange .navbar-default .orange .nav > li > a:hover,
+.orange .subfooter .orange .navbar-default .orange .nav > .orange .active > a:hover,
+.orange .subfooter .orange .navbar-default .orange .nav > .orange .active > a:focus {
 	background-color: transparent;
-	color: #db7093!important;
+	color: #ffa500;
 }
 
 /* 6 Blocks/Widgets
 ----------------------------------------------------------------------------- */
 /* Boxes
 ---------------------------------- */
-.box.gray-bg:hover {
-	color: #db7093!important;
+.orange .box.orange .gray-bg:hover {
+	color: #ffa500;
 }
-.box.default-bg:hover {
+.orange .box.orange .default-bg:hover {
 	background-color: #fff;
-	border: 1px solid #db7093!important;
+	border: 1px solid #ffa500;
 }
-.box.default-bg:hover * {
-	color: #db7093!important;
+.orange .box.orange .default-bg:hover * {
+	color: #ffa500;
 }
-.box-style-1:not(.team-member):hover i {
-	color: #db7093!important;
+.orange .box-style-1:not(.orange .team-member):hover i {
+	color: #ffa500;
 }
-.box-style-1.default-bg:hover i, 
-.box-style-1.dark-bg:hover i {
+.orange .box-style-1.orange .default-bg:hover i, 
+.orange .box-style-1.orange .dark-bg:hover i {
 	color: inherit;
 }
-.box-style-2:hover .default-bg {
+.orange .box-style-2:hover .orange .default-bg {
 	background-color: #fff;
-	border: 1px solid #db7093!important;
+	border: 1px solid #ffa500;
 }
-.box-style-2:hover .default-bg * {
-	color: #db7093!important;
+.orange .box-style-2:hover .orange .default-bg * {
+	color: #ffa500;
 }
-.box-style-2:hover .white-bg * {
-	color: #db7093!important;
+.orange .box-style-2:hover .orange .white-bg * {
+	color: #ffa500;
 }
-.box-style-3:hover .default-bg {
+.orange .box-style-3:hover .orange .default-bg {
 	background-color: #fff;
-	border: 1px solid #db7093!important;
+	border: 1px solid #ffa500;
 }
-.box-style-3:hover .default-bg * {
-	color: #db7093!important;
+.orange .box-style-3:hover .orange .default-bg * {
+	color: #ffa500;
 }
-.box-style-3:hover .white-bg * {
-	color: #db7093!important;
+.orange .box-style-3:hover .orange .white-bg * {
+	color: #ffa500;
 }
 
 /* Tags cloud block
 ---------------------------------- */
-.tag a:hover {
+.orange .tag a:hover {
 	color: #ffffff;
-	background-color: #db7093!important;
-	border-color: #db7093!important;
+	background-color: #ffa500;
+	border-color: #ffa500;
 }
 
 /* Social icons block
 ---------------------------------- */
-.social-links li a {
-	background: #db7093!important;
-	border: 1px solid #db7093!important;
-	color: #fff;
-}
-.social-links li a:hover {
+
+.orange .social-links li a:hover {
 	background-color: transparent;
-	border-color: #c86384!important;
-	color: #c86384!important;
+	border-color: #e09200;
+	color: #e09200;
 }
-.social-links .dropdown.open>button>i:before {
+.orange .social-links .orange .dropdown.orange .open>button>i:before {
 	content: "\f00d";
-	color: #db7093!important;
+	color: #ffa500;
 }
-.header-top .social-links li a:hover {
-	color: #c86384!important;
+.orange .header-top .orange .social-links li a:hover {
+	color: #e09200;
 }
 
 /* search and login
 ---------------------------------- */
-.header-top-dropdown .dropdown.open>button,
-.header-top-dropdown .dropdown>button:hover {
+.orange .header-top-dropdown .orange .dropdown.orange .open>button,
+.orange .header-top-dropdown .orange .dropdown>button:hover {
 
-	color: #db7093!important;
+	color: #ffa500;
 }
 
 /* Pricing tables
 ---------------------------------- */
-.plan .popover-title {
-	background-color: #db7093!important;
+.orange .plan .orange .popover-title {
+	background-color: #ffa500;
 	color: #ffffff;
 }
-.gray .plan .header h3 {
-	color: #db7093!important;
+.orange .gray .orange .plan .orange .header h3 {
+	color: #ffa500;
 }
-.white .plan .header {
+.orange .white .orange .plan .orange .header {
 	color: #fff;
-	background: #db7093!important;
+	background: #ffa500;
 }
-.stripped .header {
-	background: #db7093!important;
-	-webkit-box-shadow: 0px 0px 60px #c86384 inset!important ;
-	-moz-box-shadow: 0px 0px 60px #c86384 inset!important ;
-	box-shadow: 0px 0px 60px #c86384 inset!important ;
+.orange .stripped .orange .header {
+	background: #ffa500;
+	-webkit-box-shadow: 0px 0px 60px #e09200 inset;
+	-moz-box-shadow: 0px 0px 60px #e09200 inset;
+	box-shadow: 0px 0px 60px #e09200 inset;
 	color: #fff;
 }
 
 /* 7 Main Slideshow
 ----------------------------------------------------------------------------- */
 /* Slider Revolution captions */
-.default_bg {
-	background-color: #db7093!important;
+.orange .default_bg {
+	background-color: #ffa500;
 	color: #fff;
 }
 
 /* Revolution Nav Controls */
-.tparrows.round:hover {
+.orange .tparrows.orange .round:hover {
 	color: #ffffff;
-	background-color: #db7093!important;
+	background-color: #ffa500;
 }
-.tp-bullets.simplebullets.round .bullet:hover,
-.tp-bullets.simplebullets.round .bullet.selected {
-	background-color: #db7093!important;
+.orange .tp-bullets.orange .simplebullets.orange .round .orange .bullet:hover,
+.orange .tp-bullets.orange .simplebullets.orange .round .orange .bullet.orange .selected {
+	background-color: #ffa500;
 }
-.tp-bannertimer {
-	background-color: rgba(219,112,147,0.7);
+.orange .tp-bannertimer {
+	background-color: rgba(61,120,216,0.orange .7);
 }
 
 /* 8 Owl carousel
 ----------------------------------------------------------------------------- */
-.owl-prev {
-	background-color: #db7093!important;
+.orange .owl-prev {
+	background-color: #ffa500;
 	color: #f1f1f1;
 }
-.owl-next {
+.orange .owl-next {
 	background-color: #f1f1f1;
-	color: #db7093!important;
+	color: #ffa500;
 }
-.content-slider-with-controls .owl-buttons div,
-.content-slider-with-controls-autoplay .owl-buttons div {
-	background-color: #db7093!important;
+.orange .content-slider-with-controls .orange .owl-buttons div,
+.orange .content-slider-with-controls-autoplay .orange .owl-buttons div {
+	background-color: #ffa500;
 	color: #f1f1f1;
 }
-.content-slider-with-controls .owl-prev:hover,
-.content-slider-with-controls .owl-next:hover,
-.content-slider-with-controls-autoplay .owl-prev:hover,
-.content-slider-with-controls-autoplay .owl-next:hover {
+.orange .content-slider-with-controls .orange .owl-prev:hover,
+.orange .content-slider-with-controls .orange .owl-next:hover,
+.orange .content-slider-with-controls-autoplay .orange .owl-prev:hover,
+.orange .content-slider-with-controls-autoplay .orange .owl-next:hover {
 	background-color: #f1f1f1;
-	color: #db7093!important;
+	color: #ffa500;
 }
-.owl-controls .owl-page.active span,
-.owl-controls.clickable .owl-page:hover span {
-	background: #db7093!important;
+.orange .owl-controls .orange .owl-page.orange .active span,
+.orange .owl-controls.orange .clickable .orange .owl-page:hover span {
+	background: #ffa500;
 }
-img.product-image
+
+img.orange .product-image
 {
-	background-color: #db7093!important;
+		background-color: #ffa500;
+}
+.orange .nav-tabs > li.active > a:after {
+	background-color: #ffa500!important;
+}
+
+.orange .banner-anim-arrow-default.next:hover,
+.orange .banner-anim-arrow-default.prev:hover,
+.orange .tp-bannertimer,
+.orange .banner-anim-arrow-default.next:hover {
+    background-color: #ffa500;
+}
+.orange .banner-anim-thumb-default span:active, .orange .banner-anim-thumb-default span.active {
+  background-color: #ffa500;
+}
+.orange .tabs-style-2 .nav-tabs > li.active > a,
+.orange .tabs-style-2 .nav-tabs > li.active > a:hover,
+.orange .tabs-style-2 .nav-tabs > li.active > a:focus,
+.orange .tabs-style-2 .nav-tabs > li > a:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #ffa500;
+  background-color: #ffa500;
+  color: #fff;
+}
+.orange .vertical .nav-tabs > li > a:hover:after {
+  width: 3px;
+  content: "";
+  background-color: #ffa500;
+  height: 102%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.orange .box-style-1:not(.team-member):hover i {
+  color: #ffa500;
+}
+.orange .banner-anim-thumb >span:hover {
+  background:#ffa500;
+}
+.orange .blogpost .post-info {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+.submitted a, .orange .text-default {
+	color: #ffa500;
+}
+
+.orange .title >a:hover {
+  color:#ffa500;
+}
+.orange  .blogpost .side .social-links li a {
+	color: #ffa500;
+}
+.orange code{
+	color: #ffa500;
+}
+.orange .list li a {
+  color: #ffa500;
 }
