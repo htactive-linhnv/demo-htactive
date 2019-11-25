@@ -12,15 +12,15 @@ import Home1st from "../components/Home/Home1st/Home1st"
 import { connect } from "react-redux"
 import Helmet from "react-helmet"
 
-const IndexPage = ({ data, color, footer,slug }) => { 
-  console.log(slug);
+const IndexPage = ({ data, color, footer }) => { 
+  console.log(data);
    
   return (
     <Layout footer={footer} menu={data.menu_vn}>
       <Helmet></Helmet>
       <SEO title="Home" color={color} />
       <Banner data={data.slide_vn}></Banner>
-      <PageTop data={'data.lead_vn'}/>
+      <PageTop data={data.lead_vn}/>
       <Home1st  data={data.home1st_vn}color={color} />
       <Home2nd data={data.home2nd_vn} color={color} />
       <BannerHome data={data.banner_vn} />
@@ -148,6 +148,5 @@ export const query = graphql`
         }
       }
     }
-  }
-  
+  } 
 `
