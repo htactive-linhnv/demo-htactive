@@ -2,7 +2,7 @@ import React from "react"
 import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax"
 import "../BannerHome/BannerHome.css"
 const BannerHome = ({ data }) => {
-  const dataUse = data.edges[1].node.frontmatter.home_banner_vn || {}
+  const dataUse = data.frontmatter.home_banner_vn || {}
   const dataArr = Object.values(dataUse).map(item => item) || []  
   return (
     <ParallaxProvider>

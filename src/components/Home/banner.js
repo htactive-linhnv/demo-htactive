@@ -11,10 +11,10 @@ import ProgressBar from "./progressBar"
 const { Element } = BannerAnim
 const BgElement = Element.BgElement
 const Banner = ({ data }) => {
-  const dataUse = data.edges[1].node.frontmatter.slide_vn || {}
+  const dataUse = data.frontmatter.slide_vn || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
-  console.log(dataArr);
-  
+  console.log(dataArr)
+
   const [showbar, setBar] = useState(true)
   const handleProgressBar = e => {
     if (e === "after") {
@@ -75,12 +75,7 @@ const Banner = ({ data }) => {
               name="QueueAnim"
               className={`col-sm-10 banner-left-wrapper`}
             >
-              {showbar && (
-                <BannerLeft
-                  title={item.title}
-                  lead={item.lead}
-                />
-              )}
+              {showbar && <BannerLeft title={item.title} lead={item.lead} />}
             </QueueAnim>
             <div></div>
             {item.img !== "" && (
@@ -99,30 +94,28 @@ const Banner = ({ data }) => {
 }
 export default Banner
 
+// const data2 = [
+//   {
+//     bg: dataArr[6],
+//     title: "HT Active - Professional Software Solutions",
+//     lead: "Provide Best Services+New Technology+Best Quality+Support 24/7",
+//     more: "And much more ...",
+//     img: "",
+//   },
 
-
-  // const data2 = [
-  //   {
-  //     bg: dataArr[6],
-  //     title: "HT Active - Professional Software Solutions",
-  //     lead: "Provide Best Services+New Technology+Best Quality+Support 24/7",
-  //     more: "And much more ...",
-  //     img: "",
-  //   },
-
-  //   {
-  //     bg: dataArr[7],
-  //     title: "We Provide All You Need",
-  //     lead: "Website Application+Windows Application+Mobile Application+Game",
-  //     more: "And more software solutions...",
-  //     img: `${MacImg}`,
-  //   },
-  //   {
-  //     bg: dataArr[8],
-  //     title: "Satisfaction Is What You Need",
-  //     lead:
-  //       "Clean and unique design+After sale support+Cross-Browser/ Cross-Platform Compatible+Young and Brilliant Team",
-  //     more: "Dont miss out!",
-  //     img: "",
-  //   },
-  // ]
+//   {
+//     bg: dataArr[7],
+//     title: "We Provide All You Need",
+//     lead: "Website Application+Windows Application+Mobile Application+Game",
+//     more: "And more software solutions...",
+//     img: `${MacImg}`,
+//   },
+//   {
+//     bg: dataArr[8],
+//     title: "Satisfaction Is What You Need",
+//     lead:
+//       "Clean and unique design+After sale support+Cross-Browser/ Cross-Platform Compatible+Young and Brilliant Team",
+//     more: "Dont miss out!",
+//     img: "",
+//   },
+// ]

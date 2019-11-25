@@ -14,7 +14,7 @@ const Home3rd = ({ data }) => {
     void element.offsetWidth
     element.classList.add("fade-in--quick")
   }
-  const dataUse = data.edges[1].node.frontmatter.home_3rd_vn || {}
+  const dataUse = data.frontmatter.home_3rd_vn || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
   const dataTab = dataArr.filter((item, index) => index >= 2)
   const tabSelect =

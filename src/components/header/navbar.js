@@ -6,7 +6,7 @@ const NavBar = ({ color, active, changeActive, menu }) => {
   const engRoute = ['/','services','portfolio','blog','contact']
   let menuItem = []
   if (menu) {
-    const dataUse = menu.edges[1].node.frontmatter.menu_vn || {}
+    const dataUse = menu.frontmatter.menu_vn || {}
     const dataArr = Object.values(dataUse).map(item => item) || []
     menuItem = dataArr.map((item, index) => {
       return (
