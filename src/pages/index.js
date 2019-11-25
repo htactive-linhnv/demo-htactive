@@ -8,22 +8,22 @@ import FooterTop from "../components/FooterTop/FooterTop"
 import Banner from "../components/Home/banner"
 import BannerHome from "../components/BannerHome/BannerHome"
 import PageTop from "../components/Home/pageTop"
-import Services from "../components/Home/Home1st/Home1st"
+import Home1st from "../components/Home/Home1st/Home1st"
 import { connect } from "react-redux"
 import Helmet from "react-helmet"
 
 const IndexPage = ({ data, color, footer }) => {
   
   return (
-    <Layout footer={footer}>
+    <Layout footer={footer} menu={data.menu_vn}>
       <Helmet></Helmet>
       <SEO title="Home" color={color} />
-      <Banner></Banner>
-      <PageTop />
-      <Services color={color} />
-      <Home2nd data={data.home2nd} color={color} />
-      <BannerHome />
-      <Home3rd test={data} />
+      <Banner data={data.slide_vn}></Banner>
+      <PageTop data={data.lead_vn}/>
+      <Home1st  data={data.home1st_vn}color={color} />
+      <Home2nd data={data.home2nd_vn} color={color} />
+      <BannerHome data={data.banner_vn} />
+      <Home3rd data={data.home3rd_vn} />
       <FooterTop />
     </Layout>
   )
@@ -36,7 +36,31 @@ export default connect(mapStateToProps, null)(IndexPage)
 
 export const query = graphql`
   query {
-    home2nd: allMarkdownRemark {
+    home1st_vn: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            home_1st_vn {
+              home_1st_des_vn
+              home_1st_title_vn
+              home_1st_vn_1 {
+                home_box_desc_vn_1
+                home_box_title_vn_1
+              }
+              home_1st_vn_2 {
+                home_box_desc_vn_2
+                home_box_title_vn_2
+              }
+              home_1st_vn_3 {
+                home_box_desc_vn_3
+                home_box_title_vn_3
+              }
+            }
+          }
+        }
+      }
+    },  
+    home2nd_vn: allMarkdownRemark {
       edges {
         node {
           frontmatter {
@@ -69,8 +93,88 @@ export const query = graphql`
           }
         }
       }
-    
-    
+    },  
+    home3rd_vn: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            home_3rd_vn {
+              home_3rd_desc_vn
+              home_3rd_title_vn
+              tab1_vn {
+                tab_img_vn_1
+                tab_desc_vn_1
+                tab_title_vn_1
+              }
+              tab2_vn {
+                tab_desc_vn_2
+                tab_img_vn_2
+                tab_title_vn_2
+              }
+              tab3_vn {
+                tab_desc_vn_3
+                tab_img_vn_3
+                tab_title_vn_3
+              }
+              tab4_vn {
+                tab_desc_vn_4
+                tab_img_vn_4
+                tab_title_vn_4
+              }
+            }
+          }
+        }
+      }
+    },
+    banner_vn: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            home_banner_vn {
+              banner_img_vn
+              home_banner_desc_vn
+              home_banner_heading_vn
+            }
+          }
+        }
+      }
+    }
+    lead_vn: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            lead_vn
+          }
+        }
+      }
+    }    
+    menu_vn: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            menu_vn
+          }
+        }
+      }
+    }
+    slide_vn: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            slide_vn {
+              slide_caption1_vn
+              slide_caption2_vn
+              slide_caption3_vn
+              slide_detail1_vn
+              slide_detail2_vn
+              slide_detail3_vn
+              slide_img1_vn
+              slide_img2_vn
+              slide_img3_vn
+            }
+          }
+        }
+      }
     }
   }
 `

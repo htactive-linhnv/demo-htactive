@@ -21,11 +21,11 @@ import "./ResponsiveCss/maxWidth480.css"
 import { connect } from 'react-redux'
 
 
-const Layout = ({ footer,children,color,open}) => {  
+const Layout = ({ footer,children,color,open,menu}) => {  
   return (
     <div className={ "page-wrapper " +  (open ? "blur-bg" : "")}>
       <StyleSwitcher></StyleSwitcher>
-      <Header color={color} />
+      <Header menu ={menu} color={color} />
       <main>{children}</main>
       <Footer footer={footer} />
       <ScrollUpButton AnimationDuration={1500} ShowAtPosition={0} />
