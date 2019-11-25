@@ -1,9 +1,7 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import "../Home3rd/Home3rd.css"
 import TextCenter from "../TextCenter/TextCenter"
-import studioImg from "../../../data/images/studio.png"
-const Home3rd = ({ data }) => {
+const Home3rd = ({ data, language }) => {
   const [toggleStatus, setToggleStatus] = useState(1)
   const toggleTab = status => {
     toggleStatus !== status ? setToggleStatus(status) : setToggleStatus(0)
@@ -14,13 +12,13 @@ const Home3rd = ({ data }) => {
     void element.offsetWidth
     element.classList.add("fade-in--quick")
   }
-  const dataUse = data.frontmatter.home_3rd_vn || {}
+  const dataUse = data.frontmatter[`home_3rd_${language}`] || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
   const dataTab = dataArr.filter((item, index) => index >= 2)
   const tabSelect =
     toggleStatus !== 0
       ? dataTab[toggleStatus - 1]
-      : dataTab[0] || { tab_title_vn: "Hello" }
+      : dataTab[0] || { [`tab_title_${language}`]: "Hello" }
   const navTabs = dataTab.map((item, index) => {
     const position = index + 1
     return (
@@ -33,7 +31,7 @@ const Home3rd = ({ data }) => {
         className={toggleStatus === position ? "active " : ""}
       >
         <a role="tab" data-toggle="tab">
-          {item[`tab_title_vn_${position}`]}
+          {item[`tab_title_${language}_${position}`]}
         </a>
       </li>
     )
@@ -55,12 +53,17 @@ const Home3rd = ({ data }) => {
             id="tab-pane"
           >
             <h1 className="text-center title">
-              {tabSelect[`tab_title_vn_${toggleStatus}`] || null}
+              {tabSelect[`tab_title_${language}_${toggleStatus}`] || null}
             </h1>
             <div className="row">
               <div className="col-md-12">
-                <p>{tabSelect[`tab_desc_vn_${toggleStatus}`] || null}</p>
-                <img src={tabSelect[`tab_img_vn_${toggleStatus}`] || null} alt="" />
+                <p>
+                  {tabSelect[`tab_desc_${language}_${toggleStatus}`] || null}
+                </p>
+                <img
+                  src={tabSelect[`tab_img_${language}_${toggleStatus}`] || null}
+                  alt=""
+                />
               </div>
             </div>
           </div>

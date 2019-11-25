@@ -1,8 +1,8 @@
 import React from "react"
 import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax"
 import "../BannerHome/BannerHome.css"
-const BannerHome = ({ data }) => {
-  const dataUse = data.frontmatter.home_banner_vn || {}
+const BannerHome = ({ data,language }) => {
+  const dataUse = data.frontmatter[`home_banner_${language}`] || {}
   const dataArr = Object.values(dataUse).map(item => item) || []  
   return (
     <ParallaxProvider>

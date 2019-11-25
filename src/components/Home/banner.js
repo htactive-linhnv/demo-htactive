@@ -10,10 +10,9 @@ import ProgressBar from "./progressBar"
 
 const { Element } = BannerAnim
 const BgElement = Element.BgElement
-const Banner = ({ data }) => {
-  const dataUse = data.frontmatter.slide_vn || {}
+const Banner = ({ data,language }) => {
+  const dataUse = data.frontmatter[`slide_${language}`] || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
-  console.log(dataArr)
 
   const [showbar, setBar] = useState(true)
   const handleProgressBar = e => {

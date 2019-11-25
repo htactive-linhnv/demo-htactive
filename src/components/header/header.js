@@ -2,11 +2,11 @@ import React from "react"
 import HeaderTop from "./header-top"
 import HeaderFixed from "./header-fixed"
 
-const Header = ({ menu,color }) => {
+const Header = ({ menu,color,language }) => {
   return (
     <header>
       <HeaderTop />
-      <HeaderFixed menu= {menu} color={color} />
+      <HeaderFixed menu= {menu} color={color}  language={language} />
     </header>
   )
 }

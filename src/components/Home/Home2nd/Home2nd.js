@@ -5,8 +5,8 @@ import { Collapse } from "antd"
 import QueueAnim from "rc-queue-anim"
 import TextCenter from "../TextCenter/TextCenter"
 const { Panel } = Collapse
-export default ({ color, data }) => {
-  const dataUse = data.frontmatter.home_2nd_vn || {}
+export default ({ color, data,language }) => {
+  const dataUse = data.frontmatter[`home_2nd_${language}`] || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
   const dataPanel = dataArr.filter((item, index) => index >= 3)
   const dataParagraph = dataArr[0]
@@ -20,12 +20,12 @@ export default ({ color, data }) => {
 
   const dataRender = dataPanel.map((item, index) => (
     <Panel
-      header={item[`home_panel_title_vn_${index + 1}`]}
+      header={item[`home_panel_title_${language}_${index + 1}`]}
       key={index + 1}
       extra={extraNode(index)}
       showArrow={false}
     >
-      <p>{item[`home_panel_desc_vn_${index + 1}`]}</p>
+      <p>{item[`home_panel_desc_${language}_${index + 1}`]}</p>
     </Panel>
   ))
   return (
