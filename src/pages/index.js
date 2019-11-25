@@ -13,6 +13,7 @@ import { connect } from "react-redux"
 import Helmet from "react-helmet"
 
 const IndexPage = ({ data, color, footer }) => {
+  
   return (
     <Layout footer={footer}>
       <Helmet></Helmet>
@@ -20,7 +21,7 @@ const IndexPage = ({ data, color, footer }) => {
       <Banner></Banner>
       <PageTop />
       <Services color={color} />
-      <Home2nd test={data} color={color} />
+      <Home2nd data={data.home2nd} color={color} />
       <BannerHome />
       <Home3rd test={data} />
       <FooterTop />
@@ -35,65 +36,41 @@ export default connect(mapStateToProps, null)(IndexPage)
 
 export const query = graphql`
   query {
-    why: allMarkdownRemark {
+    home2nd: allMarkdownRemark {
       edges {
         node {
           frontmatter {
-            home_why_vn {
-              tab1_vn {
-                tab_desc_vn
-                tab_img_vn
-                tab_title_vn
+            home_2nd_vn {
+              about_paragraph_vn {
+                about_img
+                about_paragraph_title_vn
+                about_paragraph_vn_1
+                about_paragraph_vn_2
               }
-              tab2_vn {
-                tab_desc_vn
-                tab_img_vn
-                tab_title_vn
+              home_2nd_desc_vn
+              home_2nd_title_vn
+              panel_vn_1 {
+                home_panel_desc_vn_1
+                home_panel_title_vn_1
               }
-              tab3_vn {
-                tab_desc_vn
-                tab_img_vn
-                tab_title_vn
+              panel_vn_2 {
+                home_panel_desc_vn_2
+                home_panel_title_vn_2
               }
-              tab4_vn {
-                tab_desc_vn
-                tab_img_vn
-                tab_title_vn
+              panel_vn_3 {
+                home_panel_desc_vn_3
+                home_panel_title_vn_3
+              }
+              panel_vn_4 {
+                home_panel_desc_vn_4
+                home_panel_title_vn_4
               }
             }
           }
         }
       }
-    }
-    about: allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            home_about_vn {
-              panel_vn1 {
-                home_box_desc_vn
-                home_box_title_vn
-                home_boxe_icon_vn
-              }
-              panel_vn2 {
-                home_box_desc_vn
-                home_box_title_vn
-                home_boxe_icon_vn
-              }
-              panel_vn3 {
-                home_box_desc_vn
-                home_box_title_vn
-                home_boxe_icon_vn
-              }
-              panel_vn4 {
-                home_box_desc_vn
-                home_box_title_vn
-                home_boxe_icon_vn
-              }
-            }
-          }
-        }
-      }
+    
+    
     }
   }
 `
