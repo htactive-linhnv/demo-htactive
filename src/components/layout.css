@@ -62,7 +62,7 @@ body {
   cursor: pointer;
   opacity: 1;
   right: 10px !important;
-  z-index: 10000000;
+  z-index: 10000000000000!important;
   fill: white;
   padding-bottom: 1px;
   padding-left: 1px;
@@ -73,6 +73,24 @@ body {
 }
 .logo {
   background-image: url("../data/images/logo_red.png");
+}
+.blue .logo {
+  background-image: url("../data/images/logo_blue.png");
+}
+.pink .logo {
+  background-image: url("../data/images/logo_pink.png");
+}
+.green .logo {
+  background-image: url("../data/images/logo_green.png");
+}
+.orange .logo {
+  background-image: url("../data/images/logo_orange.png");
+}
+.purple .logo {
+  background-image: url("../data/images/logo_purple.png");
+}
+.yellow .logo {
+  background-image: url("../data/images/logo_yellow.png");
 }
 .fa-angle-up {
   font-size: 33px;
