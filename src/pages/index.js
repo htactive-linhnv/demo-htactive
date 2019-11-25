@@ -25,7 +25,6 @@ const IndexPage = ({ data, color, footer,slug }) => {
       <Home2nd data={data.home2nd_vn} color={color} />
       <BannerHome data={data.banner_vn} />
       <Home3rd data={data.home3rd_vn} />
-      <FooterTop />
     </Layout>
   )
 }

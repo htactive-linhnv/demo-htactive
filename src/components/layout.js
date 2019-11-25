@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button"
 import Header from "./header/header"
 import Footer from "./footer"
+import FooterTop from './FooterTop/FooterTop'
 import StyleSwitcher from "../components/StyleSwitcher/StyleSwitcher"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./layoutCss/assets/css/bootstrap.css"
@@ -27,6 +28,7 @@ const Layout = ({ footer,children,color,open,menu}) => {
       <StyleSwitcher></StyleSwitcher>
       <Header menu ={menu} color={color} />
       <main>{children}</main>
+      <FooterTop />
       <Footer footer={footer} />
       <ScrollUpButton AnimationDuration={1500} ShowAtPosition={0} />
       <div>
