@@ -3,8 +3,7 @@ import {Link } from "gatsby"
 
 
 const PageTop = ({data}) => {
-    const dataUse = data.edges[1].node.frontmatter.lead_vn || {}
-
+    const dataUse = data.frontmatter.lead_vn || {}
     return (
         <div className="page-top" style={{ marginTop: "0px" }}>
             <div className="container">

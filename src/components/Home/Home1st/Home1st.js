@@ -4,7 +4,7 @@ import TextCenter from "../TextCenter/TextCenter"
 import Home1stCard from "./Home1stCard"
 
 const Home1st = ({data}) => {
-  const dataUse = data.edges[1].node.frontmatter.home_1st_vn || {}
+  const dataUse = data.frontmatter.home_1st_vn || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
   const dataBox = dataArr.filter((item,index)=> index>1)
   const [scrollY, setScrollY] = useState(0)

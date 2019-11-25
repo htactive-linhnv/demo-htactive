@@ -6,7 +6,7 @@ import QueueAnim from "rc-queue-anim"
 import TextCenter from "../TextCenter/TextCenter"
 const { Panel } = Collapse
 export default ({ color, data }) => {
-  const dataUse = data.edges[1].node.frontmatter.home_2nd_vn || {}
+  const dataUse = data.frontmatter.home_2nd_vn || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
   const dataPanel = dataArr.filter((item, index) => index >= 3)
   const dataParagraph = dataArr[0]
