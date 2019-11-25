@@ -1,131 +1,129 @@
 ---
-title-en: Home - Tiếng  việt
+title-en: Home - English
 date-en: 2019-11-09T07:18:52.506Z
 menu-en:
-  - TRANG CHỦ
-  - DỊCH VỤ Test
+  - HOME
+  - SERVICE
   - PORTFOLIOS
-  - BÀI VIẾT
-  - LIÊN HỆ
+  - BLOGS
+  - CONTACT
 slide-en:
-  slide-caption1-en: HT Active - Giải pháp công nghệ test
-  slide-caption2-en: Cung cấp tất cả những gì bạn cần
-  slide-caption3-en: Sự hài lòng của bạn là mục tiêu của HT Active
+  slide-caption1-en: HT Active - Professional Software Solutions
+  slide-caption2-en: We Provide All You Need
+  slide-caption3-en: Satisfaction Is What You Need
   slide-detail1-en:
     - >-
-      Mang đến dịch vụ tốt nhất+Công nghệ mới nhất+Chất lượng đảm bảo+Hỗ trợ
-      24/7+Và hơn thế nữa...
+      Provide Best Services+New Technology+Best Quality+Support 24/7+And much
+      more...
   slide-detail2-en:
     - >-
-      Ứng dụng Web+Ứng dụng Windows+ Ứng dụng di động +Game di động+Và những
-      giải pháp công nghệ mới nhất...
+      Website Application+Windows Application+Mobile Application+Game+And more
+      software solutions...
   slide-detail3-en:
     - >-
-      Thiết kế độc đáo+Bảo hành sản phẩm+Tương thích đa nền tảng+Hỗ trợ toàn
-      diện+Đừng bỏ lỡ cơ hội...
+      Clean and unique design+After sale support+Cross-Browser/ Cross-Platform
+      Compatible+Young and Brilliant Team+Dont miss ...!
   slide-img1-en: /img/slider-1.jpg
   slide-img2-en: /img/slider-background.jpg
   slide-img3-en: /img/slider-3.jpg
-lead-en: Chúng tôi cung cấp cho bạn một giải pháp công nghệ toàn diện!
+lead-en: We strive to offer the best solution for your business.
 home-1st-en:
-  home-1st-des-en: >-
-    Cung cấp các giải pháp phần mềm chuyên nghiệp hỗ trợ mọi nền tảng, mọi ngôn
-    ngữ.
-  home-1st-title-en: DỊCH VỤ test
+  home-1st-des-en: 'By using our services, you will get all of the great experience.'
   home-1st-en-1:
-    home-box-desc-en-1: >-
-      Gia công và thiết kế website theo yêu cầu, giải pháp máy chủ, tên miền,
-      tối ưu hóa SEO...
-    home-box-title-en-1: Ứng dụng web
+    home-box-desc-en-1: 'Design and develop web applications, hosting service, domain, SEO.'
+    home-box-title-en-1: Web applications
   home-1st-en-2:
     home-box-desc-en-2: >-
-      Thiết kế và lập trình ứng dụng di động, cung cấp giải pháp xuất bản và
-      quảng bá...
-    home-box-title-en-2: Ứng dụng di động
+      Design and develop mobile applications, publish and app store
+      optimization.
+    home-box-title-en-2: Mobile Applications
   home-1st-en-3:
-    home-box-desc-en-3: >-
-      Thiết kế và lập trình game di động, cung cấp giải pháp xuất bản và quảng
-      bá, tối ưu hóa.
-    home-box-title-en-3: Game di động
+    home-box-desc-en-3: 'Design and develop mobile games, publish and app store optimization.'
+    home-box-title-en-3: Mobile Games
+  home-1st-title-en: SERVICE
 home-2nd-en:
   about-paragraph-en:
     about-img: /img/section-image-2.png
-    about-paragraph-title-en: Đến với HT Active test
     about-paragraph-en-1: >-
-      Chúng tôi hỗ trợ những dịch vụ, tạo ra các sản phẩm và truyển thông. Chúng
-      tôi yêu thích những gì mình làm ra, và cả những người bạn cùng hợp tác.
+      We work on the services, product and comunication. We love what we do, and
+      who we do it with. To HT Active, all customers are friends.
     about-paragraph-en-2: >-
-      HT Active sẽ không bao giờ hoạt động nếu thiếu đi sự đóng góp của mỗi
-      thành viên, sự tin tưởng của khách hàng. Cảm ơn mọi người vì đã luôn ủng
-      hộ và đặt niềm tin vào HT Active.
+      We work on the services, product and comunication. We love what we do, and
+      who we do it with. To HT Active, all customers are friends.
+    about-paragraph-title-en: Meet the team - HT Active
   home-2nd-desc-en: >-
-    Chúng tôi, những bạn trẻ năng động và sáng tạo, những con người đam mê và
-    cầu tiến, những chuyên viên phần mền đầy năng lực và nhiệt huyết, sẵn sàng
-    mang đến tính chuyên nghiệp và sự hài lòng.
-  home-2nd-title-en: VỀ HT ACTIVE test
+    HT Active is the team of Young & Brilliant people. We will help and support
+    all you need about Software Solutions. We’re developers, designers, support
+    specialists and gamers. We have all you needs.
+  home-2nd-title-en: ABOUT HT ACTIVE
   panel-en-1:
     home-panel-desc-en-1: >-
-      Phong cách làm việc chuyên nghiệp là tiêu chí hàng đầu của chúng tôi. HT
-      Active luôn hỗ trợ khách hàng tốt nhất có thể bỏi vì chỉ có lòng tin và sự
-      hài lòng của bạn là mục tiêu của chúng tôi.
-    home-panel-title-en-1: Sự tín nhiệm test
+      Professional ethics is the number one criteria. For customer, we will
+      always be honest because only the trust and satisfaction of customers
+      bring us success.
+    home-panel-title-en-1: Reliance
   panel-en-2:
     home-panel-desc-en-2: >-
-      Sự phát triển của HT Active dựa vào chất lượng sản phẩm do chúng tôi làm
-      ra, luôn làm những gì tốt nhất để mang đến sự hài lòng nhanh nhất. Nếu như
-      chất lượng sản phẩm không đúng như đã cam kết, HT Active sẽ hoàn lại tiền
-      đầu tư của các bạn, sẽ luôn là như vậy.
-    home-panel-title-en-2: Cam kết chất lượng tốt nhất cho sản phẩm
+      We measure our success as a company by how well we achieve, not by the
+      size of our profits. We'll do our best to bring you just the satisfied in
+      the fastest way. When the service provider is not good just as committed,
+      HT Active will refund to you. There will always be so.
+    home-panel-title-en-2: Fast and high quality commitment
   panel-en-3:
     home-panel-desc-en-3: >-
-      Chúng tôi làm với sự đam mê công việc, và luôn xem khách hàng làm ưu tiên
-      cao nhất. Vì vậy, cung cấp những giải pháp tối ưu với mức giá phải chăng
-      luôn là mục tiêu của HT Active.
-    home-panel-title-en-3: Tiết kiệm và hiệu quả
+      We do services not only for the profits, but also by the passion. We’re
+      developers, designers, support specialists and gamers. We all love
+      programing. Our services will savings and efficiency.
+    home-panel-title-en-3: Savings and effieciency
   panel-en-4:
     home-panel-desc-en-4: >-
-      HT Active luôn luôn hỗ trợ, bảo trì sản phẩm dài hạn. Ngoài ra, chúng tôi
-      còn có hệ thống kênh chat hoạt động 24/7, sẵn sàng phục vụ khi bạn cần.
-    home-panel-title-en-4: Hỗ trợ 24/7
+      HT Active will always support, serve, and maintain our customer for long
+      term. Beside that, we provide a live chat system, working 24/7, that will
+      help you immediate access to help.
+    home-panel-title-en-4: 24/7 supporting
 home-banner-en:
   banner-img-en: /img/portfolio-3.jpg
-  home-banner-desc-en: Chúng tôi sẽ trả lời yêu cầu của bạn trong thời gian sớm nhất.
-  home-banner-heading-en: 'ĐỪNG BỎ LỠ CƠ HỘI, LIÊN HỆ NGAY test'
+  home-banner-desc-en: We will reply your message as soon as possible.
+  home-banner-heading-en: 'DON''T MISS OUT, CONTACT US NOW!'
 home-3rd-en:
   home-3rd-desc-en: >-
-    HT Active cung cấp chất lượng tuyệt vời trong thiết kế, phát triển và lập
-    trình trang web hay ứng dụng của bạn. Chúng tôi hướng đến những giải pháp
-    tốt nhất cho công việc của bạn và tư vấn nhiệt tình với một mực giá thấp
-    nhất. Chúng tôi không ngừng nghiên cứu những công nghệ mới và áp dụng vào
-    sản p
-  home-3rd-title-en: TẠI SAO NÊN CHỌN HT ACTIVE
+    HT Active offers a great service in the design, development and programming
+    of your website/application. We strive to offer the best solution for your
+    business and impartial advice at an honest price. We are constantly
+    investigating new technologies and recommend them when they make sense.
+  home-3rd-title-en: WHY CHOOSE HT ACTIVE
   tab1-en:
     tab-desc-en-1: >-
-      Chúng tôi yêu thích những gì chúng tôi đang làm, mang đến sự hăng hái và
-      cam kết trong từng sản phẩm, áp dụng những công nghệ mới nhất, với hiệu
-      suất cao nhất cho khách hàng.
+      We love what we do, some might say a bit too much, and we bring enthusiasm
+      and commitment to every project we work on. Put simply, if you want a
+      partner who cares about your business, choose HT Active.
     tab-img-en-1: /img/whychooseus.png
-    tab-title-en-1: Giải pháp tốt nhất test
+    tab-title-en-1: THE RIGHT TEAM
   tab2-en:
     tab-desc-en-2: >-
-      Lắng nghe, thảo luận và đưa ra lời khuyên. Ý tưởng, kế hoạch và mục tiêu
-      của bạn là ưu tiên của chúng tôi. Với HT Active, mỗi khách hàng cũng là
-      một người bạn.
+      We listen, we discuss, we advise. We then select the best solution to fit.
+      We don’t shoehorn projects and if we feel we’re not a good fit we’ll be
+      honest and tell you from the outset. We're experienced programmers, we
+      love discussing and planning new projects and have years of knowledge and
+      ex
     tab-img-en-2: /img/whychooseus1.jpg
-    tab-title-en-2: Chúng tôi lắng nghe
+    tab-title-en-2: WE LISTEN
   tab3-en:
     tab-desc-en-3: >-
-      Dù đó là website, ứng dụng, game..., chúng tôi đều làm những sản phẩm tốt
-      nhất cho bạn. Nếu bạn có ý tưởng, chúng tôi sẽ hoàn thiện nó. HT Active
-      muốn làm ra những sản phẩm tuyệt vời cùng những khách hàng tuyệt vời.
+      Whether it’s website or application, game..., system development or custom
+      programming, we like to keep everything under one roof to make it easier
+      for our customers. We love nothing more than working on a great project
+      with a fantastic client. We care about our clients and can often be found
     tab-img-en-3: /img/whychooseus2.jpg
-    tab-title-en-3: Sáng tạo và chất lượng
+    tab-title-en-3: CREATIVE & TECHNICAL
   tab4-en:
     tab-desc-en-4: >-
-      Những dịch vụ của HT Active bao gồm lên ý tưởng sản phẩm, thiết kế và phát
-      triển, xây dựng và triển khai ứng dụng web/di động/game. Mọi thứ luôn được
-      thống nhất, và hoạt động tại mọi nơi.
+      HT Active is 'one-stop-shop' software solution agency providing everything
+      you need to successfully market your business to customers. Our services
+      include planning and strategy, design and development, building and
+      deploying web applications/mobile application/game belong with graphic
+      design,
     tab-img-en-4: /img/studio.png
-    tab-title-en-4: Tất cả trong một
+    tab-title-en-4: UNDER ONE ROOF
 ---
 
