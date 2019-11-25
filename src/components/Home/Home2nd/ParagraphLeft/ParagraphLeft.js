@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 const ParagraphLeft = ({ color, data }) => {
-  console.log(data)
   return (
     <div className="col-lg-6 col-md-12">
       <h2 className="title">{data.about_paragraph_title_vn}</h2>

@@ -1,8 +1,24 @@
 import React, { useState } from "react"
 import { connect } from "react-redux"
 import { Link } from "gatsby"
-const NavBar = ({ color, active, changeActive }) => {
+const NavBar = ({ color, active, changeActive, menu }) => {
   const [openDrop, setOpenDrop] = useState(false)
+  const engRoute = ['/','services','portfolio','blog','contact']
+  let menuItem = []
+  if (menu) {
+    const dataUse = menu.edges[1].node.frontmatter.menu_vn || {}
+    const dataArr = Object.values(dataUse).map(item => item) || []
+    menuItem = dataArr.map((item, index) => {
+      return (
+        <li
+          className={`${color} ${active === `${index+1}` ? "active" : ""} `}
+          onClick={() => changeActive(`${index+1}`)}
+        >
+          <Link to={engRoute[index]}>{item}</Link>
+        </li>
+      )
+    })
+  }
 
   return (
     <nav className="navbar navbar-default" role="navigation">
@@ -25,36 +41,7 @@ const NavBar = ({ color, active, changeActive }) => {
           style={{ display: `${openDrop ? "block" : "none"}` }}
         >
           <ul className="nav navbar-nav navbar-right">
-            <li
-              className={`${color} ${active === "1" ? "active" : ""} `}
-              onClick={() => changeActive("1")}
-            >
-              <Link to="/">Home</Link>
-            </li>
-            <li
-              className={`${color} ${active === "2" ? "active" : ""} `}
-              onClick={() => changeActive("2")}
-            >
-              <Link to="/services">Service</Link>
-            </li>
-            <li
-              className={`${color} ${active === "3" ? "active" : ""} `}
-              onClick={() => changeActive("3")}
-            >
-              <Link to="/portfolio">Portfolios</Link>
-            </li>
-            <li
-              className={`${color} ${active === "4" ? "active" : ""} `}
-              onClick={() => changeActive("4")}
-            >
-              <Link to="/blog">Blogs</Link>
-            </li>
-            <li
-              className={`${color} ${active === "5" ? "active" : ""} `}
-              onClick={() => changeActive("5")}
-            >
-              <Link to="/contact">Contact</Link>
-            </li>
+            {menuItem}
           </ul>
         </div>
       </div>
@@ -70,4 +57,7 @@ const mapDispatchToProps = dispatch => {
     changeActive: value => dispatch({ type: `ACTIVE_NAVBAR`, active: value }),
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NavBar)
