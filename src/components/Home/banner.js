@@ -41,7 +41,8 @@ const Banner = ({ data }) => {
     {
       bg: dataArr[8],
       title: dataArr[2],
-      lead: dataArr[5][0],
+      // lead: dataArr[5][0],
+      lead: "Website Application+Windows Application+Mobile Application+Game+Bla",
       img: "",
     },
   ]
