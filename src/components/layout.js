@@ -22,11 +22,11 @@ import "./ResponsiveCss/maxWidth480.css"
 import { connect } from 'react-redux'
 
 
-const Layout = ({ footer,children,color,open,menu}) => {  
+const Layout = ({ footer,children,color,open,menu,language}) => {  
   return (
     <div className={ "page-wrapper " +  (open ? "blur-bg" : "")}>
       <StyleSwitcher></StyleSwitcher>
-      <Header menu ={menu} color={color} />
+      <Header menu ={menu} color={color}  language={language} />
       <main>{children}</main>
       <FooterTop />
       <Footer footer={footer} />
@@ -42,7 +42,7 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-const mapStateToProps = ({ color,open,footer}) => {
-  return { color,open,footer }
+const mapStateToProps = ({ color,open,footer,language}) => {
+  return { color,open,footer,language }
 }
 export default connect(mapStateToProps, null)(Layout)

@@ -1,18 +1,21 @@
 import React, { useState } from "react"
 import { connect } from "react-redux"
 import { Link } from "gatsby"
-const NavBar = ({ color, active, changeActive, menu }) => {
+const NavBar = ({ color, active, changeActive, menu,language }) => {
   const [openDrop, setOpenDrop] = useState(false)
-  const engRoute = ['/','services','portfolio','blog','contact']
+  const engRoute = ["/", "services", "portfolio", "blog", "contact"]
   let menuItem = []
+  
   if (menu) {
-    const dataUse = menu.frontmatter.menu_vn || {}
+    console.log(menu,language);
+
+    const dataUse = menu.frontmatter[`menu_${language}`] || {}
     const dataArr = Object.values(dataUse).map(item => item) || []
     menuItem = dataArr.map((item, index) => {
       return (
         <li
-          className={`${color} ${active === `${index+1}` ? "active" : ""} `}
-          onClick={() => changeActive(`${index+1}`)}
+          className={`${color} ${active === `${index + 1}` ? "active" : ""} `}
+          onClick={() => changeActive(`${index + 1}`)}
         >
           <Link to={engRoute[index]}>{item}</Link>
         </li>
@@ -40,9 +43,7 @@ const NavBar = ({ color, active, changeActive, menu }) => {
           className="collapse navbar-collapse"
           style={{ display: `${openDrop ? "block" : "none"}` }}
         >
-          <ul className="nav navbar-nav navbar-right">
-            {menuItem}
-          </ul>
+          <ul className="nav navbar-nav navbar-right">{menuItem}</ul>
         </div>
       </div>
     </nav>

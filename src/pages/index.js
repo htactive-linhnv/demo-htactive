@@ -4,7 +4,6 @@ import Home2nd from "../components/Home/Home2nd/Home2nd"
 import Home3rd from "../components/Home/Home3rd/Home3rd"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import FooterTop from "../components/FooterTop/FooterTop"
 import Banner from "../components/Home/banner"
 import BannerHome from "../components/BannerHome/BannerHome"
 import PageTop from "../components/Home/pageTop"
@@ -12,31 +11,160 @@ import Home1st from "../components/Home/Home1st/Home1st"
 import { connect } from "react-redux"
 import Helmet from "react-helmet"
 
-const IndexPage = ({ data, color, footer }) => { 
-  console.log(data);
-   
+const IndexPage = ({ data, color, footer, language }) => {
   return (
-    <Layout footer={footer} menu={data.menu_vn}>
+    <Layout footer={footer} menu={data[`menu_${language}`]}>
       <Helmet></Helmet>
       <SEO title="Home" color={color} />
-      <Banner data={data.slide_vn}></Banner>
-      <PageTop data={data.lead_vn}/>
-      <Home1st  data={data.home1st_vn}color={color} />
-      <Home2nd data={data.home2nd_vn} color={color} />
-      <BannerHome data={data.banner_vn} />
-      <Home3rd data={data.home3rd_vn} />
+      <Banner data={data[`slide_${language}`]} language={language}></Banner>
+      <PageTop data={data[`lead_${language}`]} language={language} />
+      <Home1st data={data[`home1st_${language}`]} color={color} language={language} />
+      <Home2nd data={data[`home2nd_${language}`]} color={color} language={language} />
+      <BannerHome data={data[`banner_${language}`]} language={language} />
+      <Home3rd data={data[`home3rd_${language}`]}  language={language}/>
     </Layout>
   )
 }
 
-const mapStateToProps = ({ color, footer }) => {
-  return { color, footer }
+const mapStateToProps = ({ color, footer, language }) => {
+  return { color, footer, language }
 }
-export default connect(mapStateToProps, null)(IndexPage)
+export default connect(
+  mapStateToProps,
+  null
+)(IndexPage)
 
 export const query = graphql`
   query {
-    home1st_vn: markdownRemark(frontmatter: {home_1st_vn: {home_1st_des_vn: {ne: null}}}) {
+    home1st_en: markdownRemark(
+      frontmatter: { home_1st_en: { home_1st_des_en: { ne: null } } }
+    ) {
+      frontmatter {
+        home_1st_en {
+          home_1st_des_en
+          home_1st_title_en
+          home_1st_en_1 {
+            home_box_desc_en_1
+            home_box_title_en_1
+          }
+          home_1st_en_2 {
+            home_box_desc_en_2
+            home_box_title_en_2
+          }
+          home_1st_en_3 {
+            home_box_desc_en_3
+            home_box_title_en_3
+          }
+        }
+      }
+    }
+    home2nd_en: markdownRemark(
+      frontmatter: { home_1st_en: { home_1st_des_en: { ne: null } } }
+    ) {
+      frontmatter {
+        home_2nd_en {
+          about_paragraph_en {
+            about_img
+            about_paragraph_title_en
+            about_paragraph_en_1
+            about_paragraph_en_2
+          }
+          home_2nd_desc_en
+          home_2nd_title_en
+          panel_en_1 {
+            home_panel_desc_en_1
+            home_panel_title_en_1
+          }
+          panel_en_2 {
+            home_panel_desc_en_2
+            home_panel_title_en_2
+          }
+          panel_en_3 {
+            home_panel_desc_en_3
+            home_panel_title_en_3
+          }
+          panel_en_4 {
+            home_panel_desc_en_4
+            home_panel_title_en_4
+          }
+        }
+      }
+    }
+    home3rd_en: markdownRemark(
+      frontmatter: { home_1st_en: { home_1st_des_en: { ne: null } } }
+    ) {
+      frontmatter {
+        home_3rd_en {
+          home_3rd_desc_en
+          home_3rd_title_en
+          tab1_en {
+            tab_img_en_1
+            tab_desc_en_1
+            tab_title_en_1
+          }
+          tab2_en {
+            tab_desc_en_2
+            tab_img_en_2
+            tab_title_en_2
+          }
+          tab3_en {
+            tab_desc_en_3
+            tab_img_en_3
+            tab_title_en_3
+          }
+          tab4_en {
+            tab_desc_en_4
+            tab_img_en_4
+            tab_title_en_4
+          }
+        }
+      }
+    }
+    banner_en: markdownRemark(
+      frontmatter: { home_1st_en: { home_1st_des_en: { ne: null } } }
+    ) {
+      frontmatter {
+        home_banner_en {
+          banner_img_en
+          home_banner_desc_en
+          home_banner_heading_en
+        }
+      }
+    }
+    lead_en: markdownRemark(
+      frontmatter: { home_1st_en: { home_1st_des_en: { ne: null } } }
+    ) {
+      frontmatter {
+        lead_en
+      }
+    }
+    menu_en: markdownRemark(
+      frontmatter: { home_1st_en: { home_1st_des_en: { ne: null } } }
+    ) {
+      frontmatter {
+        menu_en
+      }
+    }
+    slide_en: markdownRemark(
+      frontmatter: { home_1st_en: { home_1st_des_en: { ne: null } } }
+    ) {
+      frontmatter {
+        slide_en {
+          slide_caption1_en
+          slide_caption2_en
+          slide_caption3_en
+          slide_detail1_en
+          slide_detail2_en
+          slide_detail3_en
+          slide_img1_en
+          slide_img2_en
+          slide_img3_en
+        }
+      }
+    }
+    home1st_vn: markdownRemark(
+      frontmatter: { home_1st_vn: { home_1st_des_vn: { ne: null } } }
+    ) {
       frontmatter {
         home_1st_vn {
           home_1st_des_vn
@@ -56,7 +184,9 @@ export const query = graphql`
         }
       }
     }
-    home2nd_vn: markdownRemark(frontmatter: {home_1st_vn: {home_1st_des_vn: {ne: null}}}) {
+    home2nd_vn: markdownRemark(
+      frontmatter: { home_1st_vn: { home_1st_des_vn: { ne: null } } }
+    ) {
       frontmatter {
         home_2nd_vn {
           about_paragraph_vn {
@@ -86,7 +216,9 @@ export const query = graphql`
         }
       }
     }
-    home3rd_vn: markdownRemark(frontmatter: {home_1st_vn: {home_1st_des_vn: {ne: null}}}) {
+    home3rd_vn: markdownRemark(
+      frontmatter: { home_1st_vn: { home_1st_des_vn: { ne: null } } }
+    ) {
       frontmatter {
         home_3rd_vn {
           home_3rd_desc_vn
@@ -114,7 +246,9 @@ export const query = graphql`
         }
       }
     }
-    banner_vn: markdownRemark(frontmatter: {home_1st_vn: {home_1st_des_vn: {ne: null}}}) {
+    banner_vn: markdownRemark(
+      frontmatter: { home_1st_vn: { home_1st_des_vn: { ne: null } } }
+    ) {
       frontmatter {
         home_banner_vn {
           banner_img_vn
@@ -123,17 +257,23 @@ export const query = graphql`
         }
       }
     }
-    lead_vn: markdownRemark(frontmatter: {home_1st_vn: {home_1st_des_vn: {ne: null}}}) {
+    lead_vn: markdownRemark(
+      frontmatter: { home_1st_vn: { home_1st_des_vn: { ne: null } } }
+    ) {
       frontmatter {
         lead_vn
       }
     }
-    menu_vn: markdownRemark(frontmatter: {home_1st_vn: {home_1st_des_vn: {ne: null}}}) {
+    menu_vn: markdownRemark(
+      frontmatter: { home_1st_vn: { home_1st_des_vn: { ne: null } } }
+    ) {
       frontmatter {
         menu_vn
       }
     }
-    slide_vn: markdownRemark(frontmatter: {home_1st_vn: {home_1st_des_vn: {ne: null}}}) {
+    slide_vn: markdownRemark(
+      frontmatter: { home_1st_vn: { home_1st_des_vn: { ne: null } } }
+    ) {
       frontmatter {
         slide_vn {
           slide_caption1_vn
@@ -148,5 +288,5 @@ export const query = graphql`
         }
       }
     }
-  } 
+  }
 `
