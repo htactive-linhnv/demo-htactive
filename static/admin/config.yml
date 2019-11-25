@@ -7,7 +7,8 @@ backend:
 media_folder: static/img
 public_folder: /img
 
-collections:
+collections:       
+#  HOME vietnamese
   - name: "home-vn"
     label: "Home - Tiếng Việt"
     folder: "src/data/vi/home"

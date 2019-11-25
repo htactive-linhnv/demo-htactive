@@ -12284,6 +12284,11 @@ react-helmet@^5.2.1:
     react-fast-compare "^2.0.2"
     react-side-effect "^1.1.0"
 
+react-hooks-use-modal@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-hooks-use-modal/-/react-hooks-use-modal-1.0.5.tgz#09925e3f9fd873f62b32af66b1ed2761c3d4e126"
+  integrity sha512-bAdTj32os102q2EOWu8LsEEyrfJ1WZ4qPISZOGfySw8U544m7AX85819c+VBrx12b0jNSIsDY9iEDs9JMTGAKw==
+
 react-hot-loader@^4.12.16, react-hot-loader@^4.8.0:
   version "4.12.16"
   resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.16.tgz#353bd07fbb08f791b5720535f86b0a8f9b651317"
@@ -12340,6 +12345,11 @@ react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-modal-hook@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-modal-hook/-/react-modal-hook-2.0.0.tgz#b2883758a29c9bc4c91fe3e565dfa28ede08337e"
+  integrity sha512-rSZbMw//qOx/tgZpTKIO8iihY58zM1RBYEf4nGyeEQ3LXOFLqSphkIyMtYrI8ZQBGUdkKduSArcxj0k2jxGdcg==
 
 react-modal-image@^2.5.0:
   version "2.5.0"
