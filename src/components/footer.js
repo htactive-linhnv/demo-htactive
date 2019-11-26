@@ -29,7 +29,9 @@ const Footer = ({ footer, menu, language }) => {
             >
               <div className="footer-content">
                 <Link to="/">
-                  <div className="logo"></div>
+                  <div >
+                    <img className="logo-footer" src="/img/logo_footer.png"></img>
+                  </div>
                 </Link>
                 <div className="row">
                   <div className="col-sm-12 col-md-6">
@@ -90,10 +92,8 @@ const Footer = ({ footer, menu, language }) => {
                     </ul>
                   </div>
                 </div>
-                <Link to="/about" className="link">
-                  <span>
-                    {language === "en" ? "About Us" : "Về chúng tôi"}
-                    </span>
+                <Link to="/about" className="link-arrow link">
+                  <span>{language === "en" ? "About Us" : "Về chúng tôi"}</span>
                 </Link>
               </div>
             </div>
@@ -135,7 +135,7 @@ const Footer = ({ footer, menu, language }) => {
       <div className="subfooter">
         <div className="container">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 copyright">
               <p>Copyright © 2019 by HT Active. All Rights Reserved.</p>
             </div>
             <div className="col-md-6">
@@ -147,8 +147,8 @@ const Footer = ({ footer, menu, language }) => {
     </footer>
   )
 }
-const mapStateToProps = ({ active, language, color }) => {
-  return { active, language, color }
+const mapStateToProps = ({ active, language, color,footer }) => {
+  return { active, language, color,footer }
 }
 export default connect(
   mapStateToProps,
