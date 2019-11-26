@@ -11,7 +11,7 @@ const Footer = ({ footer, menu, language }) => {
     const dataArr = Object.values(dataUse).map(item => item) || []
     menuItem = dataArr.map((item, index) => {
       return (
-        <li>
+        <li key={index}>
           <Link to={engRoute[index]}>{item}</Link>
         </li>
       )
@@ -83,7 +83,7 @@ const Footer = ({ footer, menu, language }) => {
                       </li>
                       <li>
                         <i className="fa fa-envelope-o pr-10"></i>
-                        <a class="link" href="mailto:recruit@htactive.com">
+                        <a className="link" href="mailto:recruit@htactive.com">
                           recruit@htactive.com
                         </a>
                       </li>

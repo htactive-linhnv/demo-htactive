@@ -20,8 +20,10 @@ const Banner = ({ language }) => {
     }
   `)
   const dataFromQuery= data.allMarkdownRemark.edges
-  const keyword= language==="vi"?null:language;
+  const keyword= language==="vn"?null:language;
+  console.log(keyword)
   const rawData= dataFromQuery.find((item)=>item.node.frontmatter.banner_services.language===keyword);
+  console.log(rawData);
   const bannerData=rawData.node.frontmatter.banner_services
   return (
     <div

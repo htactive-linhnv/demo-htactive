@@ -1,6 +1,9 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+.dropdown-menu {
+  display: block!important;
+}
 .logo {
   background-size: 200px 77px;
   background-position: center;
