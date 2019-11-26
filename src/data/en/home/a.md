@@ -27,6 +27,14 @@ slide-en:
   slide-img2-en: /img/slider-background.jpg
   slide-img3-en: /img/slider-3.jpg
 lead-en: We strive to offer the best solution for your business.
+carousel-en:
+  carousel-en-1: /img/client-1.png
+  carousel-en-2: /img/client-2.png
+  carousel-en-3: /img/client-3.png
+  carousel-en-4: /img/client-4.png
+  carousel-en-5: /img/client-5.png
+  carousel-en-6: /img/client-6.png
+  carousel-en-7: /img/client-7.png
 home-1st-en:
   home-1st-des-en: 'By using our services, you will get all of the great experience.'
   home-1st-en-1:
