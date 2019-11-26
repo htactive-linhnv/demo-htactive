@@ -1,10 +1,27 @@
 import React, { useState } from "react"
 import { connect } from "react-redux"
+import { Link } from "gatsby"
 
-const HeaderTop = ({ language, changeLanguage }) => {
+const HeaderTop = ({ language, changeLanguage, active }) => {
   const [openDropdown, setOpenDropdown] = useState(false)
   const [openToggle, setOpenToggle] = useState(false)
-
+  let link = "/"
+  switch (active) {
+    case "1":
+      link = "/"
+      break
+    case "2":
+      link = "/services"
+      break
+    case "3":
+      link = "/portfolio"
+    case "4":
+      link = "/blog"
+    case "5":
+      link = "/contact"
+    default:
+      break
+  }
   return (
     <div className="header-top">
       <div className="container">
@@ -126,7 +143,9 @@ const HeaderTop = ({ language, changeLanguage }) => {
                     }}
                   >
                     <span className="fa fa-globe"></span>
-                    <span className="text">{language === "en" ? "English" : "Tiếng Việt"}</span>
+                    <span className="text">
+                      {language === "en" ? "English" : "Tiếng Việt"}
+                    </span>
                   </button>
 
                   {openDropdown ? (
@@ -137,9 +156,9 @@ const HeaderTop = ({ language, changeLanguage }) => {
                           setOpenDropdown(false)
                         }}
                       >
-                        <a className="btn-link" href="/">
+                        <Link className="btn-link" to={`${link}`}>
                           English
-                        </a>
+                        </Link>
                       </li>
                       <li
                         onClick={() => {
@@ -147,9 +166,9 @@ const HeaderTop = ({ language, changeLanguage }) => {
                           setOpenDropdown(false)
                         }}
                       >
-                        <a className="btn-link" href="/">
+                        <Link className="btn-link" to={`${link}`}>
                           Tiếng Việt
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   ) : null}
@@ -162,8 +181,8 @@ const HeaderTop = ({ language, changeLanguage }) => {
     </div>
   )
 }
-const mapStateToProps = ({ language }) => {
-  return { language }
+const mapStateToProps = ({ language, active }) => {
+  return { language, active }
 }
 const mapDispatchToProps = dispatch => {
   return {
@@ -171,7 +190,4 @@ const mapDispatchToProps = dispatch => {
       dispatch({ type: `CHANGE_LANGUAGE`, language: language }),
   }
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HeaderTop)
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderTop)
