@@ -4,7 +4,7 @@ import TextCenter from "../TextCenter/TextCenter"
 const Home3rd = ({ data, language }) => {
   const [toggleStatus, setToggleStatus] = useState(1)
   const toggleTab = status => {
-    toggleStatus !== status ? setToggleStatus(status) : setToggleStatus(0)
+    toggleStatus !== status ? setToggleStatus(status) : setToggleStatus(1)
   }
   const resetAnimation = () => {
     const element = document.getElementById("tab-pane")

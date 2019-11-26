@@ -36,7 +36,7 @@ const Home1st = ({ data, language }) => {
                   <Home1stCard
                     scrollY={scrollY}
                     key={index}
-                    id={item}
+                    id={index+1}
                     icon={icon[index]}
                     language={language}
                     title={item[`home_box_title_${language}_${index + 1}`]}
