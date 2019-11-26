@@ -2008,6 +2008,13 @@ fieldset[disabled] .btn-default {
   position: relative;
   display: inline-block;
   text-align: right;
+  color:#e84c3d;
+}
+ .blogpost-content a {
+  color:#e84c3d;
+}
+.submitted a, .text-default {
+  color:#e84c3d;
 }
 .link:hover {
   text-decoration: none;
@@ -2589,7 +2596,6 @@ ul.pagination li > a:focus {
 .nav-pills > li.active > a:focus,
 .nav-pills > li > a:hover,
 .nav-pills > li > a:focus {
-  border: 1px solid #f3f3f3;
   color: #e84c3d;
   background-color: #fafafa;
 }
@@ -2636,7 +2642,7 @@ ul.pagination li > a:focus {
 }
 .footer-content .nav-pills > li.active > a:hover,
 .footer-content .nav-pills > li > a:hover {
-  color: #fff;
+  color: #cd3c2e;
   background-color: transparent;
   border-color: transparent;
 }
@@ -5633,7 +5639,7 @@ ul.blue .pagination li.blue .active a,
 
 /* vertical tabs */
 .blue .vertical .blue .nav-tabs > li > a:hover:after {
-	background-color: #3d78d8;
+	background-color: #e9eaec;
 }
 
 /* Nav pills
@@ -5643,7 +5649,6 @@ ul.blue .pagination li.blue .active a,
 .blue .nav-pills > li.blue .active > a:focus,
 .blue .nav-pills > li > a:hover,
 .blue .nav-pills > li > a:focus {
-	border: 1px solid #f3f3f3;
 	color: #3d78d8;
 	background-color: #fafafa;
 }
@@ -6224,7 +6229,6 @@ ul.pink .pagination li.pink .active a,
 .pink .nav-pills > li.pink .active > a:focus,
 .pink .nav-pills > li > a:hover,
 .pink .nav-pills > li > a:focus {
-	border: 1px solid #f3f3f3;
 	color: #db7093;
 	background-color: #fafafa;
 }
@@ -6807,7 +6811,6 @@ ul.orange .pagination li.orange .active a,
 .orange .nav-pills > li.orange .active > a:focus,
 .orange .nav-pills > li > a:hover,
 .orange .nav-pills > li > a:focus {
-	border: 1px solid #f3f3f3;
 	color: #ffa500;
 	background-color: #fafafa;
 }
@@ -7389,7 +7392,6 @@ ul.green .pagination li.green .active a,
 .green .nav-pills > li.green .active > a:focus,
 .green .nav-pills > li > a:hover,
 .green .nav-pills > li > a:focus {
-	border: 1px solid #f3f3f3;
 	color: #0d760a;
 	background-color: #fafafa;
 }
@@ -7974,7 +7976,6 @@ ul.purple .pagination li.purple .active a,
 .purple .nav-pills > li.purple .active > a:focus,
 .purple .nav-pills > li > a:hover,
 .purple .nav-pills > li > a:focus {
-	border: 1px solid #f3f3f3;
 	color: #954db3;
 	background-color: #fafafa;
 }
@@ -8556,7 +8557,6 @@ ul.yellow .pagination li.yellow .active a,
 .yellow .nav-pills > li.yellow .active > a:focus,
 .yellow .nav-pills > li > a:hover,
 .yellow .nav-pills > li > a:focus {
-	border: 1px solid #f3f3f3;
 	color: #d3b61c;
 	background-color: #fafafa;
 }

@@ -7,8 +7,6 @@ const NavBar = ({ color, active, changeActive, menu,language }) => {
   let menuItem = []
   
   if (menu) {
-    console.log(menu,language);
-
     const dataUse = menu.frontmatter[`menu_${language}`] || {}
     const dataArr = Object.values(dataUse).map(item => item) || []
     menuItem = dataArr.map((item, index) => {
@@ -50,8 +48,8 @@ const NavBar = ({ color, active, changeActive, menu,language }) => {
   )
 }
 
-const mapStateToProps = ({ active }) => {
-  return { active }
+const mapStateToProps = ({ active,language }) => {
+  return { active,language }
 }
 const mapDispatchToProps = dispatch => {
   return {

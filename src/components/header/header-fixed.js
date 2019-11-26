@@ -38,7 +38,7 @@ const HeaderFixed = ({ color,menu,language }) => {
           <div className="col-md-9">
             <div className="header-right clearfix">
               <div className="main-navigation animated">
-                <NavBar menu={menu} color={color}  language={language} />
+                <NavBar menu={menu} color={color} />
               </div>
             </div>
           </div>
