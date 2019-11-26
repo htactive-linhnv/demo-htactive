@@ -295,11 +295,15 @@ collections:
           - name: "list-card-1"
             label: "list-card 1 "
             widget: "object"
-            fields:               
-              - { label: "Ảnh của card",name: "img-card",widget: "image"}
-              - { label: "Tiêu đề",name: "title-vn",widget: "string"}
-              - { label: "Miêu tả",name: "lead-vn",widget: "string"}
-        
+            fields:     
+              - name: "Card"    
+                label: "card"      
+                widget: "object"
+                fields:
+                  - { label: "Ảnh của card",name: "img-card",widget: "image"}
+                  - { label: "Tiêu đề",name: "title-vn",widget: "string"}
+                  - { label: "Miêu tả",name: "lead-vn",widget: "string"}
+          
      
   
           
