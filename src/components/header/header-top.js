@@ -11,17 +11,18 @@ const HeaderTop = ({ language, changeLanguage, active }) => {
       link = "/"
       break
     case "2":
-      link = "/services"
+      link = "/services/"
       break
     case "3":
-      link = "/portfolio"
+      link = "/portfolio/"
     case "4":
-      link = "/blog"
+      link = "/blog/"
     case "5":
-      link = "/contact"
+      link = "/contact/"
     default:
       break
   }
+  console.log(link)
   return (
     <div className="header-top">
       <div className="container">
@@ -138,8 +139,7 @@ const HeaderTop = ({ language, changeLanguage, active }) => {
                     className="btn dropdown-toggle"
                     data-toggle="dropdown"
                     onClick={() => {
-                      if (language === "en") changeLanguage("vn")
-                      else changeLanguage("en")
+                      setOpenDropdown(!openDropdown)
                     }}
                   >
                     <span className="fa fa-globe"></span>
