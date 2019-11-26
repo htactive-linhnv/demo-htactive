@@ -267,43 +267,125 @@ collections:
               - { label: "Description",name: "tab-desc-en-4",widget: "string"}  
               - { label: "Image",name: "tab-img-en-4",widget: "image"}  
   
+            
+#Services page in Vietnamese
 
-#Services page
-  - name: "services-vn"
+  - name: "banner-service-vn"
     label: "Services- Tiếng Việt"
-    folder: "src/data/vi/services"
+    folder: "src/data/vi/services/banner"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
-    preview: false
+      preview: false
     fields:
-      - { label: "Tiêu đề", name: "title-vn", widget: "string" }
-      - { label: "Publish Date", name: "date-vn", widget: "datetime" }      
-      - name: "banner-vn"
-        label: "Banner"
+     - { label: "Tiêu đề Trang", name: "title", widget: "string" }
+     - { label: "Publish Date", name: "date", widget: "datetime" }    
+     - name: "banner-services"
+       label: "banner-services"
+       widget: "object"
+       fields: 
+          - { label: "Ảnh nền Banner",name: "banner-img",widget: "image"}
+          - { label: " Tiêu đề banner", name: "banner-title", widget: "string" } 
+          - { label: " Lời dẫn banner", name: "banner-lead", widget: "string" }    
+  - name: "service-categories-vn"
+    label: "Services-Thể loại- Tiếng Việt"
+    folder: "src/data/vi/services/categories"    
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  
+    editor:
+      preview: false
+    fields:
+     - { label: "Tiêu đề thể loại ", name: "title", widget: "string" }
+     - { label: "Publish Date", name: "date", widget: "datetime" }    
+     - name: "service-category"
+       label: "Loại dịch vụ"
+       widget: "object"
+       fields:          
+          - { label: "ID", name: "id", widget: "number" } 
+          - { label: " Tiêu đề Dịch vụ", name: "category-title", widget: "string" } 
+          - { label: " Lời dẫn Dịch vụ", name: "category-lead", widget: "string" }   
+          - { label: " Tên đuôi", name: "tag-name", widget: "string" }   
+                  
+  - name: "services-card-vn"
+    label: "Services-Thẻ- Tiếng Việt"
+    folder: "src/data/vi/services/card"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"   
+    editor:
+       preview: false
+    fields:
+      - { label: "Tiêu đề thẻ ", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - name: "card-services"
+        label: "card-services"
         widget: "object"
-        fields:
-          - { label: "Ảnh nền Banner",name: "banner-img-vn",widget: "image"}
-          - { label: " Tiêu đề banner", name: "banner-title-vn", widget: "string" } 
-          - { label: " Lời dẫn banner", name: "banner-lead-vn", widget: "string" }         
-    
-      - name: "services-1st-vn"
-        label: "Service-- Nội dung 1"
+        fields: 
+          - { label: "Ảnh của card",name: "card-img",widget: "image"}
+          - { label: " Tiêu đề Card", name: "card-title", widget: "string" } 
+          - { label: "Mô tả card", name: "card-lead", widget: "string" }    
+          - { label: "Thể loại card", name: "tag-card", widget: "string" } 
+      
+# Services page in English
+  - name: "banner-service-en"
+    label: "Services- English"
+    folder: "src/data/en/services/banner"    
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+     - { label: "Page Title", name: "title", widget: "string" }
+     - { label: "Publish Date", name: "date", widget: "datetime" }    
+     - name: "banner-services"
+       label: "banner-services"
+       widget: "object"
+       fields: 
+          - { label: "language", name: "language", widget: "string", default: "en" }    
+          - { label: "Background Image",name: "banner-img",widget: "image"}
+          - { label: "Banner tiltle", name: "banner-title", widget: "string" } 
+          - { label: "Banner lead", name: "banner-lead", widget: "string" }    
+  - name: "service-categories"
+    label: "Services-Category"
+    folder: "src/data/en/services/categories"    
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+     - { label: "language", name: "language", widget: "string", default: "en" }    
+     - { label: "Category title", name: "title", widget: "string" }
+     - { label: "Publish Date", name: "date", widget: "datetime" }    
+     - name: "service-category"
+       label: "Category title"
+       widget: "object"
+       fields:    
+          - { label: "id", name: "id", widget: "number" }        
+          - { label: "language", name: "language", widget: "string", default: "en" }    
+          - { label: "Category title", name: "category-title", widget: "string" } 
+          - { label: "Category lead", name: "category-lead", widget: "string" }  
+          - { label: "Tag name", name: "tag-name", widget: "string" }    
+                  
+  - name: "services-card"
+    label: "Services-Card"
+    folder: "src/data/en/services/card"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+       preview: false
+    fields:
+      - { label: "language", name: "language", widget: "string", default: "en" }    
+      - { label: "Card title ", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - name: "card-services"
+        label: "card-services"
         widget: "object"
-        fields:
-          - {label: "Tiêu đề",name: "service-1st-title-vn",widget: "string"}         
-          - name: "list-card-1"
-            label: "list-card 1 "
-            widget: "object"
-            fields:     
-              - name: "Card"    
-                label: "card"      
-                widget: "object"
-                fields:
-                  - { label: "Ảnh của card",name: "img-card",widget: "image"}
-                  - { label: "Tiêu đề",name: "title-vn",widget: "string"}
-                  - { label: "Miêu tả",name: "lead-vn",widget: "string"}
-          
-     
+        fields: 
+          - { label: "language", name: "language", widget: "string", default: "en" }    
+          - { label: "Card image",name: "card-img",widget: "image"}
+          - { label: " Card title", name: "card-title", widget: "string" } 
+          - { label: "Card description", name: "card-lead", widget: "string" }    
+          - { label: "Card-tag", name: "tag-card", widget: "string" } 
+      
+
   
           
