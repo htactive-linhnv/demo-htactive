@@ -20,12 +20,12 @@ export default ({ color, test }) => {
 
   const dataRender = dataPanel.map((item, index) => (
     <Panel
-      header={item[`home_panel_title_vn_${index + 1}`]}
+      header={item[`home_panel_title_${language}_${index + 1}`]}
       key={index + 1}
       extra={extraNode(index)}
       showArrow={false}
     >
-      <p>{item[`home_panel_desc_vn_${index + 1}`]}</p>
+      <p>{item[`home_panel_desc_${language}_${index + 1}`]}</p>
     </Panel>
   ))
   return (
@@ -33,7 +33,7 @@ export default ({ color, test }) => {
       <div className="container">
         <TextCenter head={dataArr[2]} description={dataArr[1]} />
         <div className="row home2nd">
-          <ParagraphLeft color={color} data={dataParagraph} />
+          <ParagraphLeft color={color} data={dataParagraph} language={language}/>
           <div className="col-lg-6 col-md-12">
             <div>
               <QueueAnim className="demo-content">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import NavBar from "./navbar"
-const HeaderFixed = ({ color }) => {
+const HeaderFixed = ({ color,menu,language }) => {
   const [scrollY, setScrollY] = useState(0)
   const logit = () => {
     setScrollY(window.pageYOffset)
@@ -38,7 +38,7 @@ const HeaderFixed = ({ color }) => {
           <div className="col-md-9">
             <div className="header-right clearfix">
               <div className="main-navigation animated">
-                <NavBar color={color} />
+                <NavBar menu={menu} color={color} />
               </div>
             </div>
           </div>
