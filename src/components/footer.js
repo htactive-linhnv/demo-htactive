@@ -147,8 +147,8 @@ const Footer = ({ footer, menu, language }) => {
     </footer>
   )
 }
-const mapStateToProps = ({ active, language, color }) => {
-  return { active, language, color }
+const mapStateToProps = ({ active, language, color, footer }) => {
+  return { active, language, color, footer }
 }
 export default connect(
   mapStateToProps,
