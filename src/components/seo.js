@@ -16,6 +16,7 @@ const SEO = ({
   lang,
   meta,
   title,
+  active,
   data,
   changeColorRedux,
   changeFooterRedux,
@@ -62,7 +63,13 @@ const SEO = ({
   )
 
   const metaDescription = description || site.siteMetadata.description
-
+  const pageTitle = [
+    "Home",
+    "Services",
+    "Our Portfolios",
+    "News",
+    "Contact",
+  ].filter((item, index) => index + 1 == active)
   return (
     <>
       <Helmet
@@ -70,7 +77,7 @@ const SEO = ({
           lang,
         }}
         title={" HT Active"}
-        titleTemplate={`%s | ${site.siteMetadata.title}`}
+        titleTemplate={`%s - ${pageTitle}`}
         meta={[
           {
             name: `description`,
@@ -122,8 +129,8 @@ SEO.propTypes = {
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 }
-const mapStateToProps = ({ color, footer, mode }) => {
-  return { color, footer, mode }
+const mapStateToProps = ({ color, footer, mode, active }) => {
+  return { color, footer, mode, active }
 }
 const mapDispatchToProps = dispatch => {
   return {
