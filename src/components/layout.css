@@ -1112,6 +1112,11 @@ div.style-switcher .dark-red:hover {
 .blur-bg {
   filter:blur(8px);
 }
+@media (max-width:768px) {
+  .logo { 
+    margin: 0 auto;
+  }
+}
 /*Boxed*/
 
 @media (min-width: 768px) {

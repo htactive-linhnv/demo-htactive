@@ -91,7 +91,9 @@ const Footer = ({ footer, menu, language }) => {
                   </div>
                 </div>
                 <Link to="/about" className="link">
-                  <span>About Us</span>
+                  <span>
+                    {language === "en" ? "About Us" : "Về chúng tôi"}
+                    </span>
                 </Link>
               </div>
             </div>

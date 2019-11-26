@@ -3832,7 +3832,6 @@ a.overlay.small i {
 
 
 
-
 /* Small devices (tablets, phones less than 767px) */
 
 
@@ -5453,7 +5452,9 @@ File Description: Blue Skin
 
 /* 1 Typography
 ----------------------------------------------------------------------------- */
-
+.blue > a :hover{
+	color: #3d78d8!important;
+}
 mark,
 .blue .mark {
 	background-color: #3d78d8;
