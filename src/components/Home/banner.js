@@ -1,18 +1,32 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import BannerAnim from "rc-banner-anim"
 import QueueAnim from "rc-queue-anim"
-import Slide1 from "../../data/images/slider-1.jpg"
-import Slide2 from "../../data/images/slider-background.jpg"
-import Slide3 from "../../data/images/slider-3.jpg"
+
 import MacImg from "../../data/images/slider-2.png"
 import BannerLeft from "./bannerLeft"
 import ProgressBar from "./progressBar"
 
 const { Element } = BannerAnim
 const BgElement = Element.BgElement
-const Banner = ({ data,language }) => {
+const Banner = ({ data, language }) => {
   const dataUse = data.frontmatter[`slide_${language}`] || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
+
+
+  const [scrollY, setScrollY] = useState(0)
+  const logit = () => {
+    setScrollY(window.pageYOffset)
+  }
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", logit)
+    }
+    watchScroll()
+    return () => {
+      window.removeEventListener("scroll", logit)
+    }
+  }, [])
+
   const [showbar, setBar] = useState(true)
   const handleProgressBar = e => {
     if (e === "after") {
@@ -44,7 +58,7 @@ const Banner = ({ data,language }) => {
     },
   ]
   return (
-    <div className="banner">
+    <div className="banner" style={{paddingTop:`${scrollY>182?"150px":"0"}`}}>
       <BannerAnim
         autoPlay
         autoPlaySpeed={10000}

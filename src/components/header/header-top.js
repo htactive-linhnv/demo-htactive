@@ -15,14 +15,16 @@ const HeaderTop = ({ language, changeLanguage, active }) => {
       break
     case "3":
       link = "/portfolio/"
+      break
     case "4":
       link = "/blog/"
+      break
     case "5":
       link = "/contact/"
+      break
     default:
       break
-  }
-  console.log(link)
+  } 
   return (
     <div className="header-top">
       <div className="container">

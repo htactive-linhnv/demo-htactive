@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 const Banner = ({ language }) => {
+ 
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(filter: { fields: { slug: { regex: "/banner/" } } }) {
@@ -21,14 +22,12 @@ const Banner = ({ language }) => {
   `)
   const dataFromQuery= data.allMarkdownRemark.edges
   const keyword= language==="vn"?null:language;
-  console.log(keyword)
   const rawData= dataFromQuery.find((item)=>item.node.frontmatter.banner_services.language===keyword);
-  console.log(rawData);
   const bannerData=rawData.node.frontmatter.banner_services
   return (
     <div
       className="banner-page"
-      style={{
+      style={{       
         backgroundImage: `${bannerData.banner_img}`,
         backgroundSize: "cover",
         backgroundPosition: "center",
