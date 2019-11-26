@@ -2023,7 +2023,10 @@ fieldset[disabled] .btn-default {
 .link:hover span {
   text-decoration: underline;
 }
-.link:after {
+.footer-content h2{
+  padding-top:10px;
+}
+.link-arrow:after {
   content: "\f178";
   font-family: "FontAwesome";
   position: absolute;
@@ -3880,9 +3883,6 @@ a.overlay.small i {
   text-align: center;
   margin-bottom: 20px;
 }
-.logo-footer {
-  margin: 25px 0 20px;
-}
 .offcanvas .logo {
   margin: 20px 0 10px;
 }
@@ -4232,7 +4232,7 @@ footer:not(.light) .footer-content .tag a,
   border-color: transparent;
 }
 .header-top .social-links li a:hover {
-  color: #cd3c2e;
+  color: #cd3c2e!important;
 }
 .header-top .social-links li a i {
   line-height: 30px;
@@ -4267,190 +4267,190 @@ footer:not(.light) .footer-content .tag a,
 }
 .social-links li.twitter a:hover,
 .colored.social-links li.twitter a {
-  background-color: #55acee;
-  border-color: #55acee;
-  color: #fff;
+  background-color: #55acee!important;
+  border-color: #55acee!important;
+  color: #fff!important;
 }
 .social-links li.skype a:hover,
 .colored.social-links li.skype a {
-  background-color: #00aff0;
-  border-color: #00aff0;
-  color: #fff;
+  background-color: #00aff0!important;
+  border-color: #00aff0!important;
+  color: #fff!important;
 }
 .social-links li.linkedin a:hover,
 .colored.social-links li.linkedin a {
-  background-color: #0976b4;
-  border-color: #0976b4;
-  color: #fff;
+  background-color: #0976b4!important;
+  border-color: #0976b4!important;
+  color: #fff!important;
 }
 .social-links li.googleplus a:hover,
 .colored.social-links li.googleplus a {
-  background-color: #dd4b39;
-  border-color: #dd4b39;
-  color: #fff;
+  background-color: #dd4b39!important;
+  border-color: #dd4b39!important;
+  color: #fff!important;
 }
 .social-links li.youtube a:hover,
 .colored.social-links li.youtube a {
-  background-color: #b31217;
-  border-color: #b31217;
-  color: #fff;
+  background-color: #b31217!important;
+  border-color: #b31217!important;
+  color: #fff!important;
 }
 .social-links li.flickr a:hover,
 .colored.social-links li.flickr a {
-  background-color: #ff0084;
-  border-color: #ff0084;
-  color: #fff;
+  background-color: #ff0084!important;
+  border-color: #ff0084!important;
+  color: #fff!important;
 }
 .social-links li.facebook a:hover,
 .colored.social-links li.facebook a {
-  background-color: #3b5998;
-  border-color: #3b5998;
-  color: #fff;
+  background-color: #3b5998!important;
+  border-color: #3b5998!important;
+  color: #fff!important;
 }
 .social-links li.pinterest a:hover,
 .colored.social-links li.pinterest a {
-  background-color: #cb2027;
-  border-color: #cb2027;
-  color: #fff;
+  background-color: #cb2027!important;
+  border-color: #cb2027!important;
+  color: #fff!important;
 }
 .social-links li.instagram a:hover,
 .colored.social-links li.instagram a {
-  background-color: #517fa4;
-  border-color: #517fa4;
-  color: #fff;
+  background-color: #517fa4!important;
+  border-color: #517fa4!important;
+  color: #fff!important;
 }
 .social-links li.vimeo a:hover,
 .colored.social-links li.vimeo a {
-  background-color: #aad450;
-  border-color: #aad450;
-  color: #fff;
+  background-color: #aad450!important;
+  border-color: #aad450!important;
+  color: #fff!important;
 }
 .social-links li.tumblr a:hover,
 .colored.social-links li.tumblr a {
-  background-color: #32506d;
-  border-color: #32506d;
-  color: #fff;
+  background-color: #32506d!important;
+  border-color: #32506d!important;
+  color: #fff!important;
 }
 .social-links li.soundcloud a:hover,
 .colored.social-links li.soundcloud a {
-  background-color: #ff3a00;
-  border-color: #ff3a00;
-  color: #fff;
+  background-color: #ff3a00!important;
+  border-color: #ff3a00!important;
+  color: #fff!important;
 }
 .social-links li.foursquare a:hover,
 .colored.social-links li.foursquare a {
-  background-color: #0072b1;
-  border-color: #0072b1;
-  color: #fff;
+  background-color: #0072b1!important;
+  border-color: #0072b1!important;
+  color: #fff!important;
 }
 .social-links li.dribbble a:hover,
 .colored.social-links li.dribbble a {
-  background-color: #ea4c89;
-  border-color: #ea4c89;
-  color: #fff;
+  background-color: #ea4c89!important;
+  border-color: #ea4c89!important;
+  color: #fff!important;
 }
 .social-links li.behance a:hover,
 .colored.social-links li.behance a {
-  background-color: #053eff;
-  border-color: #053eff;
-  color: #fff;
+  background-color: #053eff!important;
+  border-color: #053ef!importantf!important;
+  color: #fff!important;
 }
 .social-links li.vine a:hover,
 .colored.social-links li.vine a {
-  background-color: #00a478;
-  border-color: #00a478;
-  color: #fff;
+  background-color: #00a478!important;
+  border-color: #00a478!important;
+  color: #fff!important;
 }
 .social-links li.stumbleupon a:hover,
 .colored.social-links li.stumbleupon a {
-  background-color: #f74425;
-  border-color: #f74425;
-  color: #fff;
+  background-color: #f74425!important;
+  border-color: #f74425!important;
+  color: #fff!important;
 }
 .header-top .social-links li.twitter a:hover {
-  color: #55acee;
-  background-color: transparent;
-  border-color: transparent;
+  color: #55acee!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.skype a:hover {
-  color: #00aff0;
-  background-color: transparent;
-  border-color: transparent;
+  color: #00aff0!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.linkedin a:hover {
-  color: #0976b4;
-  background-color: transparent;
-  border-color: transparent;
+  color: #0976b4!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.googleplus a:hover {
-  color: #dd4b39;
-  background-color: transparent;
-  border-color: transparent;
+  color: #dd4b39!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.youtube a:hover {
-  color: #b31217;
-  background-color: transparent;
-  border-color: transparent;
+  color: #b31217!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.flickr a:hover {
-  color: #ff0084;
-  background-color: transparent;
-  border-color: transparent;
+  color: #ff0084!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.facebook a:hover {
-  color: #3b5998;
-  background-color: transparent;
-  border-color: transparent;
+  color: #3b5998!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.pinterest a:hover {
-  color: #cb2027;
-  background-color: transparent;
-  border-color: transparent;
+  color: #cb2027!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.instagram a:hover {
-  color: #517fa4;
-  background-color: transparent;
-  border-color: transparent;
+  color: #517fa4!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.vimeo a:hover {
-  color: #aad450;
-  background-color: transparent;
-  border-color: transparent;
+  color: #aad450!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.tumblr a:hover {
-  color: #32506d;
-  background-color: transparent;
-  border-color: transparent;
+  color: #32506d!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.soundcloud a:hover {
-  color: #ff3a00;
-  background-color: transparent;
-  border-color: transparent;
+  color: #ff3a00!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.foursquare a:hover {
-  color: #0072b1;
-  background-color: transparent;
-  border-color: transparent;
+  color: #0072b1!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.dribbble a:hover {
-  color: #ea4c89;
-  background-color: transparent;
-  border-color: transparent;
+  color: #ea4c89!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.behance a:hover {
-  color: #053eff;
-  background-color: transparent;
-  border-color: transparent;
+  color: #053eff!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.vine a:hover {
-  color: #00a478;
-  background-color: transparent;
-  border-color: transparent;
+  color: #00a478!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .header-top .social-links li.stumbleupon a:hover {
-  color: #f74425;
-  background-color: transparent;
-  border-color: transparent;
+  color: #f74425!important;
+  background-color: transparent!important;
+  border-color: transparent!important;
 }
 .social-links .dropdown > button {
   padding: 6px 15px 5px;
@@ -5469,7 +5469,11 @@ mark,
 .blue .table-bordered {
 	border-color: #3d78d8;
 }
-
+.logo-footer {
+  height: 50px;
+  width: auto;
+  margin-bottom:5px;
+}
 /* 2 Layout
 ----------------------------------------------------------------------------- */
 .blue .default-bg {
@@ -8935,4 +8939,26 @@ img.yellow .product-image
 }
 .yellow .link {
   color:#d3b61c;
+}
+
+a:hover {
+  color:#cd3c2e!important;
+}
+.blue a:hover {
+  color:#2c5fb3!important;
+}
+.pink a:hover {
+  color:#c86384!important;
+}
+.orange a:hover {
+  color:#e09200!important;
+}
+.yellow a:hover {
+  color:#b59a17!important;
+}
+.purple a:hover {
+  color:#b331b3!important;
+}
+.green a:hover {
+  color:#3b8f33!important;
 }

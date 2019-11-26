@@ -1214,3 +1214,10 @@ div.style-switcher .dark-red:hover {
 .something{
   display:none;
 }
+.copyright {
+  text-align: left;
+  color:#666666;
+}
+.page-title {
+  font-weight:700;
+}
