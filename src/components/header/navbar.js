@@ -12,6 +12,7 @@ const NavBar = ({ color, active, changeActive, menu,language }) => {
     menuItem = dataArr.map((item, index) => {
       return (
         <li
+         key={index}
           className={`${color} ${active === `${index + 1}` ? "active" : ""} `}
           onClick={() =>{
             changeActive(`${index + 1}`)

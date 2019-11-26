@@ -1,9 +1,7 @@
 import React, { useState } from "react"
 import BannerAnim from "rc-banner-anim"
 import QueueAnim from "rc-queue-anim"
-import Slide1 from "../../data/images/slider-1.jpg"
-import Slide2 from "../../data/images/slider-background.jpg"
-import Slide3 from "../../data/images/slider-3.jpg"
+
 import MacImg from "../../data/images/slider-2.png"
 import BannerLeft from "./bannerLeft"
 import ProgressBar from "./progressBar"
