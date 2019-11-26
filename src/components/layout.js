@@ -45,7 +45,7 @@ const Layout = ({ footer, children, color, open, language }) => {
       <StyleSwitcher></StyleSwitcher>
       <Header menu={menu} color={color} language={language} />
       <main>{children}</main>
-      <FooterTop />
+      <FooterTop  language={language}/>
       <Footer menu={menu} />
       <ScrollUpButton AnimationDuration={1500} ShowAtPosition={0} />
       <div>
