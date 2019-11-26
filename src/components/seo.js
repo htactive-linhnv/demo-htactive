@@ -17,9 +17,6 @@ const SEO = ({
   meta,
   title,
   data,
-  color,
-  footer,
-  mode,
   changeColorRedux,
   changeFooterRedux,
   changeLayoutRedux,
@@ -60,7 +57,7 @@ const SEO = ({
       }
     `
   )
-
+      
   const metaDescription = description || site.siteMetadata.description
 
   return (

@@ -32,7 +32,7 @@ const BannerHome = ({ data,language }) => {
               <div className="col-lg-4 col-s,-12">
                 <div className="text-center">
                   <a href="/contact" className="btn btn-default btn-lg">
-                        Liên hệ
+                  {language === "en" ? "CONTACT" : "LIÊN HỆ"}
                   </a>
                 </div>
               </div>

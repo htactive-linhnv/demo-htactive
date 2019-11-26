@@ -11,11 +11,13 @@ const PageTop = ({ data, language }) => {
             <div className="call-to-action">
               <p className="lead">{dataUse}</p>
               <Link className="btn btn-white more" to="/services">
-                TÌM HIỂU THÊM<i className="pl-10 fa fa-info"></i>
+                {language === "en" ? "READ MORE" : "TÌM HIỂU THÊM"}
+                <i className="pl-10 fa fa-info"></i>
               </Link>
 
               <Link to="/contact" className="btn btn-default contact">
-                LIÊN HỆ<i className="pl-10 fa fa-phone"></i>
+              {language === "en" ? "CONTACT" : "LIÊN HÊ"}
+                <i className="pl-10 fa fa-phone"></i>
               </Link>
             </div>
           </div>

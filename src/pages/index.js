@@ -13,7 +13,7 @@ import Helmet from "react-helmet"
 
 const IndexPage = ({ data, color, footer, language }) => {
   return (
-    <Layout footer={footer} menu={data[`menu_${language}`]}>
+    <Layout footer={footer} >
       <Helmet></Helmet>
       <SEO title="Home" color={color} />
       <Banner data={data[`slide_${language}`]} language={language}></Banner>

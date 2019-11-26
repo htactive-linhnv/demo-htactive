@@ -38,6 +38,7 @@ const Home1st = ({ data, language }) => {
                     key={index}
                     id={item}
                     icon={icon[index]}
+                    language={language}
                     title={item[`home_box_title_${language}_${index + 1}`]}
                     lead={item[`home_box_desc_${language}_${index + 1}`]}
                   />

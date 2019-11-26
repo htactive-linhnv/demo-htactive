@@ -33,7 +33,7 @@ export default ({ color, data,language }) => {
       <div className="container">
         <TextCenter head={dataArr[2]} description={dataArr[1]} />
         <div className="row home2nd">
-          <ParagraphLeft color={color} data={dataParagraph} />
+          <ParagraphLeft color={color} data={dataParagraph} language={language}/>
           <div className="col-lg-6 col-md-12">
             <div>
               <QueueAnim className="demo-content">
