@@ -13,7 +13,6 @@ const BgElement = Element.BgElement
 const Banner = ({ data,language }) => {
   const dataUse = data.frontmatter[`slide_${language}`] || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
-
   const [showbar, setBar] = useState(true)
   const handleProgressBar = e => {
     if (e === "after") {
