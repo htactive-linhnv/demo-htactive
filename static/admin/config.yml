@@ -486,10 +486,9 @@ collections:
             label: "Tab 4"
             widget: "object"
             fields:
-<<<<<<< HEAD
-              - { label: "Title",name: "tab-title-en-4",widget: "string"}  
-              - { label: "Description",name: "tab-desc-en-4",widget: "string"}  
-              - { label: "Image",name: "tab-img-en-4",widget: "image"}  
+              - { label: "Title",name: "tab-title-en-4", widget: "string"}  
+              - { label: "Description",name: "tab-desc-en-4", widget: "string"}  
+              - { label: "Image",name: "tab-img-en-4", widget: "image"}  
   
             
 #Services page in Vietnamese
@@ -609,16 +608,22 @@ collections:
           - { label: " Card title", name: "card-title", widget: "string" } 
           - { label: "Card description", name: "card-lead", widget: "string" }    
           - { label: "Card-tag", name: "tag-card", widget: "string" } 
+#Blog page in English
+  - name: "blog-en"
+    label: "Blog - English"
+    folder: "src/data/en/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+     preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Featured Image",name: "thumbnail",widget: "image"}
+      - { label: "Body", name: "body", widget: "markdown" }
       
 
   
           
-=======
-              - { label: "Title", name: "tab-title-en-4", widget: "string" }
-              - {
-                  label: "Description",
-                  name: "tab-desc-en-4",
-                  widget: "string",
-                }
-              - { label: "Image", name: "tab-img-en-4", widget: "image" }
->>>>>>> 543af11e41c13c8f2716d503f30751a0f558c13e
