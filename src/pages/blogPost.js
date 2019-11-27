@@ -72,60 +72,10 @@ const blogPost = (props) => {
                   <h3 className="title">Related posts</h3>
                   <div className="separator" />
                   <div className="image-box">
-                    <div className="overlay-container">
-                      <img
-                        src="https://www.techworm.net/wp-content/uploads/2018/03/wc-swift.jpg"
-                        alt=""
-                      />
-                      <div className="overlay">
-                        <div className="overlay-links">
-                          <a
-                            href="https://www.techworm.net/wp-content/uploads/2018/03/wc-swift.jpg"
-                            className="popup-img-single"
-                            title="image title"
-                          >
-                            <i className="fa fa-search-plus" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="image-box-body">
-                      <h3 className="title">
-                        <a href="news-detail/1/hello-world-voi-swift">
-                          Hello World với Swift
-                        </a>
-                      </h3>
-                      <p>
-                        Hôm nay mình sẽ hướng dẫn các bạn viết chương trình
-                        Hello World sử dụng Swift. Để bắt đầu, chúng ta sẽ viết
-                        1 chương trình đơn giản như sau ...
-                      </p>
-                      <a
-                        href="news-detail/1/hello-world-voi-swift"
-                        className="link"
-                      >
-                        <span>Read more</span>
-                      </a>
-                    </div>
+                    
                   </div>
                   <div className="image-box">
-                    <div className="overlay-container">
-                      <img
-                        src="https://scontent.fdad3-2.fna.fbcdn.net/v/t31.0-0/p180x540/14054324_10154624375358984_2240899986652458346_o.jpg?oh=53816cd88c9c9eb2305b12fd8bcbd1de&oe=5A46DDF2"
-                        alt=""
-                      />
-                      <div className="overlay">
-                        <div className="overlay-links">
-                          <a
-                            href="https://scontent.fdad3-2.fna.fbcdn.net/v/t31.0-0/p180x540/14054324_10154624375358984_2240899986652458346_o.jpg?oh=53816cd88c9c9eb2305b12fd8bcbd1de&oe=5A46DDF2"
-                            className="popup-img-single"
-                            title="image title"
-                          >
-                            <i className="fa fa-search-plus" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+    
                     <div className="image-box-body">
                       <h3 className="title">
                         <a href="news-detail/2/huong-dan-assembly-64-bit">
@@ -148,23 +98,6 @@ const blogPost = (props) => {
                     </div>
                   </div>
                   <div className="image-box">
-                    <div className="overlay-container">
-                      <img
-                        src="https://scontent.fdad3-2.fna.fbcdn.net/v/t31.0-0/p180x540/14054324_10154624375358984_2240899986652458346_o.jpg?oh=53816cd88c9c9eb2305b12fd8bcbd1de&oe=5A46DDF2"
-                        alt=""
-                      />
-                      <div className="overlay">
-                        <div className="overlay-links">
-                          <a
-                            href="https://scontent.fdad3-2.fna.fbcdn.net/v/t31.0-0/p180x540/14054324_10154624375358984_2240899986652458346_o.jpg?oh=53816cd88c9c9eb2305b12fd8bcbd1de&oe=5A46DDF2"
-                            className="popup-img-single"
-                            title="image title"
-                          >
-                            <i className="fa fa-search-plus" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
                     <div className="image-box-body">
                       <h3 className="title">
                         <a href="news-detail/3/huong-dan-assembly-64-bit-bai-2">
