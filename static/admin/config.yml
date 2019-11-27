@@ -617,12 +617,12 @@ collections:
     editor:
      preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image"}
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Title", name: "blog-title-en", widget: "string" }
+      - { label: "Publish Date", name: "blog-date-en", widget: "datetime" }
+      - { label: "Description", name: "blog-description-en", widget: "string" }
+      - { label: "Author", name: "author-en", widget: "string" }
+      - { label: "Featured Image", name: "thumbnail-en", widget: "image"}
+      - { label: "Body", name: "body-en", widget: "markdown" }
       
 
   
