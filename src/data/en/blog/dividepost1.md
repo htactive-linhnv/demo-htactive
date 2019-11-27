@@ -31,7 +31,7 @@ Mình từng dùng và biết cũng cơ số những component như này trong R
 
 ![](/img/snap-carousel-1.gif)
 
-![a](/img/snap-carousel-3.gif "a")
+![a](/img/snap-carousel-2.gif "a")
 
 ![a](/img/snap-carousel-3.gif "a")
 
@@ -39,11 +39,11 @@ Mình từng dùng và biết cũng cơ số những component như này trong R
 
 Trong các ứng dụng thực tế:
 
-![a](/img/snap-carousel-3.gif "a")
+![a](/img/snap-carousel-4.gif "a")
 
-![a](/img/snap-carousel-1.gif "a")
+![a](/img/snap-carousel-5.gif "a")
 
-![a](/img/snap-carousel-1.gif "a")
+![a](/img/snap-carousel-6.gif "a")
 
 Thư viện này hiện đang được bảo trì và support khá tốt từ nhóm phát triển, nó hiện đang sử dụng flatlist và lazy load nên trông rất mượt mà về performance. Example của thư viện này là một cái app hoàn chỉnh, các bạn có thể xem và học hỏi các component khác trong example đó.
 
