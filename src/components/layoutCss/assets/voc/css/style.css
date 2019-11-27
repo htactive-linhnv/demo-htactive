@@ -1163,13 +1163,21 @@ tbody {
 .blogpost .post-info .day {
   font-size: 34px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 0.7;
   display: block;
+}
+.fa-user {
+  padding-right:5px!important;
 }
 .blogpost .post-info .month {
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 0.8;
   display: inline-block;
+}
+.blogpost .post-info .year {
+  font-size: 10px;
+  line-height: 0.8;
+  display: block;
 }
 .blogpost .side span.share {
   font-size: 13px;
@@ -4352,7 +4360,7 @@ footer:not(.light) .footer-content .tag a,
 .social-links li.behance a:hover,
 .colored.social-links li.behance a {
   background-color: #053eff!important;
-  border-color: #053ef!importantf!important;
+  border-color: #053eff!important;
   color: #fff!important;
 }
 .social-links li.vine a:hover,
