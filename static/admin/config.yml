@@ -486,9 +486,9 @@ collections:
             label: "Tab 4"
             widget: "object"
             fields:
-              - { label: "Title",name: "tab-title-en-4", widget: "string"}  
-              - { label: "Description",name: "tab-desc-en-4", widget: "string"}  
-              - { label: "Image",name: "tab-img-en-4", widget: "image"}  
+              - { label: "Title", name: "tab-title-en-4", widget: "string"}  
+              - { label: "Description", name: "tab-desc-en-4", widget: "string"}  
+              - { label: "Image", name: "tab-img-en-4", widget: "image"}  
   
             
 #Services page in Vietnamese
@@ -507,7 +507,7 @@ collections:
        label: "banner-services"
        widget: "object"
        fields: 
-          - { label: "Ảnh nền Banner",name: "banner-img",widget: "image"}
+          - { label: "Ảnh nền Banner", name: "banner-img", widget: "image"}
           - { label: " Tiêu đề banner", name: "banner-title", widget: "string" } 
           - { label: " Lời dẫn banner", name: "banner-lead", widget: "string" }    
   - name: "service-categories-vn"
@@ -543,7 +543,7 @@ collections:
         label: "card-services"
         widget: "object"
         fields: 
-          - { label: "Ảnh của card",name: "card-img",widget: "image"}
+          - { label: "Ảnh của card", name: "card-img", widget: "image"}
           - { label: " Tiêu đề Card", name: "card-title", widget: "string" } 
           - { label: "Mô tả card", name: "card-lead", widget: "string" }    
           - { label: "Thể loại card", name: "tag-card", widget: "string" } 
@@ -564,7 +564,7 @@ collections:
        widget: "object"
        fields: 
           - { label: "language", name: "language", widget: "string", default: "en" }    
-          - { label: "Background Image",name: "banner-img",widget: "image"}
+          - { label: "Background Image", name: "banner-img", widget: "image"}
           - { label: "Banner tiltle", name: "banner-title", widget: "string" } 
           - { label: "Banner lead", name: "banner-lead", widget: "string" }    
   - name: "service-categories"
@@ -604,7 +604,7 @@ collections:
         widget: "object"
         fields: 
           - { label: "language", name: "language", widget: "string", default: "en" }    
-          - { label: "Card image",name: "card-img",widget: "image"}
+          - { label: "Card image", name: "card-img", widget: "image"}
           - { label: " Card title", name: "card-title", widget: "string" } 
           - { label: "Card description", name: "card-lead", widget: "string" }    
           - { label: "Card-tag", name: "tag-card", widget: "string" } 
@@ -621,7 +621,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Featured Image",name: "thumbnail",widget: "image"}
+      - { label: "Featured Image", name: "thumbnail", widget: "image"}
       - { label: "Body", name: "body", widget: "markdown" }
       
 
