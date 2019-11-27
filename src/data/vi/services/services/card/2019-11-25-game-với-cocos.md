@@ -8,5 +8,6 @@ card-services:
     công cụ làm game Cocos
   card-title: Game với Cocos
   tag-card: game
+  language: vn
 ---
 

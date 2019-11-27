@@ -8,5 +8,6 @@ card-services:
     dụng.
   card-title: Tích hợp tính năng
   tag-card: game
+  language: vn
 ---
 
