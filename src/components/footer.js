@@ -30,7 +30,7 @@ const Footer = ({ footer, menu, language }) => {
               <div className="footer-content">
                 <Link to="/">
                   <div >
-                    <img className="logo-footer" src="/img/logo_footer.png"></img>
+                    <img className="logo-footer" alt="" src="/img/logo_footer.png"></img>
                   </div>
                 </Link>
                 <div className="row">
