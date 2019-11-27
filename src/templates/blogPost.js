@@ -3,8 +3,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 const blogPost = (props) => {
-  console.log(props)
-
   return (
     <Layout>
       <SEO title="Blog" />
