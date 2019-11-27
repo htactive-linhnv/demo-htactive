@@ -623,7 +623,7 @@ collections:
       - { label: "Description", name: "blog-description-en", widget: "string" }
       - { label: "Author", name: "author-en", widget: "string" }
       - { label: "Featured Image", name: "thumbnail-en", widget: "image"}
-      - { label: "Body", name: "body-en", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown" }
       
 
   
