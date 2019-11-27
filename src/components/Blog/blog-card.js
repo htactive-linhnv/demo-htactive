@@ -17,7 +17,7 @@ const CardBlog = ({
   tag,
   linkBlog,
   linkImg,
-  toggleOverlay
+  toggleOverlay,
 }) => {
   const [open, setOpen] = useState(false)
   const [showModal, hideModal] = useModal(() => (
@@ -31,7 +31,7 @@ const CardBlog = ({
         }}
       >
         <div>&nbsp;</div>
-        <img src={src} alt=""></img>
+        <img src={src} alt="img"></img>
       </div>
     </ReactModal>
   ))
@@ -99,11 +99,13 @@ const CardBlog = ({
           <div className="blogpost-content">
             <header>
               <h2 className="title">
-                <a href="blogPost" className="post-title">{cardTitle}</a>
+                <Link to="/blogPost" className="post-title">
+                  {cardTitle}
+                </Link>
               </h2>
               <div className="submitted">
                 <i className="fa fa-user pr-5" /> by{" "}
-                <a href="/blog">{author}</a>
+                <Link to="/blog">{author}</Link>
               </div>
             </header>
             <p>{cardContent}</p>
@@ -116,7 +118,7 @@ const CardBlog = ({
               <a href="/blog">{commend}</a> |
             </li>
             <li>
-              <i className="fa fa-tags pr-5" /> <a href="/blog">{tag}</a>
+              <i className="fa fa-tags pr-5" /> <Link to="/blog">{tag}</Link>
             </li>
           </ul>
           <Link className="pull-right link" to={linkBlog}>
@@ -132,7 +134,4 @@ const mapDispatchToProps = dispatch => {
     toggleOverlay: open => dispatch({ type: `TOGGLE_OVERLAY`, open: open }),
   }
 }
-export default connect(
-  null,
-  mapDispatchToProps
-)(CardBlog)
+export default connect(null, mapDispatchToProps)(CardBlog)

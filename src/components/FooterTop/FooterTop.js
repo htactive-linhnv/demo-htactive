@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import {Link } from "gatsby"
 import "../FooterTop/FooterTop.css"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -40,9 +41,9 @@ const FooterTop = ({language}) => {
   const carouselImg = [...carouselArr,carouselArr[2]].map((item, index) => (
     <div key = {index} className="owl-item" style={{ width: "139px" }}>
       <div className="client">
-        <a href="/">
-          <img src={item} alt="" />
-        </a>
+        <Link href="/">
+          <img src={item} alt="footer-logo" />
+        </Link>
       </div>
     </div>
   ))

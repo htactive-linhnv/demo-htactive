@@ -14,7 +14,7 @@ const HeaderTop = ({ language, changeLanguage, active }) => {
       link = "/services/"
       break
     case "3":
-      link = "/portfolio/"
+      link = "/products/"
       break
     case "4":
       link = "/blog/"

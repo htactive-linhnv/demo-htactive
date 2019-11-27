@@ -1,17 +1,19 @@
 import React from "react"
+import { connect } from "react-redux"
+import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button"
 import Header from "./header/header"
 import Footer from "./footer"
 import FooterTop from "./FooterTop/FooterTop"
 import StyleSwitcher from "../components/StyleSwitcher/StyleSwitcher"
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./layoutCss/assets/css/bootstrap.css"
 import "./layoutCss/assets/css/carousel.css"
 import "./layoutCss/assets/css/icons.css"
 import "./layoutCss/assets/css/main.css"
-import "./layoutCss/assets/css/plugins.css"
-import "./layoutCss/assets/voc/css/animations.css"
+
 import "./layoutCss/assets/voc/css/style.css"
 import "./layout.css"
 import "./ResponsiveCss/minWidth992.css"
@@ -19,10 +21,9 @@ import "./ResponsiveCss/maxWidth991.css"
 import "./ResponsiveCss/minWidth768.css"
 import "./ResponsiveCss/maxWidth768.css"
 import "./ResponsiveCss/maxWidth480.css"
-import { connect } from "react-redux"
-import { useStaticQuery, graphql } from "gatsby"
 
-const Layout = ({ footer, children, color, open, language }) => {
+
+const Layout = ({ children, color, open, language }) => {
   const data = useStaticQuery(
     graphql`
       query {
