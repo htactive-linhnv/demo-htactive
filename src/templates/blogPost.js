@@ -56,7 +56,7 @@ const blogPost = (props) => {
                         <a href="/">Mạnh Nguyễn</a>
                       </div>
                     </header>
-                    <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.frontmatter.body_en }} />
+                    <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
                   </div>
                   {}
                 </div>
@@ -132,9 +132,7 @@ export default blogPost
 export const query = graphql`
 query ($slug: String!) {
   markdownRemark(fields: {slug: {eq: $slug}}) {
-    frontmatter {
-      body_en
-    }
+    html
   }
 }
 `
