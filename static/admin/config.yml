@@ -614,6 +614,7 @@ collections:
     folder: "src/data/en/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: blog-title-en
     editor:
      preview: false
     fields:

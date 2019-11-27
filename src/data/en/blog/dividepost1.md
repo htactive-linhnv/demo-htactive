@@ -53,7 +53,7 @@ Link github: <https://github.com/archriss/react-native-snap-carousel>
 
 Bạn đang tìm kiếm một component drop-down có dáng dấp của native? Yeah, bạn đến đúng chỗ rồi đấy!!! Thư viện này cung cấp một drop-down component mà thích hợp cho cả IOS và Android cả về UI, UX. Cá nhân mình đảm bảo rằng các bạn sẽ thích nó khi sử dụng.
 
-![a](/img/snap-carousel-1.gif "a")
+![a](/img/sdropdown-material.gif "a")
 
 Link github: <https://github.com/n4kz/react-native-material-dropdown>
 
@@ -61,7 +61,7 @@ Link github: <https://github.com/n4kz/react-native-material-dropdown>
 
 Cũng đến từ cùng một nhà phát triển với dropdown ở trên, thư viện này cho ta các components input theo đúng chuẩn Material design
 
-![a](/img/snap-carousel-3.gif "a")
+![a](/img/input.gif "a")
 
 Link github: <https://github.com/n4kz/react-native-material-textfield>
 
@@ -69,7 +69,7 @@ Link github: <https://github.com/n4kz/react-native-material-textfield>
 
 Dự án của bạn đang cần implement một cái button mà khi bấm vào đó sẽ có 1 cái menu overflow hiện ra và bạn đang đi tìm thư viện cho nó? Yeah, nó đây chứ đâu !!! Mô tả nhiều thì lan man, đại khái nó là pure javascript, không có native module, có animation đẹp và có support ripple. Tóm lại là nhìn như native :)
 
-![a](/img/snap-carousel-3.gif "a")
+![a](/img/menu.gif "a")
 
 Link github: <https://github.com/mxck/react-native-material-menu>
 
