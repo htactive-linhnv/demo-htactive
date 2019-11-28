@@ -12,8 +12,7 @@
 .ReactModal__Overlay--after-open {
   z-index: 4000000000 !important;
   position: absolute !important;
-  background:none!important;
-
+  background: none !important;
 }
 .ReactModal__Content,
 .ReactModal__Content--after-open {
@@ -25,17 +24,35 @@
   right: 0 !important;
   border: none !important;
   opacity: 0.9 !important;
-  background:none!important;
+  background: none !important;
 }
 .ReactModal__Content--after-open > div > img {
-  width: 60% !important;
+  width: 50% !important;
   margin: 0 auto !important;
-  margin-top: 10vh !important;
-  opacity: 1!important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1 !important;
 }
+.card-content {
+  height: 95px;
+}
+.blog-card-header {
+  height: 120px;
+  position: relative;
+}
+.blog-card-author {
+  position: absolute;
+  top: 75px;
+}
+.ReactModal__Content--after-open > div > img:after {
+  content:"Linh nguyễn";
+}
+
 @media only screen and (max-width: 768px) {
   .ReactModal__Content--after-open > div > img {
-    width: 80% !important;
-    margin-top: 30vh !important;
+    width:80%!important;
+    height:auto;
   }
 }

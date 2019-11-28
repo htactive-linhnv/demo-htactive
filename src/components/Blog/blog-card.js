@@ -16,22 +16,37 @@ const CardBlog = ({
   author,
   linkBlog,
   linkImg,
-  toggleOverlay
+  toggleOverlay,
 }) => {
   const [open, setOpen] = useState(false)
-  const month = ['','Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
-  postmonth = postmonth.includes('0') ? postmonth.substring(1,2) : postmonth
+  const month = [
+    "",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ]
+  postmonth = postmonth.includes("0") ? postmonth.substring(1, 2) : postmonth
   const [showModal, hideModal] = useModal(() => (
     <ReactModal isOpen>
       <div
-        style={{ width: "100%" }}
+      className="open-div"
+        style={{ width: "100vw",height:'100vh' }}
         onClick={() => {
           hideModal()
           setOpen(false)
           toggleOverlay(false)
         }}
       >
-        <div>&nbsp;</div>
+        <div className="off-modal"></div>
         <img src={src} alt=""></img>
       </div>
     </ReactModal>
@@ -99,26 +114,28 @@ const CardBlog = ({
             <span className="year">{postyear}</span>
           </div>
           <div className="blogpost-content">
-            <header>
+            <header className="blog-card-header">
               <h2 className="title">
-                <Link to ={linkBlog} className="post-title">{cardTitle}</Link>
+                <Link to={linkBlog} className="post-title">
+                  {cardTitle}
+                </Link>
               </h2>
-              <div className="submitted">
+              <div className=" blog-card-author submitted">
                 <i className="fa fa-user pr-5" /> by{" "}
                 <a href="/blog">{author}</a>
               </div>
             </header>
-            <p>{cardContent}</p>
+            <p className="card-content">{cardContent}</p>
           </div>
         </div>
         <footer className="clearfix hidden">
           <ul className="links pull-left hidden">
             <li>
               <i className="fa fa-comment-o pr-5" />{" "}
-              <a href="/blog">20  comments</a> |
+              <a href="/blog">20 comments</a> |
             </li>
             <li>
-              <i className="fa fa-tags pr-5" /> <a href="/blog">{'tag'}</a>
+              <i className="fa fa-tags pr-5" /> <a href="/blog">{"tag"}</a>
             </li>
           </ul>
           <Link className="pull-right link" to={linkBlog}>

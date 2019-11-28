@@ -1,10 +1,10 @@
 ---
 blog-title-en: '[ReactJS Tutorial] Bài 2 - JSX'
 blog-date-en: 2019-11-27T13:55:14.689Z
-blog-description-en: 'Nguồn: tutorialspoint.com'
+blog-description-en: ReactJS là thư viện JavaScript được sử dụng để xây dựng các UI components có thể sử dụng lại.
 author-en: Hoàng Phạm
 thumbnail-en: /img/react.png
-tags-en: ["Code"]
+tags-en: ["React","Code"]
 ---
 React sử dụng JSX để tạo template thay vì JavaScript thông thường. Có thể bạn sẽ không sử dụng nó, tuy nhiên sau đây là một số lợi ích của JSX.
 
@@ -91,7 +91,8 @@ import React from react;
               <h1>{1+1}</h1>
            </div>
         );
-     }     }
+     }     
+   }
   export default App;
 ```
 
