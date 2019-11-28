@@ -18,7 +18,17 @@ JSX trông giống như một HTML thông thường trong hầu hết các trư�
 **App.jsx**
 
 ```
-import React from react;  class App extends React.Component {     render() {        return (           <div>              Hello World!!!           </div>        );     }  }  export default App;
+import React from react;
+  class App extends React.Component {
+     render() {
+        return (
+           <div>
+              Hello World!!!
+           </div>
+        );
+     }
+  }
+  export default App;
 ```
 
 Mặc dù nó tương tự như HTML, có một vài điều cần lưu ý khi làm việc với JSX.
@@ -27,12 +37,22 @@ Mặc dù nó tương tự như HTML, có một vài điều cần lưu ý khi l
 
 Nếu muốn return nhiều phần tử, cần phải bọc nó bằng một phần tử container. Chú ý cách sử dụng div làm container cho các phần tử **h1** , **h2** và **p** .
 
-
-
 **App.jsx**
 
 ```
-import React from react;  class App extends React.Component {     render() {        return (           <div>              <h1>Header</h1>              <h2>Content</h2>              <p>This is the content!!!</p>           </div>        );     }  }  export default App;
+import React from react;
+  class App extends React.Component {
+     render() {
+        return (
+           <div>
+              <h1>Header</h1>
+              <h2>Content</h2>
+              <p>This is the content!!!</p>
+           </div>
+        );
+     }
+  }
+  export default App;
 ```
 
 ![none](/img/react_jsx_wrapper.jpg "none")
@@ -41,41 +61,78 @@ import React from react;  class App extends React.Component {     render() { 
 
 Chúng ta có thể sử dụng custom attributes ngoài các attributes và HTML properties thông thường. Khi muốn thêm custom attributes, cần sử dụng tiền tố **data-** . Trong ví dụ sau, chúng ta thêm **data-myattribute** làm thuộc tính của phần tử **p** .
 
+```
+import React from react;
+  class App extends React.Component {
+     render() {
+        return (
+           <div>
+              <h1>Header</h1>
+              <h2>Content</h2>
+              <p data-myattribute = "somevalue">This is the content!!!</p>
+           </div>
+        );
+     }
+  }
+  export default App;
+```
 
 
-```
-import React from react;  class App extends React.Component {     render() {        return (           <div>              <h1>Header</h1>              <h2>Content</h2>              <p data-myattribute = "somevalue">This is the content!!!</p>           </div>        );     }  }  export default App;
-```
 
 ## JavaScript Expressions
 
 Các JavaScript Expressions có thể được sử dụng bên trong JSX. Chỉ cần wrap nó với dấu ngoặc **{}** . Ví dụ sau sẽ render **2** .
 
 ```
-import React from react;  class App extends React.Component {     render() {        return (           <div>              <h1>{1+1}</h1>           </div>        );     }  }  export default App;
+import React from react;
+  class App extends React.Component {
+     render() {
+        return (
+           <div>
+              <h1>{1+1}</h1>
+           </div>
+        );
+     }     }
+  export default App;
 ```
 
 ![2](/img/react_jsx_inline_javascript.jpg "2")
 
-
-
 Không thể sử dụng câu lệnh **if else** bên trong JSX, thay vào đó có thể sử dụng biểu thức có điều kiện (ternary) . Trong ví dụ sau, biến i bằng **if else**1 do đó trình duyệt sẽ render **true** , nếu chúng ta thay đổi nó thành một giá trị khác, nó sẽ render **false** .
 
 ```
-import React from react;  class App extends React.Component {     render() {        return (           <div>              <h1>{i == 1 ? "True!" : "False"}</h1>           </div>        );     }  }  export default App;
+import React from react;
+  class App extends React.Component {
+     render() {
+        return (
+           <div>
+              <h1>{i == 1 ? "True!" : "False"}</h1>
+           </div>
+        );
+     }
+  }
+  export default App;
 ```
 
 ![true](/img/react_jsx_ternary_expression.jpg "true")
+
+
 
 ## Styling
 
 React khuyến cáo sử dụng các kiểu inline styles. Khi muốn thiết lập các kiểu inline styles, chúng ta cần sử dụng cú pháp **camelCase** . React cũng sẽ tự động nối px sau khi đánh số trên các phần tử cụ thể. Ví dụ sau cho biết cách thêm phần tử **myStyle** vào thẻ **h1** .
 
+```
+import React from react;
+  class App extends React.Component {
+     render() {
+        var myStyle = {
+           fontSize: 100,
+           color: #FF0000                      }               return (                  <div>                       <h1 style = {myStyle}>Header</h1>
+           </div>                  )               }             }     export default App
+```
 
 
-```
-import React from react;  class App extends React.Component {     render() {        var myStyle = {           fontSize: 100,           color: #FF0000            }        return (           <div>             <h1 style = {myStyle}>Header</h1>           </div>             )            }           }     export default App
-```
 
 ## Naming Convention
 
