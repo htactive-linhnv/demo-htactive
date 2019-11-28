@@ -1,12 +1,12 @@
 ---
-blog-title-en: Hello World với Swift
-blog-date-en: 2019-11-27T09:49:20.555Z
-blog-description-en: >-
+blog-title-vn: Hello World với Swift
+blog-date-vn: 2019-11-27T09:49:20.555Z
+blog-description-vn: >-
   Hôm nay mình sẽ hướng dẫn các bạn viết chương trình Hello World sử dụng Swift.
   Để bắt đầu, chúng ta sẽ viết 1 chương trình đơn giản như sau ...
-author-en: Hiếu Lê
-thumbnail-en: /img/hello-world-working-copy1.png
-tags-en: ["Code"]
+author-vn: Hiếu Lê
+thumbnail-vn: /img/hello-world-working-copy1.png
+tags-vn: ["Code"]
 ---
 ## Bắt đầu
 

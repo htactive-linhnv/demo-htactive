@@ -1,13 +1,13 @@
 ---
-blog-title-en: Hướng dẫn Assembly 64bit.
-blog-date-en: 2019-11-27T13:27:44.773Z
-blog-description-en: >-
+blog-title-vn: Hướng dẫn Assembly 64bit.
+blog-date-vn: 2019-11-27T13:27:44.773Z
+blog-description-vn: >-
   Tiếp theo bài trước, sau khi các bác đã có 1 chương trình hoàn chỉnh hiển thị
   dòng chữ “Hello World!”, bài này sẽ hướng dẫn các bạn viết một hàm hoàn chỉnh
   trong assembly nhằm mục đích mô-đun hoá ứng dụng.
-author-en: Khiêm Trần
-thumbnail-en: /img/assem.png
-tags-en: ["Code"]
+author-vn: Khiêm Trần
+thumbnail-vn: /img/assem.png
+tags-vn: ["Code"]
 
 ---
 <iframe width="650" height="365" src="https://www.youtube.com/embed/0esP0h6SWZ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
