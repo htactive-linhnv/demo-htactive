@@ -1,12 +1,12 @@
 ---
-blog-title-en: Junior - Senior Developer Wanted
-blog-date-en: 2019-11-28T02:56:00.551Z
-blog-description-en: >-
+blog-title-vn: Junior - Senior Developer Wanted
+blog-date-vn: 2019-11-28T02:56:00.551Z
+blog-description-vn: >-
   Để đáp ứng nhu cầu phát triển, HT Active cần tuyển nhiều vị trí lập trình viên
   Junior - Senior.
-author-en: Hoàng Phạm
-thumbnail-en: /img/tuyendung.png
-tags-en: ["Recruit"]
+author-vn: Hoàng Phạm
+thumbnail-vn: /img/tuyendung.png
+tags-vn: ["Recruit"]
 ---
 ## Thông tin ứng tuyển
 

@@ -1,12 +1,12 @@
 ---
-blog-title-en: Áp dụng mô hình Scrum trong quản lý dự án
-blog-date-en: 2019-11-27T10:47:20.840Z
-blog-description-en: >-
+blog-title-vn: Áp dụng mô hình Scrum trong quản lý dự án
+blog-date-vn: 2019-11-27T10:47:20.840Z
+blog-description-vn: >-
   Scrum là một khung phát triển trong đó các nhóm liên-chức năng phát triển các
   sản phẩm hoặc dự
-author-en: Hoàng Phạm
-thumbnail-en: /img/scrum.png
-tags-en: ["Code"]
+author-vn: Hoàng Phạm
+thumbnail-vn: /img/scrum.png
+tags-vn: ["Code"]
 
 ---
 **A. GIÁ TRỊ CỐT LÕI CỦA SCRUM:**
