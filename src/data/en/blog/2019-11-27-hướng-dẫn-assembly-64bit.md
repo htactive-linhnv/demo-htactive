@@ -59,10 +59,12 @@ Thông báo lỗi do chưa viết hàm main.
 Chương trình assembly được chia thành nhiều đoạn, cấu trúc căn bản như sau:
 
 ```
-.section __DATA, __data // section data chứa data sử dụng trong chương trình.section __TEXT, __text // section text chứa code trong chương trình
+.section __DATA, __data // section data chứa data sử dụng trong chương trình.section __TEXT, __text // section text chứa code trong chương trình
 ```
 
-Chương trình muốn chạy được thì phải có symbol _main, do đó ta thêm symbol _main vào trong chương trình.
+
+
+Chương trình muốn chạy được thì phải có symbol `_main`, do đó ta thêm symbol `_main `vào trong chương trình.
 
 ```
 .section __DATA, __data // section data chứa data sử dụng trong chương trình.section __TEXT, __text // section text chứa code trong chương trình.global _main_main:
@@ -76,7 +78,7 @@ Hàm main chưa có gì thì làm sao mà chạy? làm sao mà chạy?
 
 > Hàm main chưa có gì thì làm sao mà chạy? làm sao mà chạy?
 
-Lý do là hàm `main `hiện tại chúng ta chưa viết gì cả. Vậy hàm `main `sẽ làm gì? Chúng ta sẽ thử ra chỉ thị kết thúc chương trình.
+Lý do là hàm `main`hiện tại chúng ta chưa viết gì cả. Vậy hàm `main`sẽ làm gì? Chúng ta sẽ thử ra chỉ thị kết thúc chương trình.
 
 ```
 _main:  movl $0x2000001, %eax  syscall
@@ -93,7 +95,7 @@ Nhìn trong file mình vưà gửi thì syscall 4 sẽ in viết một thông đ
 Ta chỉnh sửa lại chương trình như sau:
 
 ```
-.section __DATA, __data  helloMessage: .asciz "Hello World".section __TEXT, __text.global _main_main:  movl $0x2000004, %eax // ngắt để in ra  movl $1, %edi // standard output = 1  movq helloMessage@GOTPCREL(%rip), %rsi // thông điệp cần in ra  movq $100, %rdx // kích thước của thông điệpsyscall    movl $0x2000001, %eax // ngắt dừng chương trình  movl $0, %ebx // exit code == 0  syscall
+.section __DATA, __data  helloMessage: .asciz "Hello World".section __TEXT, __text.global _main_main:  movl $0x2000004, %eax // ngắt để in ra  movl $1, %edi // standard output = 1  movq helloMessage@GOTPCREL(%rip), %rsi // thông điệp cần in ra  movq $100, %rdx // kích thước của thông điệp  syscall    movl $0x2000001, %eax // ngắt dừng chương trình  movl $0, %ebx // exit code == 0  syscall
 ```
 
 Mình sẽ giải thích convention khi đưa tham số vào một lời gọi hàm trong bài tiếp theo. 
