@@ -24,7 +24,8 @@ const RelatedPost = ({ tags, slug }) => {
       }
     `
   )
-  const relatedPosts = data.allPost.edges
+
+  let relatedPosts = data.allPost.edges
     .filter(
       item =>
         tags &&
@@ -33,8 +34,13 @@ const RelatedPost = ({ tags, slug }) => {
         item.node.fields.slug !== slug
     )
     .slice(0, 2)
-  const relatedCard = relatedPosts.map(({ node }) => (
-    <div className="image-box">
+
+  relatedPosts =
+    relatedPosts.length === 0 
+    ? data.allPost.edges.slice(0, 2) 
+    : relatedPosts
+  const relatedCard = relatedPosts.map(({ node },index) => (
+    <div className="image-box" key={index}>
       <div className="image-box-body">
         <h3 className="title">
           <Link to={node.fields.slug}>

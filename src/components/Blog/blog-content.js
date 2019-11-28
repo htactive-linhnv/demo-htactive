@@ -3,23 +3,6 @@ import CardBlog from "./blog-card"
 import { ModalProvider } from "react-modal-hook"
 
 const BlogContent = ({posts}) => {
-  
-  const data = [
-    {
-      src:
-        "https://s3-ap-southeast-1.amazonaws.com/htactive/blogs/components_react_native.png",
-      postday: "15",
-      postmonth: "Jun 2018",
-      cardTitle: " Những Material component tuyệt vời trong React Native.",
-      author: "Mạnh Nguyễn",
-      cardContent: "Những Material component tuyệt vời trong React Native.",
-      commend: "22 comment",
-      tag: "tag1",
-      linkImg:
-        "https://s3-ap-southeast-1.amazonaws.com/htactive/blogs/components_react_native.png",
-      linkBlog: "/blogPost",
-    }
-  ]
   return (
     <ModalProvider>
       <section className="main-container" style={{ marginTop: "10px" }}>
