@@ -4,7 +4,7 @@ blog-date-en: 2019-11-27T13:48:55.476Z
 blog-description-en: 'Để đáp ứng nhu cầu phát triển, HT Active cần tuyển 05 Front-end Developer.'
 author-en: Thuận Hồ
 thumbnail-en: /img/tuyendung.png
-tags-en: ["Tuyen dung"]
+tags-en: ["Recruit"]
 
 ---
 ## Mô Tả Công Việc

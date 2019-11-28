@@ -1,30 +1,58 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { graphql } from "gatsby"
-const blogPost = (props) => {
+import { graphql, Link } from "gatsby"
+const blogPost = ({ data }) => {  
+  const post = data.markdownRemark
+  const monthList = [
+    "",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ]
+  const getDate = date => {
+    const day = date.substring(8, 10)
+    let month = date.substring(5, 7)
+    const year = date.substring(0, 4)
+    month = month.includes("0") ? month.substring(1, 2) : month
+    return [day, month, year]
+  }
   return (
     <Layout>
       <SEO title="Blog" />
       <section className="main-container">
         <div className="container">
           <div className="row">
-            {/* main start */}
-            {/* ================ */}
             <div className="main col-md-8">
-              {/* page-title start */}
-              {/* ================ */}
               <h1 className="page-title">
-                Những Material component tuyệt vời trong React Native.
+                {post.frontmatter[`blog_title_${"en"}`]}
               </h1>
-              {/* page-title end */}
-              {/* blogpost start */}
               <article className="clearfix blogpost full">
                 <div className="blogpost-body">
                   <div className="side">
                     <div className="post-info">
-                      <span className="day">15</span>
-                      <span className="month">Jun 2018</span>
+                      <span className="day">
+                        {getDate(post.frontmatter[`blog_date_${"en"}`])[0]}
+                      </span>
+                      <span className="month">
+                        {
+                          monthList[
+                            getDate(post.frontmatter[`blog_date_${"en"}`])[1]
+                          ]
+                        }
+                      </span>
+                      <span className="year">
+                        {getDate(post.frontmatter[`blog_date_${"en"}`])[2]}
+                      </span>
                     </div>
                     <div id="affix" className="affix-top">
                       <span className="share">Share this</span>
@@ -53,10 +81,12 @@ const blogPost = (props) => {
                     <header>
                       <div className="submitted">
                         <i className="fa fa-user pr-5" /> by{" "}
-                        <a href="/">Mạnh Nguyễn</a>
+                        <Link to="/blog">
+                          {post.frontmatter[`author_${"en"}`]}
+                        </Link>
                       </div>
                     </header>
-                    <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+                    <div dangerouslySetInnerHTML={{ __html: post.html }} />
                   </div>
                   {}
                 </div>
@@ -70,11 +100,8 @@ const blogPost = (props) => {
                 <div className="block clearfix">
                   <h3 className="title">Related posts</h3>
                   <div className="separator" />
+                  <div className="image-box"></div>
                   <div className="image-box">
-                    
-                  </div>
-                  <div className="image-box">
-    
                     <div className="image-box-body">
                       <h3 className="title">
                         <a href="news-detail/2/huong-dan-assembly-64-bit">
@@ -130,9 +157,18 @@ const blogPost = (props) => {
 
 export default blogPost
 export const query = graphql`
-query ($slug: String!) {
-  markdownRemark(fields: {slug: {eq: $slug}}) {
-    html
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      fields {
+        slug
+      }
+      frontmatter {
+        tags_en
+        author_en
+        blog_title_en
+        blog_date_en
+      }
+    }
   }
-}
 `
