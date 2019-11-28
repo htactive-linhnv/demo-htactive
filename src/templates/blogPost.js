@@ -25,8 +25,9 @@ const blogPost = ({ data }) => {
       let month = date.substring(5, 7)
       const year = date.substring(0, 4)
       month = month.includes("0") ? month.substring(1, 2) : month
+      return [day, month, year]
     }
-    return [day, month, year]
+    return['11','12','2019']
   }
   return (
     <Layout>
