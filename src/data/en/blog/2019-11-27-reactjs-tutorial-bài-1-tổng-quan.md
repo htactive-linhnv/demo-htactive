@@ -4,6 +4,7 @@ blog-date-en: 2019-11-27T10:39:33.405Z
 blog-description-en: Bài dịch từ tutorialspoint.com
 author-en: Hoàng Phạm
 thumbnail-en: /img/react.png
+tags-en: ["Code"]
 ---
 ReactJS là thư viện JavaScript được sử dụng để xây dựng các UI components có thể sử dụng lại. Theo tài liệu chính thức của React: React là một thư viện dùng để xây dựng các giao diện người dùng tổng hợp. Nó khuyến khích việc tạo ra các UI components sử dụng lại được, và thể hiện dữ liệu thay đổi theo thời gian. Rất nhiều người sử dụng React như View trong MVC. React làm trừu tượng các DOM, cung cấp một mô hình lập trình đơn giản và hiệu suất tốt hơn. React có thể render server side bằng cách sử dụng NodeJs, và nó cũng có thể tạo ra các native apps bằng cách sử dụng React Native. React sử dụng luồng dữ liệu một chiều (one-way data flow), làm dễ hiểu hơn so với data binding truyền thống.
 

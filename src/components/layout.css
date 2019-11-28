@@ -1221,3 +1221,7 @@ div.style-switcher .dark-red:hover {
 .page-title {
   font-weight:700;
 }
+
+strong {
+  font-weight: bold!important;
+}

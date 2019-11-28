@@ -622,6 +622,7 @@ collections:
       - { label: "Publish Date", name: "blog-date-en", widget: "datetime" }
       - { label: "Description", name: "blog-description-en", widget: "string" }
       - { label: "Author", name: "author-en", widget: "string" }
+      - { label: "Tags", name: "tags-en", widget: "list" }
       - { label: "Featured Image", name: "thumbnail-en", widget: "image"}
       - { label: "Body", name: "body", widget: "markdown" }
       

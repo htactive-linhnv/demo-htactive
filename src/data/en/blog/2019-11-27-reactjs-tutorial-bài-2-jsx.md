@@ -4,6 +4,7 @@ blog-date-en: 2019-11-27T13:55:14.689Z
 blog-description-en: 'Nguồn: tutorialspoint.com'
 author-en: Hoàng Phạm
 thumbnail-en: /img/react.png
+tags-en: ["Code"]
 ---
 React sử dụng JSX để tạo template thay vì JavaScript thông thường. Có thể bạn sẽ không sử dụng nó, tuy nhiên sau đây là một số lợi ích của JSX.
 
@@ -119,7 +120,21 @@ import React from react;
 React khuyến cáo sử dụng các kiểu inline styles. Khi muốn thiết lập các kiểu inline styles, chúng ta cần sử dụng cú pháp **camelCase** . React cũng sẽ tự động nối px sau khi đánh số trên các phần tử cụ thể. Ví dụ sau cho biết cách thêm phần tử **myStyle** vào thẻ **h1** .
 
 ```
-import React from react;  class App extends React.Component {     render() {        var myStyle = {           fontSize: 100,           color: #FF0000        }        return (           <div>              <h1 style = {myStyle}>Header</h1>           </div>        );     }  }  export default App;
+import React from react;
+  class App extends React.Component {
+     render() {
+        var myStyle = {
+           fontSize: 100,
+           color: #FF0000
+        }
+        return (
+           <div>
+              <h1 style = {myStyle}>Header</h1>
+           </div>
+        );
+     }
+  }
+  export default App;
 ```
 
 

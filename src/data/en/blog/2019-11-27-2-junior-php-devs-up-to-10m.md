@@ -4,6 +4,7 @@ blog-date-en: 2019-11-27T10:43:46.696Z
 blog-description-en: 'Để đáp ứng nhu cầu phát triển, HT Active cần tuyển 2 PHP Developer.'
 author-en: Hoàng Phạm
 thumbnail-en: /img/tuyendung.png
+tags-en: ["Tuyen dung"]
 ---
 ## Thông tin ứng tuyển
 
