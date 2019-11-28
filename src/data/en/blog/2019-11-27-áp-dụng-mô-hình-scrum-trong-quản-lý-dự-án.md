@@ -6,6 +6,8 @@ blog-description-en: >-
   sản phẩm hoặc dự
 author-en: Hoàng Phạm
 thumbnail-en: /img/scrum.png
+tags-en: ["Code"]
+
 ---
 ## **A. GIÁ TRỊ CỐT LÕI CỦA SCRUM:**
 
@@ -96,7 +98,8 @@ b)     Danh sách này chứa các h ạng mục mà Nhóm phát triển tin r�
 
 **4. INCREMENT**
 
-a)     Thực thể của Scrum Team xác định một trạng thái đã hoàn thành.
+
+a)     Thực thể của Scrum Team xác định một trạng thái đã hoàn thành.
 
 b)     Khi một mục từ Sprint Backlog được xem là đã xong, nó sẽ bị xóa khỏi Sprint Backlog và sau đó là một phần của Increment.
 
@@ -134,7 +137,8 @@ b)     Tất cả các thành viên của Development Team cần chuẩn bị ch
 2.  Tôi sẽ làm gì cho đến khi họp Daily Scrum tiếp theo để giúp Development Team để đạt được mục tiêu Sprint?
 3.  Những trở ngại của tôi là gì cản trở tôi hoặc Development Team đạt được mục tiêu của Sprint?
 
-c)     Scrum Master chịu trách nhiệm trong 15 phút này chỉ có ba câu hỏi này được trả lời và toàn bộ Development Team có mặt. Nếu cần, một cuộc họp tiếp theo có thể được thiết lập giữa các thành viên liên quan.
+c)     Scrum Master chịu trách nhiệm trong 15 phút này chỉ có ba câu hỏi này được trả lời và toàn bộ Development Team có mặt. Nếu cần, một cuộc họp tiếp theo có thể được thiết lập giữa các thành viên liên quan.
+
 
 d)    Cuộc họp này cũng được dùng để kiểm tra: Các thành viên của Development Team đang nhìn thấy sự tiến bộ của riêng mình và mọi người đều biết những gì người khác đang làm việc.
 
