@@ -18,11 +18,11 @@ Là đội tiên phong trong việc nghiên cứu những công nghệ mới đ�
 1. Số năm kinh nghiệm là không quan trọng.
 2. Thành thạo ít nhất một thư viện javascript phổ biến (`jQuery, angularJS, Vue.js, ReactJS`...).
 3. Thành thạo ít nhất một Frontend Framework (`Boostrap, Foundation, SemanticUI...`).
-4. Thành thạo ít nhất một CSS Preprocessors (ưu tiên `Sass `và `Less`).
+4. Thành thạo ít nhất một CSS Preprocessors (ưu tiên `Sass`và `Less`).
 5. Biết `.Net Core` là một lợi thế.
 6. Có hiểu biết tốt về Responsive và mobile là một lợi thế.
 7. Có hiểu biết tốt về Cross-Browser là một lợi thế.
-8. Thành thạo `Git `là một lợi thế.
+8. Thành thạo `Git`là một lợi thế.
 9. Có khả năng đọc hiểu tài liệu và yêu cầu khách hàng bằng tiếng Anh là một lợi thế
 
 ## Tại Sao Bạn Sẽ Yêu Thích Làm Việc Tại Đây
@@ -48,61 +48,5 @@ Ngoài các buổi dã ngoại, party thường xuyên, hàng năm công ty luô
 Gởi email đính kèm CV về địa chỉ [services@htactive.com](services@htactive.com) với subject là kết quả của đoạn code bên dưới
 
 ```
-// welcome to HT Active
-```
-
-```
-var your_job="Front-endDev";
-```
-
-```
-var reverse = function (s) {
-```
-
-```
-  return s.split("").reverse().join("");
-```
-
-```
-}
-```
-
-```
-var htactive = {
-```
-
-```
-  str1: "hUs",
-```
-
-```
-  str2: reverse("nioJ"),
-```
-
-```
-  str3: reverse("tiW"),
-```
-
-```
-  request: function (r) {
-```
-
-```
-    return r + ".Secret word:" +
-```
-
-```
-      this.str2 + this.str3 + this.str1;
-```
-
-```
-  }
-```
-
-```
-}
-```
-
-```
-htactive.request(your_job);
+// welcome to HT Activevar your_job="Front-endDev";var reverse = function (s) {  return s.split("").reverse().join("");}var htactive = {  str1: "hUs",  str2: reverse("nioJ"),  str3: reverse("tiW"),  request: function (r) {    return r + ".Secret word:" +      this.str2 + this.str3 + this.str1;  }}htactive.request(your_job);
 ```
