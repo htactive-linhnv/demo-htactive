@@ -77,8 +77,6 @@ import React from react;
   export default App;
 ```
 
-
-
 ## JavaScript Expressions
 
 Các JavaScript Expressions có thể được sử dụng bên trong JSX. Chỉ cần wrap nó với dấu ngoặc **{}** . Ví dụ sau sẽ render **2** .
@@ -116,20 +114,12 @@ import React from react;
 
 ![true](/img/react_jsx_ternary_expression.jpg "true")
 
-
-
 ## Styling
 
 React khuyến cáo sử dụng các kiểu inline styles. Khi muốn thiết lập các kiểu inline styles, chúng ta cần sử dụng cú pháp **camelCase** . React cũng sẽ tự động nối px sau khi đánh số trên các phần tử cụ thể. Ví dụ sau cho biết cách thêm phần tử **myStyle** vào thẻ **h1** .
 
 ```
-import React from react;
-  class App extends React.Component {
-     render() {
-        var myStyle = {
-           fontSize: 100,
-           color: #FF0000                      }               return (                  <div>                       <h1 style = {myStyle}>Header</h1>
-           </div>                  )               }             }     export default App
+import React from react;  class App extends React.Component {     render() {        var myStyle = {           fontSize: 100,           color: #FF0000        }        return (           <div>              <h1 style = {myStyle}>Header</h1>           </div>        );     }  }  export default App;
 ```
 
 
