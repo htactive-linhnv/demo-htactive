@@ -38,8 +38,8 @@ const CardBlog = ({
   const [showModal, hideModal] = useModal(() => (
     <ReactModal isOpen>
       <div
-      className="open-div"
-        style={{ width: "100vw",height:'100vh' }}
+        className="open-div"
+        style={{ width: "100vw", height: "100vh" }}
         onClick={() => {
           hideModal()
           setOpen(false)

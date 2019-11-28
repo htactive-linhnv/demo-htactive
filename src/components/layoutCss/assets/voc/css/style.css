@@ -8949,24 +8949,25 @@ img.yellow .product-image
   color:#d3b61c;
 }
 
-a:hover {
+a:not(.btn):hover {
   color:#cd3c2e!important;
 }
-.blue a:hover {
+
+.blue a:not(.btn):hover {
   color:#2c5fb3!important;
 }
-.pink a:hover {
+.pink a:not(.btn):hover {
   color:#c86384!important;
 }
-.orange a:hover {
+.orange a:not(.btn):hover {
   color:#e09200!important;
 }
-.yellow a:hover {
+.yellow a:not(.btn):hover {
   color:#b59a17!important;
 }
-.purple a:hover {
+.purple a:not(.btn):hover {
   color:#b331b3!important;
 }
-.green a:hover {
+.green a:not(.btn):hover {
   color:#3b8f33!important;
 }

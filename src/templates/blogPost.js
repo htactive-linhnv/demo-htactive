@@ -2,8 +2,10 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
+import RelatedPost from "../components/Blog/RelatedPost"
+
 const blogPost = ({ data }) => {
-  const post = data.markdownRemark
+  const post = data.post
   const monthList = [
     "",
     "Jan",
@@ -27,7 +29,7 @@ const blogPost = ({ data }) => {
       month = month.includes("0") ? month.substring(1, 2) : month
       return [day, month, year]
     }
-    return['11','12','2019']
+    return ["11", "12", "2019"]
   }
   return (
     <Layout>
@@ -43,7 +45,7 @@ const blogPost = ({ data }) => {
                 <div className="blogpost-body">
                   <div className="side">
                     <div className="post-info">
-                      <span className="day">
+                      <span className="day day--big">
                         {getDate(post.frontmatter[`blog_date_${"en"}`])[0]}
                       </span>
                       <span className="month">
@@ -94,62 +96,11 @@ const blogPost = ({ data }) => {
                   {}
                 </div>
               </article>
-              {/* blogpost end */}
             </div>
-            {/* main end */}
-            {/* sidebar start */}
-            <aside className="col-md-3 col-md-offset-1">
-              <div className="sidebar">
-                <div className="block clearfix">
-                  <h3 className="title">Related posts</h3>
-                  <div className="separator" />
-                  <div className="image-box"></div>
-                  <div className="image-box">
-                    <div className="image-box-body">
-                      <h3 className="title">
-                        <a href="news-detail/2/huong-dan-assembly-64-bit">
-                          Hướng dẫn Assembly 64bit.
-                        </a>
-                      </h3>
-                      <p>
-                        Suốt hàng ngàn năm, con người đã sử dụng các ngôn ngữ
-                        lập trình để bắt máy tính phải “hiểu" mình và làm theo
-                        mệnh lệnh của mình. Các bạn đừng bị thầy cô lừa dối, bởi
-                        vì máy tính vốn chỉ hiểu một ngôn ngữ duy nhất, đó là
-                        ngôn ngữ máy (machine code).
-                      </p>
-                      <a
-                        href="news-detail/2/huong-dan-assembly-64-bit"
-                        className="link"
-                      >
-                        <span>Read more</span>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="image-box">
-                    <div className="image-box-body">
-                      <h3 className="title">
-                        <a href="news-detail/3/huong-dan-assembly-64-bit-bai-2">
-                          Hướng dẫn Assembly 64bit - Bài 2.
-                        </a>
-                      </h3>
-                      <p>
-                        Tiếp theo bài trước, sau khi các bác đã có 1 chương
-                        trình hoàn chỉnh hiển thị dòng chữ “Hello World!”, bài
-                        này sẽ hướng dẫn các bạn viết một hàm hoàn chỉnh trong
-                        assembly nhằm mục đích mô-đun hoá ứng dụng.
-                      </p>
-                      <a
-                        href="news-detail/3/huong-dan-assembly-64-bit-bai-2"
-                        className="link"
-                      >
-                        <span>Read more</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </aside>
+            <RelatedPost
+              slug={post.fields.slug}
+              tags={post.frontmatter[`tags_${"en"}`]}
+            />
             {/* sidebar end */}
           </div>
         </div>
@@ -160,8 +111,8 @@ const blogPost = ({ data }) => {
 
 export default blogPost
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query($slug: String) {
+    post: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fields {
         slug
@@ -175,3 +126,4 @@ export const query = graphql`
     }
   }
 `
+

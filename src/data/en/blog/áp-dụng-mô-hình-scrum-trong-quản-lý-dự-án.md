@@ -9,7 +9,7 @@ thumbnail-en: /img/scrum.png
 tags-en: ["Code"]
 
 ---
-## **A. GIÁ TRỊ CỐT LÕI CỦA SCRUM:**
+**A. GIÁ TRỊ CỐT LÕI CỦA SCRUM:**
 
 **1. TRANSPARENCY (MINH BẠCH):**
 
