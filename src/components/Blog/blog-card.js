@@ -19,6 +19,7 @@ const CardBlog = ({
   toggleOverlay,
 }) => {
   const [open, setOpen] = useState(false)
+  
   const month = [
     "",
     "Jan",

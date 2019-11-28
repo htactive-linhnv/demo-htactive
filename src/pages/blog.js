@@ -7,7 +7,7 @@ const Blog = ({data}) => {
   const posts = data[`blog_${"en"}`].edges
   return (
     <Layout>
-      <SEO title="Blog" />;
+      <SEO title="Blog" />
       <BlogContent posts={posts}/>
     </Layout>
   )

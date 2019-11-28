@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { connect } from "react-redux"
 
 const Footer = ({ footer, menu, language }) => {
-  const engRoute = ["/", "services", "portfolio", "blog", "contact"]
+  const engRoute = ["/", "/services", "/portfolio", "/blog", "/contact"]
   let menuItem = []
   if (menu) {
     const dataUse = menu.frontmatter[`menu_${language}`] || {}

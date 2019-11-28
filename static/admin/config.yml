@@ -622,8 +622,27 @@ collections:
       - { label: "Publish Date", name: "blog-date-en", widget: "datetime" }
       - { label: "Description", name: "blog-description-en", widget: "string" }
       - { label: "Author", name: "author-en", widget: "string" }
-      - { label: "Tags", name: "tags-en", widget: "list" }
+      - { label: "Tags", name: "tags-en", widget: "list",default: ["Code"] }
       - { label: "Featured Image", name: "thumbnail-en", widget: "image"}
+      - { label: "Video Iframe", name: "iframe-en", widget: "string",hint: "Iframe here will be thumbnail, input embbed code",required: false}
+      - { label: "Body", name: "body", widget: "markdown" }
+#Blog page in Tiếng Việt
+  - name: "blog-vn"
+    label: "Blog - Tiếng Việt"
+    folder: "src/data/vi/blog"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: blog-title-vn
+    editor:
+     preview: false
+    fields:
+      - { label: "Tiêu đề", name: "blog-title-vn", widget: "string" }
+      - { label: "Ngày viết", name: "blog-date-vn", widget: "datetime" }
+      - { label: "Tóm tắt", name: "blog-description-vn", widget: "string" }
+      - { label: "Tác giả", name: "author-vn", widget: "string" }
+      - { label: "Tags", name: "tags-vn", widget: "list",default: ["Code"] }
+      - { label: "Ảnh thumbnail", name: "thumbnail-vn", widget: "image"}
+      - { label: "Video Iframe", name: "iframe-vn", widget: "string",hint: "Iframe here will be thumbnail, input embbed code",required: false}
       - { label: "Body", name: "body", widget: "markdown" }
       
 
