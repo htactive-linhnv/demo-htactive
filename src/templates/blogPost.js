@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
-const blogPost = ({ data }) => {  
+const blogPost = ({ data }) => {
   const post = data.markdownRemark
   const monthList = [
     "",
@@ -20,10 +20,12 @@ const blogPost = ({ data }) => {
     "Dec",
   ]
   const getDate = date => {
-    const day = date.substring(8, 10)
-    let month = date.substring(5, 7)
-    const year = date.substring(0, 4)
-    month = month.includes("0") ? month.substring(1, 2) : month
+    if (date) {
+      const day = date.substring(8, 10)
+      let month = date.substring(5, 7)
+      const year = date.substring(0, 4)
+      month = month.includes("0") ? month.substring(1, 2) : month
+    }
     return [day, month, year]
   }
   return (
