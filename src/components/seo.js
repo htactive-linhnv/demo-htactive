@@ -109,7 +109,18 @@ const SEO = ({
             content: metaDescription,
           },
         ].concat(meta)}
-      ></Helmet>
+      >
+        <link
+          href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=PT+Serif"
+          rel="stylesheet"
+          type="text/css"
+        />
+      </Helmet>
     </>
   )
 }
