@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import BannerAnim from "rc-banner-anim"
 import QueueAnim from "rc-queue-anim"
 
-
 import MacImg from "../../data/images/slider-2.png"
 import BannerLeft from "./bannerLeft"
 import ProgressBar from "./progressBar"

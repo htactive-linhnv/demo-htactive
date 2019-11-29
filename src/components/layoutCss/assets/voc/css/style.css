@@ -3981,6 +3981,9 @@ a.overlay.small i {
   margin: 15px 0 5px;
   text-align: center;
 }
+.box-style-1 i, .box-style-1 p {
+  color:rgb(99, 98, 98);
+}
 .box-style-1:not(.team-member):hover i {
   color: #e84c3d;
   -webkit-transition: all 0.3s ease-in-out;
@@ -5054,7 +5057,7 @@ ul.tweets li span {
   display: none;
 }
 .tp-loader.spinner0 {
-  background: url("../images/loader.gif") no-repeat center center;
+  /* background: url("../images/loader.gif") no-repeat center center; */
   box-shadow: none;
   -webkit-box-shadow: none;
   -webkit-animation: none;
@@ -8949,24 +8952,25 @@ img.yellow .product-image
   color:#d3b61c;
 }
 
-a:hover {
+a:not(.btn):hover {
   color:#cd3c2e!important;
 }
-.blue a:hover {
+
+.blue a:not(.btn):hover {
   color:#2c5fb3!important;
 }
-.pink a:hover {
+.pink a:not(.btn):hover {
   color:#c86384!important;
 }
-.orange a:hover {
+.orange a:not(.btn):hover {
   color:#e09200!important;
 }
-.yellow a:hover {
+.yellow a:not(.btn):hover {
   color:#b59a17!important;
 }
-.purple a:hover {
+.purple a:not(.btn):hover {
   color:#b331b3!important;
 }
-.green a:hover {
+.green a:not(.btn):hover {
   color:#3b8f33!important;
 }

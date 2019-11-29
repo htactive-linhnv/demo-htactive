@@ -37,25 +37,47 @@ const BlogPost = (props) => {
                 <div className="blogpost-body">
                   <div className="side">
                     <div className="post-info">
-                      <span className="day">15</span>
-                      <span className="month">Jun 2018</span>
+                      <span className="day day--big">
+                        {getDate(post.frontmatter[`blog_date_${language}`])[0]}
+                      </span>
+                      <span className="month">
+                        {
+                          monthList[
+                            getDate(
+                              post.frontmatter[`blog_date_${language}`]
+                            )[1]
+                          ]
+                        }
+                      </span>
+                      <span className="year">
+                        {getDate(post.frontmatter[`blog_date_${language}`])[2]}
+                      </span>
                     </div>
                     <div id="affix" className="affix-top">
                       <span className="share">Share this</span>
                       <div id="share" className="sharrre">
                         <ul className="social-links clearfix">
                           <li className="facebook">
-                            <a href="/">
+                            <a
+                              target="_blank"
+                              href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F`}
+                            >
                               <i className="fa fa-facebook" />
                             </a>
                           </li>
                           <li className="twitter">
-                            <a href="/">
+                            <a
+                              href={`https://twitter.com/intent/tweet/?text=Check%20out%20this%20website!&url=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F&via=HTActive"`}
+                              target="_blank"
+                            >
                               <i className="fa fa-twitter" />
                             </a>
                           </li>
                           <li className="googleplus">
-                            <a href="/">
+                            <a
+                              href={`https://plus.google.com/share?url=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F`}
+                              target="_blank"
+                            >
                               <i className="fa fa-google-plus" />
                             </a>
                           </li>
@@ -67,73 +89,24 @@ const BlogPost = (props) => {
                     <header>
                       <div className="submitted">
                         <i className="fa fa-user pr-5" /> by{" "}
-                        <a href="/">Mạnh Nguyễn</a>
+                        <Link to="/blog">
+                          {post.frontmatter[`author_${language}`]}
+                        </Link>
                       </div>
                     </header>
-                    <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+                    <div
+                      className="blogPost-content"
+                      dangerouslySetInnerHTML={{ __html: post.html }}
+                    />
                   </div>
                   {}
                 </div>
               </article>
-              {/* blogpost end */}
             </div>
-            {/* main end */}
-            {/* sidebar start */}
-            <aside className="col-md-3 col-md-offset-1">
-              <div className="sidebar">
-                <div className="block clearfix">
-                  <h3 className="title">Related posts</h3>
-                  <div className="separator" />
-                  <div className="image-box">
-                    
-                  </div>
-                  <div className="image-box">
-    
-                    <div className="image-box-body">
-                      <h3 className="title">
-                        <a href="news-detail/2/huong-dan-assembly-64-bit">
-                          Hướng dẫn Assembly 64bit.
-                        </a>
-                      </h3>
-                      <p>
-                        Suốt hàng ngàn năm, con người đã sử dụng các ngôn ngữ
-                        lập trình để bắt máy tính phải “hiểu" mình và làm theo
-                        mệnh lệnh của mình. Các bạn đừng bị thầy cô lừa dối, bởi
-                        vì máy tính vốn chỉ hiểu một ngôn ngữ duy nhất, đó là
-                        ngôn ngữ máy (machine code).
-                      </p>
-                      <a
-                        href="news-detail/2/huong-dan-assembly-64-bit"
-                        className="link"
-                      >
-                        <span>Read more</span>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="image-box">
-                    <div className="image-box-body">
-                      <h3 className="title">
-                        <a href="news-detail/3/huong-dan-assembly-64-bit-bai-2">
-                          Hướng dẫn Assembly 64bit - Bài 2.
-                        </a>
-                      </h3>
-                      <p>
-                        Tiếp theo bài trước, sau khi các bác đã có 1 chương
-                        trình hoàn chỉnh hiển thị dòng chữ “Hello World!”, bài
-                        này sẽ hướng dẫn các bạn viết một hàm hoàn chỉnh trong
-                        assembly nhằm mục đích mô-đun hoá ứng dụng.
-                      </p>
-                      <a
-                        href="news-detail/3/huong-dan-assembly-64-bit-bai-2"
-                        className="link"
-                      >
-                        <span>Read more</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </aside>
+            <RelatedPost
+              slug={post.fields.slug}
+              tags={post.frontmatter[`tags_${language}`]}
+            />
             {/* sidebar end */}
           </div>
         </div>
@@ -142,11 +115,30 @@ const BlogPost = (props) => {
   )
 }
 
-export default BlogPost
-export const query = graphql`
-query ($slug: String!) {
-  markdownRemark(fields: {slug: {eq: $slug}}) {
-    html
-  }
+const mapStateToProps = ({ language }) => {
+  return { language }
 }
+export default connect(
+  mapStateToProps,
+  null
+)(BlogPost)
+export const query = graphql`
+  query($slug: String) {
+    post: markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      fields {
+        slug
+      }
+      frontmatter {
+        tags_en
+        author_en
+        blog_title_en
+        blog_date_en
+        tags_vn
+        author_vn
+        blog_title_vn
+        blog_date_vn
+      }
+    }
+  }
 `

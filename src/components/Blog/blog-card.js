@@ -16,23 +16,40 @@ const CardBlog = ({
   author,
   linkBlog,
   linkImg,
+  iframe,
   toggleOverlay,
 }) => {
   const [open, setOpen] = useState(false)
-  const month = ['','Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
-  postmonth = postmonth.includes('0') ? postmonth.substring(1,2) : postmonth
+
+  const month = [
+    "",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ]
+  postmonth = postmonth.includes("0") ? postmonth.substring(1, 2) : postmonth
   const [showModal, hideModal] = useModal(() => (
     <ReactModal isOpen>
       <div
-        style={{ width: "100%" }}
+        className="open-div"
+        style={{ width: "100vw", height: "100vh" }}
         onClick={() => {
           hideModal()
           setOpen(false)
           toggleOverlay(false)
         }}
       >
-        <div>&nbsp;</div>
-        <img src={src} alt="img"></img>
+        <div className="off-modal"></div>
+        <img src={src} alt=""></img>
       </div>
     </ReactModal>
   ))
@@ -77,20 +94,33 @@ const CardBlog = ({
               color: "transparent",
             }}
           ></Link>
-          <img
-            src={src}
-            alt="Những Material component tuyệt vời trong React Native."
-          />
-          <div className={"overlay "}>
-            <div className="overlay-links">
-              <Link to={linkBlog}>
-                <i className="fa fa-link" />
-              </Link>
-              <a href={"/"} className="popup-img-single" title="image title">
-                <i className="fa fa-search-plus" />
-              </a>
-            </div>
-          </div>
+          {iframe ? (
+            <td
+              className="iframe-small"
+              dangerouslySetInnerHTML={{ __html: iframe }}
+            />
+          ) : (
+            <React.Fragment>
+              <img
+                src={src}
+                alt="Những Material component tuyệt vời trong React Native."
+              />
+              <div className={"overlay "}>
+                <div className="overlay-links">
+                  <Link to={linkBlog}>
+                    <i className="fa fa-link" />
+                  </Link>
+                  <a
+                    href={"/"}
+                    className="popup-img-single"
+                    title="image title"
+                  >
+                    <i className="fa fa-search-plus" />
+                  </a>
+                </div>
+              </div>
+            </React.Fragment>
+          )}
         </div>
         <div className="blogpost-body">
           <div className="post-info">
@@ -99,26 +129,28 @@ const CardBlog = ({
             <span className="year">{postyear}</span>
           </div>
           <div className="blogpost-content">
-            <header>
+            <header className="blog-card-header">
               <h2 className="title">
-                <Link to ={linkBlog} className="post-title">{cardTitle}</Link>
+                <Link to={linkBlog} className="post-title">
+                  {cardTitle}
+                </Link>
               </h2>
-              <div className="submitted">
+              <div className=" blog-card-author submitted">
                 <i className="fa fa-user pr-5" /> by{" "}
-                <Link to="/blog">{author}</Link>
+                <a href="/blog">{author}</a>
               </div>
             </header>
-            <p>{cardContent}</p>
+            <p className="card-content">{cardContent}</p>
           </div>
         </div>
         <footer className="clearfix hidden">
           <ul className="links pull-left hidden">
             <li>
               <i className="fa fa-comment-o pr-5" />{" "}
-              <Link to="/blog">20  comments</Link> |
+              <a href="/blog">20 comments</a> |
             </li>
             <li>
-              <i className="fa fa-tags pr-5" /> <a href="/blog">{'tag'}</a>
+              <i className="fa fa-tags pr-5" /> <a href="/blog">{"tag"}</a>
             </li>
           </ul>
           <Link className="pull-right link" to={linkBlog}>
@@ -134,4 +166,7 @@ const mapDispatchToProps = dispatch => {
     toggleOverlay: open => dispatch({ type: `TOGGLE_OVERLAY`, open: open }),
   }
 }
-export default connect(null, mapDispatchToProps)(CardBlog)
+export default connect(
+  null,
+  mapDispatchToProps
+)(CardBlog)

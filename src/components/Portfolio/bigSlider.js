@@ -7,7 +7,6 @@ const { Element } = BannerAnim
 const BgElement = Element.BgElement
 
 const BigSlider = ({ listImg, handleOpenSlider}) => {
-  console.log(listImg)
   return (
     <>
       <RemoveScrollBar />

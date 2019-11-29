@@ -486,16 +486,16 @@ collections:
             label: "Tab 4"
             widget: "object"
             fields:
-              - { label: "Title",name: "tab-title-en-4",widget: "string"}  
-              - { label: "Description",name: "tab-desc-en-4",widget: "string"}  
-              - { label: "Image",name: "tab-img-en-4",widget: "image"}  
+              - { label: "Title", name: "tab-title-en-4", widget: "string"}  
+              - { label: "Description", name: "tab-desc-en-4", widget: "string"}  
+              - { label: "Image", name: "tab-img-en-4", widget: "image"}  
   
-   #Services page in Vietnamese
-  
-  # Services page in Vietnamese
+            
+#Services page in Vietnamese
+
   - name: "banner-service-vn"
     label: "Services- Tiếng Việt"
-    folder: "src/data/vi/services/banner"
+    folder: "src/data/vi/services/banner"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
