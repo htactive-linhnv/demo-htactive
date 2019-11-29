@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 import { connect } from "react-redux"
 import { Parallax } from "react-parallax"
 import { graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Banner from "../components/Services/banner"
@@ -27,7 +26,8 @@ export const query = graphql`
     }
   }
 `
-const Services = ({ data, language }) => {
+const Services = ({ data, language, changeActive }) => {
+  changeActive("2")
   const [scrollY, setScrollY] = useState(0)
   const logit = () => {
     setScrollY(window.pageYOffset)
@@ -49,7 +49,7 @@ const Services = ({ data, language }) => {
           data.allMarkdownRemark.edges[0].node.frontmatter.banner_services
             .banner_img
         }
-        style={{marginTop:`${scrollY>182?"147px":"0"}`}}
+        style={{ marginTop: `${scrollY > 182 ? "147px" : "0"}` }}
         strength={500}
       >
         <div style={{ height: 400 }}>
@@ -64,4 +64,12 @@ const mapStateToProps = ({ language }) => {
   return { language }
 }
 
-export default connect(mapStateToProps)(Services)
+const mapDispatchToProps = dispatch => {
+  return {
+    changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
+  }
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Services)

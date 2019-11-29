@@ -5,7 +5,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Banner from "../components/Portfolio/banner"
 import PortfolioContent from "../components/Portfolio/portfolioContent"
-const PortfolioPage = () => {
+import { connect } from "react-redux"
+const PortfolioPage = ({changeActive}) => {
+  changeActive('3')
   const [scrollY, setScrollY] = useState(0)
   const logit = () => {
     setScrollY(window.pageYOffset)
@@ -22,10 +24,10 @@ const PortfolioPage = () => {
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <Parallax 
-      bgImage={PortfolioBanner} 
-      strength={500}
-      style={{marginTop:`${scrollY>182?"147px":"0"}`}}
+      <Parallax
+        bgImage={PortfolioBanner}
+        strength={500}
+        style={{ marginTop: `${scrollY > 182 ? "147px" : "0"}` }}
       >
         <div style={{ height: 400 }}>
           <Banner />
@@ -35,4 +37,12 @@ const PortfolioPage = () => {
     </Layout>
   )
 }
-export default PortfolioPage
+const mapDispatchToProps = dispatch => {
+  return {
+    changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
+  }
+}
+export default connect(
+  null,
+  mapDispatchToProps
+)(PortfolioPage)
