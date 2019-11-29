@@ -46,7 +46,7 @@ const SubPortfolio = ({ data, language, changeSlug }) => {
     <Layout>
       <SEO title="Portfolio" />
       <div
-        className={`page-intro ${scrollY>182?"solveBlink":""} `}       
+        className={`main-container ${scrollY>182?"solveBlink":""} `}       
       >
         <div className="container">
           <div className="row">
