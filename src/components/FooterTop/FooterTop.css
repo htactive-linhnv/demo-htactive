@@ -81,3 +81,7 @@ blockquote {
     transform: translate3d(-570px, 0px, 0px);
   }
 }
+blockquote.inline {
+  margin-top: 30px;
+  margin-left: 15%;
+}

@@ -30,7 +30,6 @@ const ServiceSection = ({ language, title, lead, tag_name }) => {
     item => item.node.frontmatter.card_services.language === keyword  )  
   const listCardData = rawData.map(item => item.node.frontmatter.card_services)
   const filterTagData= listCardData.filter(item=> item.tag_card===tag_name)
-  console.log(filterTagData)
   return (
     <div className="main col-md-12">
       <h1 className="page-title">{title}</h1>
