@@ -1,24 +1,12 @@
-import React, {useState, useEffect} from "react"
+import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
 import RelatedPost from "../components/Blog/RelatedPost"
 import { connect } from "react-redux"
 
-const BlogPost = ({ data, language }) => {
-  const [scrollY, setScrollY] = useState(0)
-  const logit = () => {
-    setScrollY(window.pageYOffset)
-  }
-  useEffect(() => {
-    function watchScroll() {
-      window.addEventListener("scroll", logit)
-    }
-    watchScroll()
-    return () => {
-      window.removeEventListener("scroll", logit)
-    }
-  }, [])
+const BlogPost = ({ data, language,changeActive }) => {
+  changeActive('4')
   const post = data.post
   const monthList = [
     "",
@@ -81,7 +69,7 @@ const BlogPost = ({ data, language }) => {
                         <ul className="social-links clearfix">
                           <li className="facebook">
                             <a
-                              
+                              target="_blank"
                               href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F`}
                             >
                               <i className="fa fa-facebook" />
@@ -90,7 +78,7 @@ const BlogPost = ({ data, language }) => {
                           <li className="twitter">
                             <a
                               href={`https://twitter.com/intent/tweet/?text=Check%20out%20this%20website!&url=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F&via=HTActive"`}
-                              
+                              target="_blank"
                             >
                               <i className="fa fa-twitter" />
                             </a>
@@ -98,7 +86,7 @@ const BlogPost = ({ data, language }) => {
                           <li className="googleplus">
                             <a
                               href={`https://plus.google.com/share?url=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F`}
-                          
+                              target="_blank"
                             >
                               <i className="fa fa-google-plus" />
                             </a>
@@ -140,9 +128,14 @@ const BlogPost = ({ data, language }) => {
 const mapStateToProps = ({ language }) => {
   return { language }
 }
+const mapDispatchToProps = dispatch => {
+  return {
+    changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
+  }
+}
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(BlogPost)
 export const query = graphql`
   query($slug: String) {

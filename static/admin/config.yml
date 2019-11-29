@@ -501,557 +501,150 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Tiêu đề Trang", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - name: "banner-services"
-        label: "banner-services"
-        widget: "object"
-        fields:
-          - { label: "Ảnh nền Banner", name: "banner-img", widget: "image" }
-          - { label: " Tiêu đề banner", name: "banner-title", widget: "string" }
-          - label: " Lời dẫn banner"
-            name: "banner-leads"
-            widget: "list" 
-            fields: 
-               - { label: "Nội dung", name: "banner-lead", widget: "string"}
-          - {
-              label: "Ngôn ngữ",
-              name: "language",
-              widget: "string",
-              default: "vn",
-            }
+     - { label: "Tiêu đề Trang", name: "title", widget: "string" }
+     - { label: "Publish Date", name: "date", widget: "datetime" }    
+     - name: "banner-services"
+       label: "banner-services"
+       widget: "object"
+       fields: 
+          - { label: "Ảnh nền Banner", name: "banner-img", widget: "image"}
+          - { label: " Tiêu đề banner", name: "banner-title", widget: "string" } 
+          - { label: " Lời dẫn banner", name: "banner-lead", widget: "string" }    
   - name: "service-categories-vn"
     label: "Services-Thể loại- Tiếng Việt"
-    folder: "src/data/vi/services/categories"
+    folder: "src/data/vi/services/categories"    
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  
     editor:
       preview: false
     fields:
-      - { label: "Tiêu đề thể loại ", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - name: "service-category"
-        label: "Loại dịch vụ"
-        widget: "object"
-        fields:
-          - { label: "ID", name: "id", widget: "number" }
-          - {
-              label: " Tiêu đề Dịch vụ",
-              name: "category-title",
-              widget: "string",
-            }
-          - {
-              label: " Lời dẫn Dịch vụ",
-              name: "category-lead",
-              widget: "string",
-            }
-          - { label: " Tên đuôi", name: "tag-name", widget: "string" }
-          - {
-              label: "Ngôn ngữ",
-              name: "language",
-              widget: "string",
-              default: "vn",
-            }
-
+     - { label: "Tiêu đề thể loại ", name: "title", widget: "string" }
+     - { label: "Publish Date", name: "date", widget: "datetime" }    
+     - name: "service-category"
+       label: "Loại dịch vụ"
+       widget: "object"
+       fields:          
+          - { label: "ID", name: "id", widget: "number" } 
+          - { label: " Tiêu đề Dịch vụ", name: "category-title", widget: "string" } 
+          - { label: " Lời dẫn Dịch vụ", name: "category-lead", widget: "string" }   
+          - { label: " Tên đuôi", name: "tag-name", widget: "string" }   
+                  
   - name: "services-card-vn"
     label: "Services-Thẻ- Tiếng Việt"
     folder: "src/data/vi/services/card"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"   
     editor:
-      preview: false
+       preview: false
     fields:
       - { label: "Tiêu đề thẻ ", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - name: "card-services"
         label: "card-services"
         widget: "object"
-        fields:
-          - { label: "Ảnh của card", name: "card-img", widget: "image" }
-          - { label: " Tiêu đề Card", name: "card-title", widget: "string" }
-          - { label: "Mô tả card", name: "card-lead", widget: "string" }
-          - { label: "Thể loại card", name: "tag-card", widget: "string" }
-          - {
-              label: "Ngôn ngữ",
-              name: "language",
-              widget: "string",
-              default: "vn",
-            }
-
-  # Services page in English
+        fields: 
+          - { label: "Ảnh của card", name: "card-img", widget: "image"}
+          - { label: " Tiêu đề Card", name: "card-title", widget: "string" } 
+          - { label: "Mô tả card", name: "card-lead", widget: "string" }    
+          - { label: "Thể loại card", name: "tag-card", widget: "string" } 
+      
+# Services page in English
   - name: "banner-service-en"
     label: "Services- English"
-    folder: "src/data/en/services/banner"
+    folder: "src/data/en/services/banner"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: "Page Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - name: "banner-services"
-        label: "banner-services"
-        widget: "object"
-        fields:
-          - {
-              label: "Language",
-              name: "language",
-              widget: "string",
-              default: "en",
-            }
-          - { label: "Background Image", name: "banner-img", widget: "image" }
-          - { label: "Banner tiltle", name: "banner-title", widget: "string" }
-          - label: "Banner Leads"
-            name: "banner-leads"
-            widget: "list" 
-            fields: 
-               - { label: "Content", name: "banner-lead", widget: "string"}
-         
+     - { label: "Page Title", name: "title", widget: "string" }
+     - { label: "Publish Date", name: "date", widget: "datetime" }    
+     - name: "banner-services"
+       label: "banner-services"
+       widget: "object"
+       fields: 
+          - { label: "language", name: "language", widget: "string", default: "en" }    
+          - { label: "Background Image", name: "banner-img", widget: "image"}
+          - { label: "Banner tiltle", name: "banner-title", widget: "string" } 
+          - { label: "Banner lead", name: "banner-lead", widget: "string" }    
   - name: "service-categories"
     label: "Services-Category"
-    folder: "src/data/en/services/categories"
+    folder: "src/data/en/services/categories"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: "Category title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - name: "service-category"
-        label: "Category title"
-        widget: "object"
-        fields:
-          - { label: "id", name: "id", widget: "number" }
-          - {
-              label: "Language",
-              name: "language",
-              widget: "string",
-              default: "en",
-            }
-          - {
-              label: "Category title",
-              name: "category-title",
-              widget: "string",
-            }
-          - { label: "Category lead", name: "category-lead", widget: "string" }
-          - { label: "Tag name", name: "tag-name", widget: "string" }
-
+     - { label: "language", name: "language", widget: "string", default: "en" }    
+     - { label: "Category title", name: "title", widget: "string" }
+     - { label: "Publish Date", name: "date", widget: "datetime" }    
+     - name: "service-category"
+       label: "Category title"
+       widget: "object"
+       fields:    
+          - { label: "id", name: "id", widget: "number" }        
+          - { label: "language", name: "language", widget: "string", default: "en" }    
+          - { label: "Category title", name: "category-title", widget: "string" } 
+          - { label: "Category lead", name: "category-lead", widget: "string" }  
+          - { label: "Tag name", name: "tag-name", widget: "string" }    
+                  
   - name: "services-card"
     label: "Services-Card"
     folder: "src/data/en/services/card"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
-      preview: false
+       preview: false
     fields:
+      - { label: "language", name: "language", widget: "string", default: "en" }    
       - { label: "Card title ", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - name: "card-services"
         label: "card-services"
         widget: "object"
-        fields:
-          - {
-              label: "Language",
-              name: "language",
-              widget: "string",
-              default: "en",
-            }
-          - { label: "Card image", name: "card-img", widget: "image" }
-          - { label: " Card title", name: "card-title", widget: "string" }
-          - { label: "Card description", name: "card-lead", widget: "string" }
-          - { label: "Card-tag", name: "tag-card", widget: "string" }
-
-  #Portfolio page in Vietnamese
-  - name: "banner-portfolio-vn"
-    label: "Portfolio- Tiếng Việt"
-    folder: "src/data/vi/portfolio/banner"
+        fields: 
+          - { label: "language", name: "language", widget: "string", default: "en" }    
+          - { label: "Card image", name: "card-img", widget: "image"}
+          - { label: " Card title", name: "card-title", widget: "string" } 
+          - { label: "Card description", name: "card-lead", widget: "string" }    
+          - { label: "Card-tag", name: "tag-card", widget: "string" } 
+#Blog page in English
+  - name: "blog-en"
+    label: "Blog - English"
+    folder: "src/data/en/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
+    identifier_field: blog-title-en
     editor:
-      preview: false
+     preview: false
     fields:
-      - { label: "Tiêu đề Trang", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - name: "banner-portfolio"
-        label: "banner-portfolio"
-        widget: "object"
-        fields:
-          - { label: "Ảnh nền Banner", name: "banner-img", widget: "image" }
-          - { label: " Tiêu đề banner", name: "banner-title", widget: "string" }
-          - label: " Lời dẫn banner"
-            name: "banner-leads"
-            widget: "list" 
-            fields: 
-               - { label: "Nội dung", name: "banner-lead", widget: "string"}
-          - {
-              label: "Ngôn ngữ",
-              name: "language",
-              widget: "string",
-              default: "vn",
-            }
-  - name: "Portfolio-categories-vn"
-    label: "Portfolio-Thể loại- Tiếng Việt"
-    folder: "src/data/vi/portfolio/categories"
+      - { label: "Title", name: "blog-title-en", widget: "string" }
+      - { label: "Publish Date", name: "blog-date-en", widget: "datetime" }
+      - { label: "Description", name: "blog-description-en", widget: "string" }
+      - { label: "Author", name: "author-en", widget: "string" }
+      - { label: "Tags", name: "tags-en", widget: "list",default: ["Code"] }
+      - { label: "Featured Image", name: "thumbnail-en", widget: "image"}
+      - { label: "Video Iframe", name: "iframe-en", widget: "string",hint: "Iframe here will be thumbnail, input embbed code",required: false}
+      - { label: "Body", name: "body", widget: "markdown" }
+#Blog page in Tiếng Việt
+  - name: "blog-vn"
+    label: "Blog - Tiếng Việt"
+    folder: "src/data/vi/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
+    identifier_field: blog-title-vn
     editor:
-      preview: false
+     preview: false
     fields:
-      - { label: "Tiêu đề thể loại ", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - name: "portfolio-category"
-        label: "Portfolio: Thể loại "
-        widget: "object"
-        fields:
-          - { label: "ID", name: "id", widget: "number" }
-          - {
-              label: "Tiêu đề Thể loại",
-              name: "category-title",
-              widget: "string",
-            }
-          - { label: "Tên đuôi", name: "tag-name", widget: "string" }
-          - {
-              label: "Ngôn ngữ",
-              name: "language",
-              widget: "string",
-              default: "vn",
-            }
-
-  - name: "Portfolio-card-vn"
-    label: "Portfolio-Thẻ- Tiếng Việt"
-    folder: "src/data/vi/portfolio/card"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Tiêu đề thẻ ", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - name: "card-portfolio"
-        label: "card-portfolio"
-        widget: "object"
-        fields:
-          - { label: "ID", name: "cardId", widget: "number" }
-          - { label: "Ảnh của card", name: "card-img", widget: "image" }
-          - { label: " Tiêu đề Card", name: "card-title", widget: "string" }
-          - {
-              label: " Đường dẫn card(slug)",
-              name: "card-slug",
-              widget: "string",
-            }
-          - { label: "Mô tả card", name: "card-lead", widget: "string" }
-          - { label: "Thể loại card", name: "tag-card", widget: "string" }
-          - {
-              label: "Ngôn ngữ",
-              name: "language",
-              widget: "string",
-              default: "vn",
-            }
-          - name: "card-page"
-            label: "Trang thẻ"
-            widget: "object"
-            fields:
-              - name: "footer-portfolio"
-                label: "Footer"
-                widget: "list"
-                fields: 
-                   - {label: "Tên Store", name: "store-title", widget: "string"}
-                   - {label: "Đường dẫn Store", name: "store-link", widget: "string"}
-              - name: "slider-img"
-                label: "Ảnh của Slider"
-                widget: "list"
-                required: false
-                fields:
-                  - {
-                      label: "ID",
-                      name: "id",
-                      widget: "number",
-                      required: false,
-                    }
-                  - {
-                      label: "Slider",
-                      name: "slider",
-                      widget: "image",
-                      required: false,
-                    }
-              
-              - {
-                  label: "Video",
-                  name: "video-url",
-                  widget: "string",
-                  required: false,
-                }
-                #Product detail
-              - name: "product-detail"
-                label: "Mô tả sản phẩm"
-                widget: "object"
-                fields:
-                  - name: "product-detail"
-                    label: "Chi tiết"
-                    widget: "list"
-                    fields:
-                      - {
-                          label: "ID",
-                          name: "detail-id",
-                          widget: "number",
-                          required: false,
-                        }
-                      - {
-                          label: "Tên chi tiết",
-                          name: "name",
-                          widget: "string",
-                          required: false,
-                        }
-                      - name: "content-list"
-                        label: "Nội dung"
-                        required: false
-                        widget: "list"
-                        fields:
-                          - {
-                              label: "Nội dung",
-                              name: "content",
-                              widget: "string",
-                              required: false,
-                            }
-
-                #Product Description
-              - name: "product-description"
-                label: "Công nghệ"
-                widget: "object"
-                fields:
-                  - name: "product-desc"
-                    label: "desc"
-                    widget: "list"
-                    fields:
-                      - {
-                          label: "ID",
-                          name: "desc-id",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Tên công nghệ",
-                          name: "name",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Nội dung",
-                          name: "tech-content",
-                          widget: "string",
-                          required: false,
-                        }
-                        #Nhận xét (only have in vietnamese)
-              - name: "product-comment"
-                label: "Nhận xét"
-                widget: "object"
-                fields:
-                  - name: "product-comment"
-                    label: "Comment"
-                    widget: "list"
-                    fields:
-                      - {
-                          label: "ID",
-                          name: "comment-id",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Tiêu đề",
-                          name: "title",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Nội dung",
-                          name: "comment-content",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Ngày tháng",
-                          name: "comment-date",
-                          widget: "string",
-                          required: false,
-                        }
-
-                #Portfolion in English
-  - name: "banner-portfolio-en"
-    label: "Portfolio-Banner"
-    folder: "src/data/en/portfolio/banner"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Banner Portfolio", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - name: "banner-portfolio"
-        label: "banner-portfolio"
-        widget: "object"
-        fields:
-          - { label: "Banner-image", name: "banner-img", widget: "image" }
-          - { label: "Banner-title", name: "banner-title", widget: "string" }
-          - label: "Banner Leads"
-            name: "banner-leads"
-            widget: "list" 
-            fields: 
-               - { label: "Content", name: "banner-lead", widget: "string"}
-          - {
-              label: "Language",
-              name: "language",
-              widget: "string",
-              default: "en",
-            }
-  - name: "Portfolio-categories-en"
-    label: "Portfolio-Categories"
-    folder: "src/data/en/portfolio/categories"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Category title ", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - name: "portfolio-category"
-        label: "Portfolio Category "
-        widget: "object"
-        fields:
-          - { label: "ID", name: "id", widget: "number" }
-          - {
-              label: "Category Title",
-              name: "category-title",
-              widget: "string",
-            }
-          - { label: "Tag Name", name: "tag-name", widget: "string" }
-          - {
-              label: "Language",
-              name: "language",
-              widget: "string",
-              default: "en",
-            }
-
-  - name: "Portfolio-card-en"
-    label: "Portfolio-Card"
-    folder: "src/data/en/portfolio/card"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title Card", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - name: "card-portfolio"
-        label: "card-portfolio"
-        widget: "object"
-        fields:
-          - { label: "ID", name: "cardId", widget: "number" }
-          - { label: "Card Image", name: "card-img", widget: "image" }
-          - { label: "Card Title", name: "card-title", widget: "string" }
-          - { label: "Slug", name: "card-slug", widget: "string" }
-          - { label: "Card lead", name: "card-lead", widget: "string" }
-          - { label: "Card tag name", name: "tag-card", widget: "string" }
-          - {
-              label: "Language",
-              name: "language",
-              widget: "string",
-              default: "en",
-            }
-          - name: "card-page"
-            label: "Page of Card Temple"
-            widget: "object"
-            fields:
-              - name: "footer-portfolio"
-                label: "Footer"
-                widget: "list"
-                fields: 
-                   - {label: "Store Title", name: "store-title", widget: "string"}
-                   - {label: "Store Link", name: "store-link", widget: "string"}
-              - name: "slider-img"
-                label: "Slider image"
-                widget: "list"
-                required: false
-                fields:
-                  - {
-                      label: "ID",
-                      name: "id",
-                      widget: "number",
-                      required: false,
-                    }
-                  - {
-                      label: "Slider",
-                      name: "slider",
-                      widget: "image",
-                      required: false,
-                    }
-
-              - {
-                  label: "Video",
-                  name: "video-url",
-                  widget: "string",
-                  required: false,
-                }
-                #Product detail
-              - name: "product-detail"
-                label: "Product section"
-                widget: "object"
-                fields:
-                  - name: "product-detail"
-                    label: "Product detail"
-                    widget: "list"
-                    fields:
-                      - {
-                          label: "ID",
-                          name: "detail-id",
-                          widget: "number",
-                          required: false,
-                        }
-                      - {
-                          label: "Detail name",
-                          name: "name",
-                          widget: "string",
-                          required: false,
-                        }
-                      - name: "content-list"
-                        label: "Detail contents"
-                        required: false
-                        widget: "list"
-                        fields:
-                          - {
-                              label: "Content",
-                              name: "content",
-                              widget: "string",
-                              required: false,
-                            }
-
-                #Product Description
-              - name: "product-description"
-                label: "Descriptions"
-                widget: "object"
-                fields:
-                  - name: "product-desc"
-                    label: "desc"
-                    widget: "list"
-                    fields:
-                      - {
-                          label: "ID",
-                          name: "desc-id",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Description Name",
-                          name: "name",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Description content",
-                          name: "tech-content",
-                          widget: "string",
-                          required: false,
-                        }
-
+      - { label: "Tiêu đề", name: "blog-title-vn", widget: "string" }
+      - { label: "Ngày viết", name: "blog-date-vn", widget: "datetime" }
+      - { label: "Tóm tắt", name: "blog-description-vn", widget: "string" }
+      - { label: "Tác giả", name: "author-vn", widget: "string" }
+      - { label: "Tags", name: "tags-vn", widget: "list",default: ["Code"] }
+      - { label: "Ảnh thumbnail", name: "thumbnail-vn", widget: "image"}
+      - { label: "Video Iframe", name: "iframe-vn", widget: "string",hint: "Iframe here will be thumbnail, input embbed code",required: false}
+      - { label: "Body", name: "body", widget: "markdown" }
+      
 
   
           

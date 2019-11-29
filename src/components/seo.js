@@ -66,7 +66,7 @@ const SEO = ({
     "Our Portfolios",
     "News",
     "Contact",
-  ].filter((item, index) => index + 1 === active)
+  ].filter((item, index) => index + 1 == active)
   return (
     <>
       <Helmet

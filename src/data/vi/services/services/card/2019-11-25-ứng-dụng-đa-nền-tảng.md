@@ -8,6 +8,5 @@ card-services:
     ReactNative, NativeScript...
   card-title: Ứng dụng đa nền tảng
   tag-card: mobileApp
-  language: vn
 ---
 
