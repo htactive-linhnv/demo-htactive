@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link } from 'gatsby'
 import NavBar from "./navbar"
 const HeaderFixed = ({ color,menu,language }) => {
   const [scrollY, setScrollY] = useState(0)
@@ -22,11 +23,11 @@ const HeaderFixed = ({ color,menu,language }) => {
         <div className="row header-fixed">
           <div className={`col-md-3 ${scrollY > 182 ? "header-left-fixed" : ""}`}>
             <div className="header-left clearfix">
-              <a
-                href="/"             
+              <Link
+                to="/"             
               >
                 <div className={`logo ${scrollY > 182 ? "logo-fixed" : ""}`}></div>
-              </a>
+              </Link>
               <div
                 className="site-slogan"
                 style={{ display: `${scrollY > 182 ? "none" : "block"}` }}
