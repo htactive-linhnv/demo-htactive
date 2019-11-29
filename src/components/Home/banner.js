@@ -8,16 +8,15 @@ import ProgressBar from "./progressBar"
 
 const { Element } = BannerAnim
 const BgElement = Element.BgElement
-const Banner = ({ data, language }) => {
+const Banner = ({ data, language, changeSlug }) => {
   const dataUse = data.frontmatter[`slide_${language}`] || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
-
-
+  
   const [scrollY, setScrollY] = useState(0)
   const logit = () => {
     setScrollY(window.pageYOffset)
   }
-  useEffect(() => {
+  useEffect(() => {    
     function watchScroll() {
       window.addEventListener("scroll", logit)
     }
@@ -58,7 +57,7 @@ const Banner = ({ data, language }) => {
     },
   ]
   return (
-    <div className="banner" style={{paddingTop:`${scrollY>182?"150px":"0"}`}}>
+    <div className={`banner ${scrollY>182?"solveBlink":""}`}>
       <BannerAnim
         autoPlay
         autoPlaySpeed={10000}
@@ -104,30 +103,9 @@ const Banner = ({ data, language }) => {
     </div>
   )
 }
+
 export default Banner
 
-// const data2 = [
-//   {
-//     bg: dataArr[6],
-//     title: "HT Active - Professional Software Solutions",
-//     lead: "Provide Best Services+New Technology+Best Quality+Support 24/7",
-//     more: "And much more ...",
-//     img: "",
-//   },
 
-//   {
-//     bg: dataArr[7],
-//     title: "We Provide All You Need",
-//     lead: "Website Application+Windows Application+Mobile Application+Game",
-//     more: "And more software solutions...",
-//     img: `${MacImg}`,
-//   },
-//   {
-//     bg: dataArr[8],
-//     title: "Satisfaction Is What You Need",
-//     lead:
-//       "Clean and unique design+After sale support+Cross-Browser/ Cross-Platform Compatible+Young and Brilliant Team",
-//     more: "Dont miss out!",
-//     img: "",
-//   },
-// ]
+
+

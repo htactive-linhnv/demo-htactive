@@ -603,7 +603,7 @@
 }
 .gray-bg {
   color: #333333 !important;
-  background-color: #555555 !important;
+  background-color: #555555 ;
 }
 .gray-light-bg {
   color: #333333 !important;
@@ -5789,7 +5789,6 @@ fieldset[disabled] .btn-yahoo.active {
   right: 10px;
   display: none;
 }
-
 #back-to-top a:hover {
   background-color: #303946;
 }

@@ -8,5 +8,6 @@ card-services:
     phí.
   card-title: Website bán hàng
   tag-card: web
+  language: vn
 ---
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { connect } from "react-redux"
 import { Parallax } from "react-parallax"
 import { graphql } from "gatsby"

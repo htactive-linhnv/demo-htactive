@@ -6,5 +6,6 @@ service-category:
   category-title: VỀ MẢNG ỨNG DỤNG DI ĐỘNG
   id: 3
   tag-name: mobileApp
+  language: vn
 ---
 

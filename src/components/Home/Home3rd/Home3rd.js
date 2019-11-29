@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import "../Home3rd/Home3rd.css"
-import { Link } from "gatsby"
 import TextCenter from "../TextCenter/TextCenter"
 const Home3rd = ({ data, language }) => {
   const [toggleStatus, setToggleStatus] = useState(1)
@@ -31,7 +30,7 @@ const Home3rd = ({ data, language }) => {
         }}
         className={toggleStatus === position ? "active " : ""}
       >
-        <a role="tab" data-toggle="tab">
+        <a href="/" role="tab" data-toggle="tab">
           {item[`tab_title_${language}_${position}`]}
         </a>
       </li>

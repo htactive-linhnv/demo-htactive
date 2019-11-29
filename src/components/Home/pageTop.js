@@ -2,7 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 const PageTop = ({ data, language }) => {
-  const dataUse = data.frontmatter[`lead_${language}`] || {}
+  const dataUse = data.frontmatter[`lead_${language}`] || {} 
+
   return (
     <div className="page-top" style={{ marginTop: "0px" }}>
       <div className="container">
@@ -26,4 +27,6 @@ const PageTop = ({ data, language }) => {
     </div>
   )
 }
+
 export default PageTop
+

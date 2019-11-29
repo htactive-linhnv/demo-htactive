@@ -166,7 +166,7 @@ body {
   border: none;
 }
 .ant-collapse > .ant-collapse-item {
-  border-bottom: 5px solid white;
+  border-bottom: 5px solid #fafafa;
 }
 body {
   font-family: "Open Sans", sans-serif;

@@ -29,7 +29,7 @@ const BigSlider = ({ listImg, handleOpenSlider}) => {
                   top: "20px",
                   width: "100%",
                   height: "100%",
-                  backgroundImage: `url(${item.src})`,
+                  backgroundImage: `url(${item.slider})`,
                   backgroundSize: "200px auto",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
