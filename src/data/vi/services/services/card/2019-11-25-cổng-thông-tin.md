@@ -6,6 +6,5 @@ card-services:
   card-lead: Thiết kế và thi công các website về cổng thông tin điện tử và giáo dục.
   card-title: Cổng thông tin
   tag-card: web
-  language: vn
 ---
 

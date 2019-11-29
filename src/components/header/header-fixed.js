@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { connect } from "react-redux"
-
 import NavBar from "./navbar"
-import { Link } from "gatsby"
-
-const HeaderFixed = ({ color, menu }) => {
+const HeaderFixed = ({ color,menu,language }) => {
   const [scrollY, setScrollY] = useState(0)
   const logit = () => {
     setScrollY(window.pageYOffset)
@@ -20,19 +16,17 @@ const HeaderFixed = ({ color, menu }) => {
   }, [])
   return (
     <header
-      className={`header fixed ${scrollY > 182 ? "fixed-bar" : " "} clearfix`}
+      className={`header fixed ${scrollY > 182 ? "fixed-bar" : " "} clearfix`}     
     >
       <div className="container">
         <div className="row header-fixed">
-          <div
-            className={`col-md-3 ${scrollY > 182 ? "header-left-fixed" : ""}`}
-          >
+          <div className={`col-md-3 ${scrollY > 182 ? "header-left-fixed" : ""}`}>
             <div className="header-left clearfix">
-              <Link to="/">
-                <div
-                  className={`logo ${scrollY > 182 ? "logo-fixed" : ""}`}
-                ></div>
-              </Link>
+              <a
+                href="/"             
+              >
+                <div className={`logo ${scrollY > 182 ? "logo-fixed" : ""}`}></div>
+              </a>
               <div
                 className="site-slogan"
                 style={{ display: `${scrollY > 182 ? "none" : "block"}` }}
@@ -53,9 +47,4 @@ const HeaderFixed = ({ color, menu }) => {
     </header>
   )
 }
-const mapDispatchToProps = dispatch => {
-  return {
-    changeActive: value => dispatch({ type: `ACTIVE_NAVBAR`, active: value }),
-  }
-}
-export default connect(mapDispatchToProps)(HeaderFixed)
+export default HeaderFixed

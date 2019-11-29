@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { connect } from "react-redux"
 import { Link } from "gatsby"
 
-const HeaderTop = ({ language, changeLanguage, active, slug }) => {
+const HeaderTop = ({ language, changeLanguage, active }) => {
   const [openDropdown, setOpenDropdown] = useState(false)
   const [openToggle, setOpenToggle] = useState(false)
   let link = "/"
@@ -14,12 +14,12 @@ const HeaderTop = ({ language, changeLanguage, active, slug }) => {
       link = "/services/"
       break
     case "3":
-      link = "/products/"
+      link = "/portfolio/"
       break
     case "4":
       link = "/blog/"
       break
-    case "5":      
+    case "5":
       link = "/contact/"
       break
     default:
@@ -158,7 +158,7 @@ const HeaderTop = ({ language, changeLanguage, active, slug }) => {
                           setOpenDropdown(false)
                         }}
                       >
-                        <Link className="btn-link" to={slug.split("/")[1]!=="product-detail"?`${link}`:slug}>
+                        <Link className="btn-link" to={`${link}`}>
                           English
                         </Link>
                       </li>
@@ -168,7 +168,7 @@ const HeaderTop = ({ language, changeLanguage, active, slug }) => {
                           setOpenDropdown(false)
                         }}
                       >
-                        <Link className="btn-link" to={slug.split("/")[1]!=="product-detail"?`${link}`:`/vi${slug}`}>
+                        <Link className="btn-link" to={`${link}`}>
                           Tiếng Việt
                         </Link>
                       </li>
@@ -183,16 +183,13 @@ const HeaderTop = ({ language, changeLanguage, active, slug }) => {
     </div>
   )
 }
-const mapStateToProps = ({ language, active, slug }) => {
-  return { language, active, slug }
+const mapStateToProps = ({ language, active }) => {
+  return { language, active }
 }
 const mapDispatchToProps = dispatch => {
   return {
     changeLanguage: language =>
       dispatch({ type: `CHANGE_LANGUAGE`, language: language }),
-      changeSlug: slug =>
-      dispatch({ type: `CHANGE_SLUG`, slug: slug })
-      ,
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderTop)

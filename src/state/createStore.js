@@ -26,14 +26,10 @@ const reducer = (state, action) => {
       return Object.assign({}, state, {
         active: action.active,
       })
-    case "CHANGE_LANGUAGE":
+      case "CHANGE_LANGUAGE":
         return Object.assign({}, state, {
           language: action.language,
         })
-        case "CHANGE_SLUG":
-          return Object.assign({}, state, {
-            slug: action.slug,
-          }) 
     default:
       return state
   }
@@ -47,7 +43,6 @@ const initialState = {
   display: true,
   active: "1",
   language: "en",
-  slug:"/"
 }
 
 const createStore = () => reduxCreateStore(reducer, initialState)

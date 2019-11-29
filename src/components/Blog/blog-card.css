@@ -12,8 +12,7 @@
 .ReactModal__Overlay--after-open {
   z-index: 4000000000 !important;
   position: absolute !important;
-  background:none!important;
-
+  background: none !important;
 }
 .ReactModal__Content,
 .ReactModal__Content--after-open {

@@ -7,7 +7,7 @@ const WebApp = ({ language }) => {
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(
-        filter: { fields: { slug: { regex: "/services/categories/" } } }
+        filter: { fields: { slug: { regex: "/categories/" } } }
       ) {
         edges {
           node {
@@ -26,8 +26,9 @@ const WebApp = ({ language }) => {
     }
   `)
   const dataFromQuery = data.allMarkdownRemark.edges
+  const keyword = language === "vn" ? null : language
   const rawData = dataFromQuery.filter(
-    item => item.node.frontmatter.service_category.language === language
+    item => item.node.frontmatter.service_category.language === keyword
   )
   const categories = rawData.map(item => item.node.frontmatter.service_category).sort((a,b)=>a.id-b.id)
   return (
