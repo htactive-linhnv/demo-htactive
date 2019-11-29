@@ -49,7 +49,9 @@
 .ReactModal__Content--after-open > div > img:after {
   content:"Linh nguyễn";
 }
-
+.iframe-small {
+  display:block;
+}
 @media only screen and (max-width: 768px) {
   .ReactModal__Content--after-open > div > img {
     width:80%!important;

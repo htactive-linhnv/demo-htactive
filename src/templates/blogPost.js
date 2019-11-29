@@ -3,8 +3,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
 import RelatedPost from "../components/Blog/RelatedPost"
+import { connect } from "react-redux"
 
-const blogPost = ({ data }) => {
+const BlogPost = ({ data,language }) => {
   const post = data.post
   const monthList = [
     "",
@@ -37,26 +38,26 @@ const blogPost = ({ data }) => {
       <section className="main-container">
         <div className="container">
           <div className="row">
-            <div className="main col-md-8">
+            <div className="main col-lg-8">
               <h1 className="page-title">
-                {post.frontmatter[`blog_title_${"en"}`]}
+                {post.frontmatter[`blog_title_${language}`]}
               </h1>
               <article className="clearfix blogpost full">
                 <div className="blogpost-body">
                   <div className="side">
                     <div className="post-info">
                       <span className="day day--big">
-                        {getDate(post.frontmatter[`blog_date_${"en"}`])[0]}
+                        {getDate(post.frontmatter[`blog_date_${language}`])[0]}
                       </span>
                       <span className="month">
                         {
                           monthList[
-                            getDate(post.frontmatter[`blog_date_${"en"}`])[1]
+                            getDate(post.frontmatter[`blog_date_${language}`])[1]
                           ]
                         }
                       </span>
                       <span className="year">
-                        {getDate(post.frontmatter[`blog_date_${"en"}`])[2]}
+                        {getDate(post.frontmatter[`blog_date_${language}`])[2]}
                       </span>
                     </div>
                     <div id="affix" className="affix-top">
@@ -87,11 +88,14 @@ const blogPost = ({ data }) => {
                       <div className="submitted">
                         <i className="fa fa-user pr-5" /> by{" "}
                         <Link to="/blog">
-                          {post.frontmatter[`author_${"en"}`]}
+                          {post.frontmatter[`author_${language}`]}
                         </Link>
                       </div>
                     </header>
-                    <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                    <div
+                      className="blogPost-content"
+                      dangerouslySetInnerHTML={{ __html: post.html }}
+                    />
                   </div>
                   {}
                 </div>
@@ -99,7 +103,7 @@ const blogPost = ({ data }) => {
             </div>
             <RelatedPost
               slug={post.fields.slug}
-              tags={post.frontmatter[`tags_${"en"}`]}
+              tags={post.frontmatter[`tags_${language}`]}
             />
             {/* sidebar end */}
           </div>
@@ -109,7 +113,13 @@ const blogPost = ({ data }) => {
   )
 }
 
-export default blogPost
+const mapStateToProps = ({ language }) => {
+  return { language }
+}
+export default connect(
+  mapStateToProps,
+  null
+)(BlogPost)
 export const query = graphql`
   query($slug: String) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -122,8 +132,11 @@ export const query = graphql`
         author_en
         blog_title_en
         blog_date_en
+        tags_vn
+        author_vn
+        blog_title_vn
+        blog_date_vn
       }
     }
   }
 `
-
