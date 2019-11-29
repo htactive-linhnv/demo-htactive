@@ -40,16 +40,13 @@ const SubPortfolio = ({ data, language, changeSlug }) => {
       window.removeEventListener("scroll", logit)
     }
   }, [])
-  console.log(footerPortfolio)
+
 
   return (
     <Layout>
       <SEO title="Portfolio" />
       <div
-        className={`page-intro`}
-        style={{
-          marginTop: `${scrollY > 182 ? "200px" : ""}`,
-        }}
+        className={`page-intro ${scrollY>182?"solveBlink":""} `}       
       >
         <div className="container">
           <div className="row">

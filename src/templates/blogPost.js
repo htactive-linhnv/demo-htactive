@@ -48,7 +48,7 @@ const BlogPost = ({ data, language }) => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <section className="main-container">
+      <section   className={`main-container ${scrollY>182?"solveBlink":""} `}>
         <div className="container">
           <div className="row">
             <div className="main col-lg-8">

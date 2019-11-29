@@ -21,7 +21,7 @@ const HeaderFixed = ({ color, menu }) => {
   return (
     <header
       className={`header fixed ${scrollY > 182 ? "fixed-bar" : " "} clearfix`}
-    >
+    > 
       <div className="container">
         <div className="row header-fixed">
           <div
