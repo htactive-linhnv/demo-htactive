@@ -3,15 +3,15 @@ import NavBar from "./header/navbar"
 import { Link } from "gatsby"
 import { connect } from "react-redux"
 
-const Footer = ({ footer, menu, language, changeSlug }) => {
-  const engRoute = ["/", "/services", "/products", "/blog", "/contact"]
+const Footer = ({ footer, menu, language }) => {
+  const engRoute = ["/", "/services", "/portfolio", "/blog", "/contact"]
   let menuItem = []
   if (menu) {
     const dataUse = menu.frontmatter[`menu_${language}`] || {}
     const dataArr = Object.values(dataUse).map(item => item) || []
     menuItem = dataArr.map((item, index) => {
       return (
-        <li key={index} onClick={()=>changeSlug("/")}>
+        <li key={index}>
           <Link to={engRoute[index]}>{item}</Link>
         </li>
       )
@@ -28,7 +28,7 @@ const Footer = ({ footer, menu, language, changeSlug }) => {
               style={{ marginLeft: "0!important" }}
             >
               <div className="footer-content">
-                <Link to="/" onClick={()=>changeSlug("/")}>
+                <Link to="/">
                   <div >
                     <img className="logo-footer" alt="" src="/img/logo_footer.png"></img>
                   </div>
@@ -92,7 +92,7 @@ const Footer = ({ footer, menu, language, changeSlug }) => {
                     </ul>
                   </div>
                 </div>
-                <Link to="/contact" className="link-arrow link">
+                <Link to="/about" className="link-arrow link">
                   <span>{language === "en" ? "About Us" : "Về chúng tôi"}</span>
                 </Link>
               </div>
@@ -150,9 +150,7 @@ const Footer = ({ footer, menu, language, changeSlug }) => {
 const mapStateToProps = ({ active, language, color, footer }) => {
   return { active, language, color, footer }
 }
-const mapDispatchToProps = dispatch => {
-  return {
-    changeSlug: value => dispatch({ type: `CHANGE_SLUG`, slug: value }),
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Footer)
+export default connect(
+  mapStateToProps,
+  null
+)(Footer)

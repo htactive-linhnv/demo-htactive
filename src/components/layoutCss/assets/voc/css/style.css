@@ -29,7 +29,7 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 15px!important;
+  font-size: 15px;
   line-height: 1.5;
   color: #666666;
   background-color: #ffffff;
@@ -778,13 +778,10 @@ tbody {
   position: relative;
 }
 .parallax-bg {
-  background: url("../images/portfolio-6.jpg") 50% 0px no-repeat;
 }
 .parallax-bg-2 {
-  background: url("../images/portfolio-5.jpg") 50% 0px no-repeat;
 }
 .parallax-bg-3 {
-  background: url("../images/portfolio-3.jpg") 50% 0px no-repeat;
 }
 
 /* Custom Grid
@@ -1522,7 +1519,6 @@ tbody {
 /* Coming Soon Page
 ---------------------------------- */
 .fullscreen-bg {
-  background: url("../images/portfolio-8.jpg") 50% 0px no-repeat;
   position: fixed;
   top: 0;
   left: 0;

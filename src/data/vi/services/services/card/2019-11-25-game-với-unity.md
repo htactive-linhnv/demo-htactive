@@ -8,6 +8,5 @@ card-services:
     công cụ làm game Unity
   card-title: Game với Unity
   tag-card: game
-  language: vn
 ---
 

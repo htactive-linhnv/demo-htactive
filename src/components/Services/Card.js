@@ -12,7 +12,10 @@ const Card = ({ image, title, content }) => {
           <h3 className="title">
             <span>{title}</span>
           </h3>
-          <p className="cutline">{content}</p>         
+          <p className="cutline">{content}</p>
+          <a href="/product-detail/1/" className="link hidden">
+            <span>Read More</span>
+          </a>
         </div>
       </div>
     </div>
