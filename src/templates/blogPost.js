@@ -5,7 +5,8 @@ import { graphql, Link } from "gatsby"
 import RelatedPost from "../components/Blog/RelatedPost"
 import { connect } from "react-redux"
 
-const BlogPost = ({ data, language }) => {
+const BlogPost = ({ data, language,changeActive }) => {
+  changeActive('4')
   const post = data.post
   const monthList = [
     "",
@@ -127,9 +128,14 @@ const BlogPost = ({ data, language }) => {
 const mapStateToProps = ({ language }) => {
   return { language }
 }
+const mapDispatchToProps = dispatch => {
+  return {
+    changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
+  }
+}
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(BlogPost)
 export const query = graphql`
   query($slug: String) {

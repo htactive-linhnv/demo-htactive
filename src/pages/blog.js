@@ -4,7 +4,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogContent from "../components/Blog/blog-content"
 import { connect } from "react-redux"
-const Blog = ({ data, language }) => {
+const Blog = ({ data, language, changeActive }) => {
+  changeActive("4")
   const posts = data[`blog_${language}`].edges
   return (
     <Layout>
@@ -58,7 +59,12 @@ export const query = graphql`
 const mapStateToProps = ({ language }) => {
   return { language }
 }
+const mapDispatchToProps = dispatch => {
+  return {
+    changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
+  }
+}
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(Blog)

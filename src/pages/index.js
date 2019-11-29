@@ -11,7 +11,8 @@ import Home1st from "../components/Home/Home1st/Home1st"
 import { connect } from "react-redux"
 import Helmet from "react-helmet"
 
-const IndexPage = ({ data, color, footer, language }) => {
+const IndexPage = ({ data, color, footer, language,changeActive }) => {
+  changeActive('1')
   return (
     <Layout footer={footer} >
       <Helmet></Helmet>
@@ -29,9 +30,14 @@ const IndexPage = ({ data, color, footer, language }) => {
 const mapStateToProps = ({ color, footer, language }) => {
   return { color, footer, language }
 }
+const mapDispatchToProps = dispatch => {
+  return {
+    changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
+  }
+}
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(IndexPage)
 
 export const query = graphql`

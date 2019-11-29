@@ -17,7 +17,6 @@ export default ({ color, data,language }) => {
     "fa fa-weixin customwidth",
   ]
   const extraNode = index => <i className={fontAwesome[index]}></i>
-  console.log('')
   const dataRender = dataPanel.map((item, index) => (
     <Panel
       header={item[`home_panel_title_${language}_${index + 1}`]}
