@@ -3981,6 +3981,9 @@ a.overlay.small i {
   margin: 15px 0 5px;
   text-align: center;
 }
+.box-style-1 i, .box-style-1 p {
+  color:rgb(99, 98, 98);
+}
 .box-style-1:not(.team-member):hover i {
   color: #e84c3d;
   -webkit-transition: all 0.3s ease-in-out;
