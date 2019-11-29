@@ -1350,7 +1350,7 @@ body.fixed-header #slider {
   font-size: 16px;
 }
 #footer .footer-column .footer-map {
-  background: url(../img/globus.png) no-repeat left center;
+  /* background: url(../img/globus.png) no-repeat left center; */
   background-size: 40%;
 }
 #footer .footer-column .footer-link {
@@ -5789,16 +5789,7 @@ fieldset[disabled] .btn-yahoo.active {
   right: 10px;
   display: none;
 }
-#back-to-top a {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: rgba(0, 0, 0, 0.4) url(../img/backtop.png) no-repeat center center;
-  text-indent: -9999px;
-  border-radius: 3px;
-  transition: all;
-  transition-duration: 0.4;
-}
+
 #back-to-top a:hover {
   background-color: #303946;
 }

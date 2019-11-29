@@ -38,6 +38,9 @@
 .card-content {
   height: 95px;
 }
+.day {
+  margin-top:3px;
+}
 .blog-card-header {
   height: 120px;
   position: relative;

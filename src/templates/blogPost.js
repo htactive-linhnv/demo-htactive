@@ -5,7 +5,7 @@ import { graphql, Link } from "gatsby"
 import RelatedPost from "../components/Blog/RelatedPost"
 import { connect } from "react-redux"
 
-const BlogPost = ({ data,language }) => {
+const BlogPost = ({ data, language }) => {
   const post = data.post
   const monthList = [
     "",
@@ -52,7 +52,9 @@ const BlogPost = ({ data,language }) => {
                       <span className="month">
                         {
                           monthList[
-                            getDate(post.frontmatter[`blog_date_${language}`])[1]
+                            getDate(
+                              post.frontmatter[`blog_date_${language}`]
+                            )[1]
                           ]
                         }
                       </span>
@@ -65,17 +67,26 @@ const BlogPost = ({ data,language }) => {
                       <div id="share" className="sharrre">
                         <ul className="social-links clearfix">
                           <li className="facebook">
-                            <a href="/">
+                            <a
+                              target="_blank"
+                              href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F`}
+                            >
                               <i className="fa fa-facebook" />
                             </a>
                           </li>
                           <li className="twitter">
-                            <a href="/">
+                            <a
+                              href={`https://twitter.com/intent/tweet/?text=Check%20out%20this%20website!&url=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F&via=HTActive"`}
+                              target="_blank"
+                            >
                               <i className="fa fa-twitter" />
                             </a>
                           </li>
                           <li className="googleplus">
-                            <a href="/">
+                            <a
+                              href={`https://plus.google.com/share?url=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F`}
+                              target="_blank"
+                            >
                               <i className="fa fa-google-plus" />
                             </a>
                           </li>
