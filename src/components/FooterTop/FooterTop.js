@@ -37,7 +37,7 @@ const FooterTop = ({language}) => {
   )
   const carousel = data[`carousel_${language}`].frontmatter[`carousel_${language}`]
   const carouselArr = Object.values(carousel).map(item => item) || []  
-  const carouselImg = [...carouselArr,carouselArr[2]].map((item, index) => (
+  const carouselImg = [...carouselArr,...carouselArr].map((item, index) => (
     <div key = {index} className="owl-item" style={{ width: "139px" }}>
       <div className="client">
         <a href="/">
