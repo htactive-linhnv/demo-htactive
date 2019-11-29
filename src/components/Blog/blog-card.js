@@ -16,10 +16,11 @@ const CardBlog = ({
   author,
   linkBlog,
   linkImg,
+  iframe,
   toggleOverlay,
 }) => {
   const [open, setOpen] = useState(false)
-  
+
   const month = [
     "",
     "Jan",
@@ -93,20 +94,33 @@ const CardBlog = ({
               color: "transparent",
             }}
           ></Link>
-          <img
-            src={src}
-            alt="Những Material component tuyệt vời trong React Native."
-          />
-          <div className={"overlay "}>
-            <div className="overlay-links">
-              <Link to={linkBlog}>
-                <i className="fa fa-link" />
-              </Link>
-              <a href={"/"} className="popup-img-single" title="image title">
-                <i className="fa fa-search-plus" />
-              </a>
-            </div>
-          </div>
+          {iframe ? (
+            <td
+              className="iframe-small"
+              dangerouslySetInnerHTML={{ __html: iframe }}
+            />
+          ) : (
+            <React.Fragment>
+              <img
+                src={src}
+                alt="Những Material component tuyệt vời trong React Native."
+              />
+              <div className={"overlay "}>
+                <div className="overlay-links">
+                  <Link to={linkBlog}>
+                    <i className="fa fa-link" />
+                  </Link>
+                  <a
+                    href={"/"}
+                    className="popup-img-single"
+                    title="image title"
+                  >
+                    <i className="fa fa-search-plus" />
+                  </a>
+                </div>
+              </div>
+            </React.Fragment>
+          )}
         </div>
         <div className="blogpost-body">
           <div className="post-info">

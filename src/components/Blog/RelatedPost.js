@@ -55,7 +55,7 @@ const RelatedPost = ({ tags, slug }) => {
     </div>
   ))
   return (
-    <aside className="col-md-3 col-md-offset-1">
+    <aside className="col-lg-3 col-md-offset-1">
       <div className="sidebar">
         <div className="block clearfix">
           <h3 className="title">Related posts</h3>

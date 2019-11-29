@@ -1,15 +1,15 @@
 ---
-blog-title-en: Lập trình cho mọi người - Bài 1.
-blog-date-en: 2019-11-28T15:14:53.067Z
-blog-description-en: >-
+blog-title-vn: Lập trình cho mọi người - Bài 1.
+blog-date-vn: 2019-11-28T15:14:53.067Z
+blog-description-vn: >-
   Tôi đảm bảo 100% những người đang đọc bài viết này đều biết sử dụng máy tính
   hoặc điện thoại di động, hoặc máy tính bảng hoặc lọt vào những trường hợp còn
   lại. Sở dĩ tôi biết được...
-author-en: Khiêm Trần
-tags-en:
+author-vn: Khiêm Trần
+tags-vn:
   - Code
-thumbnail-en: /img/assem.png
-iframe-en: >-
+thumbnail-vn: /img/assem.png
+iframe-vn: >-
   <iframe width="100%" height="225"
   src="https://www.youtube.com/embed/Dv7gLpW91DM" frameborder="0"
   allow="accelerometer; autoplay; encrypted-media; gyroscope;
