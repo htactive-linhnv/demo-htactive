@@ -1047,7 +1047,7 @@ body.header-fixed #content {
   overflow: hidden;
   right: 0;
   top: 50%;
-  background: transparent url(../img/magnifier.svg) no-repeat center center;
+  /* background: transparent url(../img/magnifier.svg) no-repeat center center; */
   background-size: 100%;
   border: none;
   pointer-events: none;

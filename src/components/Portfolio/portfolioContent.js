@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import CardPort from "./CardPort"
 
-import Img1 from "../layoutCss/assets/voc/images/max-market.jpg"
+import Img1 from "../../../static/img/tuyendung.png"
 
 const PortfolioContent = () => {
   const data = [

@@ -778,13 +778,10 @@ tbody {
   position: relative;
 }
 .parallax-bg {
-  background: url("../images/portfolio-6.jpg") 50% 0px no-repeat;
 }
 .parallax-bg-2 {
-  background: url("../images/portfolio-5.jpg") 50% 0px no-repeat;
 }
 .parallax-bg-3 {
-  background: url("../images/portfolio-3.jpg") 50% 0px no-repeat;
 }
 
 /* Custom Grid
@@ -1522,7 +1519,6 @@ tbody {
 /* Coming Soon Page
 ---------------------------------- */
 .fullscreen-bg {
-  background: url("../images/portfolio-8.jpg") 50% 0px no-repeat;
   position: fixed;
   top: 0;
   left: 0;
@@ -5057,7 +5053,7 @@ ul.tweets li span {
   display: none;
 }
 .tp-loader.spinner0 {
-  background: url("../images/loader.gif") no-repeat center center;
+  /* background: url("../images/loader.gif") no-repeat center center; */
   box-shadow: none;
   -webkit-box-shadow: none;
   -webkit-animation: none;
