@@ -16,8 +16,8 @@ const HeaderFixed = ({ color,menu,language }) => {
   }, [])
   return (
     <header
-      className={`header fixed ${scrollY > 182 ? "fixed-bar" : " "} clearfix`}     
-    >
+      className={`header fixed ${scrollY > 182 ? "fixed-bar" : " "} clearfix`}
+    > 
       <div className="container">
         <div className="row header-fixed">
           <div className={`col-md-3 ${scrollY > 182 ? "header-left-fixed" : ""}`}>
