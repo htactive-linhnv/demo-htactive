@@ -16,8 +16,6 @@ const NavBar = ({ color, active, changeActive, menu,language, changeSlug }) => {
           className={`${color} ${active === `${index + 1}` ? "active" : ""} `}
           onClick={() =>{
             changeActive(`${index + 1}`)
-            localStorage.setItem('active',index+1)
-            
           } }
         >
           <Link to={engRoute[index]} onClick={()=> changeSlug("/")}>{item}</Link>

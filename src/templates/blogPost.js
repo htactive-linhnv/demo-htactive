@@ -1,9 +1,11 @@
-import React,{useState, useEffect} from "react"
+import React, {useState, useEffect} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import RelatedPost from "../components/Blog/RelatedPost"
+import { connect } from "react-redux"
 
-const BlogPost = (props) => {
+const BlogPost = ({ data, language }) => {
   const [scrollY, setScrollY] = useState(0)
   const logit = () => {
     setScrollY(window.pageYOffset)
@@ -17,22 +19,42 @@ const BlogPost = (props) => {
       window.removeEventListener("scroll", logit)
     }
   }, [])
+  const post = data.post
+  const monthList = [
+    "",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ]
+  const getDate = date => {
+    if (date) {
+      const day = date.substring(8, 10)
+      let month = date.substring(5, 7)
+      const year = date.substring(0, 4)
+      month = month.includes("0") ? month.substring(1, 2) : month
+      return [day, month, year]
+    }
+    return ["11", "12", "2019"]
+  }
   return (
     <Layout>
       <SEO title="Blog" />
-      <section className={`main-container ${scrollY>182?"solveBlink":""}`}>
+      <section className="main-container">
         <div className="container">
           <div className="row">
-            {/* main start */}
-            {/* ================ */}
-            <div className="main col-md-8">
-              {/* page-title start */}
-              {/* ================ */}
+            <div className="main col-lg-8">
               <h1 className="page-title">
-                Những Material component tuyệt vời trong React Native.
+                {post.frontmatter[`blog_title_${language}`]}
               </h1>
-              {/* page-title end */}
-              {/* blogpost start */}
               <article className="clearfix blogpost full">
                 <div className="blogpost-body">
                   <div className="side">
@@ -59,7 +81,7 @@ const BlogPost = (props) => {
                         <ul className="social-links clearfix">
                           <li className="facebook">
                             <a
-                              target="_blank"
+                              
                               href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F`}
                             >
                               <i className="fa fa-facebook" />
@@ -68,7 +90,7 @@ const BlogPost = (props) => {
                           <li className="twitter">
                             <a
                               href={`https://twitter.com/intent/tweet/?text=Check%20out%20this%20website!&url=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F&via=HTActive"`}
-                              target="_blank"
+                              
                             >
                               <i className="fa fa-twitter" />
                             </a>
@@ -76,7 +98,7 @@ const BlogPost = (props) => {
                           <li className="googleplus">
                             <a
                               href={`https://plus.google.com/share?url=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F`}
-                              target="_blank"
+                          
                             >
                               <i className="fa fa-google-plus" />
                             </a>

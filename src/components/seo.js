@@ -21,14 +21,11 @@ const SEO = ({
   changeColorRedux,
   changeFooterRedux,
   changeLayoutRedux,
-  changeActive,
 }) => {
   const getLocalStyle = () => {
     const localColor = localStorage.getItem("color")
     const localLayout = localStorage.getItem("layout")
     const localFooter = localStorage.getItem("footer")
-    const localActive = localStorage.getItem("active")
-    if (localActive) changeActive(localActive)
     if (localLayout) {
       changeLayoutRedux(localLayout)
 
@@ -138,7 +135,6 @@ const mapDispatchToProps = dispatch => {
       dispatch({ type: `CHANGE_FOOTER`, footer: footer }),
     changeColorRedux: color => dispatch({ type: `CHANGE_COLOR`, color: color }),
     changeLayoutRedux: mode => dispatch({ type: `CHANGE_LAYOUT`, mode: mode }),
-    changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
   }
 }
 export default connect(

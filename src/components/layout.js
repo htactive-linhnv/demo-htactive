@@ -21,8 +21,8 @@ import "./ResponsiveCss/maxWidth991.css"
 import "./ResponsiveCss/minWidth768.css"
 import "./ResponsiveCss/maxWidth768.css"
 import "./ResponsiveCss/maxWidth480.css"
-import { connect } from "react-redux"
-import { useStaticQuery, graphql } from "gatsby"
+
+
 
 const Layout = ({ footer, children, color, open, language }) => {
   const data = useStaticQuery(
