@@ -30,7 +30,7 @@ const reducer = (state, action) => {
         return Object.assign({}, state, {
           language: action.language,
         })
-        case "CHANGE_SLUG":
+    case "CHANGE_SLUG":
           return Object.assign({}, state, {
             slug: action.slug,
           }) 
