@@ -1,3 +1,4 @@
+  
 import React from "react"
 
 const ItemSlider = ({ prevItem, item, src, title, handleOpenSlider }) => {
