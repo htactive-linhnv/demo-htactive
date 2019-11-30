@@ -11,8 +11,6 @@ import SubSlider from "../components/Portfolio/sliderSubPortfolio"
 const SubPortfolio = ({ data, language, changeSlug }) => {
   const [openTab, setOpenTab] = useState(1)
   const [openVideo, setOpenVideo] = useState(false)
-  const [scrollY, setScrollY] = useState(0)
-
   const rawData = data.markdownRemark.frontmatter.card_portfolio
   const tag = rawData.tag_card
   const footerPortfolio = rawData.card_page.footer_portfolio
@@ -23,31 +21,21 @@ const SubPortfolio = ({ data, language, changeSlug }) => {
   const descriptionData = rawData.card_page.product_description.product_desc.sort(
     (a, b) => a.desc_id - b.desc_id
   )
-
   const commentData =
     rawData.card_page.product_comment !== null
       ? rawData.card_page.product_comment.product_comment
       : []
-  const logit = () => {
-    setScrollY(window.pageYOffset)
-  }
+
   useEffect(() => {
-    function watchScroll() {
-      window.addEventListener("scroll", logit)
-    }
-    watchScroll()
     return () => {
-      window.removeEventListener("scroll", logit)
+      changeSlug("/")
     }
   }, [])
-
 
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <div
-        className={`page-intro ${scrollY>182?"solveBlink":""} `}       
-      >
+      <div className="page-intro">
         <div className="container">
           <div className="row">
             <div className="col-md-12">

@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { connect } from "react-redux"
 import { Link } from "gatsby"
-const NavBar = ({ color, active, changeActive, menu,language }) => {
+const NavBar = ({ color, active, menu,language, changeSlug, changeActive }) => {
   const [openDrop, setOpenDrop] = useState(false)
-  const engRoute = ["/", "/services", "/portfolio", "/blog", "/contact"]
+  const engRoute = ["/", "services", "products", "blog", "contact"]
   let menuItem = []
   
   if (menu) {
@@ -13,12 +13,10 @@ const NavBar = ({ color, active, changeActive, menu,language }) => {
       return (
         <li
          key={index}
-          className={`${color} ${active === `${index + 1}` ? "active" : ""} `}
-          onClick={() =>{
-            changeActive(`${index + 1}`)
-          } }
+         onClick={()=>changeActive(`${index+1}`)}
+         className={`${color} ${active === `${index + 1}` ? "active" : ""} `}          
         >
-          <Link to={engRoute[index]}>{item}</Link>
+          <Link to={engRoute[index]} onClick={()=> changeSlug("/")}>{item}</Link>
         </li>
       )
     })
@@ -57,6 +55,8 @@ const mapStateToProps = ({ active,language }) => {
 const mapDispatchToProps = dispatch => {
   return {
     changeActive: value => dispatch({ type: `ACTIVE_NAVBAR`, active: value }),
+    changeSlug: slug =>
+      dispatch({ type: `CHANGE_SLUG`, slug: slug }),
   }
 }
 export default connect(
