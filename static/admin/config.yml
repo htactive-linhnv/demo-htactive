@@ -1048,6 +1048,57 @@ collections:
       - { label: "Video Iframe", name: "iframe-vn", widget: "string",hint: "Iframe here will be thumbnail, input embbed code",required: false}
       - { label: "Body", name: "body", widget: "markdown" }
       
+#Contact page in English
+  - name: "contact-en"
+    label: "Contact - English"
+    folder: "src/data/en/contact"
+    create: true
+    slug: "{{slug}}"
+    editor:
+     preview: false
+    fields:
+      - { label: "Title Form", name: "contact-title-en", widget: "string" }
+      - { label: "Publish Date", name: "contact-date-en", widget: "datetime" }
+      - { label: "Description", name: "contact-description-en", widget: "string" }
+      - { label: "Input 1 - Label ", name: "label-1-en", widget: "string" }
+      - { label: "Input 1 - Placeholder ", name: "value-1-en", widget: "string" }
+      - { label: "Input 2 - Label ", name: "label-2-en", widget: "string" }
+      - { label: "Input 2 - Placeholder ", name: "value-2-en", widget: "string" }
+      - { label: "Input 3 - Label ", name: "label-3-en", widget: "string" }
+      - { label: "Input 3 - Placeholder ", name: "value-3-en", widget: "string" }
+      - { label: "Input 4 - Label ", name: "label-4-en", widget: "string" }
+      - { label: "Input 4 - Placeholder ", name: "value-4-en", widget: "string" }
+      - { label: "Button Submit ", name: "submit-en", widget: "string" }
+      - { label: "Address ", name: "address-en", widget: "string" }
+      - { label: "Skype ", name: "skype-en", widget: "string" }
+      - { label: "Phone ", name: "phone-en", widget: "string" }
+      - { label: "Email ", name: "email-en", widget: "string" }
+
+#Contact page in Vietnamese
+  - name: "contact-vn"
+    label: "Contact - Tiếng Việt"
+    folder: "src/data/vi/contact"
+    create: true
+    slug: "{{slug}}"
+    editor:
+     preview: false
+    fields:
+      - { label: "Tên Form", name: "contact-title-vn", widget: "string" }
+      - { label: "Publish Date", name: "contact-date-vn", widget: "datetime" }
+      - { label: "Miêu tả form", name: "contact-description-vn", widget: "string" }
+      - { label: "Input 1 - Tên ", name: "label-1-vn", widget: "string" }
+      - { label: "Input 1 - Placeholder ", name: "value-1-vn", widget: "string" }
+      - { label: "Input 2 - Tên ", name: "label-2-vn", widget: "string" }
+      - { label: "Input 2 - Placeholder ", name: "value-2-vn", widget: "string" }
+      - { label: "Input 3 - Tên ", name: "label-3-vn", widget: "string" }
+      - { label: "Input 3 - Placeholder ", name: "value-3-vn", widget: "string" }
+      - { label: "Input 4 - Tên ", name: "label-4-vn", widget: "string" }
+      - { label: "Input 4 - Placeholder ", name: "value-4-vn", widget: "string" }
+      - { label: "Nút gửi form ", name: "submit-vn", widget: "string" }
+      - { label: "Địa chỉ ", name: "address-vn", widget: "string" }
+      - { label: "Skype ", name: "skype-vn", widget: "string" }
+      - { label: "Điện thoại ", name: "phone-vn", widget: "string" }
+      - { label: "Email ", name: "email-vn", widget: "string" }
 
   
           
