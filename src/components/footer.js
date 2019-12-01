@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { connect } from "react-redux"
 
 const Footer = ({ footer, menu, language }) => {
-  const engRoute = ["/", "/services", "/portfolio", "/blog", "/contact"]
+  const engRoute = ["/", "/services/", "/products/", "/blog/", "/contact/"]
   let menuItem = []
   if (menu) {
     const dataUse = menu.frontmatter[`menu_${language}`] || {}
@@ -112,7 +112,7 @@ const Footer = ({ footer, menu, language }) => {
               <div className="footer-content">
                 <h2>CONNECT WITH US!</h2>
                 <iframe
-                  title="ht active pages"
+                  title="ht active pages"                  
                   src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhtactive%2F&amp;tabs&amp;width=340&amp;height=214&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=1780445882280832"
                   width="340"
                   height="214"

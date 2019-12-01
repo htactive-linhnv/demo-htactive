@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
@@ -6,7 +6,11 @@ import RelatedPost from "../components/Blog/RelatedPost"
 import { connect } from "react-redux"
 
 const BlogPost = ({ data, language, changeActive }) => {
-  changeActive("4")
+  useEffect(() => {
+    changeActive("4")
+    return
+  }, [changeActive])
+
   const post = data.post
   const monthList = [
     "",
@@ -36,7 +40,7 @@ const BlogPost = ({ data, language, changeActive }) => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <section className={`main-container `}>
+      <section className="main-container">
         <div className="container">
           <div className="row">
             <div className="main col-lg-8">
@@ -96,7 +100,7 @@ const BlogPost = ({ data, language, changeActive }) => {
                     <header>
                       <div className="submitted">
                         <i className="fa fa-user pr-5" /> by{" "}
-                        <Link to="/blog">
+                        <Link to="/blog/">
                           {post.frontmatter[`author_${language}`]}
                         </Link>
                       </div>
@@ -131,10 +135,7 @@ const mapDispatchToProps = dispatch => {
     changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
   }
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(BlogPost)
+export default connect(mapStateToProps, mapDispatchToProps)(BlogPost)
 export const query = graphql`
   query($slug: String) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {

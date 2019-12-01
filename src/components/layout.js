@@ -1,10 +1,14 @@
 import React from "react"
+import { connect } from "react-redux"
+import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button"
+
 import Header from "./header/header"
 import Footer from "./footer"
 import FooterTop from "./FooterTop/FooterTop"
 import StyleSwitcher from "../components/StyleSwitcher/StyleSwitcher"
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./layoutCss/assets/css/bootstrap.css"
 import "./layoutCss/assets/css/icons.css"
@@ -18,8 +22,7 @@ import "./ResponsiveCss/maxWidth991.css"
 import "./ResponsiveCss/minWidth768.css"
 import "./ResponsiveCss/maxWidth768.css"
 import "./ResponsiveCss/maxWidth480.css"
-import { connect } from "react-redux"
-import { useStaticQuery, graphql } from "gatsby"
+
 
 const Layout = ({ footer, children, color, open, language }) => {
   const data = useStaticQuery(
@@ -58,8 +61,8 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-const mapStateToProps = ({ color, open, footer, language }) => {
-  return { color, open, footer, language }
+const mapStateToProps = ({ color, open, language }) => {
+  return { color, open, language }
 }
 export default connect(
   mapStateToProps,
