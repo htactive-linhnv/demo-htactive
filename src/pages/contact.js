@@ -13,7 +13,6 @@ const Contact = ({ changeActive }) => {
     </Layout>
   )
 }
-
 const mapDispatchToProps = dispatch => {
   return {
     changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
