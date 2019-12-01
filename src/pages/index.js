@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { graphql } from "gatsby"
 import Home2nd from "../components/Home/Home2nd/Home2nd"
 import Home3rd from "../components/Home/Home3rd/Home3rd"
@@ -12,7 +12,11 @@ import { connect } from "react-redux"
 import Helmet from "react-helmet"
 
 const IndexPage = ({ data, color, footer, language,changeActive }) => {
-  changeActive('1')
+  useEffect(() => {
+    changeActive('1')
+    return ;
+  }, [changeActive])
+
   return (
     <Layout footer={footer} >
       <Helmet></Helmet>

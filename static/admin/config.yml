@@ -510,6 +510,7 @@ collections:
           - { label: "Ảnh nền Banner", name: "banner-img", widget: "image"}
           - { label: " Tiêu đề banner", name: "banner-title", widget: "string" } 
           - { label: " Lời dẫn banner", name: "banner-lead", widget: "string" }    
+          - { label: "Ngôn ngữ", name: "language", widget: "string", default: "vn" } 
   - name: "service-categories-vn"
     label: "Services-Thể loại- Tiếng Việt"
     folder: "src/data/vi/services/categories"    
@@ -525,6 +526,7 @@ collections:
        widget: "object"
        fields:          
           - { label: "ID", name: "id", widget: "number" } 
+          - { label: "Ngôn ngữ", name: "language", widget: "string", default: "vn" } 
           - { label: " Tiêu đề Dịch vụ", name: "category-title", widget: "string" } 
           - { label: " Lời dẫn Dịch vụ", name: "category-lead", widget: "string" }   
           - { label: " Tên đuôi", name: "tag-name", widget: "string" }   
@@ -543,6 +545,7 @@ collections:
         label: "card-services"
         widget: "object"
         fields: 
+          - { label: "Ngôn ngữ", name: "language", widget: "string", default: "vn" } 
           - { label: "Ảnh của card", name: "card-img", widget: "image"}
           - { label: " Tiêu đề Card", name: "card-title", widget: "string" } 
           - { label: "Mô tả card", name: "card-lead", widget: "string" }    

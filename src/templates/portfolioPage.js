@@ -30,7 +30,7 @@ const SubPortfolio = ({ data, language, changeSlug }) => {
     return () => {
       changeSlug("/")
     }
-  }, [])
+  })
 
   return (
     <Layout>
