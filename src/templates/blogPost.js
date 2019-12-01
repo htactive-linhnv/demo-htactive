@@ -116,6 +116,7 @@ const BlogPost = ({ data, language, changeActive }) => {
             </div>
             <RelatedPost
               slug={post.fields.slug}
+              language={language}
               tags={post.frontmatter[`tags_${language}`]}
             />
             {/* sidebar end */}

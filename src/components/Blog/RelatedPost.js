@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-const RelatedPost = ({ tags, slug }) => {
+const RelatedPost = ({ tags, slug, language }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -14,6 +14,9 @@ const RelatedPost = ({ tags, slug }) => {
                 tags_en
                 blog_description_en
                 blog_title_en
+                tags_vn
+                blog_description_vn
+                blog_title_vn
               }
               fields {
                 slug
@@ -29,8 +32,8 @@ const RelatedPost = ({ tags, slug }) => {
     .filter(
       item =>
         tags &&
-        item.node.frontmatter.tags_en &&
-        item.node.frontmatter.tags_en.indexOf(tags[0]) !== -1 &&
+        item.node.frontmatter[`tags_${language}`] &&
+        item.node.frontmatter[`tags_${language}`].indexOf(tags[0]) !== -1 &&
         item.node.fields.slug !== slug
     )
     .slice(0, 2)
@@ -44,10 +47,10 @@ const RelatedPost = ({ tags, slug }) => {
       <div className="image-box-body">
         <h3 className="title">
           <Link to={node.fields.slug}>
-            {node.frontmatter[`blog_title_${"en"}`]}
+            {node.frontmatter[`blog_title_${language}`]}
           </Link>
         </h3>
-        <p>{node.frontmatter[`blog_description_${"en"}`]}</p>
+        <p>{node.frontmatter[`blog_description_${language}`]}</p>
         <Link to={node.fields.slug} className="link">
           <span>Read more</span>
         </Link>
