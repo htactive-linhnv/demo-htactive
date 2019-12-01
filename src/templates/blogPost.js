@@ -5,8 +5,8 @@ import { graphql, Link } from "gatsby"
 import RelatedPost from "../components/Blog/RelatedPost"
 import { connect } from "react-redux"
 
-const BlogPost = ({ data, language,changeActive }) => {
-  changeActive('4')
+const BlogPost = ({ data, language, changeActive }) => {
+  changeActive("4")
   const post = data.post
   const monthList = [
     "",
@@ -36,7 +36,7 @@ const BlogPost = ({ data, language,changeActive }) => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <section   className={`main-container ${scrollY>182?"solveBlink":""} `}>
+      <section className={`main-container `}>
         <div className="container">
           <div className="row">
             <div className="main col-lg-8">
@@ -69,7 +69,6 @@ const BlogPost = ({ data, language,changeActive }) => {
                         <ul className="social-links clearfix">
                           <li className="facebook">
                             <a
-                              target="_blank"
                               href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F`}
                             >
                               <i className="fa fa-facebook" />
@@ -78,7 +77,6 @@ const BlogPost = ({ data, language,changeActive }) => {
                           <li className="twitter">
                             <a
                               href={`https://twitter.com/intent/tweet/?text=Check%20out%20this%20website!&url=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F&via=HTActive"`}
-                              target="_blank"
                             >
                               <i className="fa fa-twitter" />
                             </a>
@@ -86,7 +84,6 @@ const BlogPost = ({ data, language,changeActive }) => {
                           <li className="googleplus">
                             <a
                               href={`https://plus.google.com/share?url=https%3A%2F%2Ftrusting-brown-c4f562.netlify.com${post.fields.slug}%2F`}
-                              target="_blank"
                             >
                               <i className="fa fa-google-plus" />
                             </a>
@@ -115,6 +112,7 @@ const BlogPost = ({ data, language,changeActive }) => {
             </div>
             <RelatedPost
               slug={post.fields.slug}
+              language={language}
               tags={post.frontmatter[`tags_${language}`]}
             />
             {/* sidebar end */}

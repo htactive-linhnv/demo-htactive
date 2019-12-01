@@ -50,6 +50,12 @@ collections:
               name: "slide-caption3-vn",
               widget: "string",
             }
+          - {
+              label: " Details Slide 3",
+              name: "slide-detail3-vn",
+              widget: "list",
+            }
+            
       - { label: "Lead text", name: "lead-vn", widget: "string" }
       - name: "carousel-vn"
         label: "Carousel"
