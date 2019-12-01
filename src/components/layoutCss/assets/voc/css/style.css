@@ -2648,6 +2648,9 @@ ul.pagination li > a:focus {
   background-color: transparent;
   border-color: transparent;
 }
+.list li a {
+  color: #cd3c2e;
+}
 .footer-content .nav-pills > li.active > a:hover,
 .footer-content .nav-pills > li > a:hover {
   color: #cd3c2e;
@@ -3050,11 +3053,7 @@ ul.pagination li > a:focus {
   color: #ffffff;
   background-color: #e84c3d;
 }
-.overlay a:hover {
-  color: #ffffff;
-  background-color: #333333;
-  text-decoration: none;
-}
+
 .overlay i {
   line-height: 50px;
 }
@@ -8969,4 +8968,13 @@ a:not(.btn):hover {
 }
 .green a:not(.btn):hover {
   color:#3b8f33!important;
+}
+.fa-search-plus:hover {
+  background:#1f1f1f;
+  color:white;
+}
+.overlay-links a:hover {
+  color: #ffffff!important;
+  background: #333333!important;;
+  text-decoration: none;
 }
