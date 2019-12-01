@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import { Link } from "gatsby"
 const NavBar = ({ color, active, menu,language, changeSlug, changeActive }) => {
   const [openDrop, setOpenDrop] = useState(false)
-  const engRoute = ["/", "services", "products", "blog", "contact"]
+  const engRoute = ["/", "/services/", "/products/", "/blog/", "/contact/"]
   let menuItem = []
   
   if (menu) {

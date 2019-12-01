@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import BannerAnim from "rc-banner-anim"
 import QueueAnim from "rc-queue-anim"
 
@@ -11,21 +11,6 @@ const BgElement = Element.BgElement
 const Banner = ({ data, language }) => {
   const dataUse = data.frontmatter[`slide_${language}`] || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
-
-
-  const [scrollY, setScrollY] = useState(0)
-  const logit = () => {
-    setScrollY(window.pageYOffset)
-  }
-  useEffect(() => {
-    function watchScroll() {
-      window.addEventListener("scroll", logit)
-    }
-    watchScroll()
-    return () => {
-      window.removeEventListener("scroll", logit)
-    }
-  }, [])
 
   const [showbar, setBar] = useState(true)
   const handleProgressBar = e => {
@@ -58,7 +43,7 @@ const Banner = ({ data, language }) => {
     },
   ]
   return (
-    <div className="banner" style={{paddingTop:`${scrollY>182?"150px":"0"}`}}>
+    <div className="banner">
       <BannerAnim
         autoPlay
         autoPlaySpeed={10000}
@@ -105,29 +90,3 @@ const Banner = ({ data, language }) => {
   )
 }
 export default Banner
-
-// const data2 = [
-//   {
-//     bg: dataArr[6],
-//     title: "HT Active - Professional Software Solutions",
-//     lead: "Provide Best Services+New Technology+Best Quality+Support 24/7",
-//     more: "And much more ...",
-//     img: "",
-//   },
-
-//   {
-//     bg: dataArr[7],
-//     title: "We Provide All You Need",
-//     lead: "Website Application+Windows Application+Mobile Application+Game",
-//     more: "And more software solutions...",
-//     img: `${MacImg}`,
-//   },
-//   {
-//     bg: dataArr[8],
-//     title: "Satisfaction Is What You Need",
-//     lead:
-//       "Clean and unique design+After sale support+Cross-Browser/ Cross-Platform Compatible+Young and Brilliant Team",
-//     more: "Dont miss out!",
-//     img: "",
-//   },
-// ]
