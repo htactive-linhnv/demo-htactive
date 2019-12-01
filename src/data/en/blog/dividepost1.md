@@ -3,8 +3,9 @@ blog-title-en: Những Material component tuyệt vời trong React Native.
 blog-date-en: 2019-11-27T04:21:08.236Z
 blog-description-en: Những Material component tuyệt vời trong React Native.
 author-en: Mạnh Nguyễn
-thumbnail-en: /img/components_react_native.png
-tags-en: ["Code"]
+tags-en:
+  - Code
+thumbnail-en: /img/1.jpg
 ---
 Ngày đầu tiên khi mình tiếp cận React Native là năm 2016, tại thời điểm này, việc implement một giao diện người dùng đẹp đẽ, thân thiện thật sự là rất khó khăn. React và React Native ra đời để hỗ trợ việc render giao diện chứ không hỗ trợ lập trình viên cũng như nhà phát triển ứng dụng để họ có thể tối ưu hóa UI/UX trên giao diện của họ. Thời điểm đó, gần như không có library, toolkit hoặc các thứ tương tự để xây dựng giao diện. Tuy nhiên theo thời gian, mọi thứ đã thay đổi, hôm nay React có thể đã được xem như là một trend, một xu hướng của front-end, và theo đó lần lượt các thư viện, các toolkit về UI/UX ra đời (cả cho ReactJS và ReactNative).
 
