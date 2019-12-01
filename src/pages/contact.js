@@ -1,11 +1,15 @@
-import React from "react"
+import React, {useEffect} from "react"
 import ContactForm from "../components/ContactForm"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { connect } from "react-redux"
 
 const Contact = ({ changeActive }) => {
-  changeActive("5")
+  useEffect(() => {
+    changeActive("5")
+    return ;
+  })
+ 
   return (
     <Layout>
       <SEO title="Contact" />

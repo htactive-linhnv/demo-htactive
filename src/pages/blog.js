@@ -1,11 +1,14 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogContent from "../components/Blog/blog-content"
 import { connect } from "react-redux"
 const Blog = ({ data, language, changeActive }) => {
-  changeActive("4")
+  useEffect(() => {
+    changeActive("4")
+    return ;
+  })
   const posts = data[`blog_${language}`].edges
   return (
     <Layout>

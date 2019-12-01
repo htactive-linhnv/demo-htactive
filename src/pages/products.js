@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import {connect} from "react-redux"
 import {graphql} from "gatsby"
 import Layout from "../components/layout"
@@ -6,7 +6,11 @@ import SEO from "../components/seo"
 import Banner from "../components/Portfolio/banner"
 import PortfolioContent from "../components/Portfolio/portfolioContent"
 
-const PortfolioPage = ({language, data}) => {
+const PortfolioPage = ({language, data, changeActive}) => {
+  useEffect(() => {
+    changeActive("3")
+    return ;
+  })
   return (
     <Layout>
       <SEO title="Portfolio" />
@@ -15,9 +19,20 @@ const PortfolioPage = ({language, data}) => {
     </Layout>
   )
 }
+
 const mapStateToProps = ({ language }) => {
   return { language }
 }
+const mapDispatchToProps = dispatch => {
+  return {
+    changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
+  }
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PortfolioPage)
+
 export const query=graphql`
 {
   allMarkdownRemark(filter: {fields: {slug: {regex: "/en/portfolio/categories/"}}}) {
@@ -36,5 +51,5 @@ export const query=graphql`
   }
 }
 `
-export default connect(mapStateToProps)(PortfolioPage)
+
 

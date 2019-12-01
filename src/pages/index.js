@@ -15,7 +15,7 @@ const IndexPage = ({ data, color, footer, language,changeActive }) => {
   useEffect(() => {
     changeActive('1')
     return ;
-  }, [changeActive])
+  })
 
   return (
     <Layout footer={footer} >
