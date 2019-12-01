@@ -1054,6 +1054,7 @@ collections:
     folder: "src/data/en/contact"
     create: true
     slug: "{{slug}}"
+    identifier_field: contact-title-en
     editor:
      preview: false
     fields:
@@ -1080,6 +1081,7 @@ collections:
     folder: "src/data/vi/contact"
     create: true
     slug: "{{slug}}"
+    identifier_field: contact-title-vn
     editor:
      preview: false
     fields:
