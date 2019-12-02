@@ -4,9 +4,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { connect } from "react-redux"
 
-const Contact = ({ changeActive }) => {
+const Contact = ({ changeActive, changeSlug }) => {
   useEffect(() => {
     changeActive("5")
+    changeSlug("/")
     return ;
   })
  
@@ -20,6 +21,7 @@ const Contact = ({ changeActive }) => {
 const mapDispatchToProps = dispatch => {
   return {
     changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
+    changeSlug: slug => dispatch({ type: `CHANGE_SLUG`, slug: slug }),
   }
 }
 export default connect(

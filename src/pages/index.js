@@ -11,9 +11,10 @@ import Home1st from "../components/Home/Home1st/Home1st"
 import { connect } from "react-redux"
 import Helmet from "react-helmet"
 
-const IndexPage = ({ data, color, footer, language,changeActive }) => {
+const IndexPage = ({ data, color, footer, language,changeActive, changeSlug }) => {
   useEffect(() => {
     changeActive('1')
+    changeSlug("/")
     return ;
   })
 
@@ -37,6 +38,7 @@ const mapStateToProps = ({ color, footer, language }) => {
 const mapDispatchToProps = dispatch => {
   return {
     changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
+    changeSlug: slug => dispatch({ type: `CHANGE_SLUG`, slug: slug }),
   }
 }
 export default connect(

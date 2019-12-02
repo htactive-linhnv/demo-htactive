@@ -6,9 +6,10 @@ import SEO from "../components/seo"
 import Banner from "../components/Portfolio/banner"
 import PortfolioContent from "../components/Portfolio/portfolioContent"
 
-const PortfolioPage = ({language, data, changeActive}) => {
+const PortfolioPage = ({language, data, changeActive, changeSlug}) => {
   useEffect(() => {
     changeActive("3")
+    changeSlug("/")
     return ;
   })
   return (
@@ -26,6 +27,7 @@ const mapStateToProps = ({ language }) => {
 const mapDispatchToProps = dispatch => {
   return {
     changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
+    changeSlug: slug => dispatch({ type: `CHANGE_SLUG`, slug: slug }),
   }
 }
 export default connect(

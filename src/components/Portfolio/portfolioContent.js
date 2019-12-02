@@ -4,6 +4,7 @@ import CardPort from "./CardPort"
 
 const PortfolioContent = ({ language, dataCategories }) => {
   const [active, setActive] = useState("all")
+  
 
   const data = useStaticQuery(graphql`
     {
@@ -82,7 +83,7 @@ const PortfolioContent = ({ language, dataCategories }) => {
                   image={item.card_img}
                   content={item.card_lead}
                   link={item.card_slug}
-                  tag={item.tag_card}
+                  tag={item.tag_card}                  
                 />
                 ))}
              

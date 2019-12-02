@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState} from "react"
 import { Link, graphql } from "gatsby"
 import { connect } from "react-redux"
 
@@ -8,11 +8,12 @@ import avatar from "../../static/img/avatar.jpg"
 
 import SubSlider from "../components/Portfolio/sliderSubPortfolio"
 
-const SubPortfolio = ({ data, language, changeSlug }) => {
+const SubPortfolio = ({ data, language }) => {
   const [openTab, setOpenTab] = useState(1)
   const [openVideo, setOpenVideo] = useState(false)
   const rawData = data.markdownRemark.frontmatter.card_portfolio
   const tag = rawData.tag_card
+  
   const footerPortfolio = rawData.card_page.footer_portfolio
   const sliderData = rawData.card_page.slider_img
   const productDetailData = rawData.card_page.product_detail.product_detail.sort(
@@ -25,12 +26,7 @@ const SubPortfolio = ({ data, language, changeSlug }) => {
     rawData.card_page.product_comment !== null
       ? rawData.card_page.product_comment.product_comment
       : []
-
-  useEffect(() => {
-    return () => {
-      changeSlug("/")
-    }
-  },[changeSlug])
+  
 
   return (
     <Layout>
@@ -333,12 +329,14 @@ export default connect(mapStateToProps, mapDispatchToProps)(SubPortfolio)
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(
-      frontmatter: { card_portfolio: { card_slug: { regex: $slug } } }
+      frontmatter: { card_portfolio: { card_slug: { eq: $slug } } }
     ) {
       frontmatter {
         card_portfolio {
           tag_card
+          language
           card_title
+          card_slug
           card_page {
             footer_portfolio {
               store_link

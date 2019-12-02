@@ -4,9 +4,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Banner from "../components/Services/banner"
 import WebApp from "../components/Services/webApp"
-const Services = ({ language, changeActive }) => {
+const Services = ({ language, changeActive, changeSlug }) => {
   useEffect(() => {
     changeActive("2")
+    changeSlug("/")
     return ;
   })
   return (
@@ -23,6 +24,7 @@ const mapStateToProps = ({ language }) => {
 const mapDispatchToProps = dispatch => {
   return {
     changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
+    changeSlug: slug => dispatch({ type: `CHANGE_SLUG`, slug: slug }),
   }
 }
 export default connect(

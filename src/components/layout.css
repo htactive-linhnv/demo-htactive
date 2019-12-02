@@ -547,11 +547,23 @@ body {
   font-size: 20px !important;
   padding: 0 !important;
 }
+.tabs-style-2 .nav-tabs .btn {
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 12px 25px;
+  line-height: 1.42857143;
+  transition: all 0.2s ease-in-out;
+  min-width: 0!important;
+}
+.tabs-style-2 .nav-tabs .btn:hover {
+  background-color: #e84c3d;
+  color: #fff;
+}
 .nav-tabs .btn {
-  margin: 0 3px 0 0 !important;
+  margin: 0 2px 0 0 !important;
 }
 .nav-tabs .btn:hover {
-  background-color: #e84c3d !important;
+  background-color: #e84c3d;
 }
 .nav-pills button {
   border: 1px solid transparent;
@@ -1268,5 +1280,61 @@ pre code {
   }
   .blogPost-content iframe {
     height:190px;
+  }
+}
+/*porfolio*/
+
+.breadcrumb li a {
+  color: red;
+}
+.tab-pane .title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.tab-pane p {
+  font-weight: 500;
+}
+.tab-pane .space-top {
+  font-weight: 700;
+  
+}
+.dl-horizontal dt {
+  font-weight: 700;
+}
+
+/*Card Animation*/
+
+.slide-in-fwd-center {
+	-webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-fwd-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
   }
 }

@@ -4,9 +4,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogContent from "../components/Blog/blog-content"
 import { connect } from "react-redux"
-const Blog = ({ data, language, changeActive }) => {
+const Blog = ({ data, language, changeActive, changeSlug }) => {
   useEffect(() => {
     changeActive("4")
+    changeSlug("/")
     return ;
   })
   const posts = data[`blog_${language}`].edges
@@ -65,6 +66,7 @@ const mapStateToProps = ({ language }) => {
 const mapDispatchToProps = dispatch => {
   return {
     changeActive: active => dispatch({ type: `ACTIVE_NAVBAR`, active: active }),
+    changeSlug: slug => dispatch({ type: `CHANGE_SLUG`, slug: slug }),
   }
 }
 export default connect(

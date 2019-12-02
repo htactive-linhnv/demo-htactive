@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { connect } from "react-redux"
 import { Link } from "gatsby"
 
-const HeaderTop = ({ language, changeLanguage, active, slug }) => {
+const HeaderTop = ({ language, changeLanguage, active, slug, changeSlug }) => {
   const [openDropdown, setOpenDropdown] = useState(false)
   const [openToggle, setOpenToggle] = useState(false)
   let link = "/"
@@ -156,6 +156,7 @@ const HeaderTop = ({ language, changeLanguage, active, slug }) => {
                         onClick={() => {
                           changeLanguage("en")
                           setOpenDropdown(false)
+                          slug.split("/")[1]!=="product-detail"?changeSlug("/"):changeSlug(slug)                          
                         }}
                       >
                         <Link className="btn-link" to={slug.split("/")[1]!=="product-detail"?`${link}`:slug}>
@@ -165,6 +166,7 @@ const HeaderTop = ({ language, changeLanguage, active, slug }) => {
                       <li
                         onClick={() => {
                           changeLanguage("vn")
+                          slug.split("/")[1]!=="product-detail"?changeSlug("/"):changeSlug(slug)     
                           setOpenDropdown(false)
                         }}
                       >
@@ -183,8 +185,8 @@ const HeaderTop = ({ language, changeLanguage, active, slug }) => {
     </div>
   )
 }
-const mapStateToProps = ({ language, active, slug }) => {
-  return { language, active, slug }
+const mapStateToProps = ({ language, active, slug, changeSlug }) => {
+  return { language, active, slug, changeSlug }
 }
 const mapDispatchToProps = dispatch => {
   return {

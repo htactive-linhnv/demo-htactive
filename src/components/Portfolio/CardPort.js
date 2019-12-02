@@ -1,14 +1,13 @@
-import React from "react"
+import React, {useState} from "react"
 import { Link } from "gatsby"
 import {connect} from "react-redux"
 
 const CardPort = ({ image, title, content, link, language, changeSlug}) => {
   let slug= language==="vn"?`${link.slice(3,link.length)}`:`${link}`;
-
-  
+  const [animationCard, setAnimationCard]= useState(1)  
   return (
-    <div className="col-md-3 col-sm-6 isotope-item fWeb fade-in-bottom-1">
-      <div className="image-box">
+    <div className="col-md-3 col-sm-6 isotope-item fWeb ">
+      <div className="image-box slide-in-fwd-center">
         <div className="overlay-container">
           <img src={image} alt={title} />
         </div>
