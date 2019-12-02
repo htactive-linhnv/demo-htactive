@@ -14,7 +14,7 @@ const PortfolioPage = ({language, data,color, changeActive, changeSlug}) => {
   })
   return (
     <Layout>
-      <SEO title="Portfolio" />
+      <SEO title="Our Portfolios" />
       <Banner language={language} color={color}/>
       <PortfolioContent  language={language} dataCategories={data.allMarkdownRemark.edges} color={color}/>
     </Layout>
