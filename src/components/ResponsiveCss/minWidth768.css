@@ -199,8 +199,8 @@
       display: flex !important;
       flex-direction: row !important;
     }
-    .box-style-1 .card-content {
-      height: 40px;  
+    .box-style-1 .card-title {
+      height: 60px;  
     }
   }
 

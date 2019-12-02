@@ -29,13 +29,21 @@ const Footer = ({ footer, menu, language }) => {
             >
               <div className="footer-content">
                 <Link to="/">
-                  <div >
-                    <img className="logo-footer" alt="" src="/img/logo_footer.png"></img>
+                  <div>
+                    <img
+                      className="logo-footer"
+                      alt=""
+                      src="/img/logo_footer.png"
+                    ></img>
                   </div>
                 </Link>
                 <div className="row">
                   <div className="col-sm-12 col-md-6">
-                    <p>Your satisfaction is our success!</p>
+                    <p>
+                      {language === "en"
+                        ? "Your satisfaction is our success!"
+                        : "HT Active - Sự hài lòng của bạn là thành công của chúng tôi."}
+                    </p>
                     <ul className="social-links circle">
                       <li className="facebook">
                         <a href="https://www.facebook.com/htactive">
@@ -112,7 +120,7 @@ const Footer = ({ footer, menu, language }) => {
               <div className="footer-content">
                 <h2>CONNECT WITH US!</h2>
                 <iframe
-                  title="ht active pages"                  
+                  title="ht active pages"
                   src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhtactive%2F&amp;tabs&amp;width=340&amp;height=214&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=1780445882280832"
                   width="340"
                   height="214"
@@ -150,7 +158,4 @@ const Footer = ({ footer, menu, language }) => {
 const mapStateToProps = ({ active, language, color, footer }) => {
   return { active, language, color, footer }
 }
-export default connect(
-  mapStateToProps,
-  null
-)(Footer)
+export default connect(mapStateToProps, null)(Footer)

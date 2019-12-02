@@ -125,7 +125,7 @@ const SubPortfolio = ({ data, language, color }) => {
                 <aside className="col-md-8">
                   <div className="sidebar">
                     <div className="side product-item vertical-divider-left">
-                      <div className={`tabs-style-2`}>
+                      <div className={`tabs-style-2 ${color} `}>
                         {/* Nav tabs */}
                         <ul className="nav nav-tabs" role="tablist">
                           <li className={`${color}`}>

@@ -50,7 +50,7 @@ const SubSlider = ({changeHideHeader, listImg, color}) => {
           </div>
         </div>
         <div className="owl-controls clickable">
-          <div className={`owl-pagination `}>
+          <div className={`owl-pagination ${color}`}>
             {listImg.map(img => (
               <div
                 key={img.id}

@@ -1936,6 +1936,15 @@ tbody {
   background-color: rgba(0, 0, 0, 0.3);
   border-color: transparent;
 }
+.red .btn:hover,.btn-default:hover,
+.red .btn-default:focus,
+.red .btn-default:active,
+.red .btn-default.red .active,
+.red.open .red .dropdown-toggle.red .btn-default {
+	color: #fff !important;
+	background-color: #cd3c2e!important;
+	border-color: #cd3c2e!important;
+}
 .default-bg .btn:hover,.btn-default:hover,
 .default-bg .btn-default:focus,
 .default-bg .btn-default:active,
@@ -8935,25 +8944,43 @@ a.yellow .overlay i {
 	background-color: #d3b61c!important;
 	color: #f1f1f1;
 }
-.owl-controls .yellow .active span, .owl-page:hover span {
+.owl-controls .yellow .active span{
   background: #d3b61c!important;
 }
-.owl-controls .red .active span, .owl-page:hover span {
+.owl-controls .red .owl-page:hover span {
   background-color: #e84c3d!important;
 }
-.owl-controls .green .active span, .owl-page:hover span {
+.owl-controls .yellow .owl-page:hover span {
+  background-color: #d3b61c!important;
+}
+.owl-controls .green .active span {
   background: #3b8f33!important;
 }
-.owl-controls .blue .active span, .owl-page:hover span {
+.owl-controls .green .owl-page:hover span {
+  background: #3b8f33!important;
+}
+.owl-controls .blue .active span {
   background: #2c5fb3!important;
 }
-.owl-controls .pink .active span, .owl-page:hover span {
+.owl-controls .blue .owl-page:hover span {
+  background: #2c5fb3!important;
+}
+.owl-controls .pink .active span{
   background: #c86384!important;
 }
-.owl-controls .purple .active span, .owl-page:hover span {
+.owl-controls .pink .owl-page:hover span {
+  background: #c86384!important;
+}
+.owl-controls .purple .active span {
   background: #b331b3!important;
 }
-.owl-controls .orange .active span, .owl-page:hover span {
+.owl-controls .purple .owl-page:hover span {
+  background: #b331b3!important;
+}
+.owl-controls .orange .active span {
+  background: #e09200!important;
+}
+.owl-controls .orange .owl-page:hover span {
   background: #e09200!important;
 }
 .red .owl-prev {
@@ -9104,4 +9131,23 @@ a:not(.btn):hover {
   color: #ffffff!important;
   background: #333333!important;;
   text-decoration: none;
+}
+
+.product-item .green .nav-tabs {
+  border-bottom-color: #3b8f33!important;
+}
+.product-item .blue .nav-tabs {
+  border-bottom-color: #2c5fb3!important;
+}
+.product-item .yellow .nav-tabs {
+  border-bottom-color: #b59a17!important;
+}
+.product-item .pink .nav-tabs {
+  border-bottom-color: #db7093!important;;
+}
+.product-item .purple .nav-tabs {
+  border-bottom-color: #b331b3!important;
+}
+.product-item .orange .nav-tabs {
+  border-bottom-color: #ffa500!important;;
 }

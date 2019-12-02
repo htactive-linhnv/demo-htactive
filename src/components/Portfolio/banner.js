@@ -2,8 +2,7 @@ import React from "react"
 import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Banner = ({ language }) => {
-  
+const Banner = ({ language }) => { 
 
   const data = useStaticQuery(graphql`
     {
