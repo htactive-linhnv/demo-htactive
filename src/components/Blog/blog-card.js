@@ -95,10 +95,17 @@ const CardBlog = ({
             }}
           ></Link>
           {iframe ? (
-            <td
-              className="iframe-small"
-              dangerouslySetInnerHTML={{ __html: iframe }}
-            />
+            <table>
+              <tbody>
+              <tr>
+                <td
+                  className="iframe-small"
+                  dangerouslySetInnerHTML={{ __html: iframe }}
+                />
+              </tr>
+              </tbody>
+             
+            </table>
           ) : (
             <React.Fragment>
               <img
@@ -166,7 +173,4 @@ const mapDispatchToProps = dispatch => {
     toggleOverlay: open => dispatch({ type: `TOGGLE_OVERLAY`, open: open }),
   }
 }
-export default connect(
-  null,
-  mapDispatchToProps
-)(CardBlog)
+export default connect(null, mapDispatchToProps)(CardBlog)

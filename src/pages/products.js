@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import Banner from "../components/Portfolio/banner"
 import PortfolioContent from "../components/Portfolio/portfolioContent"
 
-const PortfolioPage = ({language, data, changeActive, changeSlug}) => {
+const PortfolioPage = ({language, data,color, changeActive, changeSlug}) => {
   useEffect(() => {
     changeActive("3")
     changeSlug("/")
@@ -15,14 +15,14 @@ const PortfolioPage = ({language, data, changeActive, changeSlug}) => {
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <Banner language={language} />
-      <PortfolioContent  language={language} dataCategories={data.allMarkdownRemark.edges}/>
+      <Banner language={language} color={color}/>
+      <PortfolioContent  language={language} dataCategories={data.allMarkdownRemark.edges} color={color}/>
     </Layout>
   )
 }
 
-const mapStateToProps = ({ language }) => {
-  return { language }
+const mapStateToProps = ({ language, color }) => {
+  return { language, color }
 }
 const mapDispatchToProps = dispatch => {
   return {

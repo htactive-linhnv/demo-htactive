@@ -8,7 +8,7 @@ import avatar from "../../static/img/avatar.jpg"
 
 import SubSlider from "../components/Portfolio/sliderSubPortfolio"
 
-const SubPortfolio = ({ data, language }) => {
+const SubPortfolio = ({ data, language, color }) => {
   const [openTab, setOpenTab] = useState(1)
   const [openVideo, setOpenVideo] = useState(false)
   const rawData = data.markdownRemark.frontmatter.card_portfolio
@@ -36,7 +36,7 @@ const SubPortfolio = ({ data, language }) => {
           <div className="row">
             <div className="col-md-12">
               <ol className="breadcrumb">
-                <li>
+                <li className={`${color}`}>
                   <i className="fa fa-home pr-10" />
                   {rawData.tag_card === "web" && (
                     <Link to="/products">Web Application</Link>
@@ -68,9 +68,9 @@ const SubPortfolio = ({ data, language }) => {
               </h1>
               {/* page-title end */}
               <div className="row">
-                <div className="col-md-4">
+                <div className={`col-md-4 ${color}`}>
                   {/* Nav tabs */}
-                  <ul className="nav nav-pills white space-top" role="tablist">
+                  <ul className={`nav nav-pills white space-top `} role="tablist">
                     <li>
                       <button
                         title="images"
@@ -125,10 +125,10 @@ const SubPortfolio = ({ data, language }) => {
                 <aside className="col-md-8">
                   <div className="sidebar">
                     <div className="side product-item vertical-divider-left">
-                      <div className="tabs-style-2">
+                      <div className={`tabs-style-2`}>
                         {/* Nav tabs */}
                         <ul className="nav nav-tabs" role="tablist">
-                          <li>
+                          <li className={`${color}`}>
                             <button
                               onClick={() => setOpenTab(1)}
                               className={`btn ${
@@ -144,7 +144,7 @@ const SubPortfolio = ({ data, language }) => {
                             </button>
                           </li>
 
-                          <li>
+                          <li className={`${color}`}>
                             <button
                               onClick={() => setOpenTab(2)}
                               className={`btn ${
@@ -161,7 +161,7 @@ const SubPortfolio = ({ data, language }) => {
                           </li>
 
                           {language === "vn" && (
-                            <li>
+                             <li className={`${color}`}>
                               <button
                                 onClick={() => setOpenTab(3)}
                                 className={`btn ${
@@ -316,8 +316,8 @@ const SubPortfolio = ({ data, language }) => {
   )
 }
 
-const mapStateToProps = ({ language }) => {
-  return { language }
+const mapStateToProps = ({ language, color }) => {
+  return { language, color }
 }
 const mapDispatchToProps = dispatch => {
   return {

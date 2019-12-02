@@ -537,7 +537,7 @@ body {
   width: 30%;
 }
 .tab-pane .owl-buttons .owl-prev {
-  background-color: #e84c3d !important;
+  background-color: #e84c3d;
   opacity: 1 !important;
 }
 .owl-buttons .owl-next,
@@ -914,6 +914,9 @@ div.style-switcher .dark-red:hover {
 }
 .logo {
   background-image: url("../data/images/logo_red.png");
+}
+.first-title {
+  font-weight: 700;
 }
 
 .fixed-bar {
@@ -1304,37 +1307,40 @@ pre code {
 
 /*Card Animation*/
 
-.slide-in-fwd-center {
-	-webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.scale-in-center-1 {
+	-webkit-animation: scale-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-/**
- * ----------------------------------------
- * animation slide-in-fwd-center
- * ----------------------------------------
- */
- @-webkit-keyframes slide-in-fwd-center {
+
+
+
+@-webkit-keyframes scale-in-center {
   0% {
-    -webkit-transform: translateZ(-1400px);
-            transform: translateZ(-1400px);
-    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
   }
   100% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
   }
 }
-@keyframes slide-in-fwd-center {
+@keyframes scale-in-center {
   0% {
-    -webkit-transform: translateZ(-1400px);
-            transform: translateZ(-1400px);
-    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
   }
   100% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
   }
 }
+
