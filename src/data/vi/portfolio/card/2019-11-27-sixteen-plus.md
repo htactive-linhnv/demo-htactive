@@ -5,7 +5,7 @@ card-portfolio:
   card-img: /img/sixteen.jpg
   card-lead: >-
     Ứng dụng giúp matching giữa 2 người có cùng sở thích và mối quan tâm, chỉ
-    đường để giúp họ có thể tìm được nhau.
+    đường để giúp họ có thể tìm được nhau...
   card-page:
     footer-portfolio:      
       - store-title: Google Play

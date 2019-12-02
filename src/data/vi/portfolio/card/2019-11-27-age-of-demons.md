@@ -5,7 +5,7 @@ card-portfolio:
   card-img: /img/demons.jpg
   card-lead: >-
     Chạm và giữ ngắm vào mục tiêu, thả ra để bắn. Bắn chính xác sẽ được cộng
-    thêm điểm và phần thưởng.
+    thêm điểm và phần thưởng...
   card-page:
     footer-portfolio:
       - store-title: Google Play

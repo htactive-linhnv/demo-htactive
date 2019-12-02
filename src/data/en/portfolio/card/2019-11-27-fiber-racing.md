@@ -3,7 +3,7 @@ title: Fiber Racing
 date: 2019-11-27T04:11:34.253Z
 card-portfolio:
   card-img: /img/fiber_racing.jpg
-  card-lead: Tap to swing and release to let go. Travel as far as possible using simple one touch controls. Collect coins and unlock 
+  card-lead: Tap to swing and release to let go. Travel as far as possible using simple one touch controls. Collect coins and unlock ...
   card-page:
     footer-portfolio:
       - store-title: Google Play

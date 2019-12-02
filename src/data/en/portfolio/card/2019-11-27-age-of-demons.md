@@ -4,7 +4,7 @@ date: 2019-11-27T04:12:57.983Z
 card-portfolio:
   card-img: /img/demons.jpg
   card-lead: >-
-    Tap and hold to target the evil trooper, then release to shoot. Aim at the evil trooper's head to score more and get rewards!
+    Tap and hold to target the evil trooper, then release to shoot. Aim at the evil trooper's head to score more and get rewards!...
   card-page: 
     footer-portfolio:
       - store-title: Google Play

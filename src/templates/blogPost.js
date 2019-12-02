@@ -39,7 +39,7 @@ const BlogPost = ({ data, language, changeActive }) => {
   }
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title={`${post.frontmatter.blog_title_en}`} />
       <section className="main-container">
         <div className="container">
           <div className="row">

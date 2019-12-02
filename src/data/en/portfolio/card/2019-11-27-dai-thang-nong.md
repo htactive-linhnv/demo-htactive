@@ -5,7 +5,7 @@ card-portfolio:
   cardId: 4
   card-img: /img/dtn.jpg
   card-lead: >-
-    Dai Thang Nong's website, to provide agricultural products.
+    Dai Thang Nong's website, to provide agricultural products...
   card-page:
     footer-portfolio:      
       - store-title: DTN
