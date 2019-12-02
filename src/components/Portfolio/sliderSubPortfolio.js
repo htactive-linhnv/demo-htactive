@@ -5,7 +5,7 @@ import ItemSlider from "./SubSliderItem"
 import BigSlider from "./bigSlider"
 
 
-const SubSlider = ({changeHideHeader, listImg}) => {
+const SubSlider = ({changeHideHeader, listImg, color}) => {
   const [item, setItem] = useState(1)
   const [openBigSlider, setOpenSlider] = useState(false)
   
@@ -50,7 +50,7 @@ const SubSlider = ({changeHideHeader, listImg}) => {
           </div>
         </div>
         <div className="owl-controls clickable">
-          <div className="owl-pagination">
+          <div className={`owl-pagination ${color}`}>
             {listImg.map(img => (
               <div
                 key={img.id}
@@ -61,7 +61,7 @@ const SubSlider = ({changeHideHeader, listImg}) => {
               </div>
             ))}
           </div>
-          <div className="owl-buttons">
+          <div className={`owl-buttons ${color}`}>
             <div
               className="owl-prev"
               onClick={() => setItem(item === 1 ? listImg.length : item - 1)}
@@ -81,8 +81,8 @@ const SubSlider = ({changeHideHeader, listImg}) => {
     </div>
   )
 }
-const mapStateToProps = ({ display }) => {
-  return { display }
+const mapStateToProps = ({ display, color }) => {
+  return { display, color }
 }
 const mapDispatchToProps = dispatch => {
   return {

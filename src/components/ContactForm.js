@@ -76,7 +76,7 @@ const ContactForm = ({ language }) => {
     `
   )
   const contact = data[`contact_${language}`].edges[0].node.frontmatter
-  console.log(contact)
+ 
 
   return (
     <React.Fragment>

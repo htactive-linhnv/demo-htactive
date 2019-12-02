@@ -12,20 +12,20 @@ card-portfolio:
     product-description:
       product-desc:
         - desc-id: '1'
-          name: 'Danh mục '
-          tech-content: Trò chơi
+          name: 'Category '
+          tech-content: Game
         - desc-id: '2'
-          name: Loại trò chơi
-          tech-content: 'Đi cảnh, nhập vai, trò chơi nhỏ'
+          name: Game Type
+          tech-content: 'Arcade Game, Role-Playing Game, Minigame'
         - desc-id: '3'
-          name: Giá cả & Phân phối
-          tech-content: 'Trò chơi miễn phí, có thể tải về/chơi trên Android/IOS/Windows'
+          name: Pricing
+          tech-content: 'Free Game, can get/play on Android/IOS/Windows'
         - desc-id: '4'
-          name: Mua hàng
-          tech-content: Không hỗ trợ
+          name: In-App Products
+          tech-content: Not support
         - desc-id: '5'
-          name: 'Đánh giá nội dung '
-          tech-content: 'Được đánh giá 3+, cho mọi người'
+          name: 'Content Rating'
+          tech-content: 'Rated for 3+, Everyone'
     product-detail:
       product-detail:
         - content-list:

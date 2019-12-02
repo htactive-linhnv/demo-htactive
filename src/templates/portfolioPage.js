@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState} from "react"
 import { Link, graphql } from "gatsby"
 import { connect } from "react-redux"
 
@@ -8,11 +8,12 @@ import avatar from "../../static/img/avatar.jpg"
 
 import SubSlider from "../components/Portfolio/sliderSubPortfolio"
 
-const SubPortfolio = ({ data, language, changeSlug }) => {
+const SubPortfolio = ({ data, language, color }) => {
   const [openTab, setOpenTab] = useState(1)
   const [openVideo, setOpenVideo] = useState(false)
   const rawData = data.markdownRemark.frontmatter.card_portfolio
   const tag = rawData.tag_card
+  
   const footerPortfolio = rawData.card_page.footer_portfolio
   const sliderData = rawData.card_page.slider_img
   const productDetailData = rawData.card_page.product_detail.product_detail.sort(
@@ -25,12 +26,7 @@ const SubPortfolio = ({ data, language, changeSlug }) => {
     rawData.card_page.product_comment !== null
       ? rawData.card_page.product_comment.product_comment
       : []
-
-  useEffect(() => {
-    return () => {
-      changeSlug("/")
-    }
-  })
+  
 
   return (
     <Layout>
@@ -40,7 +36,7 @@ const SubPortfolio = ({ data, language, changeSlug }) => {
           <div className="row">
             <div className="col-md-12">
               <ol className="breadcrumb">
-                <li>
+                <li className={`${color}`}>
                   <i className="fa fa-home pr-10" />
                   {rawData.tag_card === "web" && (
                     <Link to="/products">Web Application</Link>
@@ -72,9 +68,9 @@ const SubPortfolio = ({ data, language, changeSlug }) => {
               </h1>
               {/* page-title end */}
               <div className="row">
-                <div className="col-md-4">
+                <div className={`col-md-4 ${color}`}>
                   {/* Nav tabs */}
-                  <ul className="nav nav-pills white space-top" role="tablist">
+                  <ul className={`nav nav-pills white space-top `} role="tablist">
                     <li>
                       <button
                         title="images"
@@ -129,10 +125,10 @@ const SubPortfolio = ({ data, language, changeSlug }) => {
                 <aside className="col-md-8">
                   <div className="sidebar">
                     <div className="side product-item vertical-divider-left">
-                      <div className="tabs-style-2">
+                      <div className={`tabs-style-2 ${color} `}>
                         {/* Nav tabs */}
                         <ul className="nav nav-tabs" role="tablist">
-                          <li>
+                          <li className={`${color}`}>
                             <button
                               onClick={() => setOpenTab(1)}
                               className={`btn ${
@@ -148,7 +144,7 @@ const SubPortfolio = ({ data, language, changeSlug }) => {
                             </button>
                           </li>
 
-                          <li>
+                          <li className={`${color}`}>
                             <button
                               onClick={() => setOpenTab(2)}
                               className={`btn ${
@@ -165,7 +161,7 @@ const SubPortfolio = ({ data, language, changeSlug }) => {
                           </li>
 
                           {language === "vn" && (
-                            <li>
+                             <li className={`${color}`}>
                               <button
                                 onClick={() => setOpenTab(3)}
                                 className={`btn ${
@@ -320,8 +316,8 @@ const SubPortfolio = ({ data, language, changeSlug }) => {
   )
 }
 
-const mapStateToProps = ({ language }) => {
-  return { language }
+const mapStateToProps = ({ language, color }) => {
+  return { language, color }
 }
 const mapDispatchToProps = dispatch => {
   return {
@@ -333,12 +329,14 @@ export default connect(mapStateToProps, mapDispatchToProps)(SubPortfolio)
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(
-      frontmatter: { card_portfolio: { card_slug: { regex: $slug } } }
+      frontmatter: { card_portfolio: { card_slug: { eq: $slug } } }
     ) {
       frontmatter {
         card_portfolio {
           tag_card
+          language
           card_title
+          card_slug
           card_page {
             footer_portfolio {
               store_link

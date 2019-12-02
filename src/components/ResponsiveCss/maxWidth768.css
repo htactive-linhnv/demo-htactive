@@ -44,6 +44,7 @@
     .banner-left-heading ul li {
       margin-top: 0.7em;
       display: flex;
+      font-weight: 500;
     }
   
     .banner-left-heading .banner-title {
@@ -342,4 +343,14 @@
         right: 50px;
         top: 15px;
       }
+      .fixed-bar {
+        display: none;
+      }
   }
+
+  @media (max-width: 769px)  {
+     .image-box-body .title {
+       min-height: 50px;
+     }
+  }
+  

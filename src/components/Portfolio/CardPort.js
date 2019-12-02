@@ -1,13 +1,25 @@
 import React from "react"
 import { Link } from "gatsby"
-import {connect} from "react-redux"
+import { connect } from "react-redux"
 
-const CardPort = ({ image, title, content, link, language, changeSlug}) => {
-  let slug= language==="vn"?`${link.slice(3,link.length)}`:`${link}`;
+const CardPort = ({
+  tag,
+  image,
+  title,
+  content,
+  link,
+  language,
+  changeSlug,
+  active,
+}) => {
+  let slug = language === "vn" ? `${link.slice(3, link.length)}` : `${link}` 
 
-  
+
   return (
-    <div className="col-md-3 col-sm-6 isotope-item fWeb fade-in-bottom-1">
+    <div
+     className={`col-md-3 col-sm-6 isotope-item fWeb scale-in-center`}
+     style={{display:`${active===tag||active==="all"?"block":"none"}`}}
+     >
       <div className="image-box">
         <div className="overlay-container">
           <img src={image} alt={title} />
