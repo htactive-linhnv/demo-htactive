@@ -60,13 +60,7 @@ const SEO = ({
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const pageTitle = [
-    "Home",
-    "Services",
-    "Our Portfolios",
-    "News",
-    "Contact",
-  ].filter((item, index) => index + 1 === active)
+
   return (
     <>
       <Helmet
