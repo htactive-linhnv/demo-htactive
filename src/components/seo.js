@@ -74,7 +74,7 @@ const SEO = ({
           lang,
         }}
         title={" HT Active"}
-        titleTemplate={`%s - ${pageTitle}`}
+        titleTemplate={`%s - ${title}`}
         meta={[
           {
             name: `description`,

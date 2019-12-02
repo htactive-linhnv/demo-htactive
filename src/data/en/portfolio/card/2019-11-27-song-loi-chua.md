@@ -5,7 +5,7 @@ card-portfolio:
   cardId: 5
   card-img: /img/slc.jpg
   card-lead: >-
-        SLC is a mobile application which was designed by Bayard Viet Nam base on a famous application, Prions en Eglise and 
+        SLC is a mobile application which was designed by Bayard Viet Nam base on a famous application, Prions en Eglise and... 
   card-page:   
     footer-portfolio:      
       - store-title: App Store

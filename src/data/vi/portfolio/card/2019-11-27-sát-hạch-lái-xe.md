@@ -6,7 +6,7 @@ card-portfolio:
   card-img: /img/sathach.jpg
   card-lead: >-
     Đầy đủ dữ liệu 450 câu hỏi cập nhập mới nhất của cục Khảo Thí, Tổng Cục
-    Đường Bộ Việt Nam. Chế độ ôn thi cho phép xem 45
+    Đường Bộ Việt Nam. Chế độ ôn thi cho phép xem 45...
   card-page:
     footer-portfolio:      
       - store-title: Window Phone Store

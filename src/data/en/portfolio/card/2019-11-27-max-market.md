@@ -5,7 +5,7 @@ card-portfolio:
   cardId: 1
   card-img: /img/max-market.jpg
   card-lead: >-
-   Max Market is the best website to advertise, buy and sell goods. User can post their notice, and search for products
+   Max Market is the best website to advertise, buy and sell goods. User can post their notice, and search for products...
   card-page:
     footer-portfolio:      
       - store-title: MAX MARKET

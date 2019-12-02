@@ -34,6 +34,7 @@ const reducer = (state, action) => {
       return Object.assign({}, state, {
         slug: action.slug,
       })
+      
     default:
       return state
   }

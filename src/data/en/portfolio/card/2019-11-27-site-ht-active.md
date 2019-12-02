@@ -5,7 +5,7 @@ card-portfolio:
   cardId: 3
   card-img: /img/htactive.jpg
   card-lead: >-
-    HT Active is our website to advertise business of company. Show own products was made by HT Active and introduce all 
+    HT Active is our website to advertise business of company. Show own products was made by HT Active and introduce all ...
   card-page:
     footer-portfolio:      
       - store-title: HT ACTIVE

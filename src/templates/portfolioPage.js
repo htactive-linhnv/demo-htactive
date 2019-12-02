@@ -30,7 +30,7 @@ const SubPortfolio = ({ data, language, color }) => {
 
   return (
     <Layout>
-      <SEO title="Portfolio" />
+      <SEO title={`${rawData.card_title}`} />
       <div className="page-intro">
         <div className="container">
           <div className="row">
