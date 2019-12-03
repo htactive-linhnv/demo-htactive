@@ -1927,7 +1927,7 @@ tbody {
 .btn-default:focus,
 .btn-default:active,
 .btn-default.active,
-.open .dropdown-toggle.btn-default {
+.open {
   color: #fff !important;
   background-color: #cd3c2e!important;
   border-color: #cd3c2e!important;
@@ -9155,9 +9155,17 @@ button.dropdown-toggle:active {
   background-color: #fafafa!important;
   border-right-color: #e3e3e3!important ;
 }
-.no-bg:hover {
+.no-bg:hover,.no-bg:focus,.no-bg:active,.no-bg:visited {
   background-color: #fafafa!important;
-  border-right-color: #e3e3e3!important ;
+  border-left:1px solid rgb(211, 211, 211)!important;
+  border-right:1px solid rgb(211, 211, 211)!important;
+  border-top:none!important;
+  border-bottom:none!important;
+  color:#e84c3d!important;
+}
+.no-bg {
+  border-top:none!important;
+  border-bottom:none!important;
 }
 .subfooter  .navbar  {
   padding:0!important;
