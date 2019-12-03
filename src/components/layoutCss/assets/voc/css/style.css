@@ -9167,6 +9167,55 @@ button.dropdown-toggle:active {
   border-top:none!important;
   border-bottom:none!important;
 }
+.blue .no-bg:hover,.blue .no-bg:focus,.blue .no-bg:active,.blue .no-bg:visited {
+  background-color: #fafafa!important;
+  border-left:1px solid rgb(211, 211, 211)!important;
+  border-right:1px solid rgb(211, 211, 211)!important;
+  border-top:none!important;
+  border-bottom:none!important;
+  color:#3d78d8!important;
+}
+
+.green .no-bg:hover,.green .no-bg:focus,.green .no-bg:active,.green .no-bg:visited {
+  background-color: #fafafa!important;
+  border-left:1px solid rgb(211, 211, 211)!important;
+  border-right:1px solid rgb(211, 211, 211)!important;
+  border-top:none!important;
+  border-bottom:none!important;
+  color:#0d760a!important;
+}
+.orange .no-bg:hover,.orange .no-bg:focus,.orange .no-bg:active,.orange .no-bg:visited {
+  background-color: #fafafa!important;
+  border-left:1px solid rgb(211, 211, 211)!important;
+  border-right:1px solid rgb(211, 211, 211)!important;
+  border-top:none!important;
+  border-bottom:none!important;
+  color:#ffa500!important;
+}
+.pink .no-bg:hover,.pink .no-bg:focus,.pink .no-bg:active,.pink .no-bg:visited {
+  background-color: #fafafa!important;
+  border-left:1px solid rgb(211, 211, 211)!important;
+  border-right:1px solid rgb(211, 211, 211)!important;
+  border-top:none!important;
+  border-bottom:none!important;
+  color:#db7093!important;
+}
+.purple .no-bg:hover,.purple .no-bg:focus,.purple .no-bg:active,.purple .no-bg:visited {
+  background-color: #fafafa!important;
+  border-left:1px solid rgb(211, 211, 211)!important;
+  border-right:1px solid rgb(211, 211, 211)!important;
+  border-top:none!important;
+  border-bottom:none!important;
+  color:#b331b3!important;
+}
+.yellow .no-bg:hover,.yellow .no-bg:focus,.yellow .no-bg:active,.yellow .no-bg:visited {
+  background-color: #fafafa!important;
+  border-left:1px solid rgb(211, 211, 211)!important;
+  border-right:1px solid rgb(211, 211, 211)!important;
+  border-top:none!important;
+  border-bottom:none!important;
+  color:#b59a17!important;
+}
 .subfooter  .navbar  {
   padding:0!important;
 }
