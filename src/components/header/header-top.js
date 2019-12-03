@@ -19,12 +19,12 @@ const HeaderTop = ({ language, changeLanguage, active, slug, changeSlug }) => {
     case "4":
       link = "/blog/"
       break
-    case "5":      
+    case "5":
       link = "/contact/"
       break
     default:
       break
-  } 
+  }
   return (
     <div className="header-top">
       <div className="container">
@@ -138,7 +138,7 @@ const HeaderTop = ({ language, changeLanguage, active, slug, changeSlug }) => {
                 <div className="btn-group dropdown">
                   <button
                     type="button"
-                    className="btn dropdown-toggle"
+                    className="btn dropdown-toggle no-bg"
                     data-toggle="dropdown"
                     onClick={() => {
                       setOpenDropdown(!openDropdown)
@@ -151,26 +151,44 @@ const HeaderTop = ({ language, changeLanguage, active, slug, changeSlug }) => {
                   </button>
 
                   {openDropdown ? (
-                    <ul className="dropdown-menu dropdown-menu-right dropdown-animation">
+                    <ul className="dropdown-menu dropdown-menu-right fade-in-top-2">
                       <li
                         onClick={() => {
                           changeLanguage("en")
                           setOpenDropdown(false)
-                          slug.split("/")[1]!=="product-detail"?changeSlug("/"):changeSlug(slug)                          
+                          slug.split("/")[1] !== "product-detail"
+                            ? changeSlug("/")
+                            : changeSlug(slug)
                         }}
                       >
-                        <Link className="btn-link" to={slug.split("/")[1]!=="product-detail"?`${link}`:slug}>
+                        <Link
+                          className="btn-link"
+                          to={
+                            slug.split("/")[1] !== "product-detail"
+                              ? `${link}`
+                              : slug
+                          }
+                        >
                           English
                         </Link>
                       </li>
                       <li
                         onClick={() => {
                           changeLanguage("vn")
-                          slug.split("/")[1]!=="product-detail"?changeSlug("/"):changeSlug(slug)     
+                          slug.split("/")[1] !== "product-detail"
+                            ? changeSlug("/")
+                            : changeSlug(slug)
                           setOpenDropdown(false)
                         }}
                       >
-                        <Link className="btn-link" to={slug.split("/")[1]!=="product-detail"?`${link}`:`/vi${slug}`}>
+                        <Link
+                          className="btn-link"
+                          to={
+                            slug.split("/")[1] !== "product-detail"
+                              ? `${link}`
+                              : `/vi${slug}`
+                          }
+                        >
                           Tiếng Việt
                         </Link>
                       </li>
@@ -192,9 +210,10 @@ const mapDispatchToProps = dispatch => {
   return {
     changeLanguage: language =>
       dispatch({ type: `CHANGE_LANGUAGE`, language: language }),
-      changeSlug: slug =>
-      dispatch({ type: `CHANGE_SLUG`, slug: slug })
-      ,
+    changeSlug: slug => dispatch({ type: `CHANGE_SLUG`, slug: slug }),
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderTop)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HeaderTop)

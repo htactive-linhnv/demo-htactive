@@ -2,7 +2,7 @@ import React from "react"
 import CardBlog from "./blog-card"
 import { ModalProvider } from "react-modal-hook"
 
-const BlogContent = ({posts,language}) => {
+const BlogContent = ({ posts, language }) => {
   return (
     <ModalProvider>
       <section className="main-container" style={{ marginTop: "10px" }}>
@@ -16,13 +16,21 @@ const BlogContent = ({posts,language}) => {
                   <CardBlog
                     key={index}
                     src={item.node.frontmatter[`thumbnail_${language}`]}
-                    postday={item.node.frontmatter[`blog_date_${language}`].substring(8,10)}
-                    postmonth={item.node.frontmatter[`blog_date_${language}`].substring(5,7)}
-                    postyear={item.node.frontmatter[`blog_date_${language}`].substring(0,4)}
+                    postday={item.node.frontmatter[
+                      `blog_date_${language}`
+                    ].substring(8, 10)}
+                    postmonth={item.node.frontmatter[
+                      `blog_date_${language}`
+                    ].substring(5, 7)}
+                    postyear={item.node.frontmatter[
+                      `blog_date_${language}`
+                    ].substring(0, 4)}
                     cardTitle={item.node.frontmatter[`blog_title_${language}`]}
                     author={item.node.frontmatter[`author_${language}`]}
                     iframe={item.node.frontmatter[`iframe_${language}`]}
-                    cardContent={item.node.frontmatter[`blog_description_${language}`]}
+                    cardContent={
+                      item.node.frontmatter[`blog_description_${language}`]
+                    }
                     linkImg={item.node.frontmatter[`thumbnail_${language}`]}
                     linkBlog={item.node.fields.slug}
                   />
