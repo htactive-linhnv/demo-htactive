@@ -5,21 +5,14 @@ import NavBar from "./navbar"
 import { Link } from "gatsby"
 
 const HeaderFixed = ({ color, menu, fixed }) => {
- 
   return (
-    <header
-      className={`header fixed ${fixed ? "fixed-bar" : " "} clearfix`}
-    >
+    <header className={`header fixed ${fixed ? "fixed-bar" : " "} clearfix`}>
       <div className="container">
         <div className="row header-fixed">
-          <div
-            className={`col-md-3 ${fixed ? "header-left-fixed" : ""}`}
-          >
+          <div className={`col-md-3 ${fixed ? "header-left-fixed" : ""}`}>
             <div className="header-left clearfix">
               <Link to="/">
-                <div
-                  className={`logo ${fixed? "logo-fixed" : ""}`}
-                ></div>
+                <div className={`logo ${fixed ? "logo-fixed" : ""}`}></div>
               </Link>
               <div
                 className="site-slogan"

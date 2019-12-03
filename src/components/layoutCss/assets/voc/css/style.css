@@ -1940,7 +1940,7 @@ tbody {
 .red .btn-default:focus,
 .red .btn-default:active,
 .red .btn-default.red .active,
-.red.open .red .dropdown-toggle.red .btn-default {
+.red.open .red  .btn-default {
 	color: #fff !important;
 	background-color: #cd3c2e!important;
 	border-color: #cd3c2e!important;
@@ -9150,4 +9150,18 @@ a:not(.btn):hover {
 }
 .product-item .orange .nav-tabs {
   border-bottom-color: #ffa500!important;;
+}
+button.dropdown-toggle:active {
+  background-color: #fafafa!important;
+  border-right-color: #e3e3e3!important ;
+}
+.no-bg:hover {
+  background-color: #fafafa!important;
+  border-right-color: #e3e3e3!important ;
+}
+.subfooter  .navbar  {
+  padding:0!important;
+}
+.subfooter  .navbar ul li a {
+  font-size:1em!important;
 }

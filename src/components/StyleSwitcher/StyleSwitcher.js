@@ -99,7 +99,7 @@ const StyleSwitcher = ({
           <h3>Footer</h3>
           <ul className="footerChange">
             <li
-              className={"dark " + (footer === "" ? "selected" : "")}
+              className={"dark " + (footer !== "light" ? "selected" : "")}
               data-style="dark"
               title="dark"
               onClick={() => changeFooter("")}
