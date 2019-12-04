@@ -1945,6 +1945,12 @@ tbody {
 	background-color: #cd3c2e!important;
 	border-color: #cd3c2e!important;
 }
+.nav-tabs .red .btn-default:hover {
+  color: #fff !important;
+	background-color: #cd3c2e!important;
+	border-color: #cd3c2e!important;
+}
+
 .default-bg .btn:hover,.btn-default:hover,
 .default-bg .btn-default:focus,
 .default-bg .btn-default:active,
