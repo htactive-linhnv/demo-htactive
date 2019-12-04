@@ -28,7 +28,7 @@ const SubSlider = ({changeHideHeader, listImg, color}) => {
       >
         <div 
         className="owl-wrapper-outer" 
-        style={{ height: "500px"}}
+       
         >
           <div
             className="owl-wrapper"
