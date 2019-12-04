@@ -549,8 +549,7 @@ body {
 }
 .tabs-style-2 .nav-tabs .btn {
   font-size: 13px;
-  text-transform: uppercase;
-  padding: 12px 25px;
+  text-transform: uppercase; 
   line-height: 1.42857143;
   transition: all 0.2s ease-in-out;
   min-width: 0!important;
@@ -1310,6 +1309,9 @@ pre code {
 .dl-horizontal dt {
   font-weight: 700;
 }
+.list-detail-item {
+  list-style-type: square;
+}
 
 /*Card Animation*/
 
@@ -1321,9 +1323,6 @@ pre code {
 	-webkit-animation: scale-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: scale-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
-
-
 
 @-webkit-keyframes scale-in-center {
   0% {
