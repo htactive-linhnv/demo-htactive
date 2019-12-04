@@ -19,6 +19,34 @@ File Description: Custom Animations
 */
 
 /*Custom Animations*/
+.fade-in-top-2 {
+	-webkit-animation: fade-in-top-2 0.34s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-top-2  0.34s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes fade-in-top-2  {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-top-2  {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    opacity: 1;
+  }
+}
 
 @-webkit-keyframes fadeInDownSmall {
   0% {

@@ -147,7 +147,7 @@ const Footer = ({ footer, menu, language }) => {
               <p>Copyright © 2019 by HT Active. All Rights Reserved.</p>
             </div>
             <div className="col-md-6">
-              <NavBar menu={menu} />
+              <NavBar menu={menu} isFooter = {true} />
             </div>
           </div>
         </div>

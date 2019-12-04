@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import "../Blog/blog-card.css"
 import { useModal } from "react-modal-hook"
 import ReactModal from "react-modal"
-import { RemoveScrollBar } from "react-remove-scroll-bar"
 import { connect } from "react-redux"
+import { RemoveScrollBar } from "react-remove-scroll-bar"
 
 const CardBlog = ({
   src,
@@ -19,8 +19,6 @@ const CardBlog = ({
   iframe,
   toggleOverlay,
 }) => {
-  const [open, setOpen] = useState(false)
-
   const month = [
     "",
     "Jan",
@@ -36,6 +34,8 @@ const CardBlog = ({
     "Nov",
     "Dec",
   ]
+  const [open, setOpen] = useState(false)
+
   postmonth = postmonth.includes("0") ? postmonth.substring(1, 2) : postmonth
   const [showModal, hideModal] = useModal(() => (
     <ReactModal isOpen>
@@ -48,14 +48,13 @@ const CardBlog = ({
           toggleOverlay(false)
         }}
       >
-        <div className="off-modal"></div>
+        <div className="off-modal">x</div>
         <img src={src} alt=""></img>
       </div>
     </ReactModal>
   ))
   return (
     <div className="masonry-grid-item col-sm-12 col-md-6 col-lg-4 col-lg-4">
-      {open && <RemoveScrollBar />}
       <article className="clearfix blogpost">
         <div className="overlay-container blog-overlay">
           <button
@@ -95,16 +94,15 @@ const CardBlog = ({
             }}
           ></Link>
           {iframe ? (
-            <table>
+            <table style={{ width: "100%" }}>
               <tbody>
-              <tr>
-                <td
-                  className="iframe-small"
-                  dangerouslySetInnerHTML={{ __html: iframe }}
-                />
-              </tr>
+                <tr>
+                  <td
+                    className="iframe-small"
+                    dangerouslySetInnerHTML={{ __html: iframe }}
+                  />
+                </tr>
               </tbody>
-             
             </table>
           ) : (
             <React.Fragment>
@@ -131,7 +129,7 @@ const CardBlog = ({
         </div>
         <div className="blogpost-body">
           <div className="post-info">
-            <span className="day">{postday}</span>
+            <span className="day"> {postday}</span>
             <span className="month">{month[postmonth]}</span>
             <span className="year">{postyear}</span>
           </div>
@@ -173,4 +171,7 @@ const mapDispatchToProps = dispatch => {
     toggleOverlay: open => dispatch({ type: `TOGGLE_OVERLAY`, open: open }),
   }
 }
-export default connect(null, mapDispatchToProps)(CardBlog)
+export default connect(
+  null,
+  mapDispatchToProps
+)(CardBlog)
