@@ -190,7 +190,7 @@ const SubPortfolio = ({ data, language, color }) => {
                                     <ul className="list-detail-content">
                                       {item.content_list.map(
                                         (content, index) => (
-                                          <p key={index}>{content.content}</p>
+                                          <li key={index} className="list-detail-item">{content.content}</li>
                                         )
                                       )}
                                     </ul>
