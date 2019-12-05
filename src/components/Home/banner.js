@@ -46,15 +46,16 @@ const Banner = ({ data, language }) => {
     <div className="banner">
       <BannerAnim
         autoPlay
-        autoPlaySpeed={10000}
+        autoPlaySpeed={10000000}
         autoPlayEffect={false}
         onChange={e => handleProgressBar(e)}
+        
       >
         {data2.map((item, index) => (
           <Element
             key={index}
-            prefixCls="banner-user-elem"
-            className="container"
+            prefixCls="banner-user-elem"  
+            className="container"          
           >
             <BgElement
               key="bg"
@@ -65,16 +66,18 @@ const Banner = ({ data, language }) => {
                 backgroundImage: `url(${item.bg})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                position: "relative",
+                position:"absolute" 
               }}
             />
+       
             <QueueAnim
               name="QueueAnim"
               className={`col-sm-10 banner-left-wrapper`}
+              style={{position:"absolute"}}
             >
               {showbar && <BannerLeft title={item.title} lead={item.lead} />}
             </QueueAnim>
-            <div></div>
+        
             {item.img !== "" && (
               <img
                 src={`${item.img}`}

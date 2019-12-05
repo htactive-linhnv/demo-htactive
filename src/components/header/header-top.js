@@ -84,7 +84,7 @@ const HeaderTop = ({ language, changeLanguage, active, slug, changeSlug }) => {
                   >
                     <i className="fa fa-share-alt"></i>
                   </button>
-                  {openDropdown ? (
+                  {openToggle ? (
                     <ul className="dropdown-menu dropdown-animation">
                       <li className="twitter">
                         <a href="https://twitter.com/hoangvhh">
