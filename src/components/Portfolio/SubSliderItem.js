@@ -1,7 +1,7 @@
   
 import React from "react"
 
-const ItemSlider = ({ prevItem, item, src, title, handleOpenSlider }) => {
+const ItemSlider = ({ prevItem, item, src, title, handleOpenSlider, color }) => {
   return (
     <div
       className={`slide-item ${
@@ -9,9 +9,9 @@ const ItemSlider = ({ prevItem, item, src, title, handleOpenSlider }) => {
       }`}
       style={{ width: "360px" }}
     >
-      <div className="overlay-container">
+      <div className={`overlay-container ${color}`}>
         <img src={src} alt={title} />
-        <span className="popup-img overlay slide-overlay " onClick={()=>handleOpenSlider(true)} title={title}>
+        <span className="popup-img overlay slide-overlay" onClick={()=>handleOpenSlider(true)} title={title}>
           <i className="fa fa-search-plus" />
         </span>
       </div>

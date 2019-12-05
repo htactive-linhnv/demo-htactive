@@ -31,6 +31,7 @@ export default ({ color, data,language }) => {
     <section className="main-container">
       <div className="container">
         <TextCenter head={dataArr[2]} description={dataArr[1]} />
+        <br/>
         <div className="row home2nd">
           <ParagraphLeft color={color} data={dataParagraph} language={language}/>
           <div className="col-lg-6 col-md-12">

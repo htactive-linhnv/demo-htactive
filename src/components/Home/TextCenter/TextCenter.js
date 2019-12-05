@@ -5,7 +5,7 @@ const TextCenter = ({head, description}) => {
         <React.Fragment>
             <h1 className="text-center">{head}</h1>
             <div className="separator"></div>
-            <p className="lead under text-center">{description}</p>
+            <p className="lead text-center">{description}</p>
         </React.Fragment>
     );
 };

@@ -119,11 +119,7 @@ h6 {
     padding: 3px 7px 0 7px;
   }
 
-  .banner-left-wrapper {
-    position: absolute !important;
-    top: 12px;
-    left: 8%;
-  }
+ 
   
   .banner-left-heading ul {
     padding-left: 0 !important;
@@ -1945,6 +1941,12 @@ tbody {
 	background-color: #cd3c2e!important;
 	border-color: #cd3c2e!important;
 }
+.nav-tabs .red .btn-default:hover {
+  color: #fff !important;
+	background-color: #cd3c2e!important;
+	border-color: #cd3c2e!important;
+}
+
 .default-bg .btn:hover,.btn-default:hover,
 .default-bg .btn-default:focus,
 .default-bg .btn-default:active,
@@ -3080,9 +3082,11 @@ a.overlay:hover {
   background-color: rgba(255, 255, 255, 0.7);
   -webkit-transform: scale(1);
   transform: scale(1);
+  
 }
 .listing-item a.overlay:hover {
   text-decoration: none;
+  background-color: transparent;
 }
 a.overlay i {
   position: absolute;
@@ -3161,9 +3165,10 @@ a.overlay.small i {
 /* first level menu */
 .navbar.navbar-default {
   border-radius: 0;
-  margin: 12px 0 5px;
+  margin: 7px 0 7px;
   background-color: #fafafa;
   border-color: #f1f1f1;
+  padding: 0!important;
 }
 .header-small .navbar.navbar-default {
   margin: 6px 0 5px;
@@ -4515,7 +4520,7 @@ footer:not(.light) .footer-content .tag a,
   border-right-color: transparent;
 }
 .header-top-dropdown .dropdown > button {
-  padding: 8px 10px;
+  padding: 9px 10px;
   margin: 0;
   font-size: 12px;
   color: #999;
@@ -6643,7 +6648,7 @@ img.pink .product-image
 }
 mark,
 .orange .mark {
-	background-color: #ffa500;
+	background-color: #d3d3d3;
 	color: #ffffff;
 }
 .orange .table > thead > tr > th {
@@ -7242,6 +7247,9 @@ mark,
 .green .nav-pills .active p {
   color: #0d760a!important;
 }
+.green .nav-pills li:hover p {
+  color: #0d760a!important;
+}
 .green .nav-pills li button {
   color: #0d760a!important;
 }
@@ -7250,6 +7258,9 @@ mark,
   color: #fff!important;
 }
 .blue .nav-pills .active p {
+  color:#3d78d8!important;
+}
+.blue .nav-pills li:hover p {
   color:#3d78d8!important;
 }
 .blue .nav-pills li button:hover {
@@ -7262,6 +7273,9 @@ mark,
 .orange .nav-pills .active p {
   color:#ffa500!important;
 }
+.orange .nav-pills li:hover p {
+  color:#ffa500!important;
+}
 .orange .nav-pills li button {
   color:#ffa500!important;
 }
@@ -7272,6 +7286,9 @@ mark,
 .pink .nav-pills .active p {
   color:#db7093!important;
 }
+.pink .nav-pills li:hover p {
+  color:#db7093!important;
+}
 .pink .nav-pills li button {
   color:#db7093!important;
 }
@@ -7280,6 +7297,9 @@ mark,
   color: #fff!important;
 }
 .purple .nav-pills .active p {
+  color:#b331b3!important;
+}
+.purple .nav-pills li:hover p {
   color:#b331b3!important;
 }
 .purple .nav-pills  li button {
@@ -7299,7 +7319,12 @@ mark,
 .yellow .nav-pills .active p {
   color:#b59a17!important;
 }
-
+.yellow .nav-pills li:hover p {
+  color:#b59a17!important;
+}
+.red .nav-pills li:hover p {
+  color:#e84c3d!important;
+}
 
 
 
@@ -9108,9 +9133,9 @@ a:not(.btn):hover {
 .orange a:not(.btn):hover {
   color:#e09200!important;
 }
-.yellow a:not(.btn):hover {
+/* .yellow a:not(.btn):hover {
   color:#b59a17!important;
-}
+} */
 .purple a:not(.btn):hover {
   color:#b331b3!important;
 }
@@ -9123,10 +9148,7 @@ a:not(.btn):hover {
 .green a:not(.btn):hover {
   color:#3b8f33!important;
 }
-.fa-search-plus:hover {
-  background:#1f1f1f;
-  color:white;
-}
+
 .overlay-links a:hover {
   color: #ffffff!important;
   background: #333333!important;;
@@ -9221,4 +9243,25 @@ button.dropdown-toggle:active {
 }
 .subfooter  .navbar ul li a {
   font-size:1em!important;
+}
+.red .slide-overlay .fa-search-plus {
+  color: #e84c3d;
+}
+.yellow .slide-overlay .fa-search-plus {
+  color: #b59a17!important;
+}
+.green .slide-overlay .fa-search-plus {
+  color: #0d760a;
+}
+.blue .slide-overlay .fa-search-plus {
+  color: #3d78d8;
+}
+.pink .slide-overlay .fa-search-plus {
+  color: #db7093;
+}
+.purple .slide-overlay .fa-search-plus {
+  color: #b331b3;
+}
+.orange  .slide-overlay .fa-search-plus {
+  color: #ffa500;
 }

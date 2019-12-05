@@ -142,7 +142,7 @@ const CardBlog = ({
               </h2>
               <div className=" blog-card-author submitted">
                 <i className="fa fa-user pr-5" /> by{" "}
-                <a href="/blog">{author}</a>
+                <Link to="/blog">{author}</Link>
               </div>
             </header>
             <p className="card-content">{cardContent}</p>
@@ -152,10 +152,10 @@ const CardBlog = ({
           <ul className="links pull-left hidden">
             <li>
               <i className="fa fa-comment-o pr-5" />{" "}
-              <a href="/blog">20 comments</a> |
+              <Link to="/blog">20 comments</Link> |
             </li>
             <li>
-              <i className="fa fa-tags pr-5" /> <a href="/blog">{"tag"}</a>
+              <i className="fa fa-tags pr-5" /> <Link href="/blog">{"tag"}</Link>
             </li>
           </ul>
           <Link className="pull-right link" to={linkBlog}>

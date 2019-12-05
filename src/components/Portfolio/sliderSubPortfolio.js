@@ -44,6 +44,7 @@ const SubSlider = ({changeHideHeader, listImg, color}) => {
                     prevItem={prevItem}
                     item={item}
                     handleOpenSlider={handleOpenSlider}
+                    color={color}
                   />
                 )
             )}

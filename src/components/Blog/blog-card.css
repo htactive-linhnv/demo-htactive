@@ -45,7 +45,7 @@
   height: 1000vh;
   opacity: 0.6;
 }
-.card-content {
+.blogpost-content .card-content {
   height: 95px;
 }
 .day {

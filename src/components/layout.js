@@ -17,14 +17,10 @@ import "./layoutCss/assets/css/carousel.css"
 import "./layoutCss/assets/voc/css/animations.css"
 import "./layoutCss/assets/voc/css/style.css"
 import "./layout.css"
-import "./ResponsiveCss/minWidth992.css"
-import "./ResponsiveCss/maxWidth991.css"
-import "./ResponsiveCss/minWidth768.css"
-import "./ResponsiveCss/maxWidth768.css"
-import "./ResponsiveCss/maxWidth480.css"
 
 
-const Layout = ({ footer, children, color, open, language }) => {
+
+const Layout = ({  children, color, open, language }) => {
   const data = useStaticQuery(
     graphql`
       query {
