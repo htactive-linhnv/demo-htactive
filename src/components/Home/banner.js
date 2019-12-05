@@ -46,7 +46,7 @@ const Banner = ({ data, language }) => {
     <div className="banner">
       <BannerAnim
         autoPlay
-        autoPlaySpeed={10000000}
+        autoPlaySpeed={10000}
         autoPlayEffect={false}
         onChange={e => handleProgressBar(e)}
         
