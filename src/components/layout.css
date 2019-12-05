@@ -586,6 +586,7 @@ body {
   border: 1px solid #f3f3f3;
   background-color: #fafafa;
 }
+
 .tab-pane {
   display: block !important;
   visibility: visible !important;
@@ -927,7 +928,7 @@ div.style-switcher .dark-red:hover {
 }
 .first-title {
   font-weight: 700;
-  margin-top: 20px!important;
+  margin: 20px 0px 10px!important;
   color: #ffffff;
 }
 .footer-top {
@@ -1158,6 +1159,10 @@ div.style-switcher .dark-red:hover {
   }
   .fixed-header-on.boxed .header.fixed {
     width: 1170px;
+  }
+  .banner-left-wrapper {
+    margin-left: 7%;
+    margin-top: 35px;
   }
 }
 /*Subslider-overlay*/
