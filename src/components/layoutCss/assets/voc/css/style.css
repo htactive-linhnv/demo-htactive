@@ -8573,6 +8573,9 @@ mark,
 	color: #fff !important;
 	border-color: #b59a17;
 }
+.btn:hover {
+  background-color: #e84c3d;
+}
 .yellow .btn:hover,.btn-default:hover,
 .yellow .btn-default:focus,
 .yellow .btn-default:active,
