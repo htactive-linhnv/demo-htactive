@@ -71,7 +71,7 @@ const StyleSwitcher = ({
     setToggle(type)
   }
   return (
-    <div>
+    <div className="main-style-switch">
       <span className="trigger">
         <i
           className={"fa fa-gears " + (toggle === 2 ? "fade-out" : "fade-in")}
