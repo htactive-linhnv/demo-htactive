@@ -8576,6 +8576,9 @@ mark,
 .btn:hover {
   background-color: #e84c3d;
 }
+.btn-default:hover {
+  background-color: #e84c3d;
+}
 .yellow .btn:hover,.btn-default:hover,
 .yellow .btn-default:focus,
 .yellow .btn-default:active,
